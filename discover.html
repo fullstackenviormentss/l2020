@@ -1,17 +1,50 @@
 ---
 layout: default
 ---
-<h1>{% t pages.titles.discover %}</h1>
-{% if site.lang == "fr" %}
-	{{ site.data.contentful.spaces.example.pageDiscover[0].textDintroduction }}
-{% else %}
-  {{ site.data.contentful.spaces.example.pageDiscoverEn[0].textDintroduction }}
-{% endif %}
-
-{% if site.lang == "fr" %}
-  {% capture link1 %}{{ site.baseurl_root }}en{{ page.url}}{% endcapture %}
-  <a href="{{ link1 }}" >en</a>
-{% elsif site.lang == "en" %}
-  {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
-  <a href="{{ link2 }}" >fr</a>
-{% endif %}
+<div class="hero hero-discover">
+  <div class="enorme_claim_wrap"></div>
+</div>
+<div class="section_intro_discover">
+  <div class="discover_wrap">
+    <h1 class="h1_bis h1_discover">La suisse</h1>
+    <p class="discover_1 discover_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+    <div class="discover_img w-row">
+      <div class="w-col w-col-4 w-col-stack">
+        <div class="news_img suisse_1"></div>
+      </div>
+      <div class="w-col w-col-4 w-col-stack">
+        <div class="news_img suisse_2"></div>
+      </div>
+      <div class="w-col w-col-4 w-col-stack">
+        <div class="news_img suisse_3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="map_section" data-ix="scroll-nav">
+  <div class="map w-widget w-widget-map" data-disable-scroll="1" data-disable-touch="1" data-widget-latlng="46.519654,6.632273" data-widget-style="satellite" data-widget-zoom="13"></div>
+  <div class="map_discover_wrap">
+    <h1 class="h1-bis h1-third h1_discover">La suisse romande</h1>
+    <p class="discover_p discver_bis">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+  </div>
+  <div class="map_wrap map_wrap_discover w-clearfix">
+    <img class="map map_discover" sizes="(max-width: 479px) 92vw, (max-width: 767px) 95vw, (max-width: 991px) 96vw, 896px" src="images/map_test.png" srcset="images/map_test-p-500x323.png 500w, images/map_test-p-800x517.png 800w, images/map_test-p-1080x697.png 1080w, images/map_test.png 1130w">
+  </div>
+</div>
+<div class="discover_3 section_intro_discover">
+  <div class="discover_wrap">
+    <h1 class="h1_discover">LAUSANNE<br>Capitale olympique</h1>
+    <div class="discover_img w-row">
+      <div class="w-col w-col-2">
+        <div class="news_img"></div>
+      </div>
+      <div class="w-col w-col-7">
+        <div class="news_img"></div>
+      </div>
+      <div class="w-col w-col-3">
+        <div class="news_img"></div>
+      </div>
+    </div>
+    <p class="discover_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+  </div>
+</div>
