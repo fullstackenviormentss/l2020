@@ -1,0 +1,8 @@
+- title: "Home"
+  path: "/"
+- title: "Discover"
+  path: "/discover"
+- title: "Lausanne2020"
+  path: "/lausanne2020"
+- title: "Contact"
+  path: "/contact"

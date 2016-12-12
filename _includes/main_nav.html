@@ -4,10 +4,14 @@
       <img class="logo" sizes="(max-width: 479px) 79vw, 235px" src="images/logo-LS2020-YOG-DNA.png" srcset="images/logo-LS2020-YOG-DNA-p-500x150.png 500w, images/logo-LS2020-YOG-DNA.png 600w" width="235">
     </a>
     <nav class="w-nav-menu" role="navigation">
-      <a class="nav_link w-nav-link" href="index.html">Home</a>
-      <a class="nav_link w-nav-link" href="discover.html">Discover</a>
-      <a class="nav_link w-nav-link" href="lausanne2020.html">Lausanne<span class="accent">2020</span></a>
-      <a class="nav_link w-nav-link" href="contact.html">Contact</a>
+      {% if site.lang == "en" %}
+        {% assign nav = site.data.nav.en %}
+      {% else if site.lang == "fr" %}
+        {% assign nav = site.data.nav.fr %}
+      {% endif %}
+      {% for link in nav %}
+        <a class="nav_link w-nav-link" href="{{link.path}}">{{link.title}}</a>
+      {% endfor %}
     </nav>
     <div class="w-nav-button">
       <div class="w-icon-nav-menu"></div>
