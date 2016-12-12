@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<h1>{% t pages.titles.discover %}</h1>
+{% if site.lang == "fr" %}
+	{{ site.data.contentful.spaces.example.pageDiscover[0].textDintroduction }}
+{% else %}
+  {{ site.data.contentful.spaces.example.pageDiscoverEn[0].textDintroduction }}
+{% endif %}
+
+{% if site.lang == "fr" %}
+  {% capture link1 %}{{ site.baseurl_root }}en{{ page.url}}{% endcapture %}
+  <a href="{{ link1 }}" >en</a>
+{% elsif site.lang == "en" %}
+  {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+  <a href="{{ link2 }}" >fr</a>
+{% endif %}
