@@ -9,21 +9,16 @@
       </div>
       <div class="w-col w-col-4">
         <ul class="footer_link w-list-unstyled">
-          <li class="nav_footer_item">
-            <a class="footer_link" href="#">Home</a>
-          </li>
-          <li class="nav_footer_item">
-            <a class="footer_link" href="#">Discover</a>
-          </li>
-          <li class="nav_footer_item">
-            <a class="footer_link" href="#">Lausanne2020</a>
-          </li>
-          <li class="nav_footer_item">
-            <a class="footer_link" href="#">Jobs</a>
-          </li>
-          <li class="nav_footer_item">
-            <a class="footer_link" href="#">Contact</a>
-          </li>
+          {% if site.lang == "en" %}
+            {% assign nav = site.data.nav.en %}
+          {% else if site.lang == "fr" %}
+            {% assign nav = site.data.nav.fr %}
+          {% endif %}
+          {% for link in nav %}
+            <li>
+            <a class="footer_link" href="{{link.path}}">{{link.title}}</a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
