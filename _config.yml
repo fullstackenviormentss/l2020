@@ -30,8 +30,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-languages: ["fr","en",]
-exclude_from_localizations: ["js","css"]
+languages: ["en","fr",]
+exclude_from_localizations: ["js","css","_sass"]
 
 contentful:
   spaces:
