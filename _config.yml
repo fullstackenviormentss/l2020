@@ -37,7 +37,7 @@ contentful:
   spaces:
     - example: # Jekyll _data folder identifier - Required
         space: <% ENV['ENV_CONTENTFUL_SPACE_ID'] %>         # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
+        access_token: <% ENV['ENV_CONTENTFUL_ACCESS_TOKEN'] %> # Required
         cda_query:                  # Optional
           include: 2
           limit: 100
