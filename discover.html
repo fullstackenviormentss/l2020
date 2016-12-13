@@ -7,7 +7,13 @@ layout: default
 <div class="section_intro_discover">
   <div class="discover_wrap">
     <h1 class="h1_bis h1_discover">La suisse</h1>
-    <p class="discover_1 discover_p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+    <p class="discover_1 discover_p">
+      {% if site.lang == "fr" %}
+        {{ site.data.contentful.spaces.example.pageDiscover[0].textDintroduction }}
+      {% else %}
+        {{ site.data.contentful.spaces.example.pageDiscoverEn[0].textDintroduction }}
+      {% endif %}
+    </p>
     <div class="discover_img w-row">
       <div class="w-col w-col-4 w-col-stack">
         <div class="news_img suisse_1"></div>
