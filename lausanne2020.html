@@ -86,6 +86,22 @@ layout: default
       </div>
     </div>
   </div>
+  <div>
+    <h2>Venues</h2>
+    <ul>
+    {% for venue in site.data.contentful.spaces.entries.venues %}
+      <li>
+        <a href="#">
+          {% if site.lang == "fr" %}
+            {{ venue.titre }}
+          {% else %}
+            {{ venue.titreEn }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
   <div class="map_section" data-ix="scroll-nav">
     <div class="map w-widget w-widget-map" data-disable-scroll="1" data-disable-touch="1" data-widget-latlng="46.519654,6.632273" data-widget-style="terrain" data-widget-zoom="13"></div>
     <div class="map_wrap">

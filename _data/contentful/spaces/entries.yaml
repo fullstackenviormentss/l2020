@@ -1,0 +1,16 @@
+---
+venues:
+- sys:
+    id: 3FEBqFhdRSkuemWoAqiyUS
+  titre: Patinage
+  titreEn: Skating
+  position:
+    :lat: 46.5196535
+    :lon: 6.632273400000031
+- sys:
+    id: 6Nnr1UbWIE0mKqUe8aAWiC
+  titre: Ski
+  titreEn: Ski
+  position:
+    :lat: 46.0207133
+    :lon: 7.749117000000069
