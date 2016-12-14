@@ -36,8 +36,8 @@ exclude_from_localizations: ["js","css","_sass"]
 contentful:
   spaces:
     - example: # Jekyll _data folder identifier - Required
-        space: <% ENV['ENV_CONTENTFUL_SPACE_ID'] %>         # Required
-        access_token: <% ENV['ENV_CONTENTFUL_ACCESS_TOKEN'] %> # Required
+        space: u1tdqm9qhqkp # Required
+        access_token: 1d24efee830e843285e8656bdc2d0cbc19fa7cdff16e0f76fb5592a69ca724e7 # Required
         cda_query:                  # Optional
           include: 2
           limit: 100
