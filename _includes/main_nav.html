@@ -13,14 +13,14 @@
         <a class="nav_link w-nav-link" href="{{link.path}}">{{link.title}}</a>
       {% endfor %}
         {% if site.lang == "fr" %}
-{% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-<a href="{{ link1 }}" >en</a>
-{% elsif site.lang == "en" %}
-  {% capture link2 %}{{ site.baseurl_root }}fr{{ page.url  }}{% endcapture %}
-  <a href="{{ link2 }}" >fr</a>
-  {% else%}
-  <a href="#">AUCUNE LANGUE</a>
-{% endif %}
+      {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
+      <a href="{{ link1 }}" >en</a>
+      {% elsif site.lang == "en" %}
+        {% capture link2 %}{{ site.baseurl_root }}fr{{ page.url  }}{% endcapture %}
+        <a href="{{ link2 }}" >fr</a>
+        {% else%}
+        <a href="#">AUCUNE LANGUE</a>
+      {% endif %}
     </nav>
     <div class="w-nav-button">
       <div class="w-icon-nav-menu"></div>

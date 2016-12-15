@@ -5,30 +5,30 @@ layout: default
     <div class="newsletter_cta_wrap container">
       <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
       <div class="row">
-        <div class="col-nopadd col-md-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        {% for new in site.data.contentful.spaces.entries.news limit:3 %}
+          <div class="col-nopadd col-md-4">
+            <div class="news_wrap">
+              <div class="">
+                <img src="{{ new.image.url }}">
+              </div>
+              <h1 class="h1_news">
+              {% if site.lang == "fr" %}
+                {{ new.titre }}
+              {% else %}
+                {{ new.titreEn }}
+              {% endif %}
+              </h1>
+              <p class="p_news">
+              {% if site.lang == "fr" %}
+                {{ new.texte }}
+              {% else %}
+                {{ new.texteEn }}
+              {% endif %}
+              </p>
+              <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
+            </div>
           </div>
-        </div>
-        <div class="col-nopadd col-md-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-          </div>
-        </div>
-        <div class="col-nopadd col-md-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
