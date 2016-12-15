@@ -29,6 +29,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+sass:
+  sass_dir: _sass
 
 languages: ["en","fr",]
 exclude_from_localizations: ["js","css","_sass"]
