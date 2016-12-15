@@ -5,7 +5,7 @@ layout: default
     <div class="newsletter_cta_wrap container">
       <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
       <div class="row">
-        {% for new in site.data.contentful.spaces.entries.news limit:3 %}
+        {% for new in site.data.contentful.spaces.news.news limit:3 %}
           <div class="col-nopadd col-md-4">
             <div class="news_wrap">
               <div class="">
@@ -89,7 +89,7 @@ layout: default
   <div>
     <h2>Venues</h2>
     <ul>
-    {% for venue in site.data.contentful.spaces.entries.venues %}
+    {% for venue in site.data.contentful.spaces.venues.venues %}
       <li>
         <a href="#">
           {% if site.lang == "fr" %}
