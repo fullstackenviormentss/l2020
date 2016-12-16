@@ -1,0 +1,78 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1280px !important;
+  }
+}
+
+// Custom Navigation Bar
+
+.navbar-custom {
+    border-color: transparent;
+    .navbar-toggle {
+        font-size: 24px;
+    }
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        background-color: transparent;
+        padding: 25px 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        border: none;
+    }
+}
+
+// Navbar Change on Scroll
+
+@media(min-width:768px) {
+    .navbar-custom.affix {
+      background-color:white;
+    }
+}
+
+@media(max-width:768px) {
+  .w-nav-brand .logo{
+      padding:17px 10px 0 30px;
+  }
+    .navbar-header {
+      padding: 10px 0;
+      background-color: #FFF;
+      .navbar-toggle{
+        margin-bottom: -20px;
+        background-color: #C8C8C8;
+        border-radius: 0;
+        height: 70px;
+        color: white;
+        padding: 0 20px;
+        margin-top: 0px;
+
+        &.collapsed{
+          background-color: #FFF;
+          color:black;
+        }
+      }
+    }
+    .navbar-collapse {
+      margin-top: -10px;
+      background-color: #C8C8C8;
+        .nav_link {
+          display:block;
+        }
+    }
+}
+
+.nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
+  font-family: Sanchez, sans-serif;
+  color: #0087cd;
+  text-transform: uppercase;
+  text-decoration:none !important;
+}
+
+.nav_link.w--current {
+  border-bottom: 2px solid #ce0071;
+  font-family: Sanchez, sans-serif;
+  color: #ce0071;
+  font-weight: 400;
+}
