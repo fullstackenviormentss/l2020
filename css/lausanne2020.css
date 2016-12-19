@@ -643,10 +643,12 @@ h1 {
 .label {
   font-family: Montserrat, sans-serif;
   color: #0087cd;
-}
-
-.label.styleguide_label {
-  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size:inherit;
+  text-align:left;
+  padding-left:0;
 }
 
 .fields {
