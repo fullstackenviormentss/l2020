@@ -1,19 +1,21 @@
+{% if site.lang == "en" %}
+  {% assign nav = site.data.nav.en %}
+{% else if site.lang == "fr" %}
+  {% assign nav = site.data.nav.fr %}
+{% endif %}
+
 <div class="footer">
+  <div class="top_footer"></div>
   <div class="footer_wrap">
-    <div class="w-row">
-      <div class="footer_logo w-col w-col-4">
+    <div class="row">
+      <div class="footer_logo col-md-4">
         <img sizes="(max-width: 479px) 92vw, (max-width: 767px) 307px, (max-width: 991px) 31vw, 307px" src="images/l2020_white.png" srcset="images/l2020_white-p-500x165.png 500w, images/l2020_white.png 637w" width="307">
       </div>
-      <div class="w-col w-col-4">
+      <div class="col-md-4">
         <div class="copy">copyrights © 2016 | Lausanne2020</div>
       </div>
-      <div class="w-col w-col-4">
+      <div class="col-md-4">
         <ul class="footer_link w-list-unstyled">
-          {% if site.lang == "en" %}
-            {% assign nav = site.data.nav.en %}
-          {% else if site.lang == "fr" %}
-            {% assign nav = site.data.nav.fr %}
-          {% endif %}
           {% for link in nav %}
             <li>
             <a class="footer_link" href="{{link.path}}">{{link.title}}</a>

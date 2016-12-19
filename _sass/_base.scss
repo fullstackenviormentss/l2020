@@ -13,7 +13,7 @@
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:767px) {
     .navbar-custom {
         background-color: transparent;
         padding: 25px 0;
@@ -26,13 +26,13 @@
 
 // Navbar Change on Scroll
 
-@media(min-width:768px) {
+@media(min-width:767px) {
     .navbar-custom.affix {
       background-color:white;
     }
 }
 
-@media(max-width:768px) {
+@media(max-width:767px) {
   .w-nav-brand .logo{
       padding:17px 10px 0 30px;
   }
@@ -75,4 +75,46 @@
   font-family: Sanchez, sans-serif;
   color: #ce0071;
   font-weight: 400;
+}
+
+
+
+// Footer
+
+.footer{
+  position: relative;
+  z-index: 3000;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #0087cd;
+}
+
+.top_footer{
+  position: absolute;
+  left: 0px;
+  top: -61px;
+  right: 0px;
+  display: block;
+  height: 111px;
+  padding-top: 0px;
+  background-image: url('/images/wave_footer_top.svg');
+  background-position: 50% 29%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+}
+
+@media (max-width: 767px){
+  .top_footer {
+      top: -60px;
+  }
+}
+
+@media (max-width: 991px){
+  .top_footer {
+      left: 0px;
+      top: -61px;
+      right: 0px;
+  }
 }
