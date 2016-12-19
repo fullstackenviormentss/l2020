@@ -6,9 +6,10 @@ layout: default
     <h1 class="h1_big_news h1_newsletter_cta">Contact us</h1>
     <div class="row">
       <div class="col-md-6">
-          <form class="form form-contact" data-name="Email Form" id="email-form-contact" name="email-form-contact" action="#" netlify>
+          <form class="form form-contact" data-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
             <label class="label" for="Firstname">Firstname:</label>
             <input class="fields w-input" data-name="Firstname" id="Firstname" maxlength="256" name="Firstname" placeholder="Enter your firstname" required="required" type="text">
+            <p class="cache"><label>Bot field: <input name="champcache"></label></p>
             <label class="label" for="Lastname">Lastname:</label>
             <input class="fields w-input" data-name="Lastname" id="Lastname" maxlength="256" name="Lastname" placeholder="Enter your lastname" required="required" type="text">
             <label class="label" for="email">Email Address:</label>
