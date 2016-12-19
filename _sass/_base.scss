@@ -1,7 +1,10 @@
-@media (min-width: 1200px) {
-  .container {
-    width: 1280px !important;
-  }
+textarea {
+   resize:vertical;
+}
+
+// Hidden field in form contact against bot spam (leave the name in french)
+.cache{
+  display:none;
 }
 
 // Custom Navigation Bar
@@ -11,16 +14,69 @@
     .navbar-toggle {
         font-size: 24px;
     }
+    .container{
+      padding-left:0;
+    }
+}
+
+.nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
+  font-family: Sanchez, sans-serif;
+  color: #0087cd;
+  text-transform: uppercase;
+  text-decoration:none !important;
+}
+
+.nav_link.w--current {
+  border-bottom: 2px solid #ce0071;
+  font-family: Sanchez, sans-serif;
+  color: #ce0071;
+  font-weight: 400;
+}
+
+// Footer
+
+.footer{
+  position: relative;
+  z-index: 3000;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #0087cd;
+}
+
+.top_footer{
+  position: absolute;
+  left: 0px;
+  top: -61px;
+  right: 0px;
+  display: block;
+  height: 111px;
+  padding-top: 0px;
+  background-image: url('/images/wave_footer_top.svg');
+  background-position: 50% 29%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1280px !important;
+  }
 }
 
 @media(min-width:767px) {
     .navbar-custom {
         background-color: transparent;
-        padding: 25px 0;
+        padding: 17px 0;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         transition: all 0.3s;
         border: none;
+    }
+    //Contact
+    .form-contact{
+      margin-left: 10px;
     }
 }
 
@@ -61,54 +117,14 @@
           display:block;
         }
     }
-}
-
-.nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
-  font-family: Sanchez, sans-serif;
-  color: #0087cd;
-  text-transform: uppercase;
-  text-decoration:none !important;
-}
-
-.nav_link.w--current {
-  border-bottom: 2px solid #ce0071;
-  font-family: Sanchez, sans-serif;
-  color: #ce0071;
-  font-weight: 400;
-}
-
-
-
-// Footer
-
-.footer{
-  position: relative;
-  z-index: 3000;
-  margin-top: 50px;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  background-color: #0087cd;
-}
-
-.top_footer{
-  position: absolute;
-  left: 0px;
-  top: -61px;
-  right: 0px;
-  display: block;
-  height: 111px;
-  padding-top: 0px;
-  background-image: url('/images/wave_footer_top.svg');
-  background-position: 50% 29%;
-  background-size: cover;
-  background-repeat: repeat-x;
-  background-attachment: scroll;
-}
-
-@media (max-width: 767px){
-  .top_footer {
-      top: -60px;
-  }
+    //Contact
+    .row{
+      margin:0;
+    }
+    //footer
+    .top_footer {
+        top: -60px;
+    }
 }
 
 @media (max-width: 991px){
