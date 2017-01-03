@@ -73,3 +73,9 @@ DEPENDENCIES
   jekyll-contentful-data-import
   jekyll-feed (~> 0.6)
   jekyll-multiple-languages-plugin
+
+RUBY VERSION
+   ruby 2.3.3p222
+
+BUNDLED WITH
+   1.13.6

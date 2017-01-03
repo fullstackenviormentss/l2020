@@ -31,4 +31,37 @@ $(document).ready(function(){
 	  });
 
 	});
+
+	// CSS animation on scroll
+
+	$(window).scroll(function () {
+	    $('[data-ix="fadeintop"]').each(function () {
+				var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+            $(this).addClass("anim_fadeintop");
+        } else {
+            $(this).removeClass("anim_fadeintop");
+        }
+			});
+			$('[data-ix="fadeinscaleup"]').each(function () {
+				var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+            $(this).addClass("anim_fadeinscaleup");
+        } else {
+            $(this).removeClass("anim_fadeinscaleup");
+        }
+			});
+			$('[data-ix="fadeindown"]').each(function () {
+				var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+            $(this).addClass("anim_fadeindown");
+        } else {
+            $(this).removeClass("anim_fadeindown");
+        }
+			});
+	});
+
 })
