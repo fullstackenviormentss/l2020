@@ -12,6 +12,7 @@ class FB
   end
 
   def self.new_connection
+    puts ENV['FACEBOOK_ACCESS_TOKEN']
     @graph = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'], ENV['FACEBOOK_SECRET'])
   end
 
