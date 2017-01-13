@@ -27,7 +27,7 @@ module Jekyll
     end
 
     def facebook_posts
-      #return FB.get(:connections, @config['fb_username'], @config['fb_count']) if has_facebook_settings?
+      return FB.get(:connections, @config['fb_username'], @config['fb_count']) if has_facebook_settings?
       []
     end
 
