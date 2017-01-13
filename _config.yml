@@ -24,6 +24,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 gems:
   - jekyll-feed
 exclude:
@@ -33,7 +34,7 @@ sass:
   sass_dir: _sass
 
 languages: ["en","fr",]
-exclude_from_localizations: ["js","css","_sass"]
+exclude_from_localizations: ["js","css","_sass","_plugins/social_wall"]
 
 contentful:
   spaces:

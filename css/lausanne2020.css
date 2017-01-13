@@ -31,7 +31,7 @@ h1 {
   height: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-top: 255px;
+  padding: 305px 0 0 0;
 }
 
 .accent {
@@ -42,8 +42,8 @@ h1 {
   display: block;
   font-family: Montserrat, sans-serif;
   color: #0087cd;
-  font-size: 130px;
-  line-height: 130px;
+  font-size: 81px;
+  line-height: 90px;
   font-weight: 700;
   text-transform: uppercase;
 }

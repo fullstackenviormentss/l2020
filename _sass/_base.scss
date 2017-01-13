@@ -1,3 +1,7 @@
+.container{
+	width:1280px !important;
+}
+
 textarea {
    resize:vertical;
 }
@@ -21,16 +25,23 @@ textarea {
 
 .nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
   font-family: Sanchez, sans-serif;
-  color: #0087cd;
+  color: $blue-primary;
   text-transform: uppercase;
   text-decoration:none !important;
 }
+.nav_link span{
+  color: $blue-primary;
+}
 
 .nav_link.w--current {
-  border-bottom: 2px solid #ce0071;
+  border-bottom: 2px solid $purple-primary;
   font-family: Sanchez, sans-serif;
-  color: #ce0071;
+  color: $purple-primary;
   font-weight: 400;
+}
+
+.nav_link.w--current span{
+  color: $purple-primary;
 }
 
 // Footer
@@ -41,7 +52,7 @@ textarea {
   margin-top: 50px;
   padding-top: 20px;
   padding-bottom: 50px;
-  background-color: #0087cd;
+  background-color: $blue-primary;
 }
 
 .top_footer{
