@@ -36,7 +36,7 @@ module Jekyll
     end
 
     def twitter_posts
-      #return TW.get(:user_timeline, @config['tw_username'], @config['tw_include_rts'], @config['tw_count']) if has_twitter_settings?
+      return TW.get(:user_timeline, @config['tw_username'], @config['tw_include_rts'], @config['tw_count']) if has_twitter_settings?
       []
     end
 
