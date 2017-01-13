@@ -34,7 +34,7 @@ sass:
   sass_dir: _sass
 
 languages: ["en","fr",]
-exclude_from_localizations: ["js","css","_sass","_plugins/social_wall"]
+exclude_from_localizations: ["js","css","_sass"]
 
 contentful:
   spaces:

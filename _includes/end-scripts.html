@@ -7,17 +7,17 @@
 <script src="{{site.url}}/js/vendors/jQuery.curtail.min.js"></script>
 
 <script>
+  $(function(){
 
+    // Randomize title at startup
+    random_number = 1 + Math.floor(Math.random() * 3);
+    $('.the_claim:nth-of-type('+ random_number +')').addClass('w--current');
 
-
-      $(function(){
-        $('.status').curtail({
-              limit: 100,
-              ellipsis: '...',
-              toggle: true
-          });
-  });
-
+    $('.status').curtail({
+          limit: 100,
+          ellipsis: '...',
+          toggle: true
+      });
 
     moment().format();
     // Get the language in html attribute lang=
@@ -61,4 +61,6 @@
       return false;
 
     });
+
+  });
 </script>

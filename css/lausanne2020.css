@@ -46,7 +46,14 @@ h1 {
   line-height: 90px;
   font-weight: 700;
   text-transform: uppercase;
+  display:none;
 }
+
+.the_claim.w--current{
+  display:block;
+}
+
+
 
 .about_yog_section {
   height: auto;
