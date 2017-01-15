@@ -38,12 +38,16 @@
 	  background:#fff;
 	  padding:20px;
 	  font-family: Montserrat, sans-serif;
-		> a > img, > img, > video, > a > iframe, > iframe{
+		> a > img, > img, > a > iframe, > iframe{
 		  height:207px; /* Precise to avoid black line on iframe video */
 			width: 100%;
 			object-fit: cover;
 			font-family: 'object-fit: cover;'
 		}
+    > video{ /* issue on webkit with cover */
+      object-fit: contain;
+      font-family: 'object-fit: contain;'
+    }
 		/* Social_wall Blockquote */
 		blockquote{
 		  margin:0;padding: 20px;
