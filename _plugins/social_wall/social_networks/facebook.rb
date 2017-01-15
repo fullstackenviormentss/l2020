@@ -1,5 +1,4 @@
 require 'koala'
-require 'fileutils'
 require 'mini_magick'
 
 class FB
@@ -41,10 +40,6 @@ class FB
     return Tools.transform_keys_to_symbols(@graph.get_picture_data(object_id, :type => size))
   end
 
-  def post_valid?
-    !@post[:message].nil? && ['photo','video'].include?(@post[:type]) || (@post[:type] == 'link' && @post[:status_type] == 'shared_story')
-  end
-
   def render
     html = String.new
 
@@ -64,6 +59,10 @@ class FB
 
     puts @post[:id]
     return html || ""
+  end
+
+  def post_valid?
+    !@post[:message].nil? && ['photo','video'].include?(@post[:type]) || (@post[:type] == 'link' && @post[:status_type] == 'shared_story')
   end
 
   def post_text_only?
@@ -146,12 +145,8 @@ class FB
     @post.has_key?(:picture) && @post[:picture] != ''
   end
 
-  def path_exist?(path)
+  def has_local_shared_story_picture?(path)
     File.exist? File.expand_path path
-  end
-
-  def create_path(path)
-    FileUtils::mkdir_p path
   end
 
   def parse_shared_story_picture(link)
@@ -170,15 +165,15 @@ class FB
     end
     image.resize "300x300>" # proportional, only if larger
     image.format 'jpg'
-    image.write("_site/images/social_wall/#{@post[:id]}.jpg")
+    image.write("images/social_wall/#{@post[:id]}.jpg")
   end
 
   def shared_story_picture
-    create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
 
-    image_url = parse_shared_story_picture(@post[:picture])
-    shared_story_picture_resize(image_url)
-
+    if has_local_shared_story_picture?("images/social_wall/#{@post[:id]}.jpg")
+      image_url = parse_shared_story_picture(@post[:picture])
+      shared_story_picture_resize(image_url)
+    end
     <<-CODE
       <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
     CODE
