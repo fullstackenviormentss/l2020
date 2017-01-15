@@ -3,4 +3,5 @@ _site
 .jekyll-metadata
 _data/contentful
 .env
-images/social_wall
+images/social_wall/*
+!images/social_wall/.gitkeep
