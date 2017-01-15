@@ -45,6 +45,8 @@
 			font-family: 'object-fit: cover;'
 		}
     > video{ /* issue on webkit with cover */
+      height:207px; /* Precise to avoid black line on iframe video */
+			width: 100%;
       object-fit: contain;
       font-family: 'object-fit: contain;'
     }

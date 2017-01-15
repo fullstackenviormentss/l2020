@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 _data/contentful
 .env
+images/social_wall

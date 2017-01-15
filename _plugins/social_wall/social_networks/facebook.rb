@@ -170,16 +170,14 @@ class FB
     end
     image.resize "300x300>" # proportional, only if larger
     image.format 'jpg'
-    image.write("_site/images/social_wall/#{@post[:id]}.jpg")
+    image.write("images/social_wall/#{@post[:id]}.jpg")
   end
 
   def shared_story_picture
-    create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
+    create_path('images/social_wall') if !path_exist?('images/social_wall')
 
-    if path_exist?("_site/images/social_wall/#{@post[:id]}.jpg")
-      image_url = parse_shared_story_picture(@post[:picture])
-      shared_story_picture_resize(image_url)
-    end
+    image_url = parse_shared_story_picture(@post[:picture])
+    shared_story_picture_resize(image_url)
 
     <<-CODE
       <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
