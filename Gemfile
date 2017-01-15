@@ -17,6 +17,8 @@ gem "koala", "~> 2.2"
 
 gem "twitter", "~> 6.0.0"
 
+gem "mini_magick"
+
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"
   gem "jekyll-multiple-languages-plugin"

@@ -1,4 +1,5 @@
 require 'koala'
+require 'mini_magick'
 
 class FB
 
@@ -105,7 +106,7 @@ class FB
   def video
     if is_facebook_video?
       <<-CODE
-        <video controls>
+        <video preload="auto" controls>
           <source src="#{@post[:source]}" type="video/mp4">
           Your browser does not support the video tag.
           <a href="#{@post[:link]}"><img src="#{@post[:picture]}"/></a>
@@ -140,18 +141,51 @@ class FB
     @post[:type] == 'link' && @post[:status_type] == 'shared_story'
   end
 
-  def parse_shared_story_picture(link)
-    return link.gsub('url=(\S+)&', '\1')
+  def has_shared_story_picture?
+    @post.has_key?(:picture) && @post[:picture] != ''
   end
 
+  def has_local_shared_story_picture?(path)
+    File.exist? File.expand_path path
+  end
+
+  def parse_shared_story_picture(link)
+    link_parsed = CGI.parse(URI.parse(link).query)
+    return link_parsed.has_key?("url") ? link_parsed["url"][0] : link
+  end
+
+  def shared_story_picture_resize(image_url)
+    image = MiniMagick::Image.open(image_url)
+    if image.type == 'PNG'
+      image.combine_options do |c|
+
+        c.background '#FFFFFF' # for transparent png
+        c.alpha 'remove'
+      end
+    end
+    image.resize "300x300>" # proportional, only if larger
+    image.format 'jpg'
+    image.write("images/social_wall/#{@post[:id]}.jpg")
+  end
+
+  def shared_story_picture
+
+    if has_local_shared_story_picture?("images/social_wall/#{@post[:id]}.jpg")
+      image_url = parse_shared_story_picture(@post[:picture])
+      shared_story_picture_resize(image_url)
+    end
+    <<-CODE
+      <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
+    CODE
+  end
 
   def shared_story
     <<-CODE
       <blockquote cite="#{@post[:link]}">
-        <p class="story_img"><a href="#{@post[:link]}"><img src="#{parse_shared_story_picture(@post[:picture])}"></a></p>
+        #{shared_story_picture if has_shared_story_picture?}
         <div class="wrap_story">
           <cite>#{@post[:caption]}</cite>
-          <h1>#{@post[:name]}</h1>
+          <h1><a href="#{@post[:link]}">#{@post[:name]}</a></h1>
           <p class="desc">#{@post[:description]}</p>
           <p class="read_more"></p>
         </div>

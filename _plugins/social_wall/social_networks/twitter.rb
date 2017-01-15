@@ -108,7 +108,7 @@ class TW
   end
 
   def video(bitrate)
-    puts @post[:extended_entities]
+    #puts @post[:extended_entities]
     <<-CODE
 
     CODE
