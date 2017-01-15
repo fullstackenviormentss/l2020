@@ -142,7 +142,6 @@ class TW
               <h1>#{@post[:quoted_status][:user][:name]}</h1>
               <cite><a href="http://twitter.com/#{@post[:quoted_status][:user][:screen_name]}">@#{@post[:quoted_status][:user][:screen_name]}</a></cite>
               <p class="desc">#{parse_text(@post[:quoted_status][:full_text])}</p>
-              <p class="read_more"></p>
             </div>
         </blockquote>
         </a>

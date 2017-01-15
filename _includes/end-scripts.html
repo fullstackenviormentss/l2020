@@ -4,7 +4,7 @@
 <script src="{{site.url}}/js/common.js" type="text/javascript"></script>
 <!-- <script src="{{site.url}}/js/creatives/lausanne2020.js" type="text/javascript"></script> -->
 <script src="{{site.url}}/js/vendors/moment-with-locales.min.js"></script>
-<script src="{{site.url}}/js/vendors/jQuery.curtail.min.js"></script>
+<script src="{{site.url}}/js/vendors/jquery.dotdotdot.min.js"></script>
 
 <script>
   $(function(){
@@ -13,11 +13,27 @@
     random_number = 1 + Math.floor(Math.random() * 3);
     $('.the_claim:nth-of-type('+ random_number +')').addClass('w--current');
 
-    $('.status').curtail({
-          limit: 100,
-          ellipsis: '...',
-          toggle: true
+    /* SOCIAL_WALL */
+
+    // Truncate quoted status and shared story
+    $('.desc').each(function(i, obj) {
+      $el = $(this);
+      $wrap_story= $el.parent();
+      height_available = $wrap_story.outerHeight(true)
+      $ps = $wrap_story.children("*:not(.desc)");
+
+      // measure how tall inside should be by adding together
+      $ps.each(function() {
+        height_available -= $(this).outerHeight(true);
       });
+
+      $el.css('height', height_available)
+
+      $el.dotdotdot()
+
+    });
+
+    // Change Time Format
 
     moment().format();
     // Get the language in html attribute lang=
@@ -25,41 +41,6 @@
     // Change the date for every element time in Social_wall div
     $('.social_wall').find('time').each(function(i){
       $( this ).text(moment($( this ).html()).fromNow());
-    });
-
-
-    var $el, $ps, $up, totalHeight;
-
-    $(".social_wall .status_box .read-more a").click(function() {
-
-      totalHeight = 0
-
-      $el = $(this);
-      $p  = $el.parent();
-      $up = $p.parent();
-      $ps = $up.find("p:not('.read-more')");
-
-      // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-      $ps.each(function() {
-        totalHeight += $(this).outerHeight(true);
-      });
-
-      $up
-        .css({
-          // Set height to prevent instant jumpdown when max height is removed
-          "height": $up.height(true),
-          "max-height": 9999
-        })
-        .animate({
-          "height": totalHeight
-        });
-
-      // fade out read-more
-      $p.fadeOut();
-
-      // prevent jump-down
-      return false;
-
     });
 
   });

@@ -176,10 +176,8 @@ class FB
   def shared_story_picture
     create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
 
-    if path_exist?("_site/images/social_wall/#{@post[:id]}.jpg")
-      image_url = parse_shared_story_picture(@post[:picture])
-      shared_story_picture_resize(image_url)
-    end
+    image_url = parse_shared_story_picture(@post[:picture])
+    shared_story_picture_resize(image_url)
 
     <<-CODE
       <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
@@ -194,7 +192,6 @@ class FB
           <cite>#{@post[:caption]}</cite>
           <h1><a href="#{@post[:link]}">#{@post[:name]}</a></h1>
           <p class="desc">#{@post[:description]}</p>
-          <p class="read_more"></p>
         </div>
       </blockquote>
     CODE
@@ -205,6 +202,8 @@ class FB
   def user_info
     username = FB.get_object(@post[:from][:id])[:username]
     picture = FB.get_picture_data(@post[:from][:id], 'normal')
+    status_id = @post[:id].split('_')
+
     <<-CODE
       <div class="user_info row">
         <p class="profile_image col-xs-3">
@@ -215,7 +214,7 @@ class FB
           <h2 class="username"><a href="https://www.facebook.com/#{username}">@#{username}</a></h2>
         </div>
         <p class="icon_social col-xs-1">
-          <a href="https://www.facebook.com/#{username}"><span class="icon-facebook"></span></a>
+          <a href="http://www.facebook.com/permalink.php?story_fbid=#{status_id[1]}&id=#{status_id[0]}"><span class="icon-facebook"></span></a>
         </p>
       </div>
     CODE
