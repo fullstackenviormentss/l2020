@@ -176,8 +176,10 @@ class FB
   def shared_story_picture
     create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
 
-    image_url = parse_shared_story_picture(@post[:picture])
-    shared_story_picture_resize(image_url)
+    if path_exist?("_site/images/social_wall/#{@post[:id]}.jpg")
+      image_url = parse_shared_story_picture(@post[:picture])
+      shared_story_picture_resize(image_url)
+    end
 
     <<-CODE
       <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
