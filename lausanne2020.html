@@ -19,11 +19,11 @@ layout: default
               {% endif %}
               </h1>
               <p class="p_news">
-              {% if site.lang == "fr" %}
-                {{ new.texte }}
-              {% else %}
-                {{ new.texteEn }}
-              {% endif %}
+                {% if site.lang == "fr" %}
+                  {{ new.texte | markdownify | remove: '<p>' | remove: '</p>'}}
+                {% else %}
+                  {{ new.texteEn | markdownify | remove: '<p>' | remove: '</p>'}}
+                {% endif %}
               </p>
               <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
             </div>
