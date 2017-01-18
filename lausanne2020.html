@@ -20,9 +20,9 @@ layout: default
               </h1>
               <p class="p_news">
                 {% if site.lang == "fr" %}
-                  {{ new.texte | markdownify | remove: '<p>' | remove: '</p>'}}
+                  {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
                 {% else %}
-                  {{ new.texteEn | markdownify | remove: '<p>' | remove: '</p>'}}
+                  {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
                 {% endif %}
               </p>
               <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>

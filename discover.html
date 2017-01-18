@@ -16,9 +16,9 @@ layout: default
     </h1>
     <p class="discover_1 discover_p">
       {% if site.lang == "fr" %}
-        {{ pageDiscover.texteDintroduction | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.texteDintroduction | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
-        {{ pageDiscover.texteDintroductionEn | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.texteDintroductionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
     </p>
     <div class="discover_img row">
@@ -46,9 +46,9 @@ layout: default
     </h1>
     <p class="discover_p discver_bis">
       {% if site.lang == "fr" %}
-        {{ pageDiscover.descriptionSection2 | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.descriptionSection2 | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
-        {{ pageDiscover.descriptionSection2En | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.descriptionSection2En | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
     </p>
   </div>
@@ -78,9 +78,9 @@ layout: default
     </div>
     <p class="discover_p">
       {% if site.lang == "fr" %}
-        {{ pageDiscover.texteSection3 | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.texteSection3 | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
-        {{ pageDiscover.texteSection3En | markdownify | remove: '<p>' | remove: '</p>'}}
+        {{ pageDiscover.texteSection3En | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
     </p>
   </div>
