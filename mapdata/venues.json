@@ -1,0 +1,10 @@
+---
+---
+[{% for venue in site.data.contentful.spaces.venues.venues %}
+  {
+    "title": "{{ venue.titre }}",
+    "title_en": "{{ venue.titreEn }}",
+    "lat": {{ venue.position.lat }},
+    "lng": {{ venue.position.lon }}
+  }{% if forloop.last == false %},{% endif %}
+{% endfor %}]

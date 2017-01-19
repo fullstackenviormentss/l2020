@@ -113,12 +113,6 @@ h1 {
   text-align: right;
 }
 
-.map_section {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #fff;
-}
-
 .map {
   display: block;
   width: 50%;
