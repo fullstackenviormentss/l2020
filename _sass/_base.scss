@@ -1,0 +1,143 @@
+@media (min-width: 1200px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+textarea {
+   resize:vertical;
+}
+
+// Hidden field in form contact against bot spam (leave the name in french)
+.cache{
+  display:none;
+}
+
+// Custom Navigation Bar
+
+.navbar-custom {
+    border-color: transparent;
+    .navbar-toggle {
+        font-size: 24px;
+    }
+    .container{
+      padding-left:0;
+    }
+}
+
+.nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
+  font-family: Sanchez, sans-serif;
+  color: $blue-primary;
+  text-transform: uppercase;
+  text-decoration:none !important;
+}
+.nav_link span{
+  color: $blue-primary;
+}
+
+.nav_link.w--current {
+  border-bottom: 2px solid $purple-primary;
+  font-family: Sanchez, sans-serif;
+  color: $purple-primary;
+  font-weight: 400;
+}
+
+.nav_link.w--current span{
+  color: $purple-primary;
+}
+
+// Footer
+
+.footer{
+  position: relative;
+  z-index: 3000;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: $blue-primary;
+}
+
+.top_footer{
+  position: absolute;
+  left: 0px;
+  top: -61px;
+  right: 0px;
+  display: block;
+  height: 111px;
+  padding-top: 0px;
+  background-image: url('/images/wave_footer_top.svg');
+  background-position: 50% 29%;
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-attachment: scroll;
+}
+
+@media(min-width:767px) {
+    .navbar-custom {
+        background-color: transparent;
+        padding: 17px 0;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        transition: all 0.3s;
+        border: none;
+    }
+    //Contact
+    .form-contact{
+      margin-left: 10px;
+    }
+}
+
+// Navbar Change on Scroll
+
+@media(min-width:767px) {
+    .navbar-custom.affix {
+      background-color:white;
+    }
+}
+
+@media(max-width:767px) {
+  .w-nav-brand .logo{
+      padding:17px 10px 0 30px;
+  }
+    .navbar-header {
+      padding: 10px 0;
+      background-color: #FFF;
+      .navbar-toggle{
+        margin-bottom: -20px;
+        background-color: #C8C8C8;
+        border-radius: 0;
+        height: 70px;
+        color: white;
+        padding: 0 20px;
+        margin-top: 0px;
+
+        &.collapsed{
+          background-color: #FFF;
+          color:black;
+        }
+      }
+    }
+    .navbar-collapse {
+      margin-top: -10px;
+      background-color: #C8C8C8;
+        .nav_link {
+          display:block;
+        }
+    }
+    //Contact
+    .row{
+      margin:0;
+    }
+    //footer
+    .top_footer {
+        top: -60px;
+    }
+}
+
+@media (max-width: 991px){
+  .top_footer {
+      left: 0px;
+      top: -61px;
+      right: 0px;
+  }
+}

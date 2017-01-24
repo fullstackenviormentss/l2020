@@ -1,4 +1,4 @@
-- title: "Home"
+- title: '<span class="icon-home"></span>'
   path: "/fr/"
 - title: "Discover"
   path: "/fr/discover"

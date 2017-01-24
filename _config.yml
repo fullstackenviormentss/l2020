@@ -30,18 +30,28 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+sass:
+  sass_dir: _sass
 
 languages: ["en","fr",]
 exclude_from_localizations: ["js","css","_sass"]
 
 contentful:
   spaces:
-    - example: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID         # Required
+    - news: # Jekyll _data folder identifier - Required
+        space: ENV_CONTENTFUL_SPACE_ID # Required
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:                  # Optional
-          include: 2
-          limit: 100
-        all_entries: false           # Optional - Defaults to false, only grabbing the amount set on CDA Query
-        all_entries_page_size: 1000 # Optional - Defaults to 1000, maximum amount of entries per CDA Request for all_entries
-        destination: destination_in_data # Optional - Defaults to _data/contentful/spaces
+        cda_query:
+          content_type: news
+          order: -fields.date
+          limit: 3
+    - venues: # Jekyll _data folder identifier - Required
+        space: ENV_CONTENTFUL_SPACE_ID # Required
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
+        cda_query:
+          content_type: venues
+    - discover: # Jekyll _data folder identifier - Required
+        space: ENV_CONTENTFUL_SPACE_ID # Required
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
+        cda_query:
+          content_type: pageDiscover

@@ -9,8 +9,16 @@ ruby RUBY_VERSION
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
+gem 'dotenv', :groups => [:development, :test]
+
 gem "jekyll", "3.3.1"
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
+
+gem "koala", "~> 2.2"
+
+gem "twitter", "~> 6.0.0"
+
+gem "mini_magick"
 
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"

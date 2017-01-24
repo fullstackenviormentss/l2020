@@ -1,0 +1,53 @@
+@keyframes fadeindown{
+	from{
+		transform: translate(0px, -31px);
+		opacity:0;
+
+	}
+	to{
+		transform: translate(0px, 0px);
+		opacity:1;
+	}
+}
+
+.anim_fadeindown {
+	animation-name: fadeindown;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes fadeintop{
+	from{
+		transform: translate(0px, 30px);
+		opacity:0;
+
+	}
+	to{
+		transform: translate(0px, 0px);
+		opacity:1;
+	}
+}
+
+.anim_fadeintop {
+	animation-name: fadeintop;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes fadeinscaleup{
+	from{
+		transform: scale(0.67);
+		opacity:0;
+
+	}
+	to{
+		transform: scale(1);
+		opacity:1;
+	}
+}
+
+.anim_fadeinscaleup {
+	animation-name: fadeintop;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+}

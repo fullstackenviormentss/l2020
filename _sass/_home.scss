@@ -1,0 +1,21 @@
+.partners_section{
+	padding: 100px 150px;
+	@media(max-width:768px){
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.partners{
+	display:flex;
+	justify-content: space-between;
+	&:first-child{
+		margin-bottom: 10px;
+	}
+	.partner{
+		flex-basis: 100px; // Optimal size for partner's logo: 100px*50px
+		margin: 0 10px;
+	}
+}
+#map{
+	height: 320px;
+}

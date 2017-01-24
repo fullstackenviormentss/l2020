@@ -2,81 +2,81 @@
 layout: default
 ---
 <div class="latestnews_section">
-    <div class="newsletter_cta_wrap">
+    <div class="newsletter_cta_wrap container">
       <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
-      <div class="w-row">
-        <div class="col-nopadd w-col w-col-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+      <div class="row">
+        {% for new in site.data.contentful.spaces.news.news limit:3 %}
+          <div class="col-nopadd col-md-4">
+            <div class="news_wrap">
+              <div class="">
+                <img src="{{ new.image.url }}">
+              </div>
+              <h1 class="h1_news">
+              {% if site.lang == "fr" %}
+                {{ new.titre }}
+              {% else %}
+                {{ new.titreEn }}
+              {% endif %}
+              </h1>
+              <p class="p_news">
+                {% if site.lang == "fr" %}
+                  {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+                {% else %}
+                  {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+                {% endif %}
+              </p>
+              <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
+            </div>
           </div>
-        </div>
-        <div class="col-nopadd w-col w-col-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-          </div>
-        </div>
-        <div class="col-nopadd w-col w-col-4">
-          <div class="news_wrap">
-            <div class="news_img no-shadow"></div>
-            <h1 class="h1_news">News title</h1>
-            <div class="news_date">08.11.2016</div>
-            <p class="p_news">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
   <div class="about_yog_2 about_yog_section">
-    <div class="about_yog_wrap">
-      <div class="row_about_yog_1 w-row">
-        <div class="w-col w-col-5 w-col-stack">
+    <div class="about_yog_wrap container">
+      <div class="row_about_yog_1 row">
+        <div class="col-md-5">
           <div class="about_img"></div>
         </div>
-        <div class="w-col w-col-7 w-col-stack">
+        <div class="col-md-5">
           <p class="about_the_yog_p floating_txt_right">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
         </div>
       </div>
-      <div class="row_about_yog_2 w-row">
-        <div class="w-col w-col-7 w-col-stack">
+      <div class="row_about_yog_2 row">
+        <div class="col-md-7">
           <p class="about_the_yog_p floating_txt_left">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
         </div>
-        <div class="w-col w-col-5 w-col-stack">
+        <div class="col-md-5">
           <div class="about_img"></div>
         </div>
       </div>
     </div>
   </div>
   <div class="facts facts_2">
-    <div class="facts_wrap">
-      <div class="w-row">
-        <div class="col-facts col-facts_1 w-col w-col-3">
+    <div class="facts_wrap container">
+      <div class="row">
+        <div class="col-facts col-facts_1 col-md-3">
           <div class="wrap_facts">
             <h1 class="h1_facts">240</h1>
             <img class="img_facts" src="images/medal.svg" width="100">
             <h1 class="h2_facts">Medals</h1>
           </div>
         </div>
-        <div class="col-facts w-col w-col-3">
+        <div class="col-facts col-md-3">
           <div class="wrap_facts">
             <h1 class="h1_facts">2365</h1>
             <img class="img_facts" src="images/basketball-jersey.svg" width="100">
             <h1 class="h2_facts">Athletes</h1>
           </div>
         </div>
-        <div class="col-facts col-facts_1 w-col w-col-3">
+        <div class="col-facts col-facts_1 col-md-3">
           <div class="wrap_facts">
             <h1 class="h1_facts">3rd</h1>
             <img class="img_facts" src="images/shapes.svg" width="100">
             <h1 class="h2_facts">Winter Games</h1>
           </div>
         </div>
-        <div class="col-facts w-col w-col-3">
+        <div class="col-facts col-md-3">
           <div class="wrap_facts">
             <h1 class="h1_facts">206</h1>
             <img class="img_facts" src="images/earth-globe.svg" width="100">
@@ -85,6 +85,22 @@ layout: default
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <h2>Venues</h2>
+    <ul>
+    {% for venue in site.data.contentful.spaces.venues.venues %}
+      <li>
+        <a href="#">
+          {% if site.lang == "fr" %}
+            {{ venue.titre }}
+          {% else %}
+            {{ venue.titreEn }}
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+    </ul>
   </div>
   <div class="map_section" data-ix="scroll-nav">
     <div class="map w-widget w-widget-map" data-disable-scroll="1" data-disable-touch="1" data-widget-latlng="46.519654,6.632273" data-widget-style="terrain" data-widget-zoom="13"></div>
