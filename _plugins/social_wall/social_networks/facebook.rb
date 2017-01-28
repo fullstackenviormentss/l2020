@@ -1,8 +1,11 @@
+require_relative 'shared_methods.rb'
 require 'koala'
 require 'fileutils'
 require 'mini_magick'
+require "net/http"
 
 class FB
+  include SharedMethods
 
   def initialize(post, created_time)
     @post = post
@@ -17,149 +20,104 @@ class FB
     @graph = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'], ENV['FACEBOOK_SECRET'])
   end
 
-  def self.get(meth, username, limit)
+  def self.get(meth, username, amount)
     posts_FB = []
 
     FB.new_connection
 
-    posts_FB = FB.method(meth).call(username, limit)
+    posts_FB = FB.method(meth).call(username, amount)
 
-    return posts_FB.map{ |post| FB.new(post, post[:created_time]) }
+    return posts_FB.map{ |post| FB.new(post, post['created_time']) }
   end
 
-  def self.connections(username, limit)
-    return Tools.transform_keys_to_symbols(@graph.get_connections(username,'posts',{limit: limit}))
+  def self.connections(username, count)
+    @graph.get_connections(username,'posts',{limit: count})
   end
 
   def self.get_object(object)
-    return Tools.transform_keys_to_symbols(@graph.get_object(object))
+    @graph.get_object(object)
   end
 
   # Get picture with the following standard size: thumbnail, album, normal
   # Don't return width & height data
   def self.get_picture_data(object_id, size)
-    return Tools.transform_keys_to_symbols(@graph.get_picture_data(object_id, :type => size))
+    @graph.get_picture_data(object_id, 'type' => size)
   end
 
-  def post_valid?
-    !@post[:message].nil? && ['photo','video'].include?(@post[:type]) || (@post[:type] == 'link' && @post[:status_type] == 'shared_story')
+
+
+  def standardize
+    puts @post['id']
+    post = Hash.new
+
+    post['social_network'] = 'facebook'
+
+    post['photo'] = photo if has_photo?
+    post['video'] = video if has_video?
+
+    post['ext_quote'] = ext_quote if has_ext_quote?
+
+    post['message'] = parse_message(@post['message']) if has_message?
+    post['user'] = user_info
+    post['meta'] = meta_info
+
+    return post
   end
 
-  def render
-    html = String.new
 
-    if post_valid?
-      html << "<div class='facebook_status col-md-4 item #{@post[:type]} #{"text_only" if post_text_only?}'><div class='wrap_status'>"
-
-      html << photo if has_photo?
-      html << video if has_video?
-      html << shared_story if has_shared_story?
-
-      html << user_info
-      html << message
-      html << meta_info
-
-      html << "</div></div>"
-    end
-
-    puts @post[:id]
-    return html || ""
-  end
-
-  def post_text_only?
-    !defined?(@post[:type])
-  end
 
   # Photo
 
   def has_photo?
-    @post[:type] == 'photo'
-  end
-
-  def photo_format(width, height)
-    return "square" if width == height
-    return "landscape" if width > height
-    return "portrait" if height > width
+    @post['type'] == 'photo'
   end
 
   def photo
-    photo_data = FB.get_object(@post[:object_id])
-    return  <<-CODE
-        <img src="#{photo_data[:source]}" class="#{photo_format(photo_data[:width].to_i, photo_data[:height].to_i)}" width="#{photo_data[:width]}" height="#{photo_data[:height]}"/>
-    CODE
+    data = FB.get_object(@post['object_id'])
+    src_full = FB.get_picture_data(@post['object_id'], 'normal')['data']['url']
+
+    photo = Hash.new
+    photo['width'] = data['width'].to_i
+    photo['height'] = data['height'].to_i
+    photo['format'] = photo_format(photo['width'], photo['height'])
+    photo['src'] = data['source']
+    photo['src_full'] = src_full
+
+    return photo
   end
 
   # Video
 
   def has_video?
-    @post[:type] == 'video'
-  end
-
-  def is_facebook_video?
-    @post[:source] =~ /^https:\/\/(video.xx.fbcdn.net|scontent.xx.fbcdn.net)/i
-  end
-
-  def parse_video(link)
-    # Youtube custom link
-    return link.gsub('autoplay=1', 'autoplay=0&rel=0&amp;showinfo=0')
+    @post['type'] == 'video'
   end
 
   def video
-    if is_facebook_video?
-      <<-CODE
-        <video preload="auto" controls>
-          <source src="#{@post[:source]}" type="video/mp4">
-          Your browser does not support the video tag.
-          <a href="#{@post[:link]}"><img src="#{@post[:picture]}"/></a>
-        </video>
-      CODE
-    else # Youtube, Dailymotion, Vimeo, more?
-      <<-CODE
-          <iframe src="#{parse_video(@post[:source])}" autoplay="0" frameborder="0" badge="0" portrait="0" byline="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      CODE
-    end
+    video = Hash.new
+    video['provider'] = get_video_provider(@post['source'])
+    video['source'] = parse_video(@post['source'])
+    video['link'] = @post['link']
+    video['picture'] = @post['picture']
+
+    return video
   end
 
-  # Message
+  # Quote
 
-  def parse_message(text)
-    text = text.gsub(/http[s]:\/\/[a-z0-9._\/-]+/i, '<a href="\0">\0</a>')
-    text = text.gsub(/\#([a-z0-9âãäåæçèéêëìíîïðñòóôõøùúûüýþÿı_-]+)/i, '<a class="hashtag" href="https://www.facebook.com/hashtag/\1">#\1</a>')
-    return text
+  def has_ext_quote?
+    @post['type'] == 'link' && @post['status_type'] == 'shared_story'
   end
 
-  def message
-    <<-CODE
-      <div class="status_box">
-        <p class="status">#{parse_message(@post[:message].truncate(180))}</p>
-      </div>
-    CODE
+  def has_ext_quote_picture?
+    @post.has_key?('picture') && @post['picture'] != '' && url_exist?(parse_ext_quote_picture(@post['picture']))
   end
 
-  # Shared Story
-
-  def has_shared_story?
-    @post[:type] == 'link' && @post[:status_type] == 'shared_story'
-  end
-
-  def has_shared_story_picture?
-    @post.has_key?(:picture) && @post[:picture] != ''
-  end
-
-  def path_exist?(path)
-    File.exist? File.expand_path path
-  end
-
-  def create_path(path)
-    FileUtils::mkdir_p path
-  end
-
-  def parse_shared_story_picture(link)
+  def parse_ext_quote_picture(link)
     link_parsed = CGI.parse(URI.parse(link).query)
     return link_parsed.has_key?("url") ? link_parsed["url"][0] : link
   end
 
-  def shared_story_picture_resize(image_url)
+  def ext_quote_picture_resize(image_url)
     image = MiniMagick::Image.open(image_url)
     if image.type == 'PNG'
       image.combine_options do |c|
@@ -170,63 +128,81 @@ class FB
     end
     image.resize "300x300>" # proportional, only if larger
     image.format 'jpg'
-    image.write("_site/images/social_wall/#{@post[:id]}.jpg")
+    image.write("_site/images/social_wall/#{@post['id']}.jpg")
   end
 
-  def shared_story_picture
+  def ext_quote_picture
     create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
 
-    image_url = parse_shared_story_picture(@post[:picture])
-    shared_story_picture_resize(image_url)
+    image_url = parse_ext_quote_picture(@post['picture'])
+    ext_quote_picture_resize(image_url)
 
-    <<-CODE
-      <p class="story_img"><a href="#{@post[:link]}"><img src="images/social_wall/#{@post[:id]}.jpg"></a></p>
-    CODE
+    return "/images/social_wall/#{@post['id']}.jpg"
   end
 
-  def shared_story
-    <<-CODE
-      <blockquote cite="#{@post[:link]}">
-        #{shared_story_picture if has_shared_story_picture?}
-        <div class="wrap_story">
-          <cite>#{@post[:caption]}</cite>
-          <h1><a href="#{@post[:link]}">#{@post[:name]}</a></h1>
-          <p class="desc">#{@post[:description]}</p>
-        </div>
-      </blockquote>
-    CODE
+  def ext_quote
+    quote = Hash.new
+    quote['link'] = @post['link']
+    quote['picture'] = ext_quote_picture if has_ext_quote_picture?
+    quote['source'] = @post['caption']
+    quote['title'] = @post['name']
+    quote['description'] = @post['description']
+
+    return quote
+  end
+
+  def has_message_tags?
+    @post.has_key?('message_tags')
+  end
+
+  # Message
+
+  def has_message?
+    @post.has_key?('message')
+  end
+
+  def parse_message(text)
+    # links
+    text = text.gsub(/(http|https):\/\/[a-z0-9._\/-]+/i, '<a href="\0">\0</a>')
+    # Hashtags
+    text = text.gsub(/\#([a-z0-9âãäåæçèéêëìíîïðñòóôõøùúûüýþÿı_-]+)/i, '<a class="hashtag" href="https://www.facebook.com/hashtag/\1">#\1</a>')
+    # Page, Group, user
+    if has_message_tags?
+
+      @post['message_tags'].each do |k, v|
+        v.each do |h|
+          text = text.gsub(/#{h["name"]}/, "<a class='mention' href='https://www.facebook.com/#{h["id"]}'>#{h["name"]}</a>")
+        end
+      end
+    end
+
+    return text
   end
 
   # Infos
 
   def user_info
-    username = FB.get_object(@post[:from][:id])[:username]
-    picture = FB.get_picture_data(@post[:from][:id], 'normal')
-    status_id = @post[:id].split('_')
+    username = FB.get_object(@post['from']['id'])['username']
+    picture = FB.get_picture_data(@post['from']['id'], 'normal')
 
-    <<-CODE
-      <div class="user_info row">
-        <p class="profile_image col-xs-3">
-          <a href="https://www.facebook.com/#{username}"><img src="#{picture[:data][:url]}" /></a>
-        </p>
-        <div class="wrap_user_name col-xs-8">
-          <h1 class="user"><a href="https://www.facebook.com/#{username}">#{@post[:from][:name]}</a></h1>
-          <h2 class="username"><a href="https://www.facebook.com/#{username}">@#{username}</a></h2>
-        </div>
-        <p class="icon_social col-xs-1">
-          <a href="http://www.facebook.com/permalink.php?story_fbid=#{status_id[1]}&id=#{status_id[0]}"><span class="icon-facebook"></span></a>
-        </p>
-      </div>
-    CODE
+    user = Hash.new
+    user['username'] = username
+    user['profile_image'] = picture['data']['url']
+    user['url'] = "https://www.facebook.com/#{username}"
+    user['name'] = @post['from']['name']
+
+    return user
   end
 
   def meta_info
-    <<-CODE
-      <p class="meta_info">
-        <time pubdate datetime="#{created_time}">#{created_time}</time>
-        <a class="icon-share" href="http://www.facebook.com/share.php?v=4&amp;src=bm&amp;u=#{CGI.escape(@post[:link])}"></a>
-      </p>
-    CODE
+    meta = Hash.new
+    status_id = @post['id'].split('_')
+
+    meta['permalink'] = "http://www.facebook.com/permalink.php?story_fbid=#{status_id[1]}&id=#{status_id[0]}"
+    meta['share_url'] = CGI.escape(@post['link'].to_s)
+    meta['created_time'] = "#{created_time}"
+
+    return meta
   end
 
 end

@@ -51,7 +51,7 @@ layout: default
 </div>
 <div class="map_section" data-ix="scroll-nav">
   <div id="map">
-    
+
   </div>
 </div>
 <div class="facts">
@@ -101,18 +101,20 @@ layout: default
     </div>
   </div>
 </div>
-<div class="social_feed_section">
+<div class="social_feed_section social_wall">
+    <div class='container'>
 
-  {% social_wall
+      {% social_wall
 
-    tw_username: lausanne2020,
-    tw_count: 4,
+        fb_username: lausanne2020,
+        fb_amount: 5,
 
-    fb_username: lausanne2020,
-    fb_count: 5,
+        tw_username: lausanne2020,
+        tw_amount: 4,
 
-  %}
+      %}
 
+    </div>
 </div>
 <div class="partners_section container">
   <div class="partners">
