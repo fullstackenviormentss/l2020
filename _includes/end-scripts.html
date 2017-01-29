@@ -7,6 +7,7 @@
 <script src="{{site.url}}/js/vendors/moment-with-locales.min.js"></script>
 <script src="{{site.url}}/js/vendors/featherlight.min.js"></script>
 <script src="{{site.url}}/js/vendors/jquery.dotdotdot.min.js"></script>
+<script src="https://unpkg.com/object-fit-images/dist/ofi.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpBk0OIM7nh9iOiqxslyGPBSRp_uVaCmw"></script>
 <script>
   $(function(){
@@ -16,6 +17,7 @@
     $('.the_claim:nth-of-type('+ random_number +')').addClass('w--current');
 
     /* SOCIAL_WALL */
+    objectFitImages();
     truncate_desc('.desc');
 
     // Truncate quoted status and shared story
