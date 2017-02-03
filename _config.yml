@@ -50,8 +50,8 @@ contentful:
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
           content_type: venues
-    - discover: # Jekyll _data folder identifier - Required
+    - sectionSites: # Jekyll _data folder identifier - Required
         space: ENV_CONTENTFUL_SPACE_ID # Required
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
-          content_type: pageDiscover
+          content_type: sectionSites

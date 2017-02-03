@@ -1,87 +1,165 @@
 ---
 layout: default
 ---
-{% assign pageDiscover = site.data.contentful.spaces.discover.pageDiscover[0]%}
+{% assign section1 = site.data.contentful.spaces.sectionSites.sectionSites[0]%}
+{% assign section2 = site.data.contentful.spaces.sectionSites.sectionSites[1]%}
 <div class="hero hero-discover">
   <div class="enorme_claim_wrap"></div>
 </div>
-<div class="section_intro_discover">
-  <div class="discover_wrap container">
-    <h1 class="h1_bis h1_discover">
+<div class="sites">
+  <div class="container">
+    <h1>
       {% if site.lang == "fr" %}
-        {{ pageDiscover.titre }}
+        {{ section1.titre }}
       {% else %}
-        {{ pageDiscover.titreEn }}
+        {{ section1.titreEn }}
       {% endif %}
     </h1>
     <p class="discover_1 discover_p">
       {% if site.lang == "fr" %}
-        {{ pageDiscover.texteDintroduction | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+        {{ section1.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
-        {{ pageDiscover.texteDintroductionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+        {{ section1.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
     </p>
-    <div class="discover_img row">
-      <div class="col-md-4">
-        <img src="{{ pageDiscover.imageSection1.url }}">
+    <div class="row-sites row">
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite1.url }}"); background-position: 0px 0px; background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section1.titreSite1}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section1.descriptionSite1 }}
+              {% else %}
+                {{ section1.descriptionSite1En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <img src="{{ pageDiscover.image2Section1.url }}">
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite2.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section1.titreSite2}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section1.descriptionSite2 }}
+              {% else %}
+                {{ section1.descriptionSite2En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <img src="{{ pageDiscover.image3Section1.url }}">
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite3.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section1.titreSite3}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section1.descriptionSite3 }}
+              {% else %}
+                {{ section1.descriptionSite3En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite4.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section1.titreSite4}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section1.descriptionSite4 }}
+              {% else %}
+                {{ section1.descriptionSite4En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 <div class="map_section" data-ix="scroll-nav">
-  <div class="map w-widget w-widget-map" data-disable-scroll="1" data-disable-touch="1" data-widget-latlng="46.519654,6.632273" data-widget-style="satellite" data-widget-zoom="13"></div>
-  <div class="map_discover_wrap">
-    <h1 class="h1-bis h1-third h1_discover">
-      {% if site.lang == "fr" %}
-        {{ pageDiscover.titreSection2 }}
-      {% else %}
-        {{ pageDiscover.titreSection2En }}
-      {% endif %}
-    </h1>
-    <p class="discover_p discver_bis">
-      {% if site.lang == "fr" %}
-        {{ pageDiscover.descriptionSection2 | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
-      {% else %}
-        {{ pageDiscover.descriptionSection2En | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
-      {% endif %}
-    </p>
-  </div>
-  <div class="map_wrap map_wrap_discover w-clearfix">
-    <img class="map map_discover" src="{{ pageDiscover.imageSection2.url }}">
+  <div id="map">
+
   </div>
 </div>
-<div class="discover_3 section_intro_discover">
-  <div class="discover_wrap container">
-    <h1 class="h1_discover">
+<div class="sites">
+  <div class="container">
+    <h1>
       {% if site.lang == "fr" %}
-        {{ pageDiscover.titreSection3 }}
+        {{ section2.titre }}
       {% else %}
-        {{ pageDiscover.titreSection3En }}
+        {{ section2.titreEn }}
       {% endif %}
     </h1>
-    <div class="discover_img row">
-      <div class="col-md-2">
-        <img src="{{ pageDiscover.image1Section3.url }}">
-      </div>
-      <div class="col-md-7">
-        <img src="{{ pageDiscover.image2Section3.url }}">
-      </div>
-      <div class="col-md-3">
-        <img src="{{ pageDiscover.image3Section3.url }}">
-      </div>
-    </div>
-    <p class="discover_p">
+    <p class="discover_1 discover_p">
       {% if site.lang == "fr" %}
-        {{ pageDiscover.texteSection3 | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+        {{ section2.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
-        {{ pageDiscover.texteSection3En | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+        {{ section2.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
     </p>
+    <div class="row-sites row">
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite1.url }}"); background-position: 0px 0px; background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section2.titreSite1}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section2.descriptionSite1 }}
+              {% else %}
+                {{ section2.descriptionSite1En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite2.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section2.titreSite2}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section2.descriptionSite2 }}
+              {% else %}
+                {{ section2.descriptionSite2En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite3.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section2.titreSite3}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section2.descriptionSite3 }}
+              {% else %}
+                {{ section2.descriptionSite3En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite4.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
+          <div class="overlay_sites">
+            <h1 class="h1_overlay">{{section2.titreSite4}}</h1>
+            <p class="p_overlay">
+              {% if site.lang == "fr" %}
+                {{ section2.descriptionSite4 }}
+              {% else %}
+                {{ section2.descriptionSite4En }}
+              {% endif %}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
