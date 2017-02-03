@@ -8,6 +8,77 @@ layout: default
     <h1 class="the_claim">Jeux d'hiver<br/><span class="accent">de la jeunesse</span></h1>
   </div>
 </div>
+<div class="about_yog_section">
+  <div class="about_yog_wrap container">
+    <div class="row">
+      <div class="col-md-4">
+        <h1 class="h1_about_yog">ABOUT <br>THE YOG</h1>
+      </div>
+      <div class="col-md-8">
+        <p class="about_the_yog_p">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="latestnews_section">
+  <div class="newsletter_cta_wrap container">
+    <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
+    <div class="row">
+      {% for new in site.data.contentful.spaces.news.news limit:3 %}
+        <div class="col-nopadd col-md-4">
+          <div class="news_wrap">
+            <div class="">
+              <img src="{{ new.image.url }}">
+            </div>
+            <h1 class="h1_news">
+            {% if site.lang == "fr" %}
+              {{ new.titre }}
+            {% else %}
+              {{ new.titreEn }}
+            {% endif %}
+            </h1>
+            <p class="p_news">
+              {% if site.lang == "fr" %}
+                {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+              {% else %}
+                {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+              {% endif %}
+            </p>
+            <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="marchandising_section">
+  <div class="marchandising_wrap container">
+    <div class="row">
+      <div class="marchandising_col_1 col-md-6">
+        <h1 class="h1_newsletter_cta shop_cta">Discover all the goodies in our marchandising partner shop!</h1>
+        <a class="shop_btn w-button" href="#">Shop!</a>
+      </div>
+      <div class="col-md-6">
+        <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="social_feed_section social_wall">
+    <div class='container'>
+
+      {% social_wall
+
+        fb_username: lausanne2020,
+        fb_amount: 5,
+
+        tw_username: lausanne2020,
+        tw_amount: 4,
+
+      %}
+
+    </div>
+</div>
 <div class="newsletter_cta">
   <div class="newsletter_cta_wrap container">
     <div class="row">
@@ -35,23 +106,6 @@ layout: default
         </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="about_yog_section">
-  <div class="about_yog_wrap container">
-    <div class="row">
-      <div class="col-md-4">
-        <h1 class="h1_about_yog">ABOUT <br>THE YOG</h1>
-      </div>
-      <div class="col-md-8">
-        <p class="about_the_yog_p">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="map_section" data-ix="scroll-nav">
-  <div id="map">
-
   </div>
 </div>
 <div class="facts">
@@ -87,34 +141,6 @@ layout: default
       </div>
     </div>
   </div>
-</div>
-<div class="marchandising_section">
-  <div class="marchandising_wrap container">
-    <div class="row">
-      <div class="marchandising_col_1 col-md-6">
-        <h1 class="h1_newsletter_cta shop_cta">Discover all the goodies in our marchandising partner shop!</h1>
-        <a class="shop_btn w-button" href="#">Shop!</a>
-      </div>
-      <div class="col-md-6">
-        <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="social_feed_section social_wall">
-    <div class='container'>
-
-      {% social_wall
-
-        fb_username: lausanne2020,
-        fb_amount: 5,
-
-        tw_username: lausanne2020,
-        tw_amount: 4,
-
-      %}
-
-    </div>
 </div>
 <div class="partners_section container">
   <div class="partners">
