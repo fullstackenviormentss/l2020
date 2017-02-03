@@ -1032,6 +1032,9 @@ h1 {
 .overlay_sites:hover{
   opacity: 1;
 }
+.row-sites div.col-md-3{
+  overflow: auto;
+}
 @media (max-width: 479px){
   .overlay_sites {
     margin-top: 200px;

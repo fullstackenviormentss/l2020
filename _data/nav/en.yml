@@ -1,8 +1,8 @@
 - title: '<span class="icon-home"></span>'
   path: "/"
-- title: "Discover"
-  path: "/discover"
-- title: "Lausanne2020"
-  path: "/lausanne2020"
+- title: "The sites"
+  path: "/the-sites"
+- title: "About"
+  path: "/About"
 - title: "Contact"
   path: "/contact"
