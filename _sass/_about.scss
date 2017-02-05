@@ -50,3 +50,25 @@
 		font-weight: 400;
     }
 }
+.about_the_yog_p.descr_pictos{
+    margin-bottom: 50px;
+    text-align: center;
+    a{
+        color: #fff;
+    }
+}
+@media (max-width: 991px){
+    .key_numbers_text {
+        position: static;
+        text-align: center;
+    }
+}
+.key_numbers_text {
+    line-height: 19px;
+}
+.key_numbers_text {
+    text-align: left;
+}
+.key_numbers_img {
+    padding-top:20px;
+}

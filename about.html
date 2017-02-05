@@ -196,35 +196,19 @@ layout: default
     <h1>Chiffres clés</h1>
     <div class="row_about_yog_2 row">
       <div class="col-md-7">
-        <p>Quelques chiffres issus de la dernière édition en date, Lillehammer 2016&nbsp;:
-          <br>
-          <br>
-          <br>• Environ 1’200 athlètes entre 15 et 18 ans
-          <br>
-          <br>• 70 nations
-          <br>
-          <br> • 10 jours de compétition et festivals
-          <br>
-          <br> • Environ 3'000 bénévoles
-          <br>
-          <br> • 720 journalistes de 70 pays
-          <br>
-          <br> • 100 000 spectateurs dont 20 000 écoliers sur les sites de compétition
-          <br>
-          <br> • 95 000 spectateurs pour le festival culturel et éducatif
-          <br>
-          <br> • 6 millions de minutes vues sur Youtube
-          <br>
-          <br> • 9 380 000 impressions sur Facebook
-          <br>
-          <br> • 30 millions de vues sur Instagram
-          <br>
-          <br> • Couverture news sur 143 chaines internationales (total 29 heures)
-          <br>
-          <br> • 4 000 articles de presse à travers le monde</p>
+        <p class="key_numbers_text">
+        {% assign keyn = site.data.contentful.spaces.keyNumbers.keyNumbers[0]%}
+        {% if site.lang == "fr" %}
+          {{ keyn.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+        {% else %}
+          {{ keyn.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+        {% else %}
+          {{ keyn.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+        {% endif %}
+        </p>
       </div>
-      <div class="col-md-5">
-        <img src="http://uploads.webflow.com/5808c5805740fb8239ba0b9d/58941e4d8031687f489aa464_Picture1.png">
+      <div class="col-md-5 key_numbers_img">
+        <img src="{{ keyn.image.url }}">
       </div>
     </div>
   </div>
