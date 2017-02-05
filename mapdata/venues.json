@@ -4,6 +4,11 @@
   {
     "title": "{{ venue.titre }}",
     "title_en": "{{ venue.titreEn }}",
+    "title_de": "{{ venue.titreDe }}",
+    "texte_fr": "{{ venue.texte }}",
+    "texte_en": "{{ venue.texteEn }}",
+    "texte_de": "{{ venue.texteDe }}",
+    "link": "{{ venue.link }}",
     "lat": {{ venue.position.lat }},
     "lng": {{ venue.position.lon }}
   }{% if forloop.last == false %},{% endif %}

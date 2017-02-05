@@ -1,110 +1,231 @@
 ---
 layout: default
 ---
-<div class="latestnews_section">
-    <div class="newsletter_cta_wrap container">
-      <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
-      <div class="row">
-        {% for new in site.data.contentful.spaces.news.news limit:3 %}
-          <div class="col-nopadd col-md-4">
-            <div class="news_wrap">
-              <div class="">
-                <img src="{{ new.image.url }}">
-              </div>
-              <h1 class="h1_news">
-              {% if site.lang == "fr" %}
-                {{ new.titre }}
-              {% else %}
-                {{ new.titreEn }}
-              {% endif %}
-              </h1>
-              <p class="p_news">
-                {% if site.lang == "fr" %}
-                  {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-                {% else %}
-                  {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-                {% endif %}
-              </p>
-              <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
-            </div>
-          </div>
-        {% endfor %}
+<div class="about_yog_2 about_yog_section">
+  <div class="about_yog_wrap container">
+    <div class="row_about_yog_1 row">
+      <div class="col-md-5">
+        <div class="about_img"></div>
+      </div>
+      <div class="col-md-5">
+        <p class="about_the_yog_p floating_txt_right">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+      </div>
+    </div>
+    <div class="row_about_yog_2 row">
+      <div class="col-md-7">
+        <p class="about_the_yog_p floating_txt_left">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+      </div>
+      <div class="col-md-5">
+        <div class="about_img"></div>
       </div>
     </div>
   </div>
-  <div class="about_yog_2 about_yog_section">
-    <div class="about_yog_wrap container">
-      <div class="row_about_yog_1 row">
-        <div class="col-md-5">
-          <div class="about_img"></div>
+</div>
+<div class="sports">
+  <div class="container">
+    <h1>Les sports</h1>
+    <p>Le programme sportif des Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont&nbsp;:</p>
+    <div class="pictos row">
+      <div class="col-md-4">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-2-biathlon.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-2-biathlon.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-2-biathlon.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-2-biathlon.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Biathlon</a>
+          </div>
         </div>
-        <div class="col-md-5">
-          <p class="about_the_yog_p floating_txt_right">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-9-curling.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-9-curling.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-9-curling.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-9-curling.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Curling</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-12-ski-freestyle.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-12-ski-freestyle.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-12-ski-freestyle.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-12-ski-freestyle.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Ski Freestyle</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-13-bobsleigh.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-13-bobsleigh.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-13-bobsleigh.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-13-bobsleigh.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Bobsleigh</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-15-luge.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-15-luge.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-15-luge.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-15-luge.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Luge</a>
+          </div>
         </div>
       </div>
-      <div class="row_about_yog_2 row">
-        <div class="col-md-7">
-          <p class="about_the_yog_p floating_txt_left">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+      <div class="col-md-4">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-4-combine-nordique.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-4-combine-nordique.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-4-combine-nordique.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-4-combine-nordique.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Combiné nordique</a>
+          </div>
         </div>
-        <div class="col-md-5">
-          <div class="about_img"></div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-5-hockey-sur-glace.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-5-hockey-sur-glace.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-5-hockey-sur-glace.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-5-hockey-sur-glace.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Hockey sur glace</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-6-patinage-artistique.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-6-patinage-artistique.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-6-patinage-artistique.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-6-patinage-artistique.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Patinage artistique</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-11-ski-alpin.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-11-ski-alpin.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-11-ski-alpin.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-11-ski-alpin.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Ski alpin</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-7-patinage-vitesse.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-7-patinage-vitesse.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-7-patinage-vitesse.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-7-patinage-vitesse.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Patinage de vitesse</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-8-short-track.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-8-short-track.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-8-short-track.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-8-short-track.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Patinage de vitesse sur piste courte (short track)</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-3-saut-a-ski.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-3-saut-a-ski.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-3-saut-a-ski.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-3-saut-a-ski.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Saut à ski</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-14-skeleton.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-14-skeleton.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-14-skeleton.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-14-skeleton.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Skeleton</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-1-ski-de-fond.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-1-ski-de-fond.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-1-ski-de-fond.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-1-ski-de-fond.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Ski de fond</a>
+          </div>
+        </div>
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 991px) 8vw, 101.65625px" src="images/LS2020-pictos-RGB-MULTICOLOR-10-snowboard.png" srcset="images/LS2020-pictos-RGB-MULTICOLOR-10-snowboard.png 500w, images/LS2020-pictos-RGB-MULTICOLOR-10-snowboard.png 800w, images/LS2020-pictos-RGB-MULTICOLOR-10-snowboard.png 1004w">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="#">Snowboard</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="about_the_yog_p descr_pictos"><a href="#" class="link_site">Découvrez les sites de compétition ici</a>
+    </p>
+  </div>
+</div>
+<div class="facts facts_2">
+  <div class="facts_wrap container">
+    <div class="row">
+      <div class="col-facts col-facts_1 col-md-3">
+        <div class="wrap_facts">
+          <h1 class="h1_facts">240</h1>
+          <img class="img_facts" src="images/medal.svg" width="100">
+          <h1 class="h2_facts">Medals</h1>
+        </div>
+      </div>
+      <div class="col-facts col-md-3">
+        <div class="wrap_facts">
+          <h1 class="h1_facts">2365</h1>
+          <img class="img_facts" src="images/basketball-jersey.svg" width="100">
+          <h1 class="h2_facts">Athletes</h1>
+        </div>
+      </div>
+      <div class="col-facts col-facts_1 col-md-3">
+        <div class="wrap_facts">
+          <h1 class="h1_facts">3rd</h1>
+          <img class="img_facts" src="images/shapes.svg" width="100">
+          <h1 class="h2_facts">Winter Games</h1>
+        </div>
+      </div>
+      <div class="col-facts col-md-3">
+        <div class="wrap_facts">
+          <h1 class="h1_facts">206</h1>
+          <img class="img_facts" src="images/earth-globe.svg" width="100">
+          <h1 class="h2_facts">Countries</h1>
         </div>
       </div>
     </div>
   </div>
-  <div class="facts facts_2">
-    <div class="facts_wrap container">
-      <div class="row">
-        <div class="col-facts col-facts_1 col-md-3">
-          <div class="wrap_facts">
-            <h1 class="h1_facts">240</h1>
-            <img class="img_facts" src="images/medal.svg" width="100">
-            <h1 class="h2_facts">Medals</h1>
-          </div>
-        </div>
-        <div class="col-facts col-md-3">
-          <div class="wrap_facts">
-            <h1 class="h1_facts">2365</h1>
-            <img class="img_facts" src="images/basketball-jersey.svg" width="100">
-            <h1 class="h2_facts">Athletes</h1>
-          </div>
-        </div>
-        <div class="col-facts col-facts_1 col-md-3">
-          <div class="wrap_facts">
-            <h1 class="h1_facts">3rd</h1>
-            <img class="img_facts" src="images/shapes.svg" width="100">
-            <h1 class="h2_facts">Winter Games</h1>
-          </div>
-        </div>
-        <div class="col-facts col-md-3">
-          <div class="wrap_facts">
-            <h1 class="h1_facts">206</h1>
-            <img class="img_facts" src="images/earth-globe.svg" width="100">
-            <h1 class="h2_facts">Countries</h1>
-          </div>
-        </div>
+</div>
+<div class="key_numbers">
+  <div class="container">
+    <h1>Chiffres clés</h1>
+    <div class="row_about_yog_2 row">
+      <div class="col-md-7">
+        <p>Quelques chiffres issus de la dernière édition en date, Lillehammer 2016&nbsp;:
+          <br>
+          <br>
+          <br>• Environ 1’200 athlètes entre 15 et 18 ans
+          <br>
+          <br>• 70 nations
+          <br>
+          <br> • 10 jours de compétition et festivals
+          <br>
+          <br> • Environ 3'000 bénévoles
+          <br>
+          <br> • 720 journalistes de 70 pays
+          <br>
+          <br> • 100 000 spectateurs dont 20 000 écoliers sur les sites de compétition
+          <br>
+          <br> • 95 000 spectateurs pour le festival culturel et éducatif
+          <br>
+          <br> • 6 millions de minutes vues sur Youtube
+          <br>
+          <br> • 9 380 000 impressions sur Facebook
+          <br>
+          <br> • 30 millions de vues sur Instagram
+          <br>
+          <br> • Couverture news sur 143 chaines internationales (total 29 heures)
+          <br>
+          <br> • 4 000 articles de presse à travers le monde</p>
+      </div>
+      <div class="col-md-5">
+        <img src="http://uploads.webflow.com/5808c5805740fb8239ba0b9d/58941e4d8031687f489aa464_Picture1.png">
       </div>
     </div>
   </div>
-  <div>
-    <h2>Venues</h2>
-    <ul>
-    {% for venue in site.data.contentful.spaces.venues.venues %}
-      <li>
-        <a href="#">
-          {% if site.lang == "fr" %}
-            {{ venue.titre }}
-          {% else %}
-            {{ venue.titreEn }}
-          {% endif %}
-        </a>
-      </li>
-    {% endfor %}
-    </ul>
-  </div>
-  <div class="map_section" data-ix="scroll-nav">
-    <div class="map w-widget w-widget-map" data-disable-scroll="1" data-disable-touch="1" data-widget-latlng="46.519654,6.632273" data-widget-style="terrain" data-widget-zoom="13"></div>
-    <div class="map_wrap">
-      <img class="map" sizes="(max-width: 991px) 80vw, 50vw" src="images/map_test.png" srcset="images/map_test-p-500x323.png 500w, images/map_test-p-800x517.png 800w, images/map_test-p-1080x697.png 1080w, images/map_test.png 1130w">
-    </div>
-  </div>
+</div>

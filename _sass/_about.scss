@@ -1,0 +1,52 @@
+.about_yog_section{
+	margin-top:95px;
+}
+.sports{
+	padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url(images/bkg_blue.png), linear-gradient(180deg, #0087cd, #0087cd);
+    background-position: 0px 0px, 0px 0px;
+    background-size: cover, auto;
+    h1{
+    	text-align: center;
+    	color: #fff;
+    }
+    p{
+    	text-align: center;
+    	color: #fff;
+    	margin-bottom: 50px;
+	    margin-top: 20px;
+		color: #fff;
+		font-size: 19px;
+		line-height: 27px;
+		font-weight: 400;
+    }
+    .pictos-grp {
+    	margin-bottom: 20px;
+	}
+	.links_sports {
+		display: inline-block;
+		margin-top: 10px;
+		font-family: Montserrat, sans-serif;
+		color: #fff;
+		font-size: 16px;
+	}
+}
+.key_numbers{
+	background-image: url(images/bkg_blue.png), linear-gradient(180deg, #0087cd, #0087cd);
+    background-position: 0px 0px, 0px 0px;
+    background-size: cover, auto;
+	h1{
+    	text-align: center;
+    	color: #fff;
+    }
+    p{
+    	color: #fff;
+    	margin-bottom: 50px;
+	    margin-top: 20px;
+		color: #fff;
+		font-size: 19px;
+		line-height: 27px;
+		font-weight: 400;
+    }
+}
