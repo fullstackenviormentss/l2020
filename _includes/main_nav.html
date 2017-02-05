@@ -1,7 +1,11 @@
 {% if site.lang == "en" %}
   {% assign nav = site.data.nav.en %}
-{% else if site.lang == "fr" %}
+{% endif %}
+{% if site.lang == "fr" %}
   {% assign nav = site.data.nav.fr %}
+{% endif %}
+{% if site.lang == "de" %}
+  {% assign nav = site.data.nav.de %}
 {% endif %}
 
 <!-- Navigation -->
@@ -24,7 +28,7 @@
 
               {% for link in nav %}
 
-                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' |first}}{% endcapture %}
+                {% capture currentpage %}{{ site.url }}{{ page.url | split:'.html' |first}}{% endcapture %}
 
                 {% if currentpage == link.path %}
                   <a class="nav_link w-nav-link w--current" href="{{link.path}}">
@@ -38,13 +42,20 @@
             </div>
             <div class="nav navbar-nav navbar-left">
               {% if site.lang == "fr" %}
-              {% capture link1 %}{{ site.baseurl_root }}{{ page.url}}{% endcapture %}
-              <a href="{{ link1 }}" >en</a>
+                {% capture link1 %}{{ site.url }}{{ page.url}}{% endcapture %}
+                <a href="{{ link1 }}" >en</a>
+                {% capture link3 %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
+                <a href="{{ link3 }}" >de</a>
               {% elsif site.lang == "en" %}
-                {% capture link2 %}{{ site.baseurl_root }}fr{{ page.url  }}{% endcapture %}
+                {% capture link2 %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
                 <a href="{{ link2 }}" >fr</a>
-                {% else%}
-                <a href="#">AUCUNE LANGUE</a>
+                {% capture link3 %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
+                <a href="{{ link3 }}" >de</a>
+              {% elsif site.lang == "de" %}
+                {% capture link1 %}{{ site.url }}{{ page.url}}{% endcapture %}
+                <a href="{{ link1 }}" >en</a>
+                {% capture link2 %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
+                <a href="{{ link2 }}" >fr</a>
               {% endif %}
             </div>
           </div>
