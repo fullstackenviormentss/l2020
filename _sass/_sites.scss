@@ -1,5 +1,11 @@
 .sqr{
 	width:100%;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    background: #ececec;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .sqr .inside {
     position: absolute;
@@ -9,7 +15,7 @@
     bottom: 0;
 }
 .sqr .inside .hover {
-    background: rgba(0,188,255,0.6);
+    background: linear-gradient(180deg, rgba(206, 0, 113, .78), rgba(206, 0, 113, .78));
     padding: 5px;
     width: 65%;
     height: 75px;
@@ -32,15 +38,6 @@
     right: 0;
     bottom: 0;
     z-index: 1;
-}
-.sqr {
-    position: relative;
-    // width: 25%;
-    float: left;
-    background: #ececec;
-    overflow: hidden;
-    box-sizing: border-box;
-    // border: 5px solid #fff;
 }
 .sqr:before {
     display: block;
