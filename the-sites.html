@@ -24,60 +24,80 @@ layout: default
     </p>
     <div class="row-sites row">
       <div class="col-md-3">
-        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite1.url }}"); background-position: 0px 0px; background-size: cover;' data-ix="overlay">
-          <div class="overlay_sites">
-            <h1 class="h1_overlay">{{section1.titreSite1}}</h1>
-            <p class="p_overlay">
-              {% if site.lang == "fr" %}
-                {{ section1.descriptionSite1 }}
-              {% else %}
-                {{ section1.descriptionSite1En }}
-              {% endif %}
-            </p>
+        <a class="sqr" title="{{section1.titreSite1}}" href="#">
+          <div class="inside">
+            <div class="hover">
+              <div class="title">{{section1.titreSite1}}</div>
+              <div class="description">
+                {% if site.lang == "fr" %}
+                  {{ section1.descriptionSite1 }}
+                {% else %}
+                  {{ section1.descriptionSite1En }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="img">
+              <img src="{{ section1.imageSite1.url }}" alt="{{section1.titreSite1}}">
+            </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-md-3">
-        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite2.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
-          <div class="overlay_sites">
-            <h1 class="h1_overlay">{{section1.titreSite2}}</h1>
-            <p class="p_overlay">
-              {% if site.lang == "fr" %}
-                {{ section1.descriptionSite2 }}
-              {% else %}
-                {{ section1.descriptionSite2En }}
-              {% endif %}
-            </p>
+        <a class="sqr" title="{{section1.titreSite1}}" href="#">
+          <div class="inside">
+            <div class="hover">
+              <div class="title">{{section1.titreSite1}}</div>
+              <div class="description">
+                {% if site.lang == "fr" %}
+                  {{ section1.descriptionSite1 }}
+                {% else %}
+                  {{ section1.descriptionSite1En }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="img">
+              <img src="{{ section1.imageSite1.url }}" alt="{{section1.titreSite1}}">
+            </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-md-3">
-        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite3.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
-          <div class="overlay_sites">
-            <h1 class="h1_overlay">{{section1.titreSite3}}</h1>
-            <p class="p_overlay">
-              {% if site.lang == "fr" %}
-                {{ section1.descriptionSite3 }}
-              {% else %}
-                {{ section1.descriptionSite3En }}
-              {% endif %}
-            </p>
+        <a class="sqr" title="{{section1.titreSite1}}" href="#">
+          <div class="inside">
+            <div class="hover">
+              <div class="title">{{section1.titreSite1}}</div>
+              <div class="description">
+                {% if site.lang == "fr" %}
+                  {{ section1.descriptionSite1 }}
+                {% else %}
+                  {{ section1.descriptionSite1En }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="img">
+              <img src="{{ section1.imageSite1.url }}" alt="{{section1.titreSite1}}">
+            </div>
           </div>
-        </div>
+        </a>
       </div>
       <div class="col-md-3">
-        <div class="sites_thumb" style='background-image: url("{{ section1.imageSite4.url }}"); background-position: 0px 0px;background-size: cover;' data-ix="overlay">
-          <div class="overlay_sites">
-            <h1 class="h1_overlay">{{section1.titreSite4}}</h1>
-            <p class="p_overlay">
-              {% if site.lang == "fr" %}
-                {{ section1.descriptionSite4 }}
-              {% else %}
-                {{ section1.descriptionSite4En }}
-              {% endif %}
-            </p>
+        <a class="sqr" title="{{section1.titreSite1}}" href="#">
+          <div class="inside">
+            <div class="hover">
+              <div class="title">{{section1.titreSite1}}</div>
+              <div class="description">
+                {% if site.lang == "fr" %}
+                  {{ section1.descriptionSite1 }}
+                {% else %}
+                  {{ section1.descriptionSite1En }}
+                {% endif %}
+              </div>
+            </div>
+            <div class="img">
+              <img src="{{ section1.imageSite1.url }}" alt="{{section1.titreSite1}}">
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
