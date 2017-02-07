@@ -141,44 +141,34 @@ layout: default
   </div>
 </div>
 <div class="partners_section container">
-  <div class="partners">
-    <div class="partner">
-      <img src="images/black.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/blue.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/red.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/green.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/red.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/blue.jpg">
-    </div>
-  </div>
-  <div class="partners">
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-    <div class="partner">
-      <img src="images/cola.jpg">
-    </div>
-  </div>
+    {% for partner in site.data.contentful.spaces.partnersLogos.partnersLogos[0].cioPartners %}
+      {% capture modulo %}{{ forloop.index0 | modulo:5 }}{% endcapture %}
+      {% if modulo == '0' and forloop.first == false %}
+        </div>
+      {% endif %}
+      {% if modulo == '0' %}
+        <div class="partners">
+      {% endif %}
+      <div class="partner">
+        <img src="{{ partner.url }}" alt="{{partner.description}}">
+      </div>
+      {% if forloop.last == true %}
+        </div>
+      {% endif %}
+    {% endfor %}
+    {% for partner in site.data.contentful.spaces.partnersLogos.partnersLogos[0].goldPartners %}
+      {% capture modulo %}{{ forloop.index0 | modulo:5 }}{% endcapture %}
+      {% if modulo == '0' and forloop.first == false %}
+        </div>
+      {% endif %}
+      {% if modulo == '0' %}
+        <div class="partners">
+      {% endif %}
+      <div class="partner">
+        <img src="{{ partner.url }}" alt="{{partner.description}}">
+      </div>
+      {% if forloop.last == true %}
+        </div>
+      {% endif %}
+    {% endfor %}
 </div>
