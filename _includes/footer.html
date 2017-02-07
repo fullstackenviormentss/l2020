@@ -1,11 +1,11 @@
 {% if site.lang == "en" %}
-  {% assign nav = site.data.nav.en %}
+  {% assign nav = site.data.nav-footer.en %}
 {% endif %}
 {% if site.lang == "fr" %}
-  {% assign nav = site.data.nav.fr %}
+  {% assign nav = site.data.nav-footer.fr %}
 {% endif %}
 {% if site.lang == "de" %}
-  {% assign nav = site.data.nav.de %}
+  {% assign nav = site.data.nav-footer.de %}
 {% endif %}
 <div class="footer">
   <div class="container">
@@ -23,12 +23,6 @@
             <a class="footer_link" href="{{link.path}}">{{link.title}}</a>
             </li>
           {% endfor %}
-          <li>
-            <a class="footer_link" href="#">{% t footer.links.jobs %}</a>
-          </li>
-          <li>
-            <a class="footer_link" href="#">{% t footer.links.volunteers %}</a>
-          </li>
         </ul>
       </div>
     </div>

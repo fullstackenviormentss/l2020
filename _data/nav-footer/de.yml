@@ -1,0 +1,12 @@
+- title: '<span class="icon-home"></span>'
+  path: "/de/"
+- title: "A propos"
+  path: "/de/about"
+- title: "Les sites"
+  path: "/de/the-sites"
+- title: "Emplois"
+  path: "/de/jobs"
+- title: "Bénévoles"
+  path: "/de/volunteers"
+- title: "Contact"
+  path: "/de/contact"
