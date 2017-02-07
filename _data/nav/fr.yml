@@ -1,8 +1,6 @@
 - title: '<span class="icon-home"></span>'
   path: "/fr/"
-- title: "Les sites"
-  path: "/fr/the-sites"
 - title: "A propos"
   path: "/fr/about"
-- title: "Contact"
-  path: "/fr/contact"
+- title: "Les sites"
+  path: "/fr/the-sites"

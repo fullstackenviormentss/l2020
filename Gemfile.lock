@@ -89,6 +89,8 @@ GEM
     nesty (1.0.2)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
+    nokogiri (1.7.0.1-x64-mingw32)
+      mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -114,6 +116,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unf_ext (0.0.7.2-x64-mingw32)
+    wdm (0.1.1)
 
 PLATFORMS
   ruby
@@ -130,9 +133,10 @@ DEPENDENCIES
   mini_magick
   nokogiri
   twitter (~> 6.0.0)
+  wdm (~> 0.1.0)
 
 RUBY VERSION
    ruby 2.3.3p222
 
 BUNDLED WITH
-   1.13.7
+   1.14.3

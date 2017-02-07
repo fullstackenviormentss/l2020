@@ -8,9 +8,25 @@
   {% assign nav = site.data.nav.de %}
 {% endif %}
 
+
 <!-- Navigation -->
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
     <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-6 header-pics">
+          <div class="links_social">
+            <a class="links_games w-inline-block" href="#">
+              <img height="30" src="images/Instagram-logo.png" srcset="images/Instagram-logo.png 500w, images/Instagram-logo.png 512w">
+            </a>
+            <a class="links_games w-inline-block" href="#">
+              <img height="30" sizes="30px" src="images/facebook-icon-preview-1.png" srcset="images/facebook-icon-preview-1.png 500w, images/facebook-icon-preview-1.png 512w">
+            </a>
+            <a class="w-inline-block" href="#">
+              <img height="24" src="images/20161107041729Twitter_bird_logo_2012.svg">
+            </a>
+          </div>
+        </div>
+      </div>
         <a class="w-nav-brand" href="index.html">
           <img class="logo" sizes="(max-width: 479px) 79vw, 235px" src="images/logo-LS2020-YOG-DNA.png" srcset="images/logo-LS2020-YOG-DNA-p-500x150.png 500w, images/logo-LS2020-YOG-DNA.png 600w" width="235">
         </a>
@@ -18,7 +34,7 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span><div class="w-icon-nav-menu"></div><i class="fa fa-bars"></i>
+                <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
             </button>
         </div>
 
@@ -28,8 +44,7 @@
 
               {% for link in nav %}
 
-                {% capture currentpage %}{{ site.url }}{{ page.url | split:'.html' |first}}{% endcapture %}
-
+                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' |first}}{% endcapture %}
                 {% if currentpage == link.path %}
                   <a class="nav_link w-nav-link w--current" href="{{link.path}}">
                 {% else %}
@@ -39,24 +54,27 @@
                 {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
               {% endfor %}
 
-            </div>
-            <div class="nav navbar-nav navbar-left">
-              {% if site.lang == "fr" %}
-                {% capture link1 %}{{ site.url }}{{ page.url}}{% endcapture %}
-                <a href="{{ link1 }}" >en</a>
-                {% capture link3 %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
-                <a href="{{ link3 }}" >de</a>
-              {% elsif site.lang == "en" %}
-                {% capture link2 %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
-                <a href="{{ link2 }}" >fr</a>
-                {% capture link3 %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
-                <a href="{{ link3 }}" >de</a>
+
+              {% capture url_site_en %}{{ site.url }}{{ page.url}}{% endcapture %}
+              {% capture url_site_de %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
+              {% capture url_site_fr %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
+
+              <div class="w-nav_lang">
+              {% if site.lang == "en" %}
+                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link accent">en</a>
+                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link">de</a>
+              {% elsif site.lang == "fr" %}
+                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link accent">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link">en</a>
+                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link">de</a>
               {% elsif site.lang == "de" %}
-                {% capture link1 %}{{ site.url }}{{ page.url}}{% endcapture %}
-                <a href="{{ link1 }}" >en</a>
-                {% capture link2 %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
-                <a href="{{ link2 }}" >fr</a>
+                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link">en</a>
+                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link accent">de</a>
               {% endif %}
+              </div>
+
             </div>
           </div>
           <!-- /.navbar-collapse -->

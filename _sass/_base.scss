@@ -16,9 +16,10 @@ textarea {
 // Custom Navigation Bar
 
 .navbar-custom {
+    background-color: white;
     border-color: transparent;
     .navbar-toggle {
-        font-size: 24px;
+        font-size: 18px;
     }
     .container{
       padding-left:0;
@@ -45,6 +46,33 @@ textarea {
 .nav_link.w--current span{
   color: $purple-primary;
 }
+@media (min-width: 768px){
+  .nav_link.nav_lang{
+    padding-left: 5px;
+    padding-right:0;
+  }
+  .w-nav_lang{
+    display:inline;
+  }
+
+}
+@media (max-width: 767px){
+  .navbar-collapse .nav_link.nav_lang{
+    display:inline;
+    padding:0;
+  }
+  .nav_link{
+    margin-left: 20px;
+  }
+  .w-nav_lang{
+    padding:20px;
+  }
+}
+.nav_lang.accent{
+  color:$purple-primary;
+  font-weight: 700;
+}
+
 
 // Footer
 
@@ -74,7 +102,6 @@ textarea {
 
 @media(min-width:767px) {
     .navbar-custom {
-        background-color: transparent;
         padding: 17px 0;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
@@ -114,6 +141,9 @@ textarea {
         &.collapsed{
           background-color: #FFF;
           color:black;
+          .icon-nav{
+            color:#000;
+          }
         }
       }
     }
@@ -149,12 +179,15 @@ textarea {
   padding-top: 22px;
   text-align: right;
 }
+.header-pics .links_social{
+  padding-bottom: 22px;
+  padding-top:0;
+}
 @media (max-width: 992px){
   .footer-pics{
     text-align: center;
   }
-  .links_social {
-    padding-top: 22px;
+  .footer-pics .links_social {
     text-align: center;
   }
 }
