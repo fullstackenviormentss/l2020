@@ -23,6 +23,11 @@
     }
     .pictos-grp {
     	margin-bottom: 20px;
+        @media (max-width: 991px){
+            div{
+                text-align: center;
+            }
+        }
 	}
 	.links_sports {
 		display: inline-block;
