@@ -1,7 +1,7 @@
 .sports{
 	padding-top: 50px;
     padding-bottom: 50px;
-    background-image: url(images/bkg_blue.png), linear-gradient(180deg, #0087cd, #0087cd);
+    background-image: url(../images/bkg_3.png);
     background-position: 0px 0px, 0px 0px;
     background-size: cover, auto;
     h1{
@@ -35,9 +35,11 @@
 	}
 }
 .key_numbers{
-	background-image: url(images/bkg_blue.png), linear-gradient(180deg, #0087cd, #0087cd);
+	background-image: url(../images/bkg_3.png);
     background-position: 0px 0px, 0px 0px;
     background-size: cover, auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
 	h1{
     	text-align: center;
     	color: #fff;
@@ -73,4 +75,38 @@
 }
 .key_numbers_img {
     padding-top:20px;
+}
+.about_yog_1{
+    margin-top: 150px;
+    background-image: url(../images/bkg_3.png);
+    background-position: 0px 0px, 0px 0px;
+    background-size: cover;
+}
+.about_yog_2{
+    background-image: url(../images/bkg_blue.png);
+    background-position: 0px 0px;
+    background-size: cover;
+}
+.about_yog{
+    h1{
+        margin-bottom: 60px;
+        color: #fff;
+        text-align: center;
+    }
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 44px;
+    padding-bottom: 44px;
+    p{
+        margin-top: 20px;
+        color: #fff;
+        font-size: 19px;
+        font-family: Montserrat, sans-serif;
+        line-height: 27px;
+        font-weight: 400;
+        @media (max-width: 991px){
+            text-align: center;
+        }
+    }
 }
