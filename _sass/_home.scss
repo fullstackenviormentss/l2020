@@ -25,6 +25,11 @@
 .hero .container{
 	padding: 305px 0 0 0;
 }
+@media (max-width: 479px) {
+  .hero .container {
+    padding-top: 165px;
+  }
+}
 .news_section {
     margin-top: 100px;
     padding-top: 20px;
