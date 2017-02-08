@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<div class="jobs">
+	<div class="container">
+		<h1>{% t pages.jobs.title %}</h1>
+		{% capture text %}{%t pages.jobs.texte %}{% endcapture %}
+		<p>{{ text | markdownify | newline_to_br }}</p>
+	</div>
+</div>
