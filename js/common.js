@@ -73,7 +73,8 @@ var mapManagement = {
 	init: function() {
 	  mapManagement.map = new google.maps.Map(document.getElementById('map'), {
 	    center: {lat: 46.8127598, lng: 7.999},
-	    zoom: 6
+	    zoom: 6,
+	    scrollwheel: false
 	  });
 	  mapManagement.placeMarker()
 	  mapManagement.map.setOptions({styles: style});
@@ -106,7 +107,7 @@ var mapManagement = {
 		    	content: content
 		  	});
 		  	marker.addListener('click', function() {
-	    	infowindow.open(mapManagement.map, marker);
+	    		infowindow.open(mapManagement.map, marker);
 	  		});
 		  });
 		});
