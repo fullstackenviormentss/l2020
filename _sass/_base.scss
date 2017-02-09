@@ -79,6 +79,11 @@ textarea {
   padding-top: 50px;
   padding-bottom: 50px;
   background-color: $dark-blue;
+  .footer_link{
+    &:hover{
+      color:#0087cd;
+    }
+  }
 }
 
 .top_footer{
