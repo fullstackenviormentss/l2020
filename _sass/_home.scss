@@ -61,3 +61,17 @@
     	}
     }
 }
+.cio-sponsors{
+	.sponsors-list.first {
+    	margin-top: 0;
+	}
+	.sponsors-list {
+	    text-align: center;
+	}
+	.sponsors-list li {
+	    display: inline-block;
+	    vertical-align: middle;
+	    margin: 0 34px 30px;
+	    min-width: 140px;
+	}
+}

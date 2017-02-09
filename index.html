@@ -149,35 +149,98 @@ layout: default
     </div>
   </div>
 </div>
-<div class="partners_section container">
-    {% for partner in site.data.contentful.spaces.partnersLogos.partnersLogos[0].cioPartners %}
-      {% capture modulo %}{{ forloop.index0 | modulo:5 }}{% endcapture %}
-      {% if modulo == '0' and forloop.first == false %}
-        </div>
-      {% endif %}
-      {% if modulo == '0' %}
-        <div class="partners">
-      {% endif %}
-      <div class="partner">
-        <img src="{{ partner.url }}" alt="{{partner.description}}">
-      </div>
-      {% if forloop.last == true %}
-        </div>
-      {% endif %}
-    {% endfor %}
-    {% for partner in site.data.contentful.spaces.partnersLogos.partnersLogos[0].goldPartners %}
-      {% capture modulo %}{{ forloop.index0 | modulo:5 }}{% endcapture %}
-      {% if modulo == '0' and forloop.first == false %}
-        </div>
-      {% endif %}
-      {% if modulo == '0' %}
-        <div class="partners">
-      {% endif %}
-      <div class="partner">
-        <img src="{{ partner.url }}" alt="{{partner.description}}">
-      </div>
-      {% if forloop.last == true %}
-        </div>
-      {% endif %}
-    {% endfor %}
+<div class="cio-sponsors container">
+  <ul class="sponsors-list first">
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Coca-Cola/Coca-Cola_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Coca-Cola">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Alibaba/alibaba-logo-01.png?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Alibaba Group">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Atos/Atos_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Atos">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Bridgestone/Bridgestone_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Bridgestone">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Dow/Dow_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Dow">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Ge/GE_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="GE">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Mcdonalds/Mcdonalds_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="McDonald's">
+      </picture>
+    </li>
+    <li>
+      <picture>
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+        <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+        <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Omega/Omega_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Omega">
+      </picture>
+      </li>
+      <li>
+        <picture>
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+          <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Panasonic/Panasonic_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Panasonic">
+        </picture>
+      </li>
+      <li>
+        <picture>
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+          <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Pg/PG_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="PG">
+        </picture>
+      </li>
+      <li>
+        <picture>
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+          <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Samsung/Samsung_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Samsung">
+        </picture>
+      </li>
+      <li>
+        <picture>
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+          <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Toyota/Toyota_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Toyota">
+        </picture>
+      </li>
+      <li>
+        <picture>
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 1024px)">
+          <source srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" media="(min-width: 768px)">
+          <img srcset="https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=130:70, https://stillmed.olympic.org/media/Images/OlympicOrg/IOC/How_We_Do_It/Sponsors/Visa/Visa_logo.jpg?interpolation=lanczos-none&amp;resize=260:140 2x" alt="Visa">
+        </picture>
+      </li>
+    </ul>
 </div>
