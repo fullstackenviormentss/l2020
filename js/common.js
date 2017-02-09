@@ -64,7 +64,9 @@ $(document).ready(function(){
 			});
 	});
 
-	mapManagement.init()
+  if($("#map").length) {
+    mapManagement.init()
+  }
 
 })
 
