@@ -11,6 +11,8 @@ layout: default
     <h1>
       {% if site.lang == "fr" %}
         {{ section1.titre }}
+      {% elsif site.lang == "de" %}
+        {{ section1.titreDe }}
       {% else %}
         {{ section1.titreEn }}
       {% endif %}
@@ -18,6 +20,8 @@ layout: default
     <p class="discover_1 discover_p">
       {% if site.lang == "fr" %}
         {{ section1.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+      {% elsif site.lang == "de" %}
+        {{ section1.descriptionDe | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
         {{ section1.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
@@ -128,6 +132,8 @@ layout: default
     <h1>
       {% if site.lang == "fr" %}
         {{ section2.titre }}
+      {% elsif site.lang == "de" %}
+        {{ section2.titreDe }}
       {% else %}
         {{ section2.titreEn }}
       {% endif %}
@@ -135,6 +141,8 @@ layout: default
     <p class="discover_1 discover_p">
       {% if site.lang == "fr" %}
         {{ section2.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+      {% elsif site.lang == "de" %}
+        {{ section2.descriptionDe | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
         {{ section2.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
