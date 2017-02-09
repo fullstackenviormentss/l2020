@@ -3,19 +3,24 @@ layout: default
 ---
 <div class="hero">
   <div class="container">
-    <h1 class="the_claim">Lausanne<br/><span class="accent">aux couleurs des jeux</span></h1>
-    <h1 class="the_claim">Mes<br/><span class="accent">jeux olympiques</span></h1>
-    <h1 class="the_claim">Jeux d'hiver<br/><span class="accent">de la jeunesse</span></h1>
+    <h1 class="the_claim">{% t pages.index.title1.part1 %}<br/><span class="accent">{% t pages.index.title1.part2 %}</span></h1>
+    <h1 class="the_claim">{% t pages.index.title2.part1 %}<br/><span class="accent">{% t pages.index.title2.part2 %}</span></h1>
+    <h1 class="the_claim">{% t pages.index.title3.part1 %}<br/><span class="accent">{% t pages.index.title3.part2 %}</span></h1>
   </div>
 </div>
 <div class="about_yog_section">
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h1 class="h1_about_yog">ABOUT <br>THE YOG</h1>
+        <h1 class="h1_about_yog">
+          {% capture about_title %}{% t pages.index.about.title %}{% endcapture %}
+          {{ about_title | newline_to_br }}
+        </h1>
       </div>
       <div class="col-md-8">
-        <p class="about_the_yog_p">The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.</p>
+        <p class="about_the_yog_p">
+          {% t pages.index.about.texte %}
+        </p>
       </div>
     </div>
   </div>
@@ -32,6 +37,8 @@ layout: default
             <h1 class="h1_news">
             {% if site.lang == "fr" %}
               {{ new.titre }}
+            {% elsif site.lang == "de" %}
+              {{ new.titreDe }}
             {% else %}
               {{ new.titreEn }}
             {% endif %}
@@ -39,6 +46,8 @@ layout: default
             <p class="p_news">
               {% if site.lang == "fr" %}
                 {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+              {% elsif site.lang == "de" %}
+                {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
               {% else %}
                 {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
               {% endif %}
@@ -53,8 +62,8 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="marchandising_col_1 col-md-6">
-        <h1 class="h1_newsletter_cta shop_cta">Discover all the goodies in our marchandising partner shop!</h1>
-        <a class="shop_btn w-button" href="#">Shop!</a>
+        <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
+        <a class="shop_btn w-button" href="#">{% t pages.index.shop.button %}</a>
       </div>
       <div class="col-md-6">
         <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
@@ -73,7 +82,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="h1_newsletter_cta">Subscribe to receive news about <span class="l2020">Lausanne2020!</span></h1>
+        <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %} <span class="l2020">{% t pages.index.newsletter.part2 %}</span></h1>
       </div>
       <div class="col-md-6">
         <div class="">
@@ -83,15 +92,15 @@ layout: default
                 <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
               </div>
               <div class="col-md-3">
-                <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="Subscribe!">
+                <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
               </div>
             </div>
           </form>
           <div class="w-form-done">
-            <div>Thank you! Your submission has been received!</div>
+            <div>{% t pages.index.newsletter.thanks %}</div>
           </div>
           <div class="w-form-fail">
-            <div>Oops! Something went wrong while submitting the form</div>
+            <div>{% t pages.index.newsletter.oops %}</div>
           </div>
         </div>
       </div>
