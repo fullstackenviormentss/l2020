@@ -9,6 +9,8 @@ pages:
     title3:
       part1: Jeux d'hiver
       part2: de la jeunesse
+    news:
+      title: Latest news
     about:
       title: | 
         ABOUT

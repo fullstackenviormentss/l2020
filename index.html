@@ -25,13 +25,13 @@ layout: default
     </div>
   </div>
 </div>
-<div class="news_section container">
-    <h1 class="h1_big_news h1_newsletter_cta">Latest news</h1>
+<div class="news_section">
+  <div class="container">
+    <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
     <div class="row">
       {% for new in site.data.contentful.spaces.news.news limit:3 %}
-        <div class="col-md-4">
-          <div class="news_wrap">
-            <div class="">
+        <div class="col-md-4 new">
+            <div>
               <img src="{{ new.image.url }}">
             </div>
             <h1 class="h1_news">
@@ -52,11 +52,11 @@ layout: default
                 {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
               {% endif %}
             </p>
-            <div class="news_date">{{new.date | date: "%d.%m.%Y"}}</div>
+            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}</p>
           </div>
-        </div>
       {% endfor %}
     </div>
+  </div>
 </div>
 <div class="marchandising_section">
   <div class="container">
@@ -74,7 +74,15 @@ layout: default
 <div class="social_feed_section social_wall">
     <div class='container'>
 
-        
+        {% social_wall       
+    
+          fb_username: lausanne2020,    
+          fb_amount: 5,   
+    
+          tw_username: lausanne2020,    
+          tw_amount: 4,   
+    
+        %}
 
     </div>
 </div>

@@ -31,7 +31,16 @@
   }
 }
 .news_section {
-    margin-top: 100px;
-    padding-top: 20px;
+    background-image: url(../images/bkg_blue.png);
     padding-bottom: 50px;
+    .h1_big_news{
+    	color: #fff;
+    }
+    .new{
+    	background-color: #fff;
+    	background-clip: content-box;
+    	h1,p{
+    		padding: 0 10px;
+    	}
+    }
 }
