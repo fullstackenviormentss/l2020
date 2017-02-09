@@ -30,17 +30,34 @@
     padding-top: 165px;
   }
 }
+.about_the_yog_p{
+	text-align: justify;
+}
 .news_section {
     background-image: url(../images/bkg_blue.png);
     padding-bottom: 50px;
+    padding-top: 20px;
     .h1_big_news{
     	color: #fff;
     }
     .new{
     	background-color: #fff;
     	background-clip: content-box;
+    	.p_news{
+		    padding-bottom: 20px;
+			color: #505050;
+		}
+		.h1_news {
+		    margin-bottom: 10px;
+		    color: #0087cd;
+		    font-size: 26px;
+		    line-height: 32px;
+		}
+    	p{
+    		text-align: justify;
+    	}
     	h1,p{
-    		padding: 0 10px;
+    		padding: 0 12px;
     	}
     }
 }
