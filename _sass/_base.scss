@@ -96,7 +96,7 @@ textarea {
   background-attachment: scroll;
 }
 
-@media(min-width:767px) {
+@media(min-width:768px) {
     .navbar-custom {
         padding: 17px 0;
         -webkit-transition: all 0.3s;
@@ -153,14 +153,6 @@ textarea {
         top: -60px;
     }
 }
-
-@media (max-width: 992px){
-  .top_footer {
-      left: 0px;
-      top: -61px;
-      right: 0px;
-  }
-}
 .botbar{
   padding-top: 20px;
   padding-bottom: 20px;
@@ -179,6 +171,20 @@ textarea {
   }
   .footer-pics .links_social {
     text-align: center;
+  }
+  .footer_link {
+      text-align: center;
+  }
+  .footer_logo {
+      text-align: center;
+  }
+  .copy {
+      margin-bottom: 20px;
+  }
+  .top_footer {
+    left: 0px;
+    top: -61px;
+    right: 0px;
   }
 }
 .links_games {
