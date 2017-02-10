@@ -26,6 +26,11 @@
             }
         }
 	}
+    .pictos>div{
+        @media (max-width: 991px){
+            height: 220px;
+        }
+    }
 	.links_sports {
 		display: inline-block;
 		margin-top: 10px;
