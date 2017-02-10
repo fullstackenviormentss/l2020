@@ -225,14 +225,22 @@ layout: default
 </div>
 <div class="key_numbers">
   <div class="container">
-    <h1>Chiffres clés</h1>
+    <h1>
+    {% assign keyn = site.data.contentful.spaces.keyNumbers.keyNumbers[0]%}
+    {% if site.lang == "fr" %}
+      {{ keyn.titre }}
+    {% elsif site.lang == "en" %}
+      {{ keyn.titreEn }}
+    {% else %}
+      {{ keyn.titreDe }}
+    {% endif %}
+    </h1>
     <div class="row_about_yog_2 row">
       <div class="col-md-7">
         <p class="key_numbers_text">
-        {% assign keyn = site.data.contentful.spaces.keyNumbers.keyNumbers[0]%}
         {% if site.lang == "fr" %}
           {{ keyn.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-        {% else %}
+        {% elsif site.lang == "en" %}
           {{ keyn.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
         {% else %}
           {{ keyn.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
