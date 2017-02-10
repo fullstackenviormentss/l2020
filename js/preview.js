@@ -13,7 +13,7 @@ $(document).ready(function(){
     };
 
     var triggerBuild = function(){
-      var url = "https://api.netlify.com/build_hooks/5850264cd6865d3dd5975393"
+      var url = "https://api.netlify.com/build_hooks/589ddcd471e20a4faf0c8c57"
       var xhr = new XMLHttpRequest();
       xhr.open("POST", url, true);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
