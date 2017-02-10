@@ -21,7 +21,7 @@ $(document).ready(function(){
     }
  
     var redirect = function() {
-        window.location.replace("http://stackoverflow.com");
+        window.location.replace("http://helmsman-snake-20876.netlify.com/");
     };
  
     // Public API
