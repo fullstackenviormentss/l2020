@@ -3,6 +3,7 @@ require 'koala'
 require 'fileutils'
 require 'mini_magick'
 require "net/http"
+require 'uri'
 
 class FB
   include SharedMethods
@@ -17,7 +18,6 @@ class FB
   end
 
   def self.new_connection
-    Koala::Utils.level = Logger::DEBUG
     @graph = Koala::Facebook::API.new(ENV['FACEBOOK_ACCESS_TOKEN'])
   end
 
@@ -52,6 +52,7 @@ class FB
     post = Hash.new
 
     post['social_network'] = 'facebook'
+
 
     post['photo'] = photo if has_photo?
     post['video'] = video if has_video?
