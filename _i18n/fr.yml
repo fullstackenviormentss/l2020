@@ -12,10 +12,8 @@ pages:
     news:
       title: Latest news
     about:
-      title: | 
-        ABOUT
-        THE YOG
-      texte: The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.
+      title: A propos
+      texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
     shop:
       title: Discover all the goodies in our marchandising partner shop!
       button: Shop!
