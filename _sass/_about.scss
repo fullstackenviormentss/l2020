@@ -103,7 +103,7 @@
     margin-left: auto;
     padding-top: 44px;
     padding-bottom: 44px;
-    p{
+    p, ul li{
         margin-top: 20px;
         color: #fff;
         font-size: 19px;
@@ -111,6 +111,9 @@
         line-height: 27px;
         font-weight: 400;
         text-align: justify;
+    }
+    ul li{
+        margin-top: 0;
     }
 }
 .facts{

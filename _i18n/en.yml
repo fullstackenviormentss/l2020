@@ -1,55 +1,101 @@
 pages:
   index:
     title1:
-      part1: Lausanne
-      part2: aux couleurs des jeux
+      part1: Lausanne 2020
+      part2: This is where it starts!
     title2:
-      part1: Mes
-      part2: jeux olympiques
+      part1: Lausanne 2020
+      part2: Legacy, Expertise, Innovation
     title3:
-      part1: Jeux d'hiver
-      part2: de la jeunesse
+      part1: JLausanne 2020
+      part2: Culture, Sport, Education
     news:
-      title: Latest news
+      title: News
     about:
-      title: | 
-        ABOUT
-        THE YOG
-      texte: The Youth Olympic Games are an elite sporting event for young people from all over the world. The sports programme is based on that of the Olympic Games, with 28 sports featured on the summer programme and 7 on the winter programme.
+      title: About
+      texte: The Youth Olympic Games are an international Olympic sporting event of the highest level for athletes aged 15 to 18 years old. They combine sport performance, culture and education in an authentic celebration of sport with a festive atmosphere.
     shop:
-      title: Discover all the goodies in our marchandising partner shop!
+      title: All the Lausanne 2020 goodies available soon!
       button: Shop!
     newsletter:
-      part1: Subscribe to receive news about
+      part1: Be part of the <span class="l2020">Lausanne 2020</span> adventure and receive the latest news!
       part2: Lausanne2020!
-      button: Subscribe!
+      button: Let’s go
       thanks: Thank you! Your submission has been received!
+      placeholder: Email address
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
     texte: "Merci pour l’intérêt que vous portez aux Jeux Olympiques de la jeunesse Lausanne 2020. \nNotre Comité d’Organisation n’a actuellement pas de postes à pourvoir. \nSi vous souhaitez soutenir Lausanne 2020 en tant que bénévole c’est par ici"
   about:
-    title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
+    title1: |
+            The Youth Olympic Games:
+            Compete, learn and share!
     texte1: |
-            Les Jeux Olympiques de la Jeunesse sont un événement sportif olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans.
+            The Youth Olympic Games are an international Olympic sporting event of the highest level for athletes aged 15 to 18 years old.
             
-            Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport. Ils ont comme objectif d’encourager la jeunesse à adopter et vivre selon les valeurs positives du sport – le respect de l’autre, de soi, de notre environnement, l’amitié entre les peuples et les cultures, l’excellence dans le don de soi – et à en devenir les ambassadeurs à travers le monde.
+            They combine sport performance, culture and education in an authentic celebration of sport with a festive atmosphere. The aim is to encourage youth to adopt and represent the positive values of sport - respect for others, for themselves and for our environment, friendship between people and cultures, excellence in self-giving, and to become sport ambassadors throughout the world.
             
-            Par leur vocation, les Jeux Olympiques de la Jeunesse veulent être un incubateur d’innovation pour les événements sportifs du futur.
-    title2: "Lausanne 2020 se déroulera du 10 au 19 janvier 2020"
+            Through its mission, the Youth Olympic Games aspire to be a leading example of innovation for sporting events of the future.
+    title2: The vision of Lausanne 2020
     texte2: |
-            La vision de Lausanne 2020 : 
+            To draw upon the legacy and strengths of Switzerland and live the Olympic values of friendship, excellence and respect through education, culture, innovation and sport, while organizing Youth Olympic Games that are unique and unifying in promoting a better world.
 
-            En puisant dans l’héritage et les atouts de la Suisse, vivre les valeurs du mouvement olympique que sont l’amitié, l’excellence et le respect au travers de la formation, la culture, l’innovation et le sport en organisant des Jeux Olympiques de la Jeunesse, uniques et rassembleurs, au service de la promotion d’un monde meilleur.
+            In this spirit Lausanne 2020 set the following mission:
+            - <b>Deliver</b> an innovative Youth Olympic Games in full co-construction with the IOC.
+            - <b>Create</b> an opportunity for all stakeholders to take <b>ownership</b> of the Youth Olympic Games, allowing them to <b>actively engage</b> in achieving their own goals
+            - <b>Enhance</b> the cultural and educational aspects of sport by providing high visibility to all facets of the concept of the Youth Olympic Games.
+            - <b>Unite</b> and involve the whole region, the country of Switzerland, as well as neighboring France, to create a unifying event that spreads positivity.
+            - <b>Promote</b> values of peace between people by creating an environment conducive to “living together”.
 
-            Dans cet esprit, Lausanne 2020 s’est donné pour mission de :
-
-            Délivrer des Jeux Olympiques de la Jeunesse novateurs en les co construisant avec le CIO
-
-            Créer l’opportunité pour l’ensemble des parties prenantes de s’approprier les Jeux Olympiques de la Jeunesse en leur permettant de s’engager activement pour la réalisation de leurs propres objectifs 
-
-            Fédérer et faire participer toute la région, l’ensemble du pays ainsi que la France voisine autour d’un événement rassembleur et diffuseur d’énergie positive
-
-            Promouvoir la paix entre les peuples en créant un environnement propice au « vivre ensemble"
-    sports_title: Les sports
-    sports_texte: "Le programme sportif des Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
+            Lausanne 2020 will take place from January 10th to 19th , 2020.
+    sports_title: Sports
+    sports_texte: "The sports programme of the 3rd edition of the Winter Youth Olympic Games is similar to the programme of the Winter Olympic Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
+    sports:
+      biathlon:
+        text: Biathlon
+        link: "https://www.olympic.org/fr/biathlon"
+      bobsleigh:
+        text: Bobsleigh
+        link: "https://www.olympic.org/bobsleigh"
+      combine-nordique:
+        text: Nordic combined
+        link: "https://www.olympic.org/nordic-combined"
+      curling:
+        text: Curling
+        link: "https://www.olympic.org/curling"
+      hockey-sur-glace:
+        text: Ice Hockey
+        link: "https://www.olympic.org/ice-hockey"
+      luge:
+        text: Luge
+        link: "https://www.olympic.org/luge"
+      patinage-artistique:
+        text: Figure skating
+        link: "https://www.olympic.org/figure-skating"
+      patinage-vitesse:
+        text: Speed skating
+        link: "https://www.olympic.org/speed-skating"
+      short-track:
+        text: Short track speed skating
+        link: "https://www.olympic.org/short-track-speed-skating"
+      saut-a-ski:
+        text: Ski jumping
+        link: "https://www.olympic.org/ski-jumping"
+      skeleton:
+        text: Skeleton
+        link: "https://www.olympic.org/skeleton"
+      ski-freestyle:
+        text: Freestyle skiing
+        link: "https://www.olympic.org/freestyle-skiing"
+      ski-alpin:
+        text: Alpine skiing
+        link: "https://www.olympic.org/alpine-skiing"
+      ski-de-fond:
+        text: Cross country skiing
+        link: "https://www.olympic.org/cross-country-skiing"
+      snowboard:
+        text: Snowboard
+        link: "https://www.olympic.org/snowboard"
+    sports_fin: Discover the venues here
+    sports_fin_link: "/the-sites"

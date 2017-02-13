@@ -63,7 +63,6 @@ layout: default
     <div class="row">
       <div class="marchandising_col_1 col-md-6">
         <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
-        <a class="shop_btn w-button" href="#">{% t pages.index.shop.button %}</a>
       </div>
       <div class="col-md-6">
         <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
@@ -82,14 +81,14 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %} <span class="l2020">{% t pages.index.newsletter.part2 %}</span></h1>
+        <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
       </div>
       <div class="col-md-6">
         <div class="">
           <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/" netlify>
             <div class="row">
               <div class="col-md-9">
-                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="Enter your email address" required="required" type="email">
+                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}" required="required" type="email">
               </div>
               <div class="col-md-3">
                 <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">

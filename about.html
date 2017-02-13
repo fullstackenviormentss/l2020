@@ -21,7 +21,7 @@ layout: default
     <div class="row">
       <div class="col-md-6 info-text">
         {% capture text %}{%t pages.about.texte2 %}{% endcapture %}
-        <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+        <p>{{ text | markdownify }}</p>
       </div>
       <div class="col-md-6">
         <img src="images/20-02-16-Ice-Hockey-Bronze-Medal-Mens-02-p-1080x717.jpeg" alt="">
@@ -40,27 +40,7 @@ layout: default
             <img src="images/sports/biathlon.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Biathlon</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/curling.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Curling</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-freestyle.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Ski acrobatique</a>
+            <a class="links_sports" href="{% t pages.about.sports.biathlon.link %}">{% t pages.about.sports.biathlon.text %}</a>
           </div>
         </div>
       </div>
@@ -70,17 +50,7 @@ layout: default
             <img src="images/sports/bobsleigh.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Bobsleigh</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/luge.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Luge</a>
+            <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}">{% t pages.about.sports.bobsleigh.text %}</a>
           </div>
         </div>
       </div>
@@ -90,7 +60,17 @@ layout: default
             <img src="images/sports/combine-nordique.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Combiné nordique</a>
+            <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}">{% t pages.about.sports.combine-nordique.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/curling.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.curling.link %}">{% t pages.about.sports.curling.text %}</a>
           </div>
         </div>
       </div>
@@ -100,7 +80,17 @@ layout: default
             <img src="images/sports/hockey-sur-glace.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Hockey sur glace</a>
+            <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/luge.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.luge.link %}">{% t pages.about.sports.luge.text %}</a>
           </div>
         </div>
       </div>
@@ -110,47 +100,7 @@ layout: default
             <img src="images/sports/patinage-artistique.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Patinage artistique</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-alpin.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Ski alpin</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/saut-a-ski.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Saut à ski</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-de-fond.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Ski de fond</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/short-track.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="#">Patinage de vitesse sur piste courte</a>
+            <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}">{% t pages.about.sports.patinage-artistique.text %}</a>
           </div>
         </div>
       </div>
@@ -160,17 +110,27 @@ layout: default
             <img src="images/sports/patinage-vitesse.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Patinage de vitesse</a>
+            <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}">{% t pages.about.sports.patinage-vitesse.text %}</a>
           </div>
         </div>
       </div>
       <div class="col-md-4 col-xs-6">
         <div class="pictos-grp row">
           <div class="col-md-3">
-            <img src="images/sports/snowboard.png">
+            <img src="images/sports/short-track.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Surf des neiges</a>
+            <a class="links_sports" href="{% t pages.about.sports.short-track.link %}">{% t pages.about.sports.short-track.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/saut-a-ski.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}">{% t pages.about.sports.saut-a-ski.text %}</a>
           </div>
         </div>
       </div>
@@ -180,12 +140,52 @@ layout: default
             <img src="images/sports/skeleton.png">
           </div>
           <div class="col-md-9">
-            <a class="links_sports" href="#">Skeleton</a>
+            <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}">{% t pages.about.sports.skeleton.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/ski-freestyle.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}">{% t pages.about.sports.ski-freestyle.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/ski-alpin.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}">{% t pages.about.sports.ski-alpin.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/ski-de-fond.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}">{% t pages.about.sports.ski-de-fond.text %}</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6">
+        <div class="pictos-grp row">
+          <div class="col-md-3">
+            <img src="images/sports/snowboard.png">
+          </div>
+          <div class="col-md-9">
+            <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}">{% t pages.about.sports.snowboard.text %}</a>
           </div>
         </div>
       </div>
     </div>
-    <p class="about_the_yog_p descr_pictos"><a href="#" class="link_site">Découvrez les sites de compétition ici</a>
+    <p class="about_the_yog_p descr_pictos"><a href="{% t pages.about.sports_fin_link %}" class="link_site">{% t pages.about.sports_fin %}</a>
     </p>
   </div>
 </div>
