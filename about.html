@@ -21,7 +21,7 @@ layout: default
     <div class="row">
       <div class="col-md-6 info-text">
         {% capture text %}{%t pages.about.texte2 %}{% endcapture %}
-        <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+        <p>{{ text | markdownify }}</p>
       </div>
       <div class="col-md-6">
         <img src="images/20-02-16-Ice-Hockey-Bronze-Medal-Mens-02-p-1080x717.jpeg" alt="">
