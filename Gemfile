@@ -18,10 +18,6 @@ gem "koala", "~> 2.2"
 
 gem "twitter", "~> 6.0.0"
 
-gem "mini_magick"
-
-gem 'nokogiri'
-
 gem 'metainspector'
 
 group :jekyll_plugins do
