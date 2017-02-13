@@ -16,11 +16,12 @@ pages:
       texte: Die Olympischen Jugendspiele sind ein internationaler Olympischer Spitzensportanlass für Athleten im Alter von 15 bis 18 Jahren. Sie verbinden die sportliche Höchstleistung, die Kultur, sowie die Bildung in einem wahrhaften Sportfestival.
     shop:
       title: Alle Lausanne 2020 Goodies demnächst verfügbar!
-      button: Shop!
+      button: Los geht’s
     newsletter:
-      part1: Subscribe to receive news about
+      part1: Sei Teil des Abenteuers <span class="l2020">Lausanne 2020</span> und erhalte die aktuellsten News!
       part2: Lausanne2020!
       button: Subscribe!
+      placeholder: Emailadresse
       thanks: Thank you! Your submission has been received!
       oops: Oops! Something went wrong while submitting the form
   jobs:

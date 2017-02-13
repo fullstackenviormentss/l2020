@@ -18,10 +18,11 @@ pages:
       title: All the Lausanne 2020 goodies available soon!
       button: Shop!
     newsletter:
-      part1: Subscribe to receive news about
+      part1: Be part of the <span class="l2020">Lausanne 2020</span> adventure and receive the latest news!
       part2: Lausanne2020!
-      button: Subscribe!
+      button: Let’s go
       thanks: Thank you! Your submission has been received!
+      placeholder: Email address
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
