@@ -9,6 +9,8 @@
     "texte_en": "{{ venue.texteEn }}",
     "texte_de": "{{ venue.texteDe }}",
     "link": "{{ venue.link }}",
+    "lienDe": "{{ venue.lienDe }}",
+    "lienEn": "{{ venue.lienEn }}",
     "lat": {{ venue.position.lat }},
     "lng": {{ venue.position.lon }}
   }{% if forloop.last == false %},{% endif %}
