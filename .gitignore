@@ -4,3 +4,4 @@ _site
 _data/contentful
 .env
 images/social_wall
+_config.yml
