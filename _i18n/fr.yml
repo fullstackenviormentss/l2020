@@ -116,10 +116,10 @@ pages:
         text: Jeux Olympiques de la Jeunesse d’hiver
       fact4: 
         number: "10"
-        text: jours de compétition et festivals
+        text: Jours de compétition et festivals
       fact5: 
         number: "3000" 
-        text: bénévoles
+        text: Bénévoles
   contact:
     title: Contact
     form:
