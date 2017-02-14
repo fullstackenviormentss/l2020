@@ -23,7 +23,7 @@ pages:
     newsletter:
       part1: Sei Teil des Abenteuers <span class="l2020">Lausanne 2020</span> und erhalte die aktuellsten News!
       part2: Lausanne2020!
-      button: Subscribe!
+      button: Los geht’s
       placeholder: Emailadresse
       thanks: Vielen Dank für deine Anmeldung!
       oops: Oops! Something went wrong while submitting the form
