@@ -101,3 +101,9 @@ pages:
         link: "https://www.olympic.org/fr/ski-alpin"
     sports_fin: Découvrez les sites de compétition ici
     sports_fin_link: "/fr/the-sites"
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/fr/"
+    beijing: "http://www.beijing2022.cn/fr/"
+    buenos: "http://www.buenosaires2018.com/fr/"
+    pyeongChang: "https://www.pyeongchang2018.com/fr/index"

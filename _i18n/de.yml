@@ -100,3 +100,9 @@ pages:
         link: "https://www.olympic.org/snowboard"
     sports_fin: Entdecke die Wettkampfstätten
     sports_fin_link: "/de/the-sites"
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/en/"
+    beijing: "http://www.beijing2022.cn/en/"
+    buenos: "http://www.buenosaires2018.com/en/"
+    pyeongChang: "https://www.pyeongchang2018.com/en/index"
