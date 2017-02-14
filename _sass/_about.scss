@@ -117,6 +117,33 @@
         font-size: 22px;
         font-weight: bold;
     }
+    .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .about-text, .about-image{
+            flex-basis: 50%;
+            @media (max-width: 768px){
+                flex-basis: 100%;
+            }
+        }
+    }
+    &.about_yog_1{
+        .about-image{
+            padding-left:10px;
+        }
+        .about-text{
+            padding-right:10px;
+        }
+    }
+    &.about_yog_2{
+        .about-image{
+            padding-left:10px;
+        }
+        .about-text{
+            padding-right:10px;
+        }
+    }
 }
 .facts{
     padding-top: 100px;
