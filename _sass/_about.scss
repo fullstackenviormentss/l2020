@@ -125,6 +125,14 @@
         text-align: center;
         color: #fff;
     }
+    .fact{
+        margin-top: 20px; 
+    }
+    @media (min-width: 768px){
+        .fact:nth-child(odd) .wrap_facts h1{
+            padding-top: 40px;
+        }
+    }
 }
 @media (min-width: 768px){
   .seven-cols .col-md-1,
