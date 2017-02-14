@@ -29,7 +29,9 @@ pages:
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
-    texte: "Merci pour l’intérêt que vous portez aux Jeux Olympiques de la jeunesse Lausanne 2020. \nNotre Comité d’Organisation n’a actuellement pas de postes à pourvoir. \nSi vous souhaitez soutenir Lausanne 2020 en tant que bénévole c’est par ici"
+    texte: |
+            Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020. Unser Organisationskomitee hat momentan keine offenen Stellen zu besetzen. 
+                  Wenn du Lausanne 2020 als Volunteer unterstützen möchtest, dann klicke <a href="http://volunteers.lausanne2020.com/" class="link_site" target="_blank">hier.</a>
   about:
     title1: |
             Die Olympischen Jugendspiele:

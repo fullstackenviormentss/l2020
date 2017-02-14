@@ -98,12 +98,12 @@ var mapManagement = {
 			    icon: '../images/location_v2.png',
 			    title: 'Hello World!'
 		  	});
-		  	var content = "<h1>"+val.title_en+"</h1><p>"+val.texte_en+"</p><p><a href="+val.lienEn+">En savoir plus</a></p>"
+		  	var content = "<h1>"+val.title_en+"</h1><p>"+val.texte_en+"</p><p><a href="+val.lienEn+" target='_blank'>More</a></p>"
 		  	if(lang == "fr"){
-		  		var content = "<h1>"+val.title+"</h1><p>"+val.texte_fr+"</p><p><a href="+val.link+">En savoir plus</a></p>"
+		  		var content = "<h1>"+val.title+"</h1><p>"+val.texte_fr+"</p><p><a href="+val.link+" target='_blank'>En savoir plus</a></p>"
 		  	}
 		  	if(lang == "de"){
-		  		var content = "<h1>"+val.title_de+"</h1><p>"+val.texte_de+"</p><p><a href="+val.lienFr+">En savoir plus</a></p>"
+		  		var content = "<h1>"+val.title_de+"</h1><p>"+val.texte_de+"</p><p><a href="+val.lienDe+" target='_blank'>Mehr infos</a></p>"
 		  	}
 	    	var infowindow = new google.maps.InfoWindow({
 		    	content: content
