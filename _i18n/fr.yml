@@ -101,6 +101,23 @@ pages:
         text: Snowboard
         link: "https://www.olympic.org/fr/surf-des-neiges"
     sports_fin: Découvrez les sites des compétitions <b><a href="venues" class="link_site">ici</a></b>
+    facts:
+      title: Lausanne 2020 en chiffres
+      fact1: 
+        number: "1200" 
+        text: Athlètes entre 15 et 18 ans
+      fact2: 
+        number: "70" 
+        text: Nations
+      fact3: 
+        number: 3ème 
+        text: Jeux Olympiques de la Jeunesse d’hiver
+      fact4: 
+        number: "10"
+        text: jours de compétition et festivals
+      fact5: 
+        number: "3000" 
+        text: bénévoles
   contact:
     form:
       prenom:

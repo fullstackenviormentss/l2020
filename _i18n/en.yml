@@ -101,6 +101,23 @@ pages:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
     sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
+    facts:
+      title: Lausanne 2020 in numbers
+      fact1: 
+        number: 1’200 
+        text: athletes between 15 ans 18 years
+      fact2: 
+        number: "70" 
+        text: nations
+      fact3: 
+        number: 3rd 
+        text: Winter Youth Olympic Games
+      fact4: 
+        number: "10" 
+        text: days of competition and festivals
+      fact5: 
+        number: 3’000 
+        text: volunteers
   contact:
     form:
       prenom:
