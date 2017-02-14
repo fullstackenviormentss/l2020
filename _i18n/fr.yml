@@ -99,9 +99,8 @@ pages:
         link: "https://www.olympic.org/fr/ski-de-fond"
       snowboard:
         text: Snowboard
-        link: "https://www.olympic.org/fr/ski-alpin"
-    sports_fin: Découvrez les sites de compétition ici
-    sports_fin_link: "/fr/the-sites"
+        link: "https://www.olympic.org/fr/surf-des-neiges"
+    sports_fin: Découvrez les sites des compétitions <b><a href="venues" class="link_site">ici</a></b>
   contact:
     form:
       prenom:

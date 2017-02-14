@@ -57,7 +57,7 @@ pages:
     sports:
       biathlon:
         text: Biathlon
-        link: "https://www.olympic.org/fr/biathlon"
+        link: "https://www.olympic.org/biathlon"
       bobsleigh:
         text: Bobsleigh
         link: "https://www.olympic.org/bobsleigh"
@@ -100,8 +100,7 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
-    sports_fin: Discover the venues here
-    sports_fin_link: "/the-sites"
+    sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
   contact:
     form:
       prenom:

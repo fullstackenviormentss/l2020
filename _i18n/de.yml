@@ -57,7 +57,7 @@ pages:
     sports:
       biathlon:
         text: Biathlon
-        link: "https://www.olympic.org/fr/biathlon"
+        link: "https://www.olympic.org/biathlon"
       bobsleigh:
         text: Bob
         link: "https://www.olympic.org/bobsleigh"
@@ -89,7 +89,7 @@ pages:
         text: Skeleton
         link: "https://www.olympic.org/skeleton"
       ski-freestyle:
-        text: Skiakrobatik / Freeski
+        text: Freestyle skiing
         link: "https://www.olympic.org/freestyle-skiing"
       ski-alpin:
         text: Ski alpin
@@ -100,8 +100,7 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
-    sports_fin: Entdecke die Wettkampfstätten
-    sports_fin_link: "/de/the-sites"
+    sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
   contact:
     form:
       prenom:
