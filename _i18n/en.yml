@@ -102,6 +102,21 @@ pages:
         link: "https://www.olympic.org/snowboard"
     sports_fin: Discover the venues here
     sports_fin_link: "/the-sites"
+  contact:
+    form:
+      prenom:
+        title: First name
+        placeholder: Enter your first name
+      nom:
+        title: Last name
+        placeholder: Enter your last name
+      email:
+        title: E-mail address
+        placeholder: Enter your e-mail address
+      message:
+        title: Message
+        placeholder: Enter your message here
+      envoyer: Send
 footer:
   link:
     tokyo: "https://tokyo2020.jp/en/"

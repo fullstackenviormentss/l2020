@@ -102,6 +102,21 @@ pages:
         link: "https://www.olympic.org/fr/ski-alpin"
     sports_fin: Découvrez les sites de compétition ici
     sports_fin_link: "/fr/the-sites"
+  contact:
+    form:
+      prenom:
+        title: Prénom
+        placeholder: Entrez votre prénom
+      nom:
+        title: Nom
+        placeholder: Entrez votre nom
+      email:
+        title: Adresse e-mail
+        placeholder: Entrez votre adresse e-mail
+      message:
+        title: Message
+        placeholder: Ecrivez votre message ici
+      envoyer: Envoyez
 footer:
   link:
     tokyo: "https://tokyo2020.jp/fr/"
