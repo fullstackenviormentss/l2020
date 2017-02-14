@@ -15,7 +15,8 @@ pages:
       title: News
     about:
       title: A propos
-      texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
+      texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
+      more: En savoir plus
     shop:
       title: Tous les produits Lausanne 2020 bientôt disponibles!
       button: Shop!
