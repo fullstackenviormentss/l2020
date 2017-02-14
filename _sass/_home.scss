@@ -22,13 +22,14 @@
 .marchandising_section{
 	padding-bottom: 30px;
 }
-.hero .container{
-	padding: 305px 0 0 0;
-}
-@media (max-width: 479px) {
-  .hero .container {
-    padding-top: 165px;
-  }
+.hero{
+	background-image: url(../images/lausanne_overview.jpg);
+	.container{
+		padding: 305px 0 0 0;
+		@media (max-width: 479px) {
+	    	padding-top: 165px;
+		}
+	}
 }
 .about_the_yog_p{
 	text-align: justify;
