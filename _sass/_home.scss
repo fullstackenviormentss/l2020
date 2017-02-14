@@ -68,6 +68,18 @@
     	}
     }
 }
+.newsletter_cta{
+    background-image: url(../images/bkg_blue.png);
+    h1{
+    	color: #fff;
+    }
+    .newsletter_cta_btn{
+    	background-color: #ce0071;
+    }
+    .newsletter_cta_field {
+    	border: none;
+	}
+}
 .cio-sponsors{
 	padding-top:80px;
 	padding-bottom:80px;
