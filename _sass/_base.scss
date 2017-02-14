@@ -80,7 +80,7 @@ textarea {
   padding-bottom: 50px;
   background-color: $dark-blue;
   .footer_link{
-    &:hover{
+    &:hover, &:focus{
       color:#0087cd;
     }
   }
