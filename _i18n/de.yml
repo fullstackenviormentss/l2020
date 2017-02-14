@@ -24,7 +24,7 @@ pages:
       part2: Lausanne2020!
       button: Subscribe!
       placeholder: Emailadresse
-      thanks: Thank you! Your submission has been received!
+      thanks: Vielen Dank für deine Anmeldung!
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
