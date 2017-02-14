@@ -121,6 +121,7 @@ pages:
         number: 3’000 
         text: volunteers
   contact:
+    title: Contact
     form:
       prenom:
         title: First name
@@ -135,6 +136,7 @@ pages:
         title: Message
         placeholder: Enter your message here
       envoyer: Send
+      thanks: Thank you very much for your request. We will reply as soon as possible!
 footer:
   link:
     tokyo: "https://tokyo2020.jp/en/"

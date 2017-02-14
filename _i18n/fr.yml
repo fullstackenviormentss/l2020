@@ -121,6 +121,7 @@ pages:
         number: "3000" 
         text: bénévoles
   contact:
+    title: Contact
     form:
       prenom:
         title: Prénom
@@ -135,6 +136,7 @@ pages:
         title: Message
         placeholder: Ecrivez votre message ici
       envoyer: Envoyez
+      thanks: Nous vous remercions de votre demande. Nous vous répondrons dans les plus brefs délais !
 footer:
   link:
     tokyo: "https://tokyo2020.jp/fr/"

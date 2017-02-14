@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="latestnews_section">
   <div class="container">
-    <h1 class="h1_big_news h1_newsletter_cta">Contact us</h1>
+    <h1 class="h1_big_news h1_newsletter_cta">{% t pages.contact.title %}</h1>
     <div class="row">
       <div class="col-md-6 form">
           <form class="form form-contact" data-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
@@ -19,7 +19,7 @@ layout: default
             <input class="submit w-button" data-wait="Please wait..." type="submit" value="Send">
           </form>
           <div class="succes w-form-done">
-            <div>Thank you! Your submission has been received!</div>
+            <div>{% t pages.contact.form.thanks %}</div>
           </div>
           <div class="error w-form-fail">
             <div>Oops! Something went wrong while submitting the form</div>
