@@ -6,7 +6,5 @@
   path: "/venues"
 - title: "Jobs"
   path: "/jobs"
-- title: "Volunteers"
-  path: "http://volunteers.lausanne2020.com"
 - title: "Contact"
   path: "/contact"
