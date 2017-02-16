@@ -1,3 +1,5 @@
+meta: 
+  desc: "Lausanne 2020 – the 3rd Winter Youth Olympic Games will be held from January 10th to 19th 2020. The competition venues are : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets and St. Moritz"
 pages:
   index:
     title1:
@@ -7,18 +9,19 @@ pages:
       part1: Lausanne 2020
       part2: Legacy, Expertise, Innovation
     title3:
-      part1: JLausanne 2020
+      part1: Lausanne 2020
       part2: Culture, Sport, Education
     news:
       title: News
     about:
       title: About
       texte: The Youth Olympic Games are an international Olympic sporting event of the highest level for athletes aged 15 to 18 years old. They combine sport performance, culture and education in an authentic celebration of sport with a festive atmosphere.
+      more: More
     shop:
       title: All the Lausanne 2020 goodies available soon!
       button: Shop!
     newsletter:
-      part1: Be part of the <span class="l2020">Lausanne 2020</span> adventure and receive the latest news!
+      part1: Be part of the Lausanne 2020 adventure and receive the latest news!
       part2: Lausanne2020!
       button: Let’s go
       thanks: Thank you! Your submission has been received!
@@ -26,7 +29,9 @@ pages:
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
-    texte: "Merci pour l’intérêt que vous portez aux Jeux Olympiques de la jeunesse Lausanne 2020. \nNotre Comité d’Organisation n’a actuellement pas de postes à pourvoir. \nSi vous souhaitez soutenir Lausanne 2020 en tant que bénévole c’est par ici"
+    texte: |
+            Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
+            No position has been opened in the Organizing committee at the time being.
   about:
     title1: |
             The Youth Olympic Games:
@@ -43,18 +48,18 @@ pages:
 
             In this spirit Lausanne 2020 set the following mission:
             - <b>Deliver</b> an innovative Youth Olympic Games in full co-construction with the IOC.
-            - <b>Create</b> an opportunity for all stakeholders to take <b>ownership</b> of the Youth Olympic Games, allowing them to <b>actively engage</b> in achieving their own goals
+            - <b>Create</b> an opportunity for all stakeholders to take <b>ownership</b> of the Youth Olympic Games, allowing them to <b>actively engage</b> in achieving their own goals.
             - <b>Enhance</b> the cultural and educational aspects of sport by providing high visibility to all facets of the concept of the Youth Olympic Games.
             - <b>Unite</b> and involve the whole region, the country of Switzerland, as well as neighboring France, to create a unifying event that spreads positivity.
             - <b>Promote</b> values of peace between people by creating an environment conducive to “living together”.
 
-            Lausanne 2020 will take place from January 10th to 19th , 2020.
+            <span class="important-dates">Lausanne 2020 will take place from January 10th to 19th , 2020.</span>
     sports_title: Sports
     sports_texte: "The sports programme of the 3rd edition of the Winter Youth Olympic Games is similar to the programme of the Winter Olympic Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
     sports:
       biathlon:
         text: Biathlon
-        link: "https://www.olympic.org/fr/biathlon"
+        link: "https://www.olympic.org/biathlon"
       bobsleigh:
         text: Bobsleigh
         link: "https://www.olympic.org/bobsleigh"
@@ -97,5 +102,44 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
-    sports_fin: Discover the venues here
-    sports_fin_link: "/the-sites"
+    sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
+    facts:
+      title: Lausanne 2020 in numbers
+      fact1: 
+        number: 1’200 
+        text: Athletes between 15 ans 18 years
+      fact2: 
+        number: "70" 
+        text: Nations
+      fact3: 
+        number: 3rd 
+        text: Winter Youth Olympic Games
+      fact4: 
+        number: "10" 
+        text: Days of competition and festivals
+      fact5: 
+        number: 3’000 
+        text: Volunteers
+  contact:
+    title: Contact
+    form:
+      prenom:
+        title: First name
+        placeholder: Enter your first name
+      nom:
+        title: Last name
+        placeholder: Enter your last name
+      email:
+        title: E-mail address
+        placeholder: Enter your e-mail address
+      message:
+        title: Message
+        placeholder: Enter your message here
+      envoyer: Send
+      thanks: Thank you very much for your request. We will reply as soon as possible!
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/en/"
+    beijing: "http://www.beijing2022.cn/en/"
+    buenos: "http://www.buenosaires2018.com/en/"
+    pyeongChang: "https://www.pyeongchang2018.com/en/index"

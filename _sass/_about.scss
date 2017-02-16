@@ -25,12 +25,10 @@
                 text-align: center;
             }
         }
-	}
-    .pictos>div{
-        @media (max-width: 991px){
-            height: 210px;
+        @media (max-width: 600px){
+            min-height: 200px;
         }
-    }
+	}
 	.links_sports {
 		display: inline-block;
 		margin-top: 10px;
@@ -115,10 +113,76 @@
     ul li{
         margin-top: 0;
     }
+    img{
+        margin-top: 20px;
+    }
+    .important-dates{
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .about-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .about-text, .about-image{
+            flex-basis: 50%;
+            @media (max-width: 768px){
+                flex-basis: 100%;
+            }
+        }
+    }
+    &.about_yog_1{
+        .about-image{
+            padding-left:10px;
+        }
+        .about-text{
+            padding-right:10px;
+        }
+    }
+    &.about_yog_2{
+        .about-image{
+            padding-left:10px;
+        }
+        .about-text{
+            padding-right:10px;
+        }
+    }
 }
 .facts{
     padding-top: 100px;
     padding-bottom: 100px;
+    h1{
+        text-align: center;
+        color: #fff;
+    }
+    .h2_facts {
+        text-transform: none;
+        font-size: 18px;
+    }
+    .facts-entities{
+        display: -ms-flexbox;
+        display: flex;
+        @media (max-width: 992px){
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+    }
+    .fact{
+        margin-top: 20px;
+        -ms-flex-basis: 0;
+        -ms-flex-grow: 1;
+        flex-basis: 0;
+        flex-grow: 1;
+        @media (max-width: 992px){
+            -ms-flex-basis: 100%;
+            flex-basis: 100%;
+        }
+    }
+    @media (min-width: 768px){
+        .fact:nth-child(odd) .wrap_facts h1{
+            padding-top: 40px;
+        }
+    }
 }
 @media (min-width: 768px){
   .seven-cols .col-md-1,
@@ -149,4 +213,40 @@
     width: 14.285714285714285714285714285714%;
     *width: 14.285714285714285714285714285714%;
   }
+}
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }

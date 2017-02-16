@@ -1,3 +1,5 @@
+meta:
+  desc: "Lausanne 2020 – die dritten Olympischen Winter Jugendspiele, welche vom 10. Bis 19. Januar 2020 stattfinden. Die Wettkampfstätten sind folgende : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets und St. Moritz"
 pages:
   index:
     title1:
@@ -14,19 +16,22 @@ pages:
     about:
       title: Über
       texte: Die Olympischen Jugendspiele sind ein internationaler Olympischer Spitzensportanlass für Athleten im Alter von 15 bis 18 Jahren. Sie verbinden die sportliche Höchstleistung, die Kultur, sowie die Bildung in einem wahrhaften Sportfestival.
+      more: Mehr infos
     shop:
       title: Alle Lausanne 2020 Goodies demnächst verfügbar!
       button: Los geht’s
     newsletter:
-      part1: Sei Teil des Abenteuers <span class="l2020">Lausanne 2020</span> und erhalte die aktuellsten News!
+      part1: Sei Teil des Abenteuers Lausanne 2020 und erhalte die aktuellsten News!
       part2: Lausanne2020!
-      button: Subscribe!
+      button: Los geht’s
       placeholder: Emailadresse
-      thanks: Thank you! Your submission has been received!
+      thanks: Vielen Dank für deine Anmeldung!
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
-    texte: "Merci pour l’intérêt que vous portez aux Jeux Olympiques de la jeunesse Lausanne 2020. \nNotre Comité d’Organisation n’a actuellement pas de postes à pourvoir. \nSi vous souhaitez soutenir Lausanne 2020 en tant que bénévole c’est par ici"
+    texte: |
+            Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020. 
+            Unser Organisationskomitee hat momentan keine offenen Stellen zu besetzen. 
   about:
     title1: |
             Die Olympischen Jugendspiele:
@@ -42,18 +47,19 @@ pages:
             Indem die Hinterlassenschaft sowie die Stärken der Schweiz ausgeschöpft werden, sollen die Werte der Olympischen Bewegung Freundschaft, Höchstleistung und Respekt durch die Bildung, die Kultur, die Innovation und den Sport gelebt werden, indem einzigartige und vereinende Olympische Jugendspiele organisiert werden, welche sich für eine bessere Welt einsetzen.
 
             In diesem Sinne verfolgt Lausanne 2020 folgende Missionen:
-            - Organisation von innovativen Olympischen Jugendspielen in gemeinsamer Erarbeitung mit dem IOC
-            - Schaffen von Gelegenheiten für alle Stakeholders, um sich die Olympischen Jugendspiele anzueignen und sich aktiv für die Realisierung ihrer eigenen Ziele einzusetzen
-            - Involvieren und Vereinigen der ganzen Region, des ganzen Landes und des benachbarten Frankreichs um ein vereinendes Event zu gestalten, welches positive Energie verbreitet
-            - Fördern von Frieden zwischen Völkern indem eine gesunde Umgebung für das Zusammenleben kreiert wird.
+            - <b>Organisieren</b> von innovativen Olympischen Jugendspielen in gemeinsamer Erarbeitung mit dem IOC.
+            - <b>Schaffen</b> von Gelegenheiten für alle Stakeholders, um sich die Olympischen Jugendspiele <b>anzueignen</b> und sich <b>aktiv</b> für die Realisierung ihrer eigenen Ziele <b>einzusetzen</b>.
+            - <b>Stärken</b> der kulturellen und pädagogischen Aspekte des Sports indem allen Facetten des Konzepts des Olympischen Jugendspiele grosse Aufmerksamkeit geschenkt wird.
+            - <b>Involvieren und Vereinen</b> der ganzen Region, des ganzen Landes und des benachbarten Frankreichs um ein vereinendes Event zu gestalten, welches positive Energie verbreitet.
+            - <b>Fördern</b> von Frieden zwischen Völkern indem eine gesunde Umgebung für das Zusammenleben kreiert wird.
 
-            Lausanne 2020 findet vom 10. bis 19. Januar 2020 statt.
+            <span class="important-dates">Lausanne 2020 findet vom 10. bis 19. Januar 2020 statt.</span>
     sports_title: Die Sportarten
     sports_texte: "Das sportliche Programm der dritten Olympischen Winterspiele der Jugend ähnelt dem der Olympischen Winterspiele, beinhält aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen sind:"
     sports:
       biathlon:
         text: Biathlon
-        link: "https://www.olympic.org/fr/biathlon"
+        link: "https://www.olympic.org/biathlon"
       bobsleigh:
         text: Bob
         link: "https://www.olympic.org/bobsleigh"
@@ -85,7 +91,7 @@ pages:
         text: Skeleton
         link: "https://www.olympic.org/skeleton"
       ski-freestyle:
-        text: Skiakrobatik / Freeski
+        text: Freestyle skiing
         link: "https://www.olympic.org/freestyle-skiing"
       ski-alpin:
         text: Ski alpin
@@ -96,5 +102,44 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
-    sports_fin: Entdecke die Wettkampfstätten
-    sports_fin_link: "/de/the-sites"
+    sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
+    facts:
+      title: Lausanne 2020 in Zahlen
+      fact1: 
+        number: 1’200 
+        text: Athleten im Alter von 15 bis 18 Jahren
+      fact2: 
+        number: "70" 
+        text: Nationen
+      fact3: 
+        number: "3." 
+        text: Olympischen Winterspiele der Jugend
+      fact4: 
+        number: "10"
+        text: Tage Wettkampf und Festival
+      fact5: 
+        number: 3’000 
+        text: Volunteers
+  contact:
+    title: Kontakt
+    form:
+      prenom:
+        title: Vorname
+        placeholder: gib deinen Vornamen ein
+      nom:
+        title: Nachname
+        placeholder: gib deinen Nachnamen ein
+      email:
+        title: Emailadresse
+        placeholder: gib deine Emailadresse ein
+      message:
+        title: Nachricht
+        placeholder: gib hier deine Nachricht ein
+      envoyer: Senden
+      thanks: Vielen Dank für deine Anfrage. Wir werden dir so schnell wie möglich antworten!
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/en/"
+    beijing: "http://www.beijing2022.cn/en/"
+    buenos: "http://www.buenosaires2018.com/en/"
+    pyeongChang: "https://www.pyeongchang2018.com/en/index"

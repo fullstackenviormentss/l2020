@@ -2,5 +2,5 @@
   path: "/"
 - title: "About"
   path: "/about"
-- title: "The sites"
-  path: "/the-sites"
+- title: "Venues"
+  path: "/venues"

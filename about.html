@@ -4,11 +4,11 @@ layout: default
 <div class="about_yog about_yog_1 ">
   <div class="container">
     <h1>{% t pages.about.title1 %}</h1>
-    <div class="row">
-      <div class="col-md-6">
-        <img src="images/19-02-16-Skeleton-Womens-Individual-04-p-1080x720.jpeg" alt="">
+    <div class="about-content">
+      <div class="about-text">
+        <img src="images/photo_CIO.jpg" alt="">
       </div>
-      <div class="col-md-6 info-text">
+      <div class="about-image">
         {% capture text %}{%t pages.about.texte1 %}{% endcapture %}
         <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
       </div>
@@ -18,13 +18,13 @@ layout: default
 <div class="about_yog about_yog_2">
   <div class="container">
     <h1>{% t pages.about.title2 %}</h1>
-    <div class="row">
-      <div class="col-md-6 info-text">
+    <div class="about-content">
+      <div class="about-text">
         {% capture text %}{%t pages.about.texte2 %}{% endcapture %}
         <p>{{ text | markdownify }}</p>
       </div>
-      <div class="col-md-6">
-        <img src="images/20-02-16-Ice-Hockey-Bronze-Medal-Mens-02-p-1080x717.jpeg" alt="">
+      <div class="about-image">
+        <span class="helper"></span><img src="images/lillehammer_2016.jpg" alt="">
       </div>
     </div>
   </div>
@@ -33,194 +33,361 @@ layout: default
   <div class="container">
     <h1>{% t pages.about.sports_title %}</h1>
     <p>{% t pages.about.sports_texte %}</p>
-    <div class="pictos row">
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/biathlon.png">
+    <div class="pictos visible-md visible-lg row">
+      <div class="col-md-8">
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/biathlon.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" target="_blank" href="{% t pages.about.sports.biathlon.link %}">{% t pages.about.sports.biathlon.text %}</a>
+            </div>
           </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.biathlon.link %}">{% t pages.about.sports.biathlon.text %}</a>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/luge.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.luge.link %}" target="_blank">{% t pages.about.sports.luge.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/bobsleigh.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}" target="_blank">{% t pages.about.sports.bobsleigh.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/patinage-artistique.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}" target="_blank">{% t pages.about.sports.patinage-artistique.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/combine-nordique.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}" target="_blank">{% t pages.about.sports.combine-nordique.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/patinage-vitesse.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}" target="_blank">{% t pages.about.sports.patinage-vitesse.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/curling.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.curling.link %}" target="_blank">{% t pages.about.sports.curling.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/short-track.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.short-track.link %}" target="_blank">{% t pages.about.sports.short-track.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/hockey-sur-glace.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}" target="_blank">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/saut-a-ski.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}" target="_blank">{% t pages.about.sports.saut-a-ski.text %}</a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/bobsleigh.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}">{% t pages.about.sports.bobsleigh.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/combine-nordique.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}">{% t pages.about.sports.combine-nordique.text %}</a>
+      <div class="col-md-4">
+        <div class="col-md-12 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/skeleton.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}" target="_blank">{% t pages.about.sports.skeleton.text %}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/curling.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.curling.link %}">{% t pages.about.sports.curling.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/hockey-sur-glace.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+        <div class="col-md-12 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-freestyle.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}" target="_blank">{% t pages.about.sports.ski-freestyle.text %}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/luge.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.luge.link %}">{% t pages.about.sports.luge.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/patinage-artistique.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}">{% t pages.about.sports.patinage-artistique.text %}</a>
+        <div class="col-md-12 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-alpin.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}" target="_blank">{% t pages.about.sports.ski-alpin.text %}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/patinage-vitesse.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}">{% t pages.about.sports.patinage-vitesse.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/short-track.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.short-track.link %}">{% t pages.about.sports.short-track.text %}</a>
+        <div class="col-md-12 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-de-fond.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}" target="_blank">{% t pages.about.sports.ski-de-fond.text %}</a>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/saut-a-ski.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}">{% t pages.about.sports.saut-a-ski.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/skeleton.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}">{% t pages.about.sports.skeleton.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-freestyle.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}">{% t pages.about.sports.ski-freestyle.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-alpin.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}">{% t pages.about.sports.ski-alpin.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/ski-de-fond.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}">{% t pages.about.sports.ski-de-fond.text %}</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 col-xs-6">
-        <div class="pictos-grp row">
-          <div class="col-md-3">
-            <img src="images/sports/snowboard.png">
-          </div>
-          <div class="col-md-9">
-            <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}">{% t pages.about.sports.snowboard.text %}</a>
+        <div class="col-md-12 col-xs-6">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/snowboard.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}" target="_blank">{% t pages.about.sports.snowboard.text %}</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <p class="about_the_yog_p descr_pictos"><a href="{% t pages.about.sports_fin_link %}" class="link_site">{% t pages.about.sports_fin %}</a>
-    </p>
+    <div class="pictos hidden-lg hidden-md row">
+      <div class="col-xs-6">
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/biathlon.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.biathlon.link %}" target="_blank">{% t pages.about.sports.biathlon.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/bobsleigh.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}" target="_blank">{% t pages.about.sports.bobsleigh.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/combine-nordique.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}" target="_blank">{% t pages.about.sports.combine-nordique.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/curling.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.curling.link %}" target="_blank">{% t pages.about.sports.curling.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/hockey-sur-glace.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}" target="_blank">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/luge.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.luge.link %}" target="_blank">{% t pages.about.sports.luge.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/patinage-artistique.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}" target="_blank">{% t pages.about.sports.patinage-artistique.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/patinage-vitesse.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}" target="_blank">{% t pages.about.sports.patinage-vitesse.text %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/short-track.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.short-track.link %}" target="_blank">{% t pages.about.sports.short-track.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/saut-a-ski.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}" target="_blank">{% t pages.about.sports.saut-a-ski.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/skeleton.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}" target="_blank">{% t pages.about.sports.skeleton.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-freestyle.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}" target="_blank">{% t pages.about.sports.ski-freestyle.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-alpin.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}" target="_blank">{% t pages.about.sports.ski-alpin.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/ski-de-fond.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}" target="_blank">{% t pages.about.sports.ski-de-fond.text %}</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="pictos-grp row">
+            <div class="col-md-3">
+              <img src="images/sports/snowboard.png">
+            </div>
+            <div class="col-md-9">
+              <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}" target="_blank">{% t pages.about.sports.snowboard.text %}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="about_the_yog_p descr_pictos">{% t pages.about.sports_fin %}</p>
   </div>
 </div>
-<div class="facts facts_2">
-  <div class="facts_wrap container">
-    <div class="row">
-      <div class="col-facts col-facts_1 col-md-3">
-        <div class="wrap_facts">
-          <h1 class="h1_facts">240</h1>
-          <img class="img_facts" src="images/medal.svg" width="100">
-          <h1 class="h2_facts">Medals</h1>
+<div class="facts">
+  <div class="container">
+    <h1>{% t pages.about.facts.title %}</h1>
+      <div class="facts-entities">
+        <div class="fact">
+          <div class="wrap_facts">
+            <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact1.number %}</h1>
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="images/facts/maillot_white.png" srcset="images/facts/maillot_white-p-500x500.png 500w, images/facts/maillot_white-p-800x800.png 800w" width="130">
+            <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact1.text %}</h1>
+          </div>
+        </div>
+        <div class="fact">
+          <div class="wrap_facts">
+            <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact2.number %}</h1>
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="images/facts/globe_white.png" srcset="images/facts/globe_white-p-500x500.png 500w, images/facts/globe_white-p-800x800.png 800w" width="130">
+            <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact2.text %}</h1>
+          </div>
+        </div>
+        <div class="fact">
+          <div class="wrap_facts">
+            <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact3.number %}</h1>
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="images/facts/boule_neige_white.png" srcset="images/facts/boule_neige_white-p-500x500.png 500w, images/facts/boule_neige_white-p-800x800.png 800w" width="130">
+            <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact3.text %}</h1>
+          </div>
+        </div>
+        <div class="fact">
+          <div class="wrap_facts">
+            <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact4.number %}</h1>
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="images/facts/calendrier.png" width="130">
+            <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact4.text %}</h1>
+          </div>
+        </div>
+        <div class="fact">
+          <div class="wrap_facts">
+            <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact5.number %}</h1>
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="images/facts/benevole.png" width="130">
+            <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact5.text %}</h1>
+          </div>
         </div>
       </div>
-      <div class="col-facts col-md-3">
-        <div class="wrap_facts">
-          <h1 class="h1_facts">2365</h1>
-          <img class="img_facts" src="images/basketball-jersey.svg" width="100">
-          <h1 class="h2_facts">Athletes</h1>
-        </div>
-      </div>
-      <div class="col-facts col-facts_1 col-md-3">
-        <div class="wrap_facts">
-          <h1 class="h1_facts">3rd</h1>
-          <img class="img_facts" src="images/shapes.svg" width="100">
-          <h1 class="h2_facts">Winter Games</h1>
-        </div>
-      </div>
-      <div class="col-facts col-md-3">
-        <div class="wrap_facts">
-          <h1 class="h1_facts">206</h1>
-          <img class="img_facts" src="images/earth-globe.svg" width="100">
-          <h1 class="h2_facts">Countries</h1>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 <div class="key_numbers">

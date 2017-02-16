@@ -79,6 +79,15 @@
     height: auto;
     opacity: 1;
 }
-.discover_p{
-    text-align: justify;
+.sites{
+    .discover_p
+    {
+        text-align: justify;
+        color: #fff;
+        font-size: 19px;
+        font-family: Montserrat, sans-serif;
+        line-height: 27px;
+        font-weight: 400;
+        text-align: justify;
+    }
 }

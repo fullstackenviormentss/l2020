@@ -1,3 +1,5 @@
+meta: 
+  desc: "Lausanne 2020 – les 3ème Jeux Olympiques de la Jeunesse d’hiver ont lieu du 10 au 19 janvier 2020. Les sites de compétition sont : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets et St. Moritz"
 pages:
   index:
     title1:
@@ -13,20 +15,23 @@ pages:
       title: News
     about:
       title: A propos
-      texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
+      texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
+      more: En savoir plus
     shop:
       title: Tous les produits Lausanne 2020 bientôt disponibles!
       button: Shop!
     newsletter:
-      part1: Faites partie de l’aventure <span class="l2020">Lausanne 2020</span> et recevez les dernières nouvelles !
+      part1: Faites partie de l’aventure Lausanne 2020 et recevez les dernières nouvelles !
       part2: Lausanne2020!
       button: Je m’inscris
       placeholder: Adresse email
-      thanks: Thank you! Your submission has been received!
+      thanks: Merci. Votre inscription a bien été prise en compte.
       oops: Oops! Something went wrong while submitting the form
   jobs:
     title: Emplois
-    texte: "Merci pour l’intérêt que vous portez aux Jeux Olympiques de la jeunesse Lausanne 2020. \nNotre Comité d’Organisation n’a actuellement pas de postes à pourvoir. \nSi vous souhaitez soutenir Lausanne 2020 en tant que bénévole c’est par ici"
+    texte: |
+            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020. 
+            Aucun poste n’est actuellement à pourvoir au sein du comité d’organisation.
   about:
     title1: |
             Les Jeux Olympiques de la Jeunesse : 
@@ -42,13 +47,13 @@ pages:
             En puisant dans l’héritage et les atouts de la Suisse, vivre les valeurs du mouvement olympique que sont l’amitié, l’excellence et le respect au travers de la formation, la culture, l’innovation et le sport en organisant des Jeux Olympiques de la Jeunesse, uniques et rassembleurs, au service de la promotion d’un monde meilleur.
 
             Dans cet esprit, Lausanne 2020 s’est donné pour mission de :
-            - <b>Délivrer</b> des Jeux Olympiques de la Jeunesse novateurs en les co-construisant avec le CIO
-            - <b>Créer</b> l’opportunité pour l’ensemble des parties prenantes de <b>s’approprier</b> les Jeux Olympiques de la Jeunesse en leur permettant de <b>s’engager activement</b> pour la réalisation de leurs propres objectifs
-            - <b>Valoriser</b> les aspects culturels et éducatifs du sport en donnant une visibilité forte à toutes les facettes du concept des Jeux de la Jeunesse
-            - <b>Fédérer et faire participer</b> toute la région, l’ensemble du pays ainsi que la France voisine autour d’un événement rassembleur et diffuseur d’énergie positive
-            - <b>Promouvoir</b> la paix entre les peuples en créant un environnement propice au « vivre ensemble »
+            - <b>Délivrer</b> des Jeux Olympiques de la Jeunesse novateurs en les co-construisant avec le CIO.
+            - <b>Créer</b> l’opportunité pour l’ensemble des parties prenantes de <b>s’approprier</b> les Jeux Olympiques de la Jeunesse en leur permettant de <b>s’engager activement</b> pour la réalisation de leurs propres objectifs.
+            - <b>Valoriser</b> les aspects culturels et éducatifs du sport en donnant une visibilité forte à toutes les facettes du concept des Jeux de la Jeunesse.
+            - <b>Fédérer et faire participer</b> toute la région, l’ensemble du pays ainsi que la France voisine autour d’un événement rassembleur et diffuseur d’énergie positive.
+            - <b>Promouvoir</b> la paix entre les peuples en créant un environnement propice au « vivre ensemble ».
 
-            Lausanne 2020 se déroulera du 10 au 19 Janvier 2020 !
+            <span class="important-dates">Lausanne 2020 se déroulera du 10 au 19 Janvier 2020 !</span>
     sports_title: Les sports
     sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
     sports:
@@ -96,6 +101,45 @@ pages:
         link: "https://www.olympic.org/fr/ski-de-fond"
       snowboard:
         text: Snowboard
-        link: "https://www.olympic.org/fr/ski-alpin"
-    sports_fin: Découvrez les sites de compétition ici
-    sports_fin_link: "/fr/the-sites"
+        link: "https://www.olympic.org/fr/surf-des-neiges"
+    sports_fin: Découvrez les sites des compétitions <b><a href="venues" class="link_site">ici</a></b>
+    facts:
+      title: Lausanne 2020 en chiffres
+      fact1: 
+        number: "1200" 
+        text: Athlètes entre 15 et 18 ans
+      fact2: 
+        number: "70" 
+        text: Nations
+      fact3: 
+        number: 3ème 
+        text: Jeux Olympiques de la Jeunesse d’hiver
+      fact4: 
+        number: "10"
+        text: Jours de compétition et festivals
+      fact5: 
+        number: "3000" 
+        text: Bénévoles
+  contact:
+    title: Contact
+    form:
+      prenom:
+        title: Prénom
+        placeholder: Entrez votre prénom
+      nom:
+        title: Nom
+        placeholder: Entrez votre nom
+      email:
+        title: Adresse e-mail
+        placeholder: Entrez votre adresse e-mail
+      message:
+        title: Message
+        placeholder: Ecrivez votre message ici
+      envoyer: Envoyez
+      thanks: Nous vous remercions de votre demande. Nous vous répondrons dans les plus brefs délais !
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/fr/"
+    beijing: "http://www.beijing2022.cn/fr/"
+    buenos: "http://www.buenosaires2018.com/fr/"
+    pyeongChang: "https://www.pyeongchang2018.com/fr/index"
