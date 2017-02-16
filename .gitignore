@@ -3,5 +3,7 @@ _site
 .jekyll-metadata
 _data/contentful
 .env
+Gemfile
+Gemfile.lock
 images/social_wall
 _config.yml
