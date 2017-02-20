@@ -63,7 +63,8 @@ class TW
     post['social_network'] = 'twitter'
 
     post['photo'] = photo(:small) if has_photo? && (!has_ext_quote? || is_ext_quote_facebook?)
-    #post['video'] = video if has_video?
+    post['video'] = video if has_video?
+
     post['video'] = ext_quote_video if has_ext_quote? && has_ext_quote_video?
 
     post['int_quote'] = int_quote if has_int_quote?
@@ -104,14 +105,19 @@ class TW
   # video
 
   def has_video?
-    defined?(@post[:extended_entities][:media][0][:type]) && @post[:extended_entities][:media][0][:type] = "video"
+    defined?(@post[:extended_entities][:media][0][:type]) && @post[:extended_entities][:media][0][:type] == "video"
   end
 
-  def video
-    #puts @post[:extended_entities][:media][0]
+  def video()
+    variants = @post[:extended_entities][:media][0][:video_info][:variants]
+    selected_video = variants.select {|item| item[:content_type] == "video/mp4"}
+                   .max_by{|item| item[:bitrate]}
+
     video = Hash.new
-    video['provider'] = get_video_provider(@post[:extended_entities][:media][0][:media_url])
-    video['source'] = parse_video(@post[:extended_entities][:media][0][:media_url])
+    video['provider'] = get_video_provider(selected_video[:url])
+    video['source'] = parse_video(selected_video[:url])
+
+    video['picture'] = @post[:extended_entities][:media][0][:media_url]
 
     return video
   end
