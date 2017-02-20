@@ -108,13 +108,13 @@ class TW
     defined?(@post[:extended_entities][:media][0][:type]) && @post[:extended_entities][:media][0][:type] == "video"
   end
 
-  def video()
+  def video
     variants = @post[:extended_entities][:media][0][:video_info][:variants]
     selected_video = variants.select {|item| item[:content_type] == "video/mp4"}
                    .max_by{|item| item[:bitrate]}
 
     video = Hash.new
-    video['provider'] = get_video_provider(selected_video[:url])
+    video['provider'] = 'twitter'
     video['source'] = parse_video(selected_video[:url])
 
     video['picture'] = @post[:extended_entities][:media][0][:media_url]
