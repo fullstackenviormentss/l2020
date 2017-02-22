@@ -51,6 +51,7 @@
     }
 		/* Social_wall Blockquote */
 		blockquote{
+
       overflow:hidden;
 		  margin:0;padding: 20px;
 			height:207px;
@@ -63,19 +64,21 @@
 				width: 130px;
 				padding-right:10px;
 				img{
-					object-fit: cover;
-					height: 165px;
+          height: 165px;
+          object-fit: cover;
+    			font-family: 'object-fit: cover;'
 				}
 			}
 			.wrap_story{
 				position: relative;
 				height: 150px;
+        padding-top:10px;
 			}
 			h1, h1 a{
 			  font-size: 14px;
 				line-height: 20px;
 			  color: $purple-primary;
-			  word-break: normal;
+			  word-break: break-all;
 				margin:0;
 			}
 			p.desc{
