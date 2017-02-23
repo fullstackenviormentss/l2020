@@ -28,7 +28,7 @@ pages:
       placeholder: Email address
       oops: Oops! Something went wrong while submitting the form
   jobs:
-    title: Emplois
+    title: Jobs
     texte: |
             Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
             No position has been opened in the Organizing committee at the time being.
@@ -50,7 +50,7 @@ pages:
             - <b>Deliver</b> an innovative Youth Olympic Games in full co-construction with the IOC.
             - <b>Create</b> an opportunity for all stakeholders to take <b>ownership</b> of the Youth Olympic Games, allowing them to <b>actively engage</b> in achieving their own goals.
             - <b>Enhance</b> the cultural and educational aspects of sport by providing high visibility to all facets of the concept of the Youth Olympic Games.
-            - <b>Unite</b> and involve the whole region, the country of Switzerland, as well as neighboring France, to create a unifying event that spreads positivity.
+            - <b>Unite and involve</b> the whole region, the country of Switzerland, as well as neighboring France, to create a unifying event that spreads positivity.
             - <b>Promote</b> values of peace between people by creating an environment conducive to “living together”.
 
             <span class="important-dates">Lausanne 2020 will take place from January 10th to 19th , 2020.</span>
@@ -107,7 +107,7 @@ pages:
       title: Lausanne 2020 in numbers
       fact1: 
         number: 1’200 
-        text: Athletes between 15 ans 18 years
+        text: Athletes between 15 and 18 years
       fact2: 
         number: "70" 
         text: Nations

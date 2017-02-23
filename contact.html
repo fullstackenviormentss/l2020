@@ -15,8 +15,8 @@ layout: default
             <label class="label" for="email">{% t pages.contact.form.email.title %}</label>
             <input class="fields w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.contact.form.email.placeholder %}" required="required" type="email">
             <label class="label" for="Message">{% t pages.contact.form.message.title %}</label>
-            <textarea class="msg-area w-input" data-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{% t pages.contact.form.email.placeholder %}" required="required"></textarea>
-            <input class="submit w-button" data-wait="Please wait..." type="submit" value="Send">
+            <textarea class="msg-area w-input" data-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{% t pages.contact.form.message.placeholder %}" required="required"></textarea>
+            <input class="submit w-button" data-wait="Please wait..." type="submit" value="{% t pages.contact.form.envoyer %}">
           </form>
           <div class="succes w-form-done">
             <div>{% t pages.contact.form.thanks %}</div>
