@@ -5,7 +5,7 @@ $(document).ready(function(){
  
     var delayRedirect = function() {
         triggerBuild()
-        timeoutID = window.setTimeout(redirect, 10000);
+        timeoutID = window.setTimeout(redirect, 20000);
     };
 
     var triggerBuild = function(){
