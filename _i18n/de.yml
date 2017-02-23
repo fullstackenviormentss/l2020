@@ -4,7 +4,7 @@ pages:
   index:
     title1:
       part1: Lausanne 2020
-      part2: Hier beginnt alles!
+      part2: Wo alles beginnt!
     title2:
       part1: Lausanne 2020
       part2: Vermächtnis, Know-How, Innovation
@@ -55,7 +55,7 @@ pages:
 
             <span class="important-dates">Lausanne 2020 findet vom 10. bis 19. Januar 2020 statt.</span>
     sports_title: Die Sportarten
-    sports_texte: "Das sportliche Programm der dritten Olympischen Winterspiele der Jugend ähnelt dem der Olympischen Winterspiele, beinhält aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen sind:"
+    sports_texte: "Das sportliche Programm der dritten Olympischen Jugend-Winterspiele ähnelt dem der Olympischen Winterspiele, beinhaltet aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen, sind:"
     sports:
       biathlon:
         text: Biathlon
