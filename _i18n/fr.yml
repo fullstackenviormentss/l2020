@@ -135,7 +135,7 @@ pages:
       message:
         title: Message
         placeholder: Ecrivez votre message ici
-      envoyer: Envoyez
+      envoyer: Envoyer
       thanks: Nous vous remercions de votre demande. Nous vous répondrons dans les plus brefs délais !
 footer:
   link:
