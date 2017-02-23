@@ -2,14 +2,10 @@ $(document).ready(function(){
 
 	// The module pattern
   var feature = (function() {
-   
-    // Private variables and functions
-    var privateThing = "secret";
-    var publicThing = "not secret";
  
     var delayRedirect = function() {
         triggerBuild()
-        timeoutID = window.setTimeout(redirect, 20000);
+        timeoutID = window.setTimeout(redirect, 10000);
     };
 
     var triggerBuild = function(){
@@ -21,7 +17,23 @@ $(document).ready(function(){
     }
  
     var redirect = function() {
-        window.location.replace("http://helmsman-snake-20876.netlify.com/");
+      var page = getUrlParameter('page');
+      window.location.replace("http://helmsman-snake-20876.netlify.com/"+page);
+    };
+
+    var getUrlParameter = function getUrlParameter(sParam) {
+      var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+      for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+      }
     };
  
     // Public API
