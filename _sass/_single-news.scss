@@ -1,0 +1,18 @@
+.single-news-content{
+	margin-top:170px;
+	header{
+		background-image: url(../images/bkg_3.png);
+		background-position: 0px 0px, 0px 0px;
+		background-size: cover;
+		padding: 20px 0;
+		.news-image{
+			text-align:center;
+		}
+	}
+	.news-content{
+		padding-bottom:50px;
+		h1{
+			color:#0087cd;
+		}
+	}
+}

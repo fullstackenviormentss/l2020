@@ -66,3 +66,14 @@ contentful:
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
           content_type: keyNumbers
+
+page_gen-dirs: true
+page_gen:
+  - data: 'contentful.spaces.news.news'
+    template: 'single'
+    name: 'titre'
+    dir: 'news-fr'
+  - data: 'contentful.spaces.news.news'
+    template: 'single'
+    name: 'titreDe'
+    dir: 'news-de'
