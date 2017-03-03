@@ -4,3 +4,5 @@
   path: "/de/about"
 - title: "Wettkampfstätten"
   path: "/de/venues"
+- title: "News"
+  path: "/de/news"

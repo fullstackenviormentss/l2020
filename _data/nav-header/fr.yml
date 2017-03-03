@@ -4,3 +4,5 @@
   path: "/fr/about"
 - title: "Les sites"
   path: "/fr/venues"
+- title: "News"
+  path: "/fr/news"

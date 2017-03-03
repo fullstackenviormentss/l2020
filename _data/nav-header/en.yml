@@ -4,3 +4,5 @@
   path: "/about"
 - title: "Venues"
   path: "/venues"
+- title: "News"
+  path: "/news"

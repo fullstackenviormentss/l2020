@@ -7,6 +7,9 @@
 		padding: 20px 0;
 		.news-image{
 			text-align:center;
+			img{
+				max-width: 700px;
+			}
 		}
 	}
 	.news-content{

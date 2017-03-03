@@ -70,10 +70,14 @@ contentful:
 page_gen-dirs: true
 page_gen:
   - data: 'contentful.spaces.news.news'
-    template: 'single'
+    template: 'single-news'
     name: 'titre'
     dir: 'news-fr'
   - data: 'contentful.spaces.news.news'
-    template: 'single'
+    template: 'single-news'
     name: 'titreDe'
     dir: 'news-de'
+  - data: 'contentful.spaces.news.news'
+    template: 'single-news'
+    name: 'titreEn'
+    dir: 'news-en'

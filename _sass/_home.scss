@@ -43,7 +43,7 @@
 	font-family: Montserrat, sans-serif;
 	text-transform: uppercase;
 }
-.news_section {
+.news_section, .news-page {
     background-image: url(../images/bkg_blue.png);
     padding-bottom: 50px;
     padding-top: 20px;
@@ -70,6 +70,9 @@
     		padding: 0 12px;
     	}
     }
+    .news_date a{
+		float: right;
+	}
 }
 .newsletter_cta{
     background-image: url(../images/bkg_blue.png);
