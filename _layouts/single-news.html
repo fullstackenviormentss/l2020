@@ -8,8 +8,18 @@ layout: default
 	  </div>
 	</header>
 	<div class="container news-content">
-	    <h1>{{ page.titre }}</h1>
-	    <p>{{ page.texte }}</p>
-	    <p class="news_date">{{page.date | date: "%d.%m.%Y"}}</p>
+		{% if site.lang == "fr" %}
+	    {% capture title %}{{page.titre}}{% endcapture %}
+	    {% capture text %}{{page.texteLong}}{% endcapture %}
+	  {% elsif site.lang == "de" %}
+	    {% capture title %}{{page.titreDe}}{% endcapture %}
+	    {% capture text %}{{page.texteLongDe}}{% endcapture %}
+	  {% else %}
+	    {% capture title %}{{page.titreEn}}{% endcapture %}
+	    {% capture text %}{{page.texteLongEn}}{% endcapture %}
+	  {% endif %}
+    <h1>{{ title }}</h1>
+    <p>{{ texte }}</p>
+    <p class="news_date">{{page.date | date: "%d.%m.%Y"}}</p>
 	</div>
 </div>
