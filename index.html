@@ -53,7 +53,15 @@ layout: default
                 {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
               {% endif %}
             </p>
-            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}</p>
+            {% capture dir %}news-{{site.lang}}{% endcapture %}
+            {% if site.lang == "fr" %}
+              {% capture link %}{{new.titre}}{% endcapture %}
+            {% elsif site.lang == "de" %}
+              {% capture link %}{{new.titreDe}}{% endcapture %}
+            {% else %}
+              {% capture link %}{{new.titreEn}}{% endcapture %}
+            {% endif %}
+            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">Lire la suite</a></p>
           </div>
       {% endfor %}
     </div>
