@@ -51,6 +51,9 @@
     	color: #fff;
     }
     .new{
+    	height: 500px;
+    	overflow: hidden;
+    	position:relative;
     	background-color: #fff;
     	background-clip: content-box;
     	.p_news{
@@ -69,10 +72,16 @@
     	h1,p{
     		padding: 0 12px;
     	}
+    	.news_date{
+	    	a{
+	    		float: right;
+	    	}
+	    	padding-right:42px;
+	    	width: 100%;
+			position: absolute;
+			bottom:0;
+		}
     }
-    .news_date a{
-		float: right;
-	}
 }
 .newsletter_cta{
     background-image: url(../images/bkg_blue.png);
