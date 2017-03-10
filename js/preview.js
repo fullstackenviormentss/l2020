@@ -18,7 +18,7 @@ $(document).ready(function(){
  
     var redirect = function() {
       var page = getUrlParameter('page');
-      window.location.replace("http://helmsman-snake-20876.netlify.com/"+page);
+      window.location.replace("http://news--boatman-snake-75507.netlify.com/"+page);
     };
 
     var getUrlParameter = function getUrlParameter(sParam) {
