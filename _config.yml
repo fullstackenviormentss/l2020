@@ -81,3 +81,7 @@ page_gen:
     template: 'single-news'
     name: 'titreEn'
     dir: 'news-en'
+  - data: 'years'
+    template: 'news-archives'
+    name: "year"
+    dir: 'news-archives'
