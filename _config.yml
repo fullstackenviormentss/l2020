@@ -38,13 +38,6 @@ exclude_from_localizations: ["js","css","_sass"]
 
 contentful:
   spaces:
-    - news: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: news
-          order: -fields.date
-          limit: 3
     - venues: # Jekyll _data folder identifier - Required
         space: ENV_CONTENTFUL_SPACE_ID # Required
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
@@ -63,9 +56,18 @@ contentful:
           content_type: partnersLogos
     - keyNumbers: # Jekyll _data folder identifier - Required
         space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN_PREVIEW # Required
+        client_options:             # Optional
+          api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
         cda_query:
           content_type: keyNumbers
+    - news: # Jekyll _data folder identifier - Required
+        space: ENV_CONTENTFUL_SPACE_ID # Required
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN_PREVIEW # Required
+        client_options:             # Optional
+          api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
+        cda_query:
+          content_type: news
 
 page_gen-dirs: true
 page_gen:
