@@ -28,6 +28,8 @@ pages:
       placeholder: Adresse email
       thanks: Merci. Votre inscription a bien été prise en compte.
       oops: Oops! Something went wrong while submitting the form
+  news:
+    archive_link: Archive
   jobs:
     title: Emplois
     texte: |

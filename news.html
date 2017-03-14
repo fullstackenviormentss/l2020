@@ -24,26 +24,28 @@ layout: default
 <div class="news-page">
   <div class="container">
     <h1 class="h1_big_news h1_newsletter_cta">News</h1>
+      <div class="archive-links">
       {% if nowyear >= '2017' %}
         {% if news2017 > 9 %}
-          <a href="/news-archives/2017" style="color:#fff;">link 2017</a>
+          <a href="/news-archives/2017" style="color:#fff;">{% t pages.news.archive_link %} 2017</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2018' %}
         {% if news2018 > 9 %}
-          <a href="#" style="color:#fff;">link 2018</a>
+          <a href="/news-archives/2018" style="color:#fff;">{% t pages.news.archive_link %} 2018</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2019' %}
         {% if news2019 > 9 %}
-          <a href="#" style="color:#fff;">link 2019</a>
+          <a href="/news-archives/2019" style="color:#fff;">{% t pages.news.archive_link %} 2019</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2020' %}
         {% if news2020 > 9 %}
-          <a href="#" style="color:#fff;">link 2020</a>
+          <a href="/news-archives/2020" style="color:#fff;">{% t pages.news.archive_link %} 2020</a>
         {% endif %}
       {% endif %}
+    </div>
     <div class="row">
       {% for new in site.data.contentful.spaces.news.news limit:9 %}
         <div class="new col-md-4">

@@ -68,6 +68,8 @@ contentful:
           api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
         cda_query:
           content_type: news
+          order: -fields.date
+          limit: 3
 
 page_gen-dirs: true
 page_gen:

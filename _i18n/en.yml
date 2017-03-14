@@ -28,6 +28,8 @@ pages:
       thanks: Thank you! Your submission has been received!
       placeholder: Email address
       oops: Oops! Something went wrong while submitting the form
+  news:
+    archive_link: Archive
   jobs:
     title: Jobs
     texte: |
