@@ -13,6 +13,7 @@ pages:
       part2: Culture, Sport, Education 
     news:
       title: News
+      plus: Lire la suite
     about:
       title: A propos
       texte: Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans. Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport.
@@ -27,6 +28,8 @@ pages:
       placeholder: Adresse email
       thanks: Merci. Votre inscription a bien été prise en compte.
       oops: Oops! Something went wrong while submitting the form
+  news:
+    archive_link: Archive
   jobs:
     title: Emplois
     texte: |

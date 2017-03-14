@@ -1,5 +1,7 @@
 - title: "Home"
   path: "/"
+- title: "News"
+  path: "/news"
 - title: "About"
   path: "/about"
 - title: "Venues"

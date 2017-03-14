@@ -1,5 +1,7 @@
 - title: "Accueil"
   path: "/fr/"
+- title: "News"
+  path: "/fr/news"
 - title: "A propos"
   path: "/fr/about"
 - title: "Les sites"

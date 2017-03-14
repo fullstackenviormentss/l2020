@@ -1,5 +1,7 @@
 - title: "Home"
   path: "/de/"
+- title: "News"
+  path: "/de/news"
 - title: "Über uns"
   path: "/de/about"
 - title: "Wettkampfstätten"
