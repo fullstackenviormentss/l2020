@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://news--boatman-snake-75507.netlify.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://www.lausanne2020.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -56,16 +56,12 @@ contentful:
           content_type: partnersLogos
     - keyNumbers: # Jekyll _data folder identifier - Required
         space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN_PREVIEW # Required
-        client_options:             # Optional
-          api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
           content_type: keyNumbers
     - news: # Jekyll _data folder identifier - Required
         space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN_PREVIEW # Required
-        client_options:             # Optional
-          api_url: 'preview.contentful.com' # Defaults to 'api.contentful.com' which is Production
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
           content_type: news
           order: -fields.date
