@@ -65,7 +65,6 @@ contentful:
         cda_query:
           content_type: news
           order: -fields.date
-          limit: 3
 
 page_gen-dirs: true
 page_gen:
