@@ -4,6 +4,7 @@ require 'fileutils'
 require 'mini_magick'
 require "net/http"
 require 'uri'
+require "open-uri"
 
 class FB
   include SharedMethods
@@ -120,12 +121,19 @@ class FB
   end
 
   def ext_quote_picture_resize(image_url)
-    image = MiniMagick::Image.open(image_url)
+
+    # Prevent filename errors by saving first
+    File.open("/tmp/#{@post['id']}", 'wb') do |fo|
+      fo.write open(image_url).read 
+    end
+
+    # Resizing and converting image
+    image = MiniMagick::Image.open("/tmp/#{@post['id']}")
     if image.type == 'PNG'
       image.combine_options do |c|
-
         c.background '#FFFFFF' # for transparent png
         c.alpha 'remove'
+        c.depth "8"
       end
     end
     image.resize "300x300>" # proportional, only if larger
