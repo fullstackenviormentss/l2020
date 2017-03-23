@@ -1,16 +1,25 @@
 ---
 ---
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "_animations.scss";
+
+/* Helpers */
+@import "helpers/_variables.scss";
+@import "helpers/_mixins.scss";
+@import "helpers/_animations.scss";
 
 @import "_base.scss";
 
-@import "_home.scss";
-@import "_about.scss";
-@import "_social_wall.scss";
-@import "_sites.scss";
-@import "_jobs.scss";
-@import "_contact.scss";
-@import "_single-news.scss";
-@import "_news.scss";
+/* Layout */
+@import "layout/_footer.scss";
+@import "layout/_header.scss";
+
+/* Pages */
+@import "pages/_home.scss";
+@import "pages/_contact.scss";
+@import "pages/_about.scss";
+@import "pages/_venues.scss";
+@import "pages/_jobs.scss";
+@import "pages/_single-news.scss";
+@import "pages/_news.scss";
+
+/* Components */
+@import "components/_social_wall.scss";

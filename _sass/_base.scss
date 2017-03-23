@@ -11,159 +11,8 @@ textarea {
     display: none;
 }
 
-// Custom Navigation Bar
-.navbar-custom {
-    background-color: white;
-    border-color: transparent;
-    padding: 2vmin 0;
-    .navbar-toggle {
-        font-size: 18px;
-    }
-    .container {
-        padding-left: 0;
-    }
-}
-
-.nav_link,
-.nav_link:hover,
-.nav_link:visited,
-.nav_link:active {
-    font-family: Sanchez, sans-serif;
-    color: $blue-primary;
-    text-transform: uppercase;
-    text-decoration: none !important;
-}
-
-.nav_link span {
-    color: $blue-primary;
-}
-
-.nav_link.w--current {
-    border-bottom: 2px solid $purple-primary;
-    font-family: Sanchez, sans-serif;
-    color: $purple-primary;
-    font-weight: 400;
-}
-
-.nav_link.w--current span {
-    color: $purple-primary;
-}
-
-@media (min-width: 768px) {
-    .nav_link.nav_lang {
-        padding-left: 5px;
-        padding-right: 0;
-    }
-    .w-nav_lang {
-        display: inline;
-    }
-}
-
-@media (max-width: 767px) {
-    .navbar-collapse .nav_link.nav_lang {
-        display: inline;
-        padding: 0;
-    }
-    .nav_link {
-        margin-left: 20px;
-    }
-    .w-nav_lang {
-        padding: 20px;
-    }
-}
-
-.nav_lang.accent {
-    color: $purple-primary;
-    font-weight: 700;
-}
-
-// Footer
-.footer {
-    position: relative;
-    z-index: 3000;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: $dark-blue;
-    .footer_link {
-        &:hover,
-        &:focus {
-            color: #0087cd;
-        }
-    }
-}
-
-.top_footer {
-    position: absolute;
-    left: 0px;
-    top: -61px;
-    right: 0px;
-    display: block;
-    height: 111px;
-    padding-top: 0px;
-    background-image: url('/images/wave_footer_top.svg');
-    background-position: 50% 29%;
-    background-size: cover;
-    background-repeat: repeat-x;
-    background-attachment: scroll;
-}
-
-@media(min-width:768px) {
-    .navbar-custom {
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-        border: none;
-    }
-    //Contact
-    .form-contact {
-        margin-left: 10px;
-    }
-}
-
-// Navbar Change on Scroll
-@media(max-width:767px) {
-    .w-nav-brand .logo {
-        padding: 17px 10px 0 30px;
-    }
-    .navbar-header {
-        padding: 20px 0;
-        background-color: #FFF;
-        .navbar-toggle {
-            margin-bottom: -20px;
-            background-color: #C8C8C8;
-            border-radius: 0;
-            height: 70px;
-            color: white;
-            padding: 0 20px;
-            margin-top: 0px;
-            &.collapsed {
-                background-color: #FFF;
-                color: black;
-                .icon-nav {
-                    color: #000;
-                }
-            }
-        }
-    }
-    .navbar-collapse {
-        margin-top: -10px;
-        background-color: #C8C8C8;
-        .nav_link {
-            display: block;
-        }
-    }
-    //Contact
-    .row {
-        margin: 0;
-    }
-    //footer
-    .top_footer {
-        top: -60px;
-    }
-}
-
 .links_social {
-    padding:17px 0; // For polyfill
+    padding: 17px 0; // For polyfill
     padding: 1vmin 0;
     text-align: right;
 }
@@ -208,40 +57,6 @@ textarea {
     margin-right: 20px;
 }
 
-.come-in {
-    transform: translateY(150px);
-    animation: come-in 0.8s ease forwards;
-}
-
-.come-in:nth-child(odd) {
-    animation-duration: 0.6s;
-    /* So they look staggered */
-}
-
-.fade-in {
-    animation: fadein 2s;
-}
-
-.already-visible {
-    transform: translateY(0);
-    animation: none;
-}
-
-@keyframes come-in {
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 
 /* Box-shadow Inset */
 
@@ -253,8 +68,37 @@ textarea {
 
 
 /* ===========================================
+   Animations
+   =========================================== */
+
+.come-in {
+    transform: translateY(150px);
+    animation: come-in 0.8s ease forwards;
+}
+
+.come-in:nth-child(odd) {
+    animation-duration: 0.6s;
+    /* So they look staggered */
+}
+
+.fade-in {
+    animation: fadeIn 2s;
+}
+
+.already-visible {
+    transform: translateY(0);
+    animation: none;
+}
+
+
+/* ===========================================
    SmoothState styling
    =========================================== */
+
+.is-loading,
+.is-loading a {
+    cursor: progress;
+}
 
 #main>div {
     -webkit-animation-duration: 1.25s;
@@ -270,27 +114,4 @@ textarea {
 #main.is-exiting>div {
     -webkit-animation-direction: alternate-reverse;
     animation-direction: alternate-reverse;
-}
-
-@-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.is-loading,
-.is-loading a {
-    cursor: progress;
 }

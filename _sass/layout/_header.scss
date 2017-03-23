@@ -1,0 +1,65 @@
+// Custom Navigation Bar
+.navbar-custom {
+    background-color: white;
+    border-color: transparent;
+    padding: 2vmin 0;
+    .navbar-toggle {
+        font-size: 18px;
+    }
+    .container {
+        padding-left: 0;
+    }
+}
+
+.nav_link,
+.nav_link:hover,
+.nav_link:visited,
+.nav_link:active {
+    font-family: Sanchez, sans-serif;
+    color: $blue-primary;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.nav_link span {
+    color: $blue-primary;
+}
+
+.nav_link.w--current {
+    border-bottom: 2px solid $purple-primary;
+    font-family: Sanchez, sans-serif;
+    color: $purple-primary;
+    font-weight: 400;
+}
+
+.nav_link.w--current span {
+    color: $purple-primary;
+}
+
+@media (min-width: 768px) {
+    .nav_link.nav_lang {
+        padding-left: 5px;
+        padding-right: 0;
+    }
+    .w-nav_lang {
+        display: inline;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-collapse .nav_link.nav_lang {
+        display: inline;
+        padding: 0;
+    }
+    .nav_link {
+        margin-left: 20px;
+    }
+    .w-nav_lang {
+        padding: 20px;
+    }
+}
+
+.nav_lang.accent {
+    color: $purple-primary;
+    font-weight: 700;
+}
