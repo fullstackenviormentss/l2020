@@ -198,3 +198,24 @@ textarea {
 .links_games {
   margin-right: 20px;
 }
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.8s ease forwards;
+}
+.come-in:nth-child(odd) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+.fade-in{
+  animation: fadein 2s;
+}
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
