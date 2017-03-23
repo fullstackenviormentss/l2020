@@ -68,7 +68,52 @@ $(document).ready(function(){
     mapManagement.init()
   }
 
+  scrollEffects.init()
+
 })
+
+
+var scrollEffects = {
+  win: $(window),
+  slideInMods: $(".come-in-module"),
+  fadeInMods: $(".fade-in-module"),
+  init: function(){
+    //Add class for social wall elements
+    $('.social_wall .container>div').each(function(i,el){
+      var el = $(el);
+      scrollEffects.slideInMods = scrollEffects.slideInMods.add(el)
+    })
+    //Merge all selectors
+    var modules = scrollEffects.slideInMods.add(scrollEffects.fadeInMods)
+    modules.each(function(i, el) {
+      var el = $(el);
+      //If element is already visible we will not apply any effect
+      if (el.visible(true)) {
+        el.addClass("already-visible"); 
+      } 
+    });
+    scrollEffects.win.scroll(function(){
+      scrollEffects.slideIn()
+      scrollEffects.fadeIn()
+    })
+  },
+  slideIn: function(){
+    scrollEffects.slideInMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("come-in"); 
+      } 
+    });
+  },
+  fadeIn: function(){
+    scrollEffects.fadeInMods.each(function(i, el) {
+      var el = $(el);
+      if (el.visible(true)) {
+        el.addClass("fade-in"); 
+      } 
+    });
+  }
+}
 
 var mapManagement = {
 	map: "",

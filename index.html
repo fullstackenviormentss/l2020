@@ -31,7 +31,7 @@ layout: default
         <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
-            <div class="new col-md-4">
+            <div class="new come-in-module col-md-4">
             <div>
               <img src="{{ new.image.url }}">
             </div>
@@ -70,10 +70,10 @@ layout: default
 <div class="marchandising_section">
     <div class="container">
         <div class="row">
-            <div class="marchandising_col_1 col-md-6">
+            <div class="marchandising_col_1 col-md-6 fade-in-module">
                 <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 fade-in-module">
                 <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
             </div>
         </div>
@@ -96,7 +96,7 @@ layout: default
 </div>
 <div class="newsletter_cta">
     <div class="container">
-        <div class="row">
+        <div class="row fade-in-module">
             <div class="col-md-6">
                 <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
             </div>
@@ -125,8 +125,8 @@ layout: default
     </div>
 </div>
 <div class="cio-sponsors container">
-    <img src="images/cio-partners/logo_olympic.png" alt="olympic">
-    <ul class="sponsors-list first">
+    <img src="images/cio-partners/logo_olympic.png" alt="olympic" class="come-in-module">
+    <ul class="sponsors-list first come-in-module">
         <li>
             <img src="images/cio-partners/Coca-Cola_logo.jpg" alt="Coca-Cola">
         </li>
