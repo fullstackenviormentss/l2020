@@ -22,8 +22,36 @@
 .marchandising_section{
 	padding-bottom: 30px;
 }
-.hero{
+html .hero{
 	background-image: url(../images/lausanne_overview.jpg);
+	background-attachment: fixed !important;
+  	background-position: 0 -400px;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	@media (max-width: 1650px) {
+    	background-position: -200px -400px;
+	}
+	@media (max-width: 1450px) {
+    	background-position: -400px -400px;
+	}
+	@media (max-width: 1250px) {
+    	background-position: -600px -400px;
+	}
+	@media (max-width: 1050px) {
+    	background-position: -800px -400px;
+	}
+	@media (max-width: 850px) {
+    	background-position: -1000px -400px;
+	}
+	@media (max-width: 650px) {
+    	background-position: -1200px -400px;
+	}
+	@media (max-width: 450px) {
+    	background-position: -1400px -400px;
+	}
+	@media (max-width: 479px) {
+    	background-position: -1250px -650px;
+	}
 	.container{
 		padding: 305px 0 0 0;
 		@media (max-width: 479px) {
@@ -132,4 +160,23 @@
 	    margin: 0 34px 30px;
 	    min-width: 140px;
 	}
+}
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
 }
