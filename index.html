@@ -1,5 +1,5 @@
----
-layout: default
+--- 
+layout: default 
 ---
 
 <div class="hero">
@@ -32,37 +32,25 @@ layout: default
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
             <div class="new come-in-module col-md-4">
-            <div>
-              <img src="{{ new.image.url }}">
+                <div>
+                    <img src="{{ new.image.url }}">
+                </div>
+                <h1 class="h1_news">
+                    {% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
+                    endif %}
+                </h1>
+                <p class="p_news">
+                    {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '
+                    <p>' | remove: '</p>'}} {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove:
+                    '
+                    <p>' | remove: '</p>'}} {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '
+                    <p>' | remove: '</p>'}} {% endif %}
+                </p>
+                {% capture dir %}news-{{site.lang}}{% endcapture %} {% if site.lang == "fr" %} {% capture link %}{{new.titre}}{% endcapture
+                %} {% elsif site.lang == "de" %} {% capture link %}{{new.titreDe}}{% endcapture %} {% else %} {% capture
+                link %}{{new.titreEn}}{% endcapture %} {% endif %}
+                <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
             </div>
-            <h1 class="h1_news">
-            {% if site.lang == "fr" %}
-              {{ new.titre }}
-            {% elsif site.lang == "de" %}
-              {{ new.titreDe }}
-            {% else %}
-              {{ new.titreEn }}
-            {% endif %}
-            </h1>
-            <p class="p_news">
-              {% if site.lang == "fr" %}
-                {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% elsif site.lang == "de" %}
-                {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% else %}
-                {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% endif %}
-            </p>
-            {% capture dir %}news-{{site.lang}}{% endcapture %}
-            {% if site.lang == "fr" %}
-              {% capture link %}{{new.titre}}{% endcapture %}
-            {% elsif site.lang == "de" %}
-              {% capture link %}{{new.titreDe}}{% endcapture %}
-            {% else %}
-              {% capture link %}{{new.titreEn}}{% endcapture %}
-            {% endif %}
-            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
-        </div>
             {% endfor %}
         </div>
     </div>
@@ -74,7 +62,8 @@ layout: default
                 <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
             </div>
             <div class="col-md-6 fade-in-module">
-                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
+                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png"
+                    srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
             </div>
         </div>
     </div>
@@ -102,10 +91,12 @@ layout: default
             </div>
             <div class="col-md-6">
                 <div class="">
-                    <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/" netlify>
+                    <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
+                        netlify>
                         <div class="row">
                             <div class="col-md-9">
-                                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}" required="required" type="email">
+                                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
+                                    required="required" type="email">
                                 <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
                             </div>
                             <div class="col-md-3">
