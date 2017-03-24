@@ -1,20 +1,7 @@
 $(document).ready(function () {
 
-  pageAjaxLoad();
-
-  /* ===========================================
-   Menu link hover line slider
-   =========================================== */
-
-  $(".nav_link")
-    .mouseenter(function () {
-      $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
-      $(this).addClass('w--current');
-    })
-    .mouseleave(function () {
-      $(".nav_link.w--current").removeClass('w--current');
-      $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
-    });
+  pageAjaxLoadBefore();
+  pageAjaxLoadAfter();
 
   /* ===========================================
    Change time format
@@ -56,8 +43,11 @@ $(document).ready(function () {
           $container.html($newContent);
         }
       },
+      onBefore: function ($container, $newContent) {
+        pageAjaxLoadBefore();
+      },
       onAfter: function ($container, $newContent) {
-        pageAjaxLoad();
+        pageAjaxLoadAfter();
       }
     },
     smoothState = $page.smoothState(options).data('smoothState');
@@ -137,12 +127,41 @@ $(document).ready(function () {
 
 })
 
-function pageAjaxLoad() {
+function pageAjaxLoadBefore() {
+  /* ===========================================
+   Menu link hover line slider
+   =========================================== */
+
+  $(".nav_link")
+    .mouseenter(function () {
+      $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
+      $(this).addClass('w--current');
+    })
+    .mouseleave(function () {
+      $(".nav_link.w--current").removeClass('w--current');
+      $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
+    });
+}
+
+function pageAjaxLoadAfter() {
 
   // Randomize title at startup
   random_number = 1 + Math.floor(Math.random() * 3);
   $('.the_claim').removeClass('w--current');
   $('.the_claim:nth-of-type(' + random_number + ')').addClass('w--current');
+
+  // Title slider
+  setInterval(function () {
+    var $next = $('.the_claim.w--current')
+      .removeClass('w--current')
+      .next('.the_claim');
+
+    if ($next.length) {
+      $next.addClass('w--current');
+    } else {
+      $(".the_claim:first").addClass('w--current');
+    }
+  }, 3500);
 
   // Social_wall
   truncate_desc('.desc');

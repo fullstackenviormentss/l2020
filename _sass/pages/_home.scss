@@ -53,6 +53,14 @@ html .hero{
 		}
 	}
 }
+.the_claim.w--current{
+	-webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
 .about_the_yog_p{
 	text-align: justify;
 	a{
@@ -64,6 +72,7 @@ html .hero{
 .h1_about_yog{
 	font-family: Montserrat, sans-serif;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 .news_section, .news-page {
     background-image: url(../images/bkg_blue.png);
