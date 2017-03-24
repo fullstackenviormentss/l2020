@@ -66,14 +66,13 @@ contentful:
           content_type: news
           order: -fields.date
 
-page_gen-dirs: true
 page_gen:
   - data: 'contentful.spaces.news.news'
-    template: 'single-news'
+    template: 'single-news-fr'
     name: 'titre'
     dir: 'news-fr'
   - data: 'contentful.spaces.news.news'
-    template: 'single-news'
+    template: 'single-news-de'
     name: 'titreDe'
     dir: 'news-de'
   - data: 'contentful.spaces.news.news'
