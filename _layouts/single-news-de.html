@@ -8,8 +8,8 @@ layout: default
 	  </div>
 	</header>
 	<div class="container news-content">
-    <h1>{{ page.titreEn }}</h1>
-    <p>{{ page.texteLongEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+    <h1>{{ page.titreDe }}</h1>
+    <p>{{ page.texteLongDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
     <p class="news_date">{{page.date | date: "%d.%m.%Y"}}</p>
 	</div>
 </div>
