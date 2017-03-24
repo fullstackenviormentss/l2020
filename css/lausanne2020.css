@@ -8,10 +8,6 @@ h1 {
 
 .hero {
     height: 800px;
-    background-image: url('../images/lausanne_overview.jpg'), url('../images/le_2.svg');
-    background-position: 50% 100%, -167px 248px;
-    background-size: cover, 560px;
-    background-repeat: no-repeat, no-repeat;
 }
 
 .hero.hero-discover {
