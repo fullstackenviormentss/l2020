@@ -21,18 +21,31 @@
     text-decoration: none !important;
 }
 
-.nav_link span {
+.nav_link {
     color: $blue-primary;
 }
 
-.nav_link.w--current {
-    border-bottom: 2px solid $purple-primary;
-    font-family: Sanchez, sans-serif;
-    color: $purple-primary;
-    font-weight: 400;
+/* Line slider */
+
+.nav_link::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 1.5px;
+	background: $purple-primary;
+	transform: scale3d(0, 1, 1);
+    transition: transform 0.1s;
 }
 
-.nav_link.w--current span {
+.nav_link.w--current::before {
+	transform: scale3d(1, 1, 1);
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 0.3s;
+}
+
+.nav_link.w--current {
     color: $purple-primary;
 }
 

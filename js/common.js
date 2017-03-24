@@ -1,7 +1,20 @@
 $(document).ready(function () {
 
   pageAjaxLoad();
-  
+
+  /* ===========================================
+   Menu link hover line slider
+   =========================================== */
+
+  $(".nav_link")
+    .mouseenter(function () {
+      $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
+      $(this).addClass('w--current');
+    })
+    .mouseleave(function () {
+      $(".nav_link.w--current").removeClass('w--current');
+      $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
+    });
 
   /* ===========================================
    Change time format

@@ -123,17 +123,19 @@ class FB
   def ext_quote_picture_resize(image_url)
 
     # Prevent filename errors by saving first
-    File.open("/tmp/#{@post['id']}", 'wb') do |fo|
-      fo.write open(image_url).read 
+    path = "/tmp/"
+
+    create_path(path) unless path_exist?(path)
+    File.open(File.join(path, @post['id']), 'wb') do |fo|
+      fo.write open(image_url).read
     end
 
     # Resizing and converting image
-    image = MiniMagick::Image.open("/tmp/#{@post['id']}")
+    image = MiniMagick::Image.open(File.join(path, @post['id']))
     if image.type == 'PNG'
       image.combine_options do |c|
         c.background '#FFFFFF' # for transparent png
         c.alpha 'remove'
-        c.depth "8"
       end
     end
     image.resize "300x300>" # proportional, only if larger
@@ -142,7 +144,7 @@ class FB
   end
 
   def ext_quote_picture
-    create_path('_site/images/social_wall') if !path_exist?('_site/images/social_wall')
+    create_path('_site/images/social_wall') unless path_exist?('_site/images/social_wall')
 
     image_url = parse_ext_quote_picture(@post['picture'])
     ext_quote_picture_resize(image_url)
