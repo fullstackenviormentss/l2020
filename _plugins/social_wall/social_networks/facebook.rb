@@ -140,11 +140,11 @@ class FB
     end
     image.resize "300x300>" # proportional, only if larger
     image.format 'jpg'
-    image.write("images/social_wall/#{@post['id']}.jpg")
+    image.write("_site/images/social_wall/#{@post['id']}.jpg")
   end
 
   def ext_quote_picture
-    create_path('images/social_wall') unless path_exist?('images/social_wall')
+    create_path('_site/images/social_wall') unless path_exist?('_site/images/social_wall')
 
     image_url = parse_ext_quote_picture(@post['picture'])
     ext_quote_picture_resize(image_url)
