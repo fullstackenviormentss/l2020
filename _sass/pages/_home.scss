@@ -81,6 +81,9 @@ html .hero{
     .h1_big_news{
     	color: #fff;
     }
+    .news-clickable{
+    	display: block;
+    }
     .new{
     	height: 425px;
     	@media (max-width: 992px) {
@@ -182,45 +185,4 @@ html .hero{
 }
 .parallax__layer--back {
   transform: translateZ(-1px);
-}
-
-
-
-html .hero-discover{
-    height: 400px;
-    background-image: url(../images/lausanne_overview.jpg);
-    background-attachment: fixed !important;
-    background-position: 0 -640px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    @media (max-width: 1650px) {
-        background-position: -200px -640px;
-    }
-    @media (max-width: 1450px) {
-        background-position: -400px -640px;
-    }
-    @media (max-width: 1250px) {
-        background-position: -600px -640px;
-    }
-    @media (max-width: 1050px) {
-        background-position: -800px -640px;
-    }
-    @media (max-width: 850px) {
-        background-position: -1000px -640px;
-    }
-    @media (max-width: 650px) {
-        background-position: -1200px -640px;
-    }
-    @media (max-width: 450px) {
-        background-position: -1400px -640px;
-    }
-    @media (max-width: 479px) {
-        background-position: -1250px -640px;
-    }
-    .container{
-        padding: 305px 0 0 0;
-        @media (max-width: 479px) {
-            padding-top: 165px;
-        }
-    }
 }

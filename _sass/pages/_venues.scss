@@ -95,3 +95,37 @@
         text-align: justify;
     }
 }
+html .hero-discover{
+    height: 400px;
+    background-image: url(../images/lausanne_overview.jpg);
+    background-attachment: fixed !important;
+    background-position-y:-440px;
+    background-repeat: no-repeat;
+    @media (min-width: 1651px) {
+        background-size: cover;
+    }
+    @media (max-width: 1450px) {
+        background-position-x: -200px;
+    }
+    @media (max-width: 1250px) {
+        background-position-x: -400px;  
+    }
+    @media (max-width: 1050px) {
+        background-position-x: -600px;
+    }
+    @media (max-width: 850px) {
+        background-position-x: -800px;  
+    }
+    @media (max-width: 650px) {
+        background-position-x: -1000px;
+    }
+    @media (max-width: 450px) {
+        background-position-x: -1200px;
+    }
+    .container{
+        padding: 305px 0 0 0;
+        @media (max-width: 479px) {
+            padding-top: 165px;
+        }
+    }
+}

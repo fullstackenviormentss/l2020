@@ -90,6 +90,19 @@ textarea {
     animation: none;
 }
 
+.slidedown, .slideup {
+    opacity: 0;
+    overflow-y: hidden;
+    max-height: 0px;
+    transition-property: all;
+    transition-duration: .8s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+.slidedown {
+    opacity: 1;
+    max-height: 50px;
+}
+
 
 /* ===========================================
    SmoothState styling

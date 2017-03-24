@@ -182,6 +182,13 @@ function pageAjaxLoadAfter() {
 
   scrollEffects.init()
 
+  // Init socials icon hide/show effect
+
+  headerSocialsManager.init()
+
+  // Transform news to link
+  newsToBeLink.init()
+
   // Polyfill init
   objectFitImages();
 
@@ -206,6 +213,38 @@ function truncate_desc(el) {
   });
 }
 
+
+var newsToBeLink = {
+  init: function(){
+    $('.news_section .new, .news-page .new').each(function (i, el) {
+      var el = $(el);
+      el.on('click',function(e){
+        location.href=$(this).find('a').first().attr("href")
+      })
+    })
+  }
+}
+
+/* ===========================================
+   Hide show socials icons on header
+   =========================================== */
+
+var headerSocialsManager = {
+  init: function(){
+    $(window).scroll(function () {
+      if($(window).scrollTop() > 5){
+        if($(".socials").hasClass("slidedown")){
+          $(".socials").removeClass("slidedown").addClass("slideup");
+        }
+      }
+      if($(window).scrollTop() < 5){
+        if($(".socials").hasClass("slideup")){
+          $(".socials").removeClass("slideup").addClass("slidedown");
+        }
+      }
+    })
+  }
+}
 
 var scrollEffects = {
   win: $(window),
