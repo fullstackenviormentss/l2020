@@ -31,9 +31,10 @@ layout: default
         <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
-            <div class="new come-in-module col-md-4">
+            <div class="come-in-module col-md-4">
+                <div class="new col-md-12">
                 <div>
-                  <img src="{{ new.image.url }}">
+                  <img class="grow" src="{{ new.image.url }}">
                 </div>
                 <h1 class="h1_news">
                 {% if site.lang == "fr" %}
@@ -62,6 +63,7 @@ layout: default
                   {% capture link %}{{new.titreEn}}{% endcapture %}
                 {% endif %}
                 <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
+                </div>
             </div>
             {% endfor %}
         </div>
