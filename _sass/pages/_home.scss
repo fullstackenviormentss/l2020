@@ -72,6 +72,9 @@ html .hero{
     .h1_big_news{
     	color: #fff;
     }
+    .news-clickable{
+    	display: block;
+    }
     .new{
     	height: 425px;
     	@media (max-width: 992px) {

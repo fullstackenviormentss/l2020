@@ -167,6 +167,9 @@ function pageAjaxLoad() {
 
   headerSocialsManager.init()
 
+  // Transform news to link
+  newsToBeLink.init()
+
   // Polyfill init
   objectFitImages();
 
@@ -189,6 +192,18 @@ function truncate_desc(el) {
     $el.dotdotdot()
 
   });
+}
+
+
+var newsToBeLink = {
+  init: function(){
+    $('.news_section .new, .news-page .new').each(function (i, el) {
+      var el = $(el);
+      el.on('click',function(e){
+        location.href=$(this).find('a').first().attr("href")
+      })
+    })
+  }
 }
 
 /* ===========================================
