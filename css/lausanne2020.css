@@ -34,21 +34,6 @@ h1 {
     color: #ce0071;
 }
 
-.the_claim {
-    display: block;
-    font-family: Montserrat, sans-serif;
-    color: #0087cd;
-    font-size: 81px;
-    line-height: 90px;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: none;
-}
-
-.the_claim.w--current {
-    display: block;
-}
-
 .about_yog_section {
     height: auto;
     padding-top: 50px;
