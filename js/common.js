@@ -199,13 +199,13 @@ var headerSocialsManager = {
   init: function(){
     $(window).scroll(function () {
       if($(window).scrollTop() > 5){
-        if($(".socials").hasClass("fadein")){
-          $(".socials").removeClass("fadein").addClass("fadeout");
+        if($(".socials").hasClass("slidedown")){
+          $(".socials").removeClass("slidedown").addClass("slideup");
         }
       }
       if($(window).scrollTop() < 5){
-        if($(".socials").hasClass("fadeout")){
-          $(".socials").removeClass("fadeout").addClass("fadein");
+        if($(".socials").hasClass("slideup")){
+          $(".socials").removeClass("slideup").addClass("slidedown");
         }
       }
     })
