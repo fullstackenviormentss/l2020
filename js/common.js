@@ -181,6 +181,7 @@ function pageAjaxLoadAfter() {
   headerSocialsManager.init()
 
   // Transform news to link
+  
   newsToBeLink.init()
 
   // Polyfill init
@@ -225,6 +226,9 @@ function truncate_desc(el) {
   });
 }
 
+/* ===========================================
+   Make entire news clickable
+   =========================================== */
 
 var newsToBeLink = {
   init: function () {
