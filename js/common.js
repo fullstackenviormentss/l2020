@@ -163,6 +163,10 @@ function pageAjaxLoad() {
 
   scrollEffects.init()
 
+  // Init socials icon hide/show effect
+
+  headerSocialsManager.init()
+
   // Polyfill init
   objectFitImages();
 
@@ -187,6 +191,26 @@ function truncate_desc(el) {
   });
 }
 
+/* ===========================================
+   Hide show socials icons on header
+   =========================================== */
+
+var headerSocialsManager = {
+  init: function(){
+    $(window).scroll(function () {
+      if($(window).scrollTop() > 5){
+        if($(".socials").hasClass("fadein")){
+          $(".socials").removeClass("fadein").addClass("fadeout");
+        }
+      }
+      if($(window).scrollTop() < 5){
+        if($(".socials").hasClass("fadeout")){
+          $(".socials").removeClass("fadeout").addClass("fadein");
+        }
+      }
+    })
+  }
+}
 
 var scrollEffects = {
   win: $(window),
