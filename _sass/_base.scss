@@ -92,7 +92,7 @@ textarea {
 
 .slidedown, .slideup {
     opacity: 0;
-    overflow-y: hidden;
+    overflow: hidden;
     max-height: 0px;
     transition-property: all;
     transition-duration: .8s;
