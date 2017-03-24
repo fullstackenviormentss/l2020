@@ -23,32 +23,28 @@
 html .hero{
 	background-image: url(../images/lausanne_overview.jpg);
 	background-attachment: fixed !important;
-  	background-position: 0 -400px;
   	background-repeat: no-repeat;
-  	background-size: cover;
-  	@media (max-width: 1650px) {
-    	background-position: -200px -400px;
+  	background-position-y: -200px;
+  	@media (min-width: 1651px) {
+    	background-size: cover;
 	}
 	@media (max-width: 1450px) {
-    	background-position: -400px -400px;
+    	background-position-x: -200px;
 	}
 	@media (max-width: 1250px) {
-    	background-position: -600px -400px;
+    	background-position-x: -400px;	
 	}
 	@media (max-width: 1050px) {
-    	background-position: -800px -400px;
+    	background-position-x: -600px;
 	}
 	@media (max-width: 850px) {
-    	background-position: -1000px -400px;
+    	background-position-x: -800px;	
 	}
 	@media (max-width: 650px) {
-    	background-position: -1200px -400px;
+    	background-position-x: -1000px;
 	}
 	@media (max-width: 450px) {
-    	background-position: -1400px -400px;
-	}
-	@media (max-width: 479px) {
-    	background-position: -1250px -650px;
+    	background-position-x: -1200px;
 	}
 	.container{
 		padding: 305px 0 0 0;
