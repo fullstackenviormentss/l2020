@@ -1,0 +1,24 @@
+/* ===========================================
+   SmoothState styling
+   =========================================== */
+
+.is-loading,
+.is-loading a {
+    cursor: progress;
+}
+
+#main>div {
+    -webkit-animation-duration: 1.25s;
+    animation-duration: 1.25s;
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+#main.is-exiting>div {
+    -webkit-animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+}

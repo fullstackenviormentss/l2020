@@ -46,7 +46,9 @@ layout: default
 	            {% else %}
 	              {% capture link %}{{new.titreEn}}{% endcapture %}
 	            {% endif %}
-	            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
+	            <p class="news_date">
+								<time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+								<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
 	          </div>
 	          {% endif %}
 	      {% endfor %}

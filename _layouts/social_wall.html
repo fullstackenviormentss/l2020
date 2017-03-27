@@ -85,7 +85,7 @@
     </div>
 
     <p class="meta_info">
-      <time pubdate datetime="{{ meta.created_time }}">{{ meta.created_time }}</time>
+      <time pubdate datetime="{{ meta.created_time }}">{{ meta.created_time | date: "%d.%m.%Y" }}</time>
       {% if social_network == 'facebook' %}
         <a class="icon-share" href="http://www.facebook.com/share.php?v=4&amp;src=bm&amp;u={{ meta.share_url }}"></a>
       {% elsif social_network == 'twitter' %}

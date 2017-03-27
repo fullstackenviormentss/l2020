@@ -10,6 +10,8 @@ layout: default
 	<div class="container news-content">
     <h1>{{ page.titreEn }}</h1>
     <p>{{ page.texteLongEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
-    <p class="news_date">{{page.date | date: "%d.%m.%Y"}}</p>
+    <p class="news_date">
+		<time pubdate datetime="{{page.date | time_tag}}">{{page.date | date: "%d.%m.%Y"}}</time>
+	</p>
 	</div>
 </div>

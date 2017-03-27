@@ -1,20 +1,8 @@
 $(document).ready(function () {
 
-  pageAjaxLoadBefore();
-  pageAjaxLoadAfter();
-
-  /* ===========================================
-   Change time format
-   =========================================== */
-
-  moment().format();
-  // Get the language in html attribute lang=
-  moment.locale($('html')[0].lang);
-  // Change the date for every element time in Social_wall div
-  $('.social_wall').find('time').each(function (i) {
-    $(this).text(moment($(this).html()).fromNow());
-  });
-
+  // First load
+  pageLoad.funcBefore();
+  pageLoad.funcAfter();
 
   /* ===========================================
    Global ajax transition page function
@@ -25,6 +13,7 @@ $(document).ready(function () {
     options = {
       debug: true,
       cacheLength: 4,
+      prefetch: true,
       onStart: {
         duration: 350, // Duration of our animation
         render: function ($container) {
@@ -44,196 +33,57 @@ $(document).ready(function () {
         }
       },
       onBefore: function ($container, $newContent) {
-        pageAjaxLoadBefore();
+        pageLoad.funcBefore();
+
       },
       onAfter: function ($container, $newContent) {
-        pageAjaxLoadAfter();
+        pageLoad.funcAfter();
       }
     },
     smoothState = $page.smoothState(options).data('smoothState');
 
-
-  /* ===========================================
-   Newsletter form
-   =========================================== */
-
-
-  $("#email-form-newsletter").submit(function (e) {
-    e.preventDefault();
-
-    var $form = $(this);
-
-    var posting = $.post($form.attr("action"), $form.serialize())
-
-    // Put the results in a div
-    posting.done(function () {
-      $('.w-form-done').show()
-    });
-    posting.fail(function () {
-      $('.w-form-fail').show()
-    });
-
-  });
-  $("#email-form-contact").submit(function (e) {
-    e.preventDefault();
-
-    var $form = $(this);
-
-    var posting = $.post($form.attr("action"), $form.serialize())
-
-    // Put the results in a div
-    posting.done(function () {
-      $('.w-form-done').show()
-    });
-    posting.fail(function () {
-      $('.w-form-fail').show()
-    });
-
-  });
-
-  /* ===========================================
-   CSS animation on scroll
-   =========================================== */
-
-  $(window).scroll(function () {
-    $('[data-ix="fadeintop"]').each(function () {
-      var bounds = $(this).get(0).getBoundingClientRect();
-
-      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
-        $(this).addClass("anim_fadeintop");
-      } else {
-        $(this).removeClass("anim_fadeintop");
-      }
-    });
-    $('[data-ix="fadeinscaleup"]').each(function () {
-      var bounds = $(this).get(0).getBoundingClientRect();
-
-      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
-        $(this).addClass("anim_fadeinscaleup");
-      } else {
-        $(this).removeClass("anim_fadeinscaleup");
-      }
-    });
-    $('[data-ix="fadeindown"]').each(function () {
-      var bounds = $(this).get(0).getBoundingClientRect();
-
-      if (bounds.top < window.innerHeight && bounds.bottom > 0) {
-        $(this).addClass("anim_fadeindown");
-      } else {
-        $(this).removeClass("anim_fadeindown");
-      }
-    });
-  });
-
 })
 
-function pageAjaxLoadBefore() {
-  menuHover();
-}
+var pageLoad = {
+  funcBefore: function () {
+    headerSocialsManager.init();
+    console.log('newPage');
 
+    titleSlider.clear();
+    titleSlider.init();
 
-function pageAjaxLoadAfter() {
+    navHover.init();
 
-  menuHover();
+    scrollEffects.init();
 
-  // Randomize title at startup
-  random_number = 1 + Math.floor(Math.random() * 3);
-  $('.the_claim').removeClass('anim_fadein');
-  $('.the_claim:nth-of-type(' + random_number + ')').addClass('anim_fadein');
+    newsToBeLink.init();
 
-  // Title slider
-  setInterval(function () {
-    var $next = $('.the_claim.anim_fadein')
-      .removeClass('anim_fadein')
-      .addClass('anim_fadeout')
-      .next('.the_claim');
+    formManagement.init("#email-form-newsletter");
+    formManagement.init("#email-form-contact");
 
-    // if not the last one
-    if ($next.length) {
-      $next.removeClass('anim_fadeout').addClass('anim_fadein');
-    } else {
-      $(".the_claim:first").removeClass('anim_fadeout').addClass('anim_fadein');
-    }
-  }, 3500);
-  
+    // Social_wall
 
-  // Social_wall
-  truncate_desc('.desc');
-
-  // Truncate quoted status and shared story
-
-  $(window).resize(function () {
     truncate_desc('.desc');
-  });
-
-  // Init Map
-
-  if ($("#map").length) {
-    mapManagement.init()
-  }
-
-  // Init Scroll Effect
-
-  scrollEffects.init()
-
-  // Init socials icon hide/show effect
-
-  headerSocialsManager.init()
-
-  // Transform news to link
-  newsToBeLink.init()
-
-  // Polyfill init
-  objectFitImages();
-
-}
-
-function menuHover() {
-  /* ===========================================
-  Menu link hover line slider
-  =========================================== */
-
-  $(".nav_link")
-    .mouseenter(function () {
-      $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
-      $(this).addClass('w--current');
-    })
-    .mouseleave(function () {
-      $(".nav_link.w--current").removeClass('w--current');
-      $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
-    });
-}
-
-
-
-function truncate_desc(el) {
-  $(el).each(function (i, obj) {
-    $el = $(this);
-    $wrap_story = $el.parent();
-    height_available = $wrap_story.outerHeight(true)
-    $ps = $wrap_story.children("*:not(.desc)");
-
-    // measure how tall inside should be by adding together
-    $ps.each(function () {
-      height_available -= $(this).outerHeight(true);
+    $(window).resize(function () {
+      truncate_desc('.desc');
     });
 
-    $el.css('height', height_available)
+    dateTime.fromNow('time');
 
-    $el.dotdotdot()
+    // Google Map
 
-  });
-}
+    if ($("#map").length) {
+      mapManagement.init();
+    }
+
+  },
+  funcAfter: function () {
 
 
-var newsToBeLink = {
-  init: function () {
-    $('.news_section .new, .news-page .new').each(function (i, el) {
-      var el = $(el);
-      el.on('click', function (e) {
-        location.href = $(this).find('a').first().attr("href")
-      })
-    })
+    scrollEffects.clear();
+
+    // Polyfill init
+    objectFitImages();
   }
 }
 
@@ -259,7 +109,6 @@ var headerSocialsManager = {
 }
 
 var scrollEffects = {
-  win: $(window),
   slideInMods: $(".come-in-module"),
   fadeInMods: $(".fade-in-module"),
   init: function () {
@@ -270,35 +119,177 @@ var scrollEffects = {
     })
     //Merge all selectors
     var modules = scrollEffects.slideInMods.add(scrollEffects.fadeInMods)
+
     modules.each(function (i, el) {
-      var el = $(el);
-      //If element is already visible we will not apply any effect
-      if (el.visible(true)) {
-        el.addClass("already-visible");
-      }
+      scrollEffects.set(el, "already-visible");
     });
-    scrollEffects.win.scroll(function () {
+    $(window).scroll(function () {
       scrollEffects.slideIn()
       scrollEffects.fadeIn()
     })
   },
   slideIn: function () {
     scrollEffects.slideInMods.each(function (i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("come-in");
-      }
+      scrollEffects.set(el, "come-in");
     });
   },
   fadeIn: function () {
     scrollEffects.fadeInMods.each(function (i, el) {
-      var el = $(el);
-      if (el.visible(true)) {
-        el.addClass("fade-in");
+      scrollEffects.set(el, "fade-in");
+    });
+  },
+  set: function (el, elClass) {
+    var el = $(el);
+    if (el.visible(true)) {
+      console.log('---')
+      console.log(el.attr('class'))
+      el.addClass(elClass);
+      console.log(el.attr('class'))
+      console.log('---')
+    }
+  },
+  clear: function () {
+    $(".already-visible").removeClass("already-visible");
+    $(".fade-in").removeClass("fade-in");
+    $(".come-in").removeClass("come-in");
+  }
+}
+
+
+/* ===========================================
+Nav link hover line slider
+=========================================== */
+
+var navHover = {
+  init: function () {
+    $(".nav_link")
+      .mouseenter(function () {
+        $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
+        $(this).addClass('w--current');
+      })
+      .mouseleave(function () {
+        $(".nav_link.w--current").removeClass('w--current');
+        $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
+      });
+  }
+}
+
+/* ===========================================
+ Title Slider
+ =========================================== */
+
+
+var titleSlider = {
+  slider: null,
+  el: '.the_claim',
+  elAddClass: 'fade-in',
+  elRemoveClass: 'fade-out',
+  init: function () {
+    random_number = 1 + Math.floor(Math.random() * $(titleSlider.el).length);
+    $(titleSlider.el).removeClass(titleSlider.elAddClass);
+    $(titleSlider.el + ':nth-of-type(' + random_number + ')').addClass(titleSlider.elAddClass);
+    titleSlider.start();
+  },
+  start: function () {
+    this.slider = window.setInterval(function () {
+      var $next = $(titleSlider.el + '.' + titleSlider.elAddClass)
+        .removeClass(titleSlider.elAddClass)
+        .addClass(titleSlider.elRemoveClass)
+        .next(titleSlider.el);
+
+      // if not the last one
+      if ($next.length) {
+        $next.removeClass(titleSlider.elRemoveClass).addClass(titleSlider.elAddClass);
+      } else {
+        $(titleSlider.el + ":first").removeClass(titleSlider.elRemoveClass).addClass(titleSlider.elAddClass);
       }
+    }, 3500);
+  },
+  clear: function () {
+    window.clearTimeout(this.slider);
+  }
+}
+
+
+/* ===========================================
+Truncate description
+=========================================== */
+
+var dateTime = {
+  fromNow: function (el) {
+    moment().format();
+    // Get the language in html attribute lang=
+    moment.locale($('html')[0].lang);
+    // Change the date for every element time in Social_wall div
+    $(el).each(function (i) {
+      $(this).text(moment($(this).attr('datetime')).fromNow());
     });
   }
 }
+
+/* ===========================================
+Truncate description
+=========================================== */
+
+function truncate_desc(el) {
+  $(el).each(function (i, obj) {
+    $el = $(this);
+    $wrap_story = $el.parent();
+    height_available = $wrap_story.outerHeight(true)
+    $ps = $wrap_story.children("*:not(.desc)");
+
+    // measure how tall inside should be by adding together
+    $ps.each(function () {
+      height_available -= $(this).outerHeight(true);
+    });
+
+    $el.css('height', height_available)
+
+    $el.dotdotdot()
+
+  });
+}
+
+/* ===========================================
+Add links to news
+=========================================== */
+
+var newsToBeLink = {
+  init: function () {
+    $('.news_section .new, .news-page .new').each(function (i, el) {
+      var el = $(el);
+      el.on('click', function (e) {
+        location.href = $(this).find('a').first().attr("href")
+      })
+    })
+  }
+}
+
+/* ===========================================
+ Newsletter form
+ =========================================== */
+
+var formManagement = {
+  init: function (el) {
+    $().submit(function (e) {
+      e.preventDefault();
+
+      var $form = $(this);
+
+      var posting = $.post($form.attr("action"), $form.serialize())
+
+      // Put the results in a div
+      posting.done(function () {
+        $('.w-form-done').show()
+      });
+      posting.fail(function () {
+        $('.w-form-fail').show()
+      });
+
+    });
+  }
+}
+
 
 /* ===========================================
    Google map
