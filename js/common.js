@@ -49,8 +49,7 @@ var pageLoad = {
     headerSocialsManager.init();
     console.log('newPage');
 
-    titleSlider.clear();
-    titleSlider.init();
+
 
     navHover.init();
 
@@ -79,6 +78,8 @@ var pageLoad = {
   },
   funcAfter: function () {
 
+    titleSlider.clear();
+    titleSlider.init();
 
     scrollEffects.clear();
 
@@ -150,8 +151,8 @@ var scrollEffects = {
   },
   clear: function () {
     $(".already-visible").removeClass("already-visible");
-    $(".fade-in").removeClass("fade-in");
-    $(".come-in").removeClass("come-in");
+    $(".fade-in-module.fade-in").removeClass("fade-in");
+    $(".come-in-module.come-in").removeClass("come-in");
   }
 }
 
@@ -186,7 +187,6 @@ var titleSlider = {
   elRemoveClass: 'fade-out',
   init: function () {
     random_number = 1 + Math.floor(Math.random() * $(titleSlider.el).length);
-    $(titleSlider.el).removeClass(titleSlider.elAddClass);
     $(titleSlider.el + ':nth-of-type(' + random_number + ')').addClass(titleSlider.elAddClass);
     titleSlider.start();
   },
@@ -206,6 +206,7 @@ var titleSlider = {
     }, 3500);
   },
   clear: function () {
+    $(titleSlider.el).removeClass('fade-in');
     window.clearTimeout(this.slider);
   }
 }
