@@ -671,10 +671,6 @@ h1 {
         padding-right: 30px;
         padding-left: 30px;
     }
-    .the_claim {
-        font-size: 90px;
-        line-height: 100px;
-    }
     .about_yog_section {
         height: auto;
         padding-bottom: 30px;
@@ -860,15 +856,10 @@ h1 {
 
 @media (max-width: 479px) {
     .hero {
-        height: 410px;
+        height: 600px;
     }
     .enorme_claim_wrap {
         padding-top: 165px;
-    }
-    .the_claim {
-        font-size: 30px;
-        line-height: 35px;
-        text-align: center;
     }
     .h1_about_yog {
         text-align: center;
