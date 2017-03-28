@@ -59,8 +59,7 @@ var pageLoad = {
     formManagement.init("#email-form-newsletter");
     formManagement.init("#email-form-contact");
 
-    // Social_wall
-    truncateText.init(['blockquote', '.new']);
+    truncateText.init('blockquote, .new');
     dateTime.fromNow('time');
 
   },
@@ -262,7 +261,7 @@ var truncateText = {
     });
   },
   truncate: function (els) {
-    $.each(els, function (i, obj) {
+    $(els).each(function (i, obj) {
       $el = $(this);
 
       $el.dotdotdot({
