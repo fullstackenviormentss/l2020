@@ -31,7 +31,7 @@ layout: default
         <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
-            <div class="come-in-module col-md-4">
+            <div class="come-in-module col-sm-6 col-md-4">
                 <div class="new col-md-12">
                     <div>
                         <img class="grow" src="{{ new.image.url }}">
@@ -40,19 +40,18 @@ layout: default
                         {% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
                         endif %}
                     </h1>
-                    <p class="p_news">
-                        {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '
-                        <p>' | remove: '</p>'}} {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br |
-                        remove: '
-                        <p>' | remove: '</p>'}} {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '
-                        <p>' | remove: '</p>'}} {% endif %}
+                    <p class="p_news desc">
+                        {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                        {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                        {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
                     </p>
                     {% capture dir %}news-{{site.lang}}{% endcapture %} {% if site.lang == "fr" %} {% capture link %}{{new.titre}}{% endcapture
                     %} {% elsif site.lang == "de" %} {% capture link %}{{new.titreDe}}{% endcapture %} {% else %} {% capture
                     link %}{{new.titreEn}}{% endcapture %} {% endif %}
                     <p class="news_date">
                         <time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                        <a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
+                        <a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a>
+                    </p>
                 </div>
             </div>
             {% endfor %}
@@ -77,10 +76,10 @@ layout: default
         {% social_wall
 
             fb_username:lausanne2020,
-            fb_amount:5,
+            fb_amount:10,
 
             tw_username:lausanne2020,
-            tw_amount:4
+            tw_amount:10
         
         %}
     </div>

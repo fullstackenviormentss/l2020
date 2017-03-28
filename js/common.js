@@ -13,6 +13,7 @@ $(document).ready(function () {
     options = {
       debug: true,
       cacheLength: 4,
+      blacklist: '.nav_lang',
       prefetch: true,
       onStart: {
         duration: 350, // Duration of our animation
@@ -47,41 +48,34 @@ $(document).ready(function () {
 var pageLoad = {
   funcBefore: function () {
     headerSocialsManager.init();
-    console.log('newPage');
-
-
 
     navHover.init();
 
-    scrollEffects.init();
-
     newsToBeLink.init();
+
+    titleSlider.clear();
+    scrollEffects.clear();
 
     formManagement.init("#email-form-newsletter");
     formManagement.init("#email-form-contact");
 
     // Social_wall
-
-    truncate_desc('.desc');
-    $(window).resize(function () {
-      truncate_desc('.desc');
-    });
-
+    truncateText.init(['blockquote', '.new']);
     dateTime.fromNow('time');
-
-    // Google Map
-
-    if ($("#map").length) {
-      mapManagement.init();
-    }
 
   },
   funcAfter: function () {
 
-    titleSlider.clear();
     titleSlider.init();
+    scrollEffects.init();
 
-    scrollEffects.clear();
+    video.FSbackgroundChange();
+    video.hoverControls();
+
+    // Google Map
+    if ($("#map").length) {
+      mapManagement.init();
+    }
 
     // Polyfill init
     objectFitImages();
@@ -142,11 +136,7 @@ var scrollEffects = {
   set: function (el, elClass) {
     var el = $(el);
     if (el.visible(true)) {
-      console.log('---')
-      console.log(el.attr('class'))
       el.addClass(elClass);
-      console.log(el.attr('class'))
-      console.log('---')
     }
   },
   clear: function () {
@@ -211,9 +201,41 @@ var titleSlider = {
   }
 }
 
+/* ===========================================
+Video change background
+=========================================== */
+
+var video = {
+  FSbackgroundChange: function () {
+    // Entering fullscreen mode
+    $('video').bind('webkitfullscreenchange mozfullscreenchange fullscreenchange', function (e) {
+      var fullScreen = document.fullScreen || document.mozFullScreen || document.webkitIsFullScreen;
+
+      if (fullScreen) {
+        $(this).addClass('fullscreen');
+      }
+      else{
+        $(this).removeClass('fullscreen');
+      }
+
+    });
+  },
+  hoverControls: function () {
+    $('video').on({
+      mouseenter: function () {
+        $(this).attr("controls", "controls")
+      },
+      mouseleave: function () {
+        $(this).removeAttr("controls");
+      }
+    });
+  }
+}
+
+
 
 /* ===========================================
-Truncate description
+Date from now
 =========================================== */
 
 var dateTime = {
@@ -232,23 +254,23 @@ var dateTime = {
 Truncate description
 =========================================== */
 
-function truncate_desc(el) {
-  $(el).each(function (i, obj) {
-    $el = $(this);
-    $wrap_story = $el.parent();
-    height_available = $wrap_story.outerHeight(true)
-    $ps = $wrap_story.children("*:not(.desc)");
-
-    // measure how tall inside should be by adding together
-    $ps.each(function () {
-      height_available -= $(this).outerHeight(true);
+var truncateText = {
+  init: function (el) {
+    truncateText.truncate(els);
+    $(window).resize(function () {
+      truncateText.truncate(els);
     });
+  },
+  truncate: function (els) {
+    $.each(els, function (i, obj) {
+      $el = $(this);
 
-    $el.css('height', height_available)
+      $el.dotdotdot({
+        height: null
+      })
 
-    $el.dotdotdot()
-
-  });
+    });
+  }
 }
 
 /* ===========================================

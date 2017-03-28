@@ -16,7 +16,7 @@ layout: default
 	      {% for new in site.data.contentful.spaces.news.news offset:offsetdependonyear %}
 	      	{% capture newyear %}{{ new.date | date: '%Y' }}{% endcapture %}
 	      	{% if newyear == pageyear %}
-	        <div class="col-md-4 new">
+	        <div class="col-sm-6 col-md-4 new">
 	            <div>
 	              <img src="{{ new.image.url }}">
 	            </div>

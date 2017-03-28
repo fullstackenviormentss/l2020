@@ -133,10 +133,15 @@ class TW
     defined?(@post[:quoted_status][:extended_entities][:media][0][:media_url]) && @post[:quoted_status][:extended_entities][:media][0][:type] == 'photo'
   end
 
+  def get_manually_ext_quote_picture(url)
+    page = MetaInspector.new(url)
+    return page.images.best
+  end
+
   def int_quote
     quote = Hash.new
     quote['link'] = @post[:entities][:urls][0][:expanded_url] # Get the last url (usually the twitter status)
-    quote['picture'] = "#{@post[:quoted_status][:extended_entities][:media][0][:media_url]}:small" if has_int_quote_photo?
+    quote['picture'] = has_int_quote_photo? ? "#{@post[:quoted_status][:extended_entities][:media][0][:media_url]}:small" : get_url_best_picture(quote['link'])
     quote['source'] = @post[:quoted_status][:user][:screen_name]
     quote['title'] = @post[:quoted_status][:user][:name]
     quote['description'] = parse_message(@post[:quoted_status][:full_text])
