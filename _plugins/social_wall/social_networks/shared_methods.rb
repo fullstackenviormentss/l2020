@@ -8,6 +8,13 @@ module SharedMethods
     return "portrait" if height > width
   end
 
+  # Parse WebPage
+
+  def get_url_best_picture(url)
+    page = MetaInspector.new(url)
+    return page.images.best
+  end
+
   # Video
 
   def is_facebook_video?(url)

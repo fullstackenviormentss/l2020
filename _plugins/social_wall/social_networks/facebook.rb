@@ -3,6 +3,7 @@ require 'koala'
 require 'fileutils'
 require 'mini_magick'
 require "net/http"
+require 'metainspector'
 require 'uri'
 require "open-uri"
 
@@ -145,17 +146,17 @@ class FB
 
   def ext_quote_picture
     create_path('_site/images/social_wall') unless path_exist?('_site/images/social_wall')
-
     image_url = parse_ext_quote_picture(@post['picture'])
     ext_quote_picture_resize(image_url)
 
     return "/images/social_wall/#{@post['id']}.jpg"
   end
 
+
   def ext_quote
     quote = Hash.new
     quote['link'] = @post['link']
-    quote['picture'] = ext_quote_picture if has_ext_quote_picture?
+    quote['picture'] = has_ext_quote_picture? ? ext_quote_picture : get_url_best_picture(quote['link'])
     quote['source'] = @post['caption']
     quote['title'] = @post['name']
     quote['description'] = @post['description']
