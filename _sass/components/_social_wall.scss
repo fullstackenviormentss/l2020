@@ -168,7 +168,7 @@
         .meta_info {
             position: absolute;
             bottom: 20px;
-            right: 30px;
+            width: 100%;
             a {
                 padding: 2px;
             }
@@ -177,8 +177,9 @@
                 font-size: 12px;
             }
             .icon_social {
+                position:relative;
                 float: right;
-                padding-left: 15px;
+                right: 60px;
             }
         }
     }

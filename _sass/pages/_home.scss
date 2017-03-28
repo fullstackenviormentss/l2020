@@ -47,6 +47,7 @@ html .hero {
     }
     @media (max-width: 450px) {
         background-position-x: -1200px;
+        background-position-y: -350px;
     }
     .container {
         padding: 305px 0 0 0;
@@ -57,14 +58,14 @@ html .hero {
 }
 
 .the_claim {
-	position:absolute;
+    position: absolute;
     font-family: Montserrat, sans-serif;
     color: #0087cd;
     font-size: 81px;
     line-height: 90px;
     font-weight: 700;
     text-transform: uppercase;
-	opacity:0;
+    opacity: 0;
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
     -webkit-transition-timing-function: ease-out;
@@ -73,6 +74,22 @@ html .hero {
     animation-fill-mode: both;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+}
+
+@media (max-width: 991px) {
+    .the_claim {
+        font-size: 90px;
+        line-height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .the_claim {
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .about_the_yog_p {
