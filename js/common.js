@@ -109,6 +109,8 @@ var polyfill = {
         .fail(function () {
           console.log('Flexibility polyfill failed to load');
         });
+    }else{
+      console.log("Compatible flexbox")
     }
     // Vmin, vw ...vh
     if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
