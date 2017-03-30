@@ -73,16 +73,25 @@ layout: default
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
+        {% social_wall
+
+            fb_username:lausanne2020,
+            fb_amount:5,
+
+            tw_username:lausanne2020,
+            tw_amount:4
+        
+        %}
     </div>
 </div>
 <div class="newsletter_cta">
     <div class="container">
-        <div class="newsletter fade-in-module">
+        <div class="newsletter fade-in-module" data-style="display: flex;">
             <div class="newsletter-text">
                 <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
             </div>
             <div class="newsletter-form">
-                <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
+                <form class="newsletter_cta_form" data-style="display: flex;" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
                     netlify>
                     <div class="newsletter-form-adress">
                         <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"

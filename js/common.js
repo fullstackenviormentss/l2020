@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+  flexibility(document.documentElement);
   // First load
   pageLoad.funcBefore();
   pageLoad.funcAfter();
