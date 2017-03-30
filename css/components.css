@@ -16,7 +16,7 @@ body {
   color: #333;
 }
 img {
-  max-width: 100%;
+  max-width: 101%; /* fix white border in firefox */
   vertical-align: middle;
   display: inline-block;
 }
