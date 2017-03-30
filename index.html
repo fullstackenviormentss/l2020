@@ -73,44 +73,31 @@ layout: default
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
-        {% social_wall
-
-            fb_username:lausanne2020,
-            fb_amount:5,
-
-            tw_username:lausanne2020,
-            tw_amount:4
-        
-        %}
     </div>
 </div>
 <div class="newsletter_cta">
     <div class="container">
-        <div class="row fade-in-module">
-            <div class="col-md-6">
+        <div class="newsletter fade-in-module">
+            <div class="newsletter-text">
                 <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
             </div>
-            <div class="col-md-6">
-                <div class="">
-                    <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
-                        netlify>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
-                                    required="required" type="email">
-                                <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
-                            </div>
-                            <div class="col-md-3">
-                                <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="w-form-done">
-                        <div>{% t pages.index.newsletter.thanks %}</div>
+            <div class="newsletter-form">
+                <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
+                    netlify>
+                    <div class="newsletter-form-adress">
+                        <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
+                            required="required" type="email">
+                        <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
                     </div>
-                    <div class="w-form-fail">
-                        <div>{% t pages.index.newsletter.oops %}</div>
+                    <div class="newsletter-form-button">
+                        <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
                     </div>
+                </form>
+                <div class="w-form-done">
+                    <div>{% t pages.index.newsletter.thanks %}</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>{% t pages.index.newsletter.oops %}</div>
                 </div>
             </div>
         </div>

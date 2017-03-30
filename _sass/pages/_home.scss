@@ -162,3 +162,43 @@ html .hero {
 .parallax__layer--back {
     transform: translateZ(-1px);
 }
+.newsletter{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    .newsletter-text{
+        padding-right: 10px; 
+        flex-basis: 50%;
+        @media(max-width: 992px) {
+            flex-basis: 100%;
+            padding-right: 0px;
+        }
+    }
+    .newsletter-form{
+        padding-left: 10px;
+        flex-basis: 50%;
+        @media(max-width: 992px) {
+            flex-basis: 100%;   
+            padding-left: 0px;
+        }
+        .newsletter-form-adress{
+            flex-basis: 75%;
+            padding-right: 20px;
+            @media(max-width: 992px) {
+                flex-basis: 100%;   
+                padding-right: 0px;
+            }
+        }
+        .newsletter-form-button{
+            flex-basis: 25%;
+            @media(max-width: 992px) {
+                flex-basis: 100%;   
+            }
+        }
+        form{
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
