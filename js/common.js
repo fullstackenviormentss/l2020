@@ -98,7 +98,7 @@ var polyfill = {
     }
      // Flexbox
     if (!Modernizr.flexbox && !Modernizr.flexwrap) {
-      $.getScript('js/vendors/polyfill/flexibility.min.js')
+      $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
           $('.newsletter, .newsletter form').attr("data-style","display: flex;")
           flexibility(document.documentElement);
@@ -106,9 +106,6 @@ var polyfill = {
         .fail(function () {
           console.log('Flexibility polyfill failed to load');
         });
-    }else{
-      $('.newsletter, .newsletter form').css("-js-display","flex")
-      $('.newsletter, .newsletter form').attr("data-style","display: flex;")
     }
     // Vmin, vw ...vh
     if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
