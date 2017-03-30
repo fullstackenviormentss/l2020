@@ -98,9 +98,12 @@ var polyfill = {
     }
      // Flexbox
     if (!Modernizr.flexbox && !Modernizr.flexwrap) {
+      console.log("flexbox incompatible")
       $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
+          console.log("flexibility loaded")
           $('.newsletter, .newsletter form').attr("data-style","display: flex;")
+          $('.newsletter, .newsletter form').css("-js-display","flex")
           flexibility(document.documentElement);
         })
         .fail(function () {
