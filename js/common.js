@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
-  flexibility(document.documentElement);
   // First load
   pageLoad.funcBefore();
   pageLoad.funcAfter();
+  polyfill.init();
 
   /* ===========================================
    Global ajax transition page function
@@ -86,7 +86,7 @@ var polyfill = {
   init: function () {
     // Objectfit
     if (!Modernizr.objectfit) {
-      $.getScript('vendors/polyfill/ofi.min.js')
+      $.getScript('js/vendors/polyfill/ofi.min.js')
         .done(function () {
           $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family','object-fit: cover;');
           $('.wrap_media > video.fullscreen').css('font-family','object-fit: contain;');
@@ -98,16 +98,21 @@ var polyfill = {
     }
      // Flexbox
     if (!Modernizr.flexbox && !Modernizr.flexwrap) {
-      $.getScript('vendors/polyfill/flexibility.min.js')
+      $.getScript('js/vendors/polyfill/flexibility.min.js')
         .done(function () {
+          $('.newsletter, .newsletter form').attr("data-style","display: flex;")
+          flexibility(document.documentElement);
         })
         .fail(function () {
           console.log('Flexibility polyfill failed to load');
         });
+    }else{
+      $('.newsletter, .newsletter form').css("-js-display","flex")
+      $('.newsletter, .newsletter form').attr("data-style","display: flex;")
     }
     // Vmin, vw ...vh
     if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
-      $.getScript('vendors/polyfill/vminpoly.js')
+      $.getScript('js/vendors/polyfill/vminpoly.js')
         .fail(function () {
           console.log('Vmin polyfill failed to load');
         });
