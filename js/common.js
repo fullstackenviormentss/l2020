@@ -76,8 +76,41 @@ var pageLoad = {
       mapManagement.init();
     }
 
-    // Polyfill init
-    objectFitImages();
+    polyfill.init();
+
+  }
+}
+
+var polyfill = {
+  init: function () {
+    // Objectfit
+    if (!Modernizr.objectfit) {
+      $.getScript('vendors/polyfill/ofi.min.js')
+        .done(function () {
+          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family','object-fit: cover;');
+          $('.wrap_media > video.fullscreen').css('font-family','object-fit: contain;');
+          objectFitImages();
+        })
+        .fail(function () {
+          console.log('Ofi polyfill failed to load');
+        });
+    }
+     // Flexbox
+    if (!Modernizr.flexbox && !Modernizr.flexwrap) {
+      $.getScript('vendors/polyfill/flexibility.min.js')
+        .done(function () {
+        })
+        .fail(function () {
+          console.log('Flexibility polyfill failed to load');
+        });
+    }
+    // Vmin, vw ...vh
+    if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
+      $.getScript('vendors/polyfill/vminpoly.js')
+        .fail(function () {
+          console.log('Vmin polyfill failed to load');
+        });
+    }
   }
 }
 
@@ -212,8 +245,7 @@ var video = {
 
       if (fullScreen) {
         $(this).addClass('fullscreen');
-      }
-      else{
+      } else {
         $(this).removeClass('fullscreen');
       }
 
