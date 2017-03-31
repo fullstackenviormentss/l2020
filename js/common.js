@@ -90,8 +90,8 @@ var polyfill = {
     if (!Modernizr.objectfit) {
       $.getScript('js/vendors/polyfill/ofi.min.js')
         .done(function () {
-          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family','object-fit: cover;');
-          $('.wrap_media > video.fullscreen').css('font-family','object-fit: contain;');
+          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family',"'object-fit: cover'");
+          $('.wrap_media > video.fullscreen').css('font-family',"'object-fit: contain'");
           objectFitImages();
         })
         .fail(function () {
