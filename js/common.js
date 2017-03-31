@@ -69,6 +69,8 @@ var pageLoad = {
     titleSlider.init();
     scrollEffects.init();
 
+    flipIcons.init();
+
     video.FSbackgroundChange();
     video.hoverControls();
 
@@ -121,6 +123,24 @@ var polyfill = {
     }
   }
 }
+
+/* ===========================================
+   Flip icons sport
+   =========================================== */
+
+var flipIcons = {
+  init:function(){
+    $('.pictos-grp')
+      .mouseenter(function () {
+        $(this).find('img').removeClass();
+        $(this).find('img').addClass('flip-in');
+      })
+      .mouseleave(function () {
+        $(this).find('img').addClass('flip-out');
+      });
+  }
+}
+
 
 /* ===========================================
    Hide show socials icons on header
