@@ -169,6 +169,7 @@ html .hero {
     .newsletter-text{
         padding-right: 10px; 
         flex-basis: 50%;
+        max-width: 50%;
         @media(max-width: 992px) {
             flex-basis: 100%;
             padding-right: 0px;
@@ -177,12 +178,14 @@ html .hero {
     .newsletter-form{
         padding-left: 10px;
         flex-basis: 50%;
+        max-width: 50%;
         @media(max-width: 992px) {
             flex-basis: 100%;   
             padding-left: 0px;
         }
         .newsletter-form-adress{
             flex-basis: 75%;
+            max-width: 75%;
             padding-right: 20px;
             @media(max-width: 992px) {
                 flex-basis: 100%;   
@@ -191,6 +194,7 @@ html .hero {
         }
         .newsletter-form-button{
             flex-basis: 25%;
+            max-width: 25%;
             @media(max-width: 992px) {
                 flex-basis: 100%;   
             }

@@ -98,7 +98,6 @@ var polyfill = {
     }
      // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
-      console.log("flexbox incompatible")
       $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
           console.log("flexibility loaded")
@@ -109,8 +108,6 @@ var polyfill = {
         .fail(function () {
           console.log('Flexibility polyfill failed to load');
         });
-    }else{
-      console.log("Compatible flexbox")
     }
     // Vmin, vw ...vh
     if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
