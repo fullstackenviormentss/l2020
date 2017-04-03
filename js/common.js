@@ -61,7 +61,9 @@ var pageLoad = {
     formManagement.init("#email-form-contact");
 
     truncateText.init('blockquote, .new');
-    dateTime.fromNow('time');
+
+    jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
+    jQuery("time").timeago();
 
   },
   funcAfter: function () {
@@ -90,21 +92,21 @@ var polyfill = {
     if (!Modernizr.objectfit) {
       $.getScript('js/vendors/polyfill/ofi.min.js')
         .done(function () {
-          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family',"'object-fit: cover'");
-          $('.wrap_media > video.fullscreen').css('font-family',"'object-fit: contain'");
+          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family', "'object-fit: cover'");
+          $('.wrap_media > video.fullscreen').css('font-family', "'object-fit: contain'");
           objectFitImages();
         })
         .fail(function () {
           console.log('Ofi polyfill failed to load');
         });
     }
-     // Flexbox
+    // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
       $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
           console.log("flexibility loaded")
-          $('.newsletter, .newsletter form').attr("data-style","display: flex;")
-          $('.newsletter, .newsletter form').css("-js-display","flex")
+          $('.newsletter, .newsletter form').attr("data-style", "display: flex;")
+          $('.newsletter, .newsletter form').css("-js-display", "flex")
           flexibility(document.documentElement);
         })
         .fail(function () {
@@ -126,7 +128,7 @@ var polyfill = {
    =========================================== */
 
 var flipIcons = {
-  init:function(){
+  init: function () {
     $('.pictos-grp')
       .mouseenter(function () {
         $(this).find('img').removeClass();
@@ -288,24 +290,6 @@ var video = {
   }
 }
 
-
-
-/* ===========================================
-Date from now
-=========================================== */
-
-var dateTime = {
-  fromNow: function (el) {
-    moment().format();
-    // Get the language in html attribute lang=
-    moment.locale($('html')[0].lang);
-    // Change the date for every element time in Social_wall div
-    $(el).each(function (i) {
-      $(this).text(moment($(this).attr('datetime')).fromNow());
-    });
-  }
-}
-
 /* ===========================================
 Truncate description
 =========================================== */
@@ -428,55 +412,43 @@ var mapManagement = {
   }
 }
 
-var style = [
-  {
+var style = [{
     "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
+    "stylers": [{
+      "color": "#f5f5f5"
+    }]
   },
   {
     "featureType": "administrative",
     "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "featureType": "administrative.country",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "visibility": "simplified"
-      }
-    ]
+    "stylers": [{
+      "visibility": "simplified"
+    }]
   },
   {
     "featureType": "administrative.country",
     "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#f5c900"
-      }
-    ]
+    "stylers": [{
+      "color": "#f5c900"
+    }]
   },
   {
     "featureType": "administrative.country",
     "elementType": "geometry.stroke",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#ce0071"
       },
       {
@@ -490,26 +462,21 @@ var style = [
   {
     "featureType": "administrative.country",
     "elementType": "labels",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "featureType": "administrative.country",
     "elementType": "labels.text",
-    "stylers": [
-      {
-        "color": "#ce0071"
-      }
-    ]
+    "stylers": [{
+      "color": "#ce0071"
+    }]
   },
   {
     "featureType": "administrative.country",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#ce0071"
       },
       {
@@ -520,8 +487,7 @@ var style = [
   {
     "featureType": "administrative.country",
     "elementType": "labels.text.stroke",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#ffffff"
       },
       {
@@ -532,8 +498,7 @@ var style = [
   {
     "featureType": "administrative.locality",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#0087eb"
       },
       {
@@ -544,8 +509,7 @@ var style = [
   {
     "featureType": "administrative.locality",
     "elementType": "labels.text.stroke",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#ffffff"
       },
       {
@@ -555,44 +519,35 @@ var style = [
   },
   {
     "featureType": "administrative.province",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "featureType": "landscape.man_made",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#f0f0f0"
-      }
-    ]
+    "stylers": [{
+      "color": "#f0f0f0"
+    }]
   },
   {
     "featureType": "landscape.natural",
     "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#f8f8f8"
-      }
-    ]
+    "stylers": [{
+      "color": "#f8f8f8"
+    }]
   },
   {
     "featureType": "landscape.natural.landcover",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#d9e9ff"
-      }
-    ]
+    "stylers": [{
+      "color": "#d9e9ff"
+    }]
   },
   {
     "featureType": "landscape.natural.terrain",
     "elementType": "geometry",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#dbeaff"
       },
       {
@@ -602,79 +557,62 @@ var style = [
   },
   {
     "featureType": "poi",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "featureType": "poi",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
+    "stylers": [{
+      "color": "#eeeeee"
+    }]
   },
   {
     "featureType": "poi",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
+    "stylers": [{
+      "color": "#757575"
+    }]
   },
   {
     "featureType": "poi.park",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
+    "stylers": [{
+      "color": "#e5e5e5"
+    }]
   },
   {
     "featureType": "poi.park",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
+    "stylers": [{
+      "color": "#9e9e9e"
+    }]
   },
   {
     "featureType": "road",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
+    "stylers": [{
+      "visibility": "off"
+    }]
   },
   {
     "featureType": "road",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
+    "stylers": [{
+      "color": "#ffffff"
+    }]
   },
   {
     "featureType": "road.arterial",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#757575"
-      }
-    ]
+    "stylers": [{
+      "color": "#757575"
+    }]
   },
   {
     "featureType": "road.highway",
     "elementType": "geometry",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#ffffff"
       },
       {
@@ -685,44 +623,35 @@ var style = [
   {
     "featureType": "road.highway",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
+    "stylers": [{
+      "color": "#616161"
+    }]
   },
   {
     "featureType": "road.local",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
+    "stylers": [{
+      "color": "#9e9e9e"
+    }]
   },
   {
     "featureType": "transit.line",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#e5e5e5"
-      }
-    ]
+    "stylers": [{
+      "color": "#e5e5e5"
+    }]
   },
   {
     "featureType": "transit.station",
     "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
+    "stylers": [{
+      "color": "#eeeeee"
+    }]
   },
   {
     "featureType": "water",
     "elementType": "geometry.fill",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#0087cd"
       },
       {
@@ -736,8 +665,7 @@ var style = [
   {
     "featureType": "water",
     "elementType": "geometry.stroke",
-    "stylers": [
-      {
+    "stylers": [{
         "color": "#0087cd"
       },
       {
@@ -751,10 +679,66 @@ var style = [
   {
     "featureType": "water",
     "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
+    "stylers": [{
+      "color": "#ffffff"
+    }]
   }
 ]
+
+/* ===========================================
+   jquery Timeago Locale
+   =========================================== */
+
+var localeTimeAgo = {
+  de: {
+    prefixAgo: "vor",
+    prefixFromNow: "in",
+    suffixAgo: "",
+    suffixFromNow: "",
+    seconds: "wenigen Sekunden",
+    minute: "etwa einer Minute",
+    minutes: "%d Minuten",
+    hour: "etwa einer Stunde",
+    hours: "%d Stunden",
+    day: "etwa einem Tag",
+    days: "%d Tagen",
+    month: "etwa einem Monat",
+    months: "%d Monaten",
+    year: "etwa einem Jahr",
+    years: "%d Jahren"
+  },
+  fr: {
+    prefixAgo: "il y a",
+    prefixFromNow: "d'ici",
+    seconds: "moins d'une minute",
+    minute: "environ une minute",
+    minutes: "environ %d minutes",
+    hour: "environ une heure",
+    hours: "environ %d heures",
+    day: "environ un jour",
+    days: "environ %d jours",
+    month: "environ un mois",
+    months: "environ %d mois",
+    year: "un an",
+    years: "%d ans"
+  },
+  en: {
+    prefixAgo: null,
+    prefixFromNow: null,
+    suffixAgo: "ago",
+    suffixFromNow: "from now",
+    seconds: "less than a minute",
+    minute: "about a minute",
+    minutes: "%d minutes",
+    hour: "about an hour",
+    hours: "about %d hours",
+    day: "a day",
+    days: "%d days",
+    month: "about a month",
+    months: "%d months",
+    year: "about a year",
+    years: "%d years",
+    wordSeparator: " ",
+    numbers: []
+  }
+}

@@ -40,7 +40,7 @@ layout: default
                         {% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
                         endif %}
                     </h1>
-                    <p class="p_news desc">
+                    <p class="p_news">
                         {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                         {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                         {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
@@ -73,7 +73,7 @@ layout: default
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
-        {% social_wall
+         {% social_wall
 
             fb_username:lausanne2020,
             fb_amount:5,
