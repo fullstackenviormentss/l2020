@@ -60,7 +60,7 @@ var pageLoad = {
     formManagement.init("#email-form-newsletter");
     formManagement.init("#email-form-contact");
 
-    truncateText.init('blockquote, .new');
+    truncateText.init('.desc, .new');
 
     jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
     jQuery("time").timeago();

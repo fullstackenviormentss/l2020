@@ -500,7 +500,6 @@ h1 {
 }
 
 .news_date {
-    margin-bottom: 5px;
     font-family: Montserrat, sans-serif;
     color: #b6b6b6;
     font-size: 12px;
@@ -769,9 +768,6 @@ h1 {
     .p_news {
         text-align: center;
     }
-    .news_date {
-        text-align: center;
-    }
     .row_about_yog_1 {
         margin-bottom: 20px;
     }
@@ -934,9 +930,6 @@ h1 {
         text-align: center;
     }
     .p_news {
-        text-align: center;
-    }
-    .news_date {
         text-align: center;
     }
     .h1_discover.h1-bis.h1-third {

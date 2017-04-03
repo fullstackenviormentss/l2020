@@ -1,19 +1,7 @@
-{% assign type = "text" %}{% assign media = "" %}
-
-{% if photo %}{% assign type = "photo" %}{% endif %}
-
-{% if int_quote %}
-  {% assign type = "int_quote" %}
-  {% unless int_quote.picture %}{% assign media = "no_media" %}{% endunless %}
-{% endif %}
-
-{% if ext_quote %}
-  {% assign type = "ext_quote" %}
-  {% unless ext_quote.picture %}{% assign media = "no_media" %}{% endunless %}
-{% endif %}
-
-
-{% if video %}{% assign type = "video" %}{% endif %}
+{% assign type = "text" %}{% assign media = "" %} {% if photo %}{% assign type = "photo" %}{% endif %} {% if int_quote %}
+{% assign type = "int_quote" %} {% unless int_quote.picture %}{% assign media = "no_media" %}{% endunless %} {% endif %}
+{% if ext_quote %} {% assign type = "ext_quote" %} {% unless ext_quote.picture %}{% assign media = "no_media" %}{% endunless
+%} {% endif %} {% if video %}{% assign type = "video" %}{% endif %}
 
 <div class='{{ social_network }}_status {{ type }} {{ media }} col-sm-6 col-md-4 item'>
   <div class="wrap_item">
@@ -35,60 +23,58 @@
         allowfullscreen></iframe>
 
       {% endif %} {% endif %} {% if int_quote %} {% if int_quote.picture %}
-        <a href="{{ int_quote.link }}">
-          <img class="grow" src="{{ int_quote.picture }}">
-        </a>
+      <a href="{{ int_quote.link }}">
+        <img class="grow" src="{{ int_quote.picture }}">
+      </a>
 
-        {% endif %}
+      {% endif %}
 
-        <blockquote cite="{{ int_quote.link }}">
-          <h1><a href="{{ int_quote.link }}">{{ int_quote.title }}</a></h1>
-          <p class="desc">{{ int_quote.description }}</p>
-        </blockquote>
+      <blockquote cite="{{ int_quote.link }}">
+        <h1><a href="{{ int_quote.link }}">{{ int_quote.title }}</a></h1>
+        <p class="desc">{{ int_quote.description }}</p>
+      </blockquote>
 
 
       {% endif %} {% if ext_quote %} {% if ext_quote.picture %}
 
-        <a href="{{ ext_quote.link }}">
-          <img class="grow" src="{{ ext_quote.picture }}">
-        </a>
+      <a href="{{ ext_quote.link }}">
+        <img class="grow" src="{{ ext_quote.picture }}">
+      </a>
 
-        {% endif %}
+      {% endif %}
 
-        <blockquote cite="{{ ext_quote.link }}">
-          <cite>{{ ext_quote.source }}</cite>
-          <h1><a href="{{ ext_quote.link }}">{{ ext_quote.title }}</a></h1>
-          <p class="desc">{{ ext_quote.description }}</p>
-        </blockquote>
+      <blockquote cite="{{ ext_quote.link }}">
+        <cite>{{ ext_quote.source }}</cite>
+        <h1><a href="{{ ext_quote.link }}">{{ ext_quote.title }}</a></h1>
+        <p class="desc">{{ ext_quote.description }}</p>
+      </blockquote>
 
       {% endif %}
 
     </div>
 
-    <div class='wrap_status'>
-
-      <div class="user_info row">
-        <p class="profile_image col-xs-3">
-          <a href="{{ user.url }}"><img src="{{ user.profile_image }}" /></a>
-        </p>
-        <div class="wrap_user_name col-xs-8">
-          <h1 class="user"><a href="{{ user.url }}">{{ user.name }}</a></h1>
-          <h2 class="username"><a href="{{ user.url }}">@{{ user.username }}</a></h2>
-        </div>
-
-      </div>
-
-      <div class="status_box">
-        <p class="status desc">{{ message }}</p>
-      </div>
-
-      <p class="meta_info">
-        <time pubdate datetime="{{ meta.created_time }}" title="{{meta.created_time | date: '%d.%m'}}">{{ meta.created_time | date: "%d.%m.%Y" }}</time>
-        <span class="icon_social">
-          <a href="{{ meta.permalink }}"><span class="icon-{{ social_network }}"></span></a>
-        </span>
+    <div class="user_info row">
+      <p class="profile_image col-xs-3">
+        <a href="{{ user.url }}"><img src="{{ user.profile_image }}" /></a>
       </p>
+      <div class="wrap_user_name col-xs-8">
+        <h1 class="user"><a href="{{ user.url }}">{{ user.name }}</a></h1>
+        <h2 class="username"><a href="{{ user.url }}">@{{ user.username }}</a></h2>
+      </div>
 
     </div>
+
+
+
+    <p class="status">{{ message }}</p>
+
+
   </div>
+
+  <p class="meta_info">
+    <time pubdate datetime="{{ meta.created_time }}" title="{{meta.created_time | date: '%d.%m'}}">{{ meta.created_time | date: "%d.%m.%Y" }}</time>
+    <span class="icon_social">
+          <a href="{{ meta.permalink }}"><span class="icon-{{ social_network }}"></span></a>
+    </span>
+  </p>
 </div>

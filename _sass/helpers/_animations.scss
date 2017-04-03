@@ -2,6 +2,14 @@
    Animations
    =========================================== */
 
+.grow {
+    transition: all 0.4s ease-in-out;
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
+
 .come-in {
     transform: translateY(150px);
     animation: come-in 0.8s ease forwards;

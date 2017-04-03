@@ -181,10 +181,9 @@ class FB
     text = text.gsub(/\#([a-z0-9âãäåæçèéêëìíîïðñòóôõøùúûüýþÿı_-]+)/i, '<a class="hashtag" href="https://www.facebook.com/hashtag/\1">#\1</a>')
     # Page, Group, user
     if has_message_tags?
-
       @post['message_tags'].each do |k, v|
         v.each do |h|
-          text = text.gsub(/#{h["name"]}/, "<a class='mention' href='https://www.facebook.com/#{h["id"]}'>#{h["name"]}</a>")
+          text = text.gsub(/\s(#{h["name"]})\s/, " <a class='mention' href='https://www.facebook.com/#{h["id"]}'>@#{h["name"]}</a> ")
         end
       end
     end

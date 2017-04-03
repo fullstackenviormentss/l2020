@@ -17,7 +17,8 @@ layout: default
 	      	{% capture newyear %}{{ new.date | date: '%Y' }}{% endcapture %}
 	      	{% if newyear == pageyear %}
 	        <div class="col-sm-6 col-md-4 new">
-	            <div>
+						<div class="new col-md-12">
+	            <div class="wrap_media">
 	              <img src="{{ new.image.url }}">
 	            </div>
 	            <h1 class="h1_news">
@@ -46,10 +47,14 @@ layout: default
 	            {% else %}
 	              {% capture link %}{{new.titreEn}}{% endcapture %}
 	            {% endif %}
-	            <p class="news_date">
-								<time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-								<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
-	          </div>
+						</div>
+	          <div class="new_meta">
+							<p class="news_date">
+									<time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+									<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a>
+							</p>
+            </div>
+					</div>
 	          {% endif %}
 	      {% endfor %}
 	    </div>
