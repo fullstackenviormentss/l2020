@@ -60,7 +60,8 @@ var pageLoad = {
     formManagement.init("#email-form-newsletter");
     formManagement.init("#email-form-contact");
 
-    truncateText.init('.desc, .new');
+    truncateText.init('.new', '.news_date');
+    truncateText.init('.wrap_item', '');
 
     jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
     jQuery("time").timeago();
@@ -295,18 +296,14 @@ Truncate description
 =========================================== */
 
 var truncateText = {
-  init: function (els) {
-    truncateText.truncate(els);
-    $(window).resize(function () {
-      truncateText.truncate(els);
-    });
-  },
-  truncate: function (els) {
+  init: function (els, elToKeep) {
     $(els).each(function (i, obj) {
       $el = $(this);
 
       $el.dotdotdot({
-        height: null
+        height: null,
+        watch: 'window',
+        after: elToKeep
       })
 
     });
