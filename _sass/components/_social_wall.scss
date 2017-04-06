@@ -66,7 +66,11 @@
                 font-size: 14px;
                 line-height: 20px;
                 color: $purple-primary;
-                word-break: break-all;
+                word-break: break-word;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
                 margin: 0;
             }
             p.desc {
@@ -138,7 +142,7 @@
     /* Status/message */
     p.status {
         padding: 10px 20px;
-        margin-bottom:10px;
+        margin-bottom: 10px;
         color: #858585;
         font-size: 13px;
         line-height: 20px;
