@@ -352,7 +352,7 @@ var formManagement = {
       }
 
       if(el.indexOf("newsletter") !== -1){
-        $.post( "https://api.mailpro.com/v2/email/add.xml", { IDClient: "155853", APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4", AddressBookID: addressBookID, EmailList:email+",,netlify,"+lang } );
+        $.post( "https://api.mailpro.com/v2/email/add.xml", { IDClient: "155853", APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4", AddressBookID: addressBookID, EmailList:email+",,,"+lang } );
       }
 
       // Put the results in a div
