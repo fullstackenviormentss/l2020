@@ -339,9 +339,20 @@ var formManagement = {
 
       var posting = $.post($form.attr("action"), $form.serialize())
 
-      console.log("submit")
+      var lang = ($('input[name="lang"]').val())
+      var email = ($('input[name="email"]').val())
+
+      var addressBookID = "1082130"
+
+      if(lang == "fr"){
+        addressBookID = "1082132"
+      }
+      if(lang == "de"){
+        addressBookID = "1082131"
+      }
+
       if(el.indexOf("newsletter") !== -1){
-        $.post( "https://api.mailpro.com/v2/email/add.xml", { IDClient: "155853", APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4", AddressBookID:"1082132", EmailList:"adrienbigler@test.com,adrien,netlify" } );
+        $.post( "https://api.mailpro.com/v2/email/add.xml", { IDClient: "155853", APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4", AddressBookID: addressBookID, EmailList:email+",,netlify,"+lang } );
       }
 
       // Put the results in a div
