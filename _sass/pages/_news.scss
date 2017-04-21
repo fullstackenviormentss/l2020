@@ -30,6 +30,11 @@
         padding: 0;
         .wrap_media {
             height: 200px;
+            img {
+                object-fit: cover;
+                height: 200px;
+                width:100%;
+            }
         }
         .p_news {
             padding-bottom: 10px;

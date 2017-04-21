@@ -3,12 +3,10 @@ $(document).ready(function () {
   // First load
   pageLoad.funcBefore();
   pageLoad.funcAfter();
-  polyfill.init();
 
   /* ===========================================
    Global ajax transition page function
    =========================================== */
-
 
   var $page = $('#main'),
     options = {
@@ -23,6 +21,7 @@ $(document).ready(function () {
           $container.addClass('is-exiting');
           // Restart your animation
           smoothState.restartCSSAnimations();
+
         }
       },
       onReady: {
@@ -59,16 +58,11 @@ var pageLoad = {
 
     formManagement.init("#email-form-newsletter");
     formManagement.init("#email-form-contact");
-
-    truncateText.init('.new', '.news_date');
-    truncateText.init('.wrap_item', '');
-
-    jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
-    jQuery("time").timeago();
-
   },
   funcAfter: function () {
 
+    titleSlider.clear();
+    scrollEffects.clear();
     titleSlider.init();
     scrollEffects.init();
 
@@ -82,8 +76,13 @@ var pageLoad = {
       mapManagement.init();
     }
 
-    polyfill.init();
+    truncateText.init('.new', '.news_date');
+    truncateText.init('.wrap_item', '');
 
+    jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
+    jQuery("time").timeago();
+
+    polyfill.init();
   }
 }
 
@@ -93,6 +92,7 @@ var polyfill = {
     if (!Modernizr.objectfit) {
       $.getScript('js/vendors/polyfill/ofi.min.js')
         .done(function () {
+          ofiLoaded = true;
           $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family', "'object-fit: cover'");
           $('.wrap_media > video.fullscreen').css('font-family', "'object-fit: contain'");
           objectFitImages();
@@ -100,14 +100,15 @@ var polyfill = {
         .fail(function () {
           console.log('Ofi polyfill failed to load');
         });
+
     }
     // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
       $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
           console.log("flexibility loaded")
-          $('.newsletter, .newsletter form').attr("data-style", "display: flex;")
-          $('.newsletter, .newsletter form').css("-js-display", "flex")
+          $('.newsletter, .newsletter form, .about-content').attr("data-style", "display: flex;")
+          $('.newsletter, .newsletter form, .about-content').css("-js-display", "flex")
           flexibility(document.documentElement);
         })
         .fail(function () {
@@ -182,6 +183,40 @@ var scrollEffects = {
       scrollEffects.slideIn()
       scrollEffects.fadeIn()
     })
+
+    /* ===========================================
+    About Page numbers
+    =========================================== */
+
+    $(window).scroll(function () {
+      $('[data-ix="fadeintop"]').each(function () {
+        var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+          $(this).addClass("fade-in-top");
+        } else {
+          $(this).removeClass("fade-in-to");
+        }
+      });
+      $('[data-ix="fadeinscaleup"]').each(function () {
+        var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+          $(this).addClass("fade-in-scale-up");
+        } else {
+          $(this).removeClass("fade-in-scale-up");
+        }
+      });
+      $('[data-ix="fadeindown"]').each(function () {
+        var bounds = $(this).get(0).getBoundingClientRect();
+
+        if (bounds.top < window.innerHeight && bounds.bottom > 0) {
+          $(this).addClass("fade-in-down");
+        } else {
+          $(this).removeClass("fade-in-down");
+        }
+      });
+    });
   },
   slideIn: function () {
     scrollEffects.slideInMods.each(function (i, el) {
@@ -325,6 +360,7 @@ var newsToBeLink = {
   }
 }
 
+
 /* ===========================================
  Newsletter form
  =========================================== */
@@ -344,15 +380,20 @@ var formManagement = {
 
       var addressBookID = "1082130"
 
-      if(lang == "fr"){
+      if (lang == "fr") {
         addressBookID = "1082132"
       }
-      if(lang == "de"){
+      if (lang == "de") {
         addressBookID = "1082131"
       }
 
-      if(el.indexOf("newsletter") !== -1){
-        $.post( "https://api.mailpro.com/v2/email/add.xml", { IDClient: "155853", APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4", AddressBookID: addressBookID, EmailList:email+",,,"+lang } );
+      if (el.indexOf("newsletter") !== -1) {
+        $.post("https://api.mailpro.com/v2/email/add.xml", {
+          IDClient: "155853",
+          APIKey: "4AF79731-2105-407C-B2AB-8826E82A82C4",
+          AddressBookID: addressBookID,
+          EmailList: email + ",,," + lang
+        });
       }
 
       // Put the results in a div
