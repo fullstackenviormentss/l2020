@@ -28,7 +28,6 @@ html .hero {
     background-repeat: no-repeat;
     background-position-y: -200px;
     @media (min-width: 1651px) {
-        background-position-y: 100%;
         background-size: cover;
     }
     @media (max-width: 1450px) {
