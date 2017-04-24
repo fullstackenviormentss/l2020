@@ -27,9 +27,17 @@ html .hero {
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
+
+    @media (min-width: 2121px) {
+        background-position-y: -400px;
+    }
+    
+    @media (min-width: 1921px) {
+        background-position-y: -400px;
+    }
+    // Width of image
     @media (min-width: 1651px) {
         background-size: cover;
-        background-position: 0% 80%;
     }
     @media (max-width: 1450px) {
         background-position-x: -200px;
@@ -62,7 +70,7 @@ html .hero {
     position: absolute;
     font-family: Montserrat, sans-serif;
     color: #0087cd;
-    width:inherit;
+    width: inherit;
     font-size: 81px;
     line-height: 90px;
     font-weight: 700;
@@ -157,12 +165,13 @@ html .hero {
 .parallax__layer--back {
     transform: translateZ(-1px);
 }
-.newsletter{
+
+.newsletter {
     display: flex;
     flex-wrap: wrap;
-    align-items:center;
-    .newsletter-text{
-        padding-right: 10px; 
+    align-items: center;
+    .newsletter-text {
+        padding-right: 10px;
         flex-basis: 50%;
         max-width: 50%;
         @media(max-width: 992px) {
@@ -171,32 +180,32 @@ html .hero {
             padding-right: 0px;
         }
     }
-    .newsletter-form{
+    .newsletter-form {
         padding-left: 10px;
         flex-basis: 50%;
         max-width: 50%;
         @media(max-width: 992px) {
-            flex-basis: 100%;   
+            flex-basis: 100%;
             max-width: 100%;
             padding-left: 0px;
         }
-        .newsletter-form-adress{
+        .newsletter-form-adress {
             flex-basis: 75%;
             max-width: 75%;
             padding-right: 20px;
             @media(max-width: 992px) {
-                flex-basis: 100%;   
+                flex-basis: 100%;
                 padding-right: 0px;
             }
         }
-        .newsletter-form-button{
+        .newsletter-form-button {
             flex-basis: 25%;
             max-width: 25%;
             @media(max-width: 992px) {
-                flex-basis: 100%;   
+                flex-basis: 100%;
             }
         }
-        form{
+        form {
             flex-basis: 100%;
             display: flex;
             flex-wrap: wrap;
