@@ -24,6 +24,8 @@ gem 'nokogiri'
 
 gem 'metainspector'
 
+gem 'packr'
+
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"
   gem "jekyll-multiple-languages-plugin"

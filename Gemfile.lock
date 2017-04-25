@@ -91,6 +91,9 @@ GEM
       mini_portile2 (~> 2.1.0)
     nokogiri (1.7.0.1-x64-mingw32)
       mini_portile2 (~> 2.1.0)
+    oyster (0.9.5)
+    packr (3.2.1)
+      oyster (>= 0.9.5)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -131,6 +134,7 @@ DEPENDENCIES
   metainspector
   mini_magick
   nokogiri
+  packr
   twitter (~> 6.0.0)
 
 RUBY VERSION

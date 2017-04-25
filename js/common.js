@@ -44,7 +44,7 @@ $(document).ready(function () {
     },
     smoothState = $page.smoothState(options).data('smoothState');
 
-})
+});
 
 var pageLoad = {
   funcBefore: function () {
@@ -85,7 +85,7 @@ var pageLoad = {
 
     polyfill.initPage();
   }
-}
+};
 
 var polyfill = {
   // Function which listen to added elements and are initiated only one time
@@ -107,9 +107,9 @@ var polyfill = {
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
       $.getScript('js/vendors/polyfill/flexibility.js')
         .done(function () {
-          console.log("flexibility loaded")
-          $('.newsletter, .newsletter form, .about-content').attr("data-style", "display: flex;")
-          $('.newsletter, .newsletter form, .about-content').css("-js-display", "flex")
+          console.log("flexibility loaded");
+          $('.newsletter, .newsletter form, .about-content').attr("data-style", "display: flex;");
+          $('.newsletter, .newsletter form, .about-content').css("-js-display", "flex");
           flexibility(document.documentElement);
         })
         .fail(function () {
@@ -124,7 +124,7 @@ var polyfill = {
         });
     }
   }
-}
+};
 
 /* ===========================================
    Flip icons sport
@@ -141,7 +141,7 @@ var flipIcons = {
         $(this).find('img').addClass('flip-out');
       });
   }
-}
+};
 
 
 /* ===========================================
@@ -163,7 +163,7 @@ var headerSocialsManager = {
       }
     })
   }
-}
+};
 
 var scrollEffects = {
   slideInMods: $(".come-in-module"),
@@ -172,18 +172,18 @@ var scrollEffects = {
     //Add class for social wall elements
     $('.social_wall .container>div').each(function (i, el) {
       var el = $(el);
-      scrollEffects.slideInMods = scrollEffects.slideInMods.add(el)
-    })
+      scrollEffects.slideInMods = scrollEffects.slideInMods.add(el);
+    });
     //Merge all selectors
-    var modules = scrollEffects.slideInMods.add(scrollEffects.fadeInMods)
+    var modules = scrollEffects.slideInMods.add(scrollEffects.fadeInMods);
 
     modules.each(function (i, el) {
       scrollEffects.set(el, "already-visible");
     });
     $(window).scroll(function () {
-      scrollEffects.slideIn()
-      scrollEffects.fadeIn()
-    })
+      scrollEffects.slideIn();
+      scrollEffects.fadeIn();
+    });
 
     /* ===========================================
     About Page numbers
@@ -240,7 +240,7 @@ var scrollEffects = {
     $(".fade-in-module.fade-in").removeClass("fade-in");
     $(".come-in-module.come-in").removeClass("come-in");
   }
-}
+};
 
 
 /* ===========================================
@@ -259,7 +259,7 @@ var navHover = {
         $(".nav_link.w--page-current").removeClass('w--page-current').addClass('w--current');
       });
   }
-}
+};
 
 /* ===========================================
  Title Slider
@@ -295,7 +295,7 @@ var titleSlider = {
     $(titleSlider.el).removeClass('fade-in');
     window.clearTimeout(this.slider);
   }
-}
+};
 
 /* ===========================================
 Video change background
@@ -318,14 +318,14 @@ var video = {
   hoverControls: function () {
     $('video').on({
       mouseenter: function () {
-        $(this).attr("controls", "controls")
+        $(this).attr("controls", "controls");
       },
       mouseleave: function () {
         $(this).removeAttr("controls");
       }
     });
   }
-}
+};
 
 /* ===========================================
 Truncate description
@@ -340,11 +340,11 @@ var truncateText = {
         height: null,
         watch: 'window',
         after: elToKeep
-      })
+      });
 
     });
   }
-}
+};
 
 /* ===========================================
 Add links to news
@@ -355,11 +355,11 @@ var newsToBeLink = {
     $('.news_section .new, .news-page .new').each(function (i, el) {
       var el = $(el);
       el.on('click', function (e) {
-        location.href = $(this).find('a').first().attr("href")
+        location.href = $(this).find('a').first().attr("href");
       })
     })
   }
-}
+};
 
 
 /* ===========================================
@@ -374,18 +374,18 @@ var formManagement = {
 
       var $form = $(this);
 
-      var posting = $.post($form.attr("action"), $form.serialize())
+      var posting = $.post($form.attr("action"), $form.serialize());
 
-      var lang = ($('input[name="lang"]').val())
-      var email = ($('input[name="email"]').val())
+      var lang = ($('input[name="lang"]').val());
+      var email = ($('input[name="email"]').val());
 
-      var addressBookID = "1082130"
+      var addressBookID = "1082130";
 
       if (lang == "fr") {
-        addressBookID = "1082132"
+        addressBookID = "1082132";
       }
       if (lang == "de") {
-        addressBookID = "1082131"
+        addressBookID = "1082131";
       }
 
       if (el.indexOf("newsletter") !== -1) {
@@ -399,15 +399,15 @@ var formManagement = {
 
       // Put the results in a div
       posting.done(function () {
-        $('.w-form-done').show()
+        $('.w-form-done').show();
       });
       posting.fail(function () {
-        $('.w-form-fail').show()
+        $('.w-form-fail').show();
       });
 
     });
   }
-}
+};
 
 
 /* ===========================================
@@ -425,18 +425,18 @@ var mapManagement = {
       zoom: 7,
       scrollwheel: false
     });
-    mapManagement.placeMarker()
+    mapManagement.placeMarker();
     mapManagement.map.setOptions({
       styles: style
     });
   },
   placeMarker: function () {
-    var lang = "en"
+    var lang = "en";
     if (window.location.href.indexOf("/fr/") > -1) {
-      lang = "fr"
+      lang = "fr";
     }
     if (window.location.href.indexOf("/de/") > -1) {
-      lang = "de"
+      lang = "de";
     }
     $.getJSON("mapdata/venues.json", function (data) {
       $.each(data, function (key, val) {
@@ -450,12 +450,12 @@ var mapManagement = {
           icon: '../images/location_v2.png',
           title: 'Hello World!'
         });
-        var content = "<h1>" + val.title_en + "</h1><p>" + val.texte_en + "</p><p><a href=" + val.lienEn + " target='_blank'>More</a></p>"
+        var content = "<h1>" + val.title_en + "</h1><p>" + val.texte_en + "</p><p><a href=" + val.lienEn + " target='_blank'>More</a></p>";
         if (lang == "fr") {
-          var content = "<h1>" + val.title + "</h1><p>" + val.texte_fr + "</p><p><a href=" + val.link + " target='_blank'>En savoir plus</a></p>"
+          var content = "<h1>" + val.title + "</h1><p>" + val.texte_fr + "</p><p><a href=" + val.link + " target='_blank'>En savoir plus</a></p>";
         }
         if (lang == "de") {
-          var content = "<h1>" + val.title_de + "</h1><p>" + val.texte_de + "</p><p><a href=" + val.lienDe + " target='_blank'>Mehr infos</a></p>"
+          var content = "<h1>" + val.title_de + "</h1><p>" + val.texte_de + "</p><p><a href=" + val.lienDe + " target='_blank'>Mehr infos</a></p>";
         }
         var infowindow = new google.maps.InfoWindow({
           content: content
@@ -466,7 +466,7 @@ var mapManagement = {
       });
     });
   }
-}
+};
 
 var style = [{
     "elementType": "labels.icon",
@@ -739,7 +739,7 @@ var style = [{
       "color": "#ffffff"
     }]
   }
-]
+];
 
 /* ===========================================
    jquery Timeago Locale
@@ -797,4 +797,4 @@ var localeTimeAgo = {
     wordSeparator: " ",
     numbers: []
   }
-}
+};
