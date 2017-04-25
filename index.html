@@ -61,7 +61,7 @@ layout: default
             {% else %}
               {% capture link %}{{new.titreEn}}{% endcapture %}
             {% endif %}
-            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
+            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
         </div>
             {% endfor %}
         </div>
