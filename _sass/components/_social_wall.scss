@@ -39,11 +39,7 @@
         >video {
             height: 202px;
             /* Precise to avoid black line on iframe video */
-            width: 100%;
-            object-fit: cover;
-        }
-        >video.fullscreen {
-            object-fit: contain;
+            width: 101%;
         }
         /* Social_wall Blockquote */
         blockquote {
@@ -176,4 +172,14 @@
             float: right;
         }
     }
+}
+
+.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video{
+    object-fit: cover;
+	font-family: 'object-fit: cover;'
+}
+
+.wrap_media > video.fullscreen{
+    object-fit: contain;
+	font-family: 'object-fit: contain;'
 }

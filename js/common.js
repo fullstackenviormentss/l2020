@@ -3,6 +3,7 @@ $(document).ready(function () {
   // First load
   pageLoad.funcBefore();
   pageLoad.funcAfter();
+  polyfill.initGlobal();
 
   /* ===========================================
    Global ajax transition page function
@@ -82,26 +83,26 @@ var pageLoad = {
     jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
     jQuery("time").timeago();
 
-    polyfill.init();
+    polyfill.initPage();
   }
 }
 
 var polyfill = {
-  init: function () {
+  // Function which listen to added elements and are initiated only one time
+  initGlobal: function(){
     // Objectfit
     if (!Modernizr.objectfit) {
       $.getScript('js/vendors/polyfill/ofi.min.js')
         .done(function () {
-          ofiLoaded = true;
-          $('.wrap_media > a > img, .wrap_media > img, .wrap_media > a > iframe, .wrap_media > iframe, .wrap_media > video').css('font-family', "'object-fit: cover'");
-          $('.wrap_media > video.fullscreen').css('font-family', "'object-fit: contain'");
-          objectFitImages();
+          objectFitImages(null, {watchMQ: true});
         })
         .fail(function () {
           console.log('Ofi polyfill failed to load');
         });
 
     }
+  },
+  initPage: function () {
     // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
       $.getScript('js/vendors/polyfill/flexibility.js')
