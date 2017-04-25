@@ -355,7 +355,7 @@ var newsToBeLink = {
     $('.news_section .new, .news-page .new').each(function (i, el) {
       var el = $(el);
       el.on('click', function (e) {
-        location.href = $(this).find('a').first().attr("href");
+        location.href = $(this).siblings().find('a').first().attr("href");
       })
     })
   }
