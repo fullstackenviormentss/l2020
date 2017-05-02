@@ -78,7 +78,8 @@ var pageLoad = {
     }
 
     truncateText.init('.new', '.news_date');
-    truncateText.init('.wrap_item', '');
+    truncateText.init('.status', '');
+    truncateText.init('.wrap_item blockquote', '');
 
     jQuery.timeago.settings.strings = localeTimeAgo[$('html')[0].lang];
     jQuery("time").timeago();
@@ -89,12 +90,14 @@ var pageLoad = {
 
 var polyfill = {
   // Function which listen to added elements and are initiated only one time
-  initGlobal: function(){
+  initGlobal: function () {
     // Objectfit
     if (!Modernizr.objectfit) {
       $.getScript('./js/vendors/polyfill/ofi.min.js')
         .done(function () {
-          objectFitImages(null, {watchMQ: true});
+          objectFitImages(null, {
+            watchMQ: true
+          });
         })
         .fail(function () {
           console.log('Ofi polyfill failed to load');
@@ -337,7 +340,6 @@ var truncateText = {
       $el = $(this);
 
       $el.dotdotdot({
-        height: null,
         watch: 'window',
         after: elToKeep
       });
