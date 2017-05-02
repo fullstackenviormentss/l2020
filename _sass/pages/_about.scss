@@ -1,253 +1,128 @@
-.sports{
-	padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: url(../images/bkg_3.png);
-    background-position: 0px 0px, 0px 0px;
-    background-size: cover, auto;
-    h1{
-    	text-align: center;
-    	color: #fff;
-    }
-    p{
-    	text-align: justify;
-        hyphens: auto;
-    	color: #fff;
-    	margin-bottom: 50px;
-	    margin-top: 20px;
-		color: #fff;
-		font-size: 19px;
-		line-height: 27px;
-		font-weight: 400;
-    }
-    .pictos-grp {
-    	margin-bottom: 20px;
-        @media (max-width: 991px){
-            div{
-                text-align: center;
-            }
-        }
-        @media (max-width: 600px){
-            min-height: 200px;
-        }
-	}
-	.links_sports {
-		display: inline-block;
-		margin-top: 10px;
-		font-family: Montserrat, sans-serif;
-		color: #fff;
-		font-size: 16px;
-	}
-}
-.key_numbers{
-	background-image: url(../images/bkg_3.png);
-    background-position: 0px 0px, 0px 0px;
-    background-size: cover, auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-	h1{
-    	text-align: center;
-    	color: #fff;
-    }
-    p{
-    	color: #fff;
-    	margin-bottom: 50px;
-	    margin-top: 20px;
-		color: #fff;
-		font-size: 19px;
-		line-height: 27px;
-		font-weight: 400;
+.sports,
+.key_numbers {
+    p {
+        margin-bottom: 50px;
     }
 }
-.about_the_yog_p.descr_pictos{
-    margin-bottom: 50px;
-    text-align: center;
-    a{
-        color: #fff;
-    }
-}
-@media (max-width: 991px){
-    .key_numbers_text {
-        position: static;
-        text-align: center;
-    }
-}
-.key_numbers_text {
-    line-height: 19px;
-}
-.key_numbers_text {
-    text-align: left;
-}
-.key_numbers_img {
-    padding-top:20px;
-}
-.about_yog_1{
-    margin-top: 150px;
-    background-image: url(../images/bkg_3.png);
-    background-position: 0px 0px, 0px 0px;
-    background-size: cover;
-}
-.about_yog_2{
-    background-image: url(../images/bkg_blue.png);
-    background-position: 0px 0px;
-    background-size: cover;
-}
-.about_yog{
-    h1{
-        margin-bottom: 60px;
-        color: #fff;
-        text-align: center;
-    }
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 44px;
-    padding-bottom: 44px;
-    p, ul li{
-        margin-top: 20px;
-        color: #fff;
+
+
+/* about_yog */
+
+.about_yog {
+    ul li {
+        margin-top: 0;
         font-size: 19px;
-        font-family: Montserrat, sans-serif;
         line-height: 27px;
-        font-weight: 400;
         text-align: justify;
     }
-    ul li{
-        margin-top: 0;
-    }
-    img{
-        margin-top: 20px;
-    }
-    .important-dates{
+    .important-dates {
         font-size: 22px;
         font-weight: bold;
     }
-    .about-content{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        .about-text, .about-image{
-            flex-basis: 50%;
-            @media (max-width: 768px){
-                flex-basis: 100%;
+    .about-content {
+        @include flex-wrap(wrap);
+        .about-text,
+        .about-image {
+            @include flex-basis(50%);
+            @media (max-width: 768px) {
+                @include flex-basis(100%);
             }
         }
     }
-    &.about_yog_1{
-        .about-image{
-            padding-left:10px;
+    &.about_yog_1 {
+        .about-image {
+            padding-left: 10px;
         }
-        .about-text{
-            padding-right:10px;
-        }
-    }
-    &.about_yog_2{
-        .about-image{
-            padding-left:10px;
-        }
-        .about-text{
-            padding-right:10px;
+        .about-text {
+            padding-right: 10px;
         }
     }
-}
-.facts{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    h1{
-        text-align: center;
-        color: #fff;
-    }
-    .h2_facts {
-        text-transform: none;
-        font-size: 18px;
-    }
-    .facts-entities{
-        display: -ms-flexbox;
-        display: flex;
-        @media (max-width: 992px){
-            flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
+    &.about_yog_2 {
+        .about-image {
+            padding-left: 10px;
+        }
+        .about-text {
+            padding-right: 10px;
         }
     }
-    .fact{
-        margin-top: 20px;
-        -ms-flex-basis: 0;
-        -ms-flex-grow: 1;
-        flex-basis: 0;
-        flex-grow: 1;
-        @media (max-width: 992px){
-            -ms-flex-basis: 100%;
-            flex-basis: 100%;
-        }
-    }
-    @media (min-width: 768px){
-        .fact:nth-child(odd) .wrap_facts h1{
-            padding-top: 40px;
-        }
-    }
-}
-@media (min-width: 768px){
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1  {
-    width: 100%;
-    *width: 100%;
-  }
 }
 
-@media (min-width: 992px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-  }
+
+/* Sports */
+
+.sports {
+    .pictos-grp {
+        margin-bottom: 20px;
+        @media (max-width: 991px) {
+            div {
+                text-align: center;
+            }
+        }
+        @media (max-width: 600px) {
+            min-height: 200px;
+        }
+    }
+    .links_sports {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 16px;
+        text-decoration: none;
+        &:hover{
+            text-decoration:underline;
+        }
+    }
 }
 
-/**
- *  The following is not really needed in this case
- *  Only to demonstrate the usage of @media for large screens
- */    
-@media (min-width: 1200px) {
-  .seven-cols .col-md-1,
-  .seven-cols .col-sm-1,
-  .seven-cols .col-lg-1 {
-    width: 14.285714285714285714285714285714%;
-    *width: 14.285714285714285714285714285714%;
-  }
+.about_the_yog_p.descr_pictos {
+    text-align: center;
 }
 
-.col-xs-5ths,
-.col-sm-5ths,
-.col-md-5ths,
-.col-lg-5ths {
-    position: relative;
-    min-height: 1px;
-    padding-right: 10px;
-    padding-left: 10px;
+
+/* Facts */
+
+@media (max-width: 992px) {
+    .facts-entities {
+        @include flex-wrap(wrap);
+    }
 }
 
-.col-xs-5ths {
-    width: 20%;
-    float: left;
+.fact {
+    margin-top: 20px;
+    @include flex-basis(0);
+    @include flex-grow(1);
+    @media (max-width: 992px) {
+        @include flex-basis(100%);
+    }
 }
 
 @media (min-width: 768px) {
-    .col-sm-5ths {
-        width: 20%;
-        float: left;
+    .fact:nth-child(odd) .wrap_facts h1 {
+        padding-top: 40px;
     }
 }
 
-@media (min-width: 992px) {
-    .col-md-5ths {
-        width: 20%;
-        float: left;
-    }
+.h1_facts {
+    margin-bottom: 0px;
+    font-family: Sanchez, sans-serif;
 }
 
-@media (min-width: 1200px) {
-    .col-lg-5ths {
-        width: 20%;
-        float: left;
-    }
+.h2_facts {
+    margin-top: 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.img_facts {
+    display: block;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+}
+
+
+/* Key Numbers */
+
+.key_numbers_img {
+    padding-top: 20px;
 }

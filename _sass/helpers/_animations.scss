@@ -84,6 +84,8 @@
     animation-iteration-count: 1;
 }
 
+/* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes flipin {
     0% {
         transform: rotateY(0deg);
@@ -117,6 +119,8 @@
         filter:blur(0px) saturate(100%);
     }
 }
+
+/* Safari 4.0 - 8.0 */
 
 @-webkit-keyframes flipout {
     0% {
@@ -152,6 +156,8 @@
     }
 }
 
+/* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes come-in {
     to {
         transform: translateY(0);
@@ -163,6 +169,8 @@
         transform: translateY(0);
     }
 }
+
+/* Safari 4.0 - 8.0 */
 
 @-webkit-keyframes fadein {
     0% {
@@ -182,6 +190,8 @@
     }
 }
 
+/* Safari 4.0 - 8.0 */
+
 @-webkit-keyframes fadeout {
     0% {
         opacity: 1;
@@ -190,6 +200,8 @@
         opacity: 0;
     }
 }
+
+/* Safari 4.0 - 8.0 */
 
 @keyframes fadeout {
     0% {

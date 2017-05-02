@@ -1,0 +1,25 @@
+.botbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a:hover,
+    a:focus {
+        text-decoration: none;
+    }
+}
+
+.links_social {
+    padding: 17px 0; // For polyfill
+    padding: 1vmin 0;
+    text-align: right;
+    a:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .botbar .links_social {
+        padding: 20px 0 10px 0; // For polyfill
+        padding: 4vmin 0 1vmin 0;
+        text-align:center;
+    }
+}

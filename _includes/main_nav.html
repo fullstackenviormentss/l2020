@@ -8,47 +8,43 @@
   {% assign nav = site.data.nav-header.de %}
 {% endif %}
 
-
-<!-- Navigation -->
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
     <div class="container">
       <div class="row socials slidedown">
         <div class="col-md-6 col-md-offset-6 header-pics navbar-right">
           <div class="links_social">
-            <a class="links_games w-inline-block" href="https://www.instagram.com/lausanne2020" target="_blank">
-              <img height="30" src="/images/Instagram-logo.png">
+            <a href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
+              <img height="30" src="/images/layout/Instagram-logo.png">
             </a>
-            <a class="links_games w-inline-block" href="https://www.facebook.com/lausanne2020/" target="_blank">
-              <img height="30" sizes="30px" src="/images/facebook-icon.png">
+            <a href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
+              <img height="30" src="/images/layout/facebook-icon.png">
             </a>
-            <a class="w-inline-block" href="https://twitter.com/lausanne2020" target="_blank">
-              <img height="24" src="/images/20161107041729Twitter_bird_logo_2012.svg">
+            <a href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
+              <img height="24" src="/images/layout/twitter-icon.svg">
             </a>
           </div>
         </div>
       </div>
-        <a class="w-nav-brand" href="{{nav[0].path}}">
-          <img class="logo" sizes="(max-width: 479px) 79vw, 235px" src="/images/logo-LS2020-YOG-DNA.png" srcset="/images/logo-LS2020-YOG-DNA-p-500x150.png 500w, /images/logo-LS2020-YOG-DNA.png 600w" width="235">
+        <a class="nav-brand" href="{{nav[0].path}}">
+          <img class="logo" sizes="(max-width: 479px) 79vw, 235px" src="/images/layout/logo-LS2020-YOG-DNA.png" srcset="/images/layout/logo-LS2020-YOG-DNA-p-500x150.png 500w, /images/layout/logo-LS2020-YOG-DNA.png 600w" width="235">
         </a>
 
-        <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
                 <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
             </button>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+        <div class="navbar-collapse collapse" id="main-navbar">
             <div class="nav navbar-nav navbar-right">
 
               {% for link in nav %}
 
                 {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' |first}}{% endcapture %}
                 {% if currentpage == link.path %}
-                  <a class="nav_link w-nav-link w--current" href="{{link.path}}">
+                  <a class="nav_link w--current" href="{{link.path}}">
                 {% else %}
-                  <a class="nav_link w-nav-link" href="{{link.path}}">
+                  <a class="nav_link" href="{{link.path}}">
                 {% endif %}
 
                 {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
@@ -59,24 +55,24 @@
               {% capture url_site_de %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
               {% capture url_site_fr %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
 
-              <div class="w-nav_lang">
+              <div class="nav_lang">
               {% if site.lang == "en" %}
-                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link">fr</a>
-                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link accent">en</a>
-                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link">de</a>
+                <a href="{{ url_site_fr }}" class="nav_link">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link accent">en</a>
+                <a href="{{ url_site_de }}" class="nav_link">de</a>
               {% elsif site.lang == "fr" %}
-                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link accent">fr</a>
-                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link">en</a>
-                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link">de</a>
+                <a href="{{ url_site_fr }}" class="nav_link accent">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link">en</a>
+                <a href="{{ url_site_de }}" class="nav_link">de</a>
               {% elsif site.lang == "de" %}
-                <a href="{{ url_site_fr }}" class="nav_link nav_lang w-nav-link">fr</a>
-                <a href="{{ url_site_en }}" class="nav_link nav_lang w-nav-link">en</a>
-                <a href="{{ url_site_de }}" class="nav_link nav_lang w-nav-link accent">de</a>
+                <a href="{{ url_site_fr }}" class="nav_link">fr</a>
+                <a href="{{ url_site_en }}" class="nav_link">en</a>
+                <a href="{{ url_site_de }}" class="nav_link accent">de</a>
               {% endif %}
               </div>
 
             </div>
           </div>
-          <!-- /.navbar-collapse -->
+          
       </div>
   </nav>

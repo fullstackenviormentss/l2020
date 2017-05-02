@@ -7,69 +7,70 @@
 {% if site.lang == "de" %}
   {% assign nav = site.data.nav-footer.de %}
 {% endif %}
+
 <div class="footer">
   <div class="container">
-    <div class="row">
+    <div class="row flex vcenter">
       <div class="footer_logo col-md-4">
-        <img sizes="(max-width: 479px) 92vw, (max-width: 767px) 307px, (max-width: 991px) 31vw, 307px" src="/images/l2020_white.png" srcset="/images/l2020_white-p-500x165.png 500w, /images/l2020_white.png 637w" width="307">
+        <img sizes="(max-width: 479px) 92vw, (max-width: 767px) 307px, (max-width: 991px) 31vw, 307px" src="/images/layout/l2020_white.png"
+          srcset="/images/layout/l2020_white-p-500x165.png 500w, /images/layout/l2020_white.png 637w" width="307">
       </div>
-      <div class="col-md-4">
-        <div class="copy">copyrights © 2017 | Lausanne2020</div>
+      <div class="footer_copy col-md-4">
+        <p>copyrights © 2017 | Lausanne2020</p>
+        <p>Build with ❤ by <a href="http://mei.heig-vd.ch/">HEIG-VD</a></p>
       </div>
-      <div class="col-md-4">
-        <ul class="footer_link w-list-unstyled">
+      <div class="footer_nav col-md-4">
+        <ul class="list-unstyled">
           {% for link in nav %}
-            <li>
-            <a class="footer_link" href="{{link.path}}">{{link.title}}</a>
-            </li>
+          <li>
+            <a href="{{link.path}}">{{link.title}}</a>
+          </li>
           {% endfor %}
         </ul>
       </div>
     </div>
   </div>
 </div>
+
 <div class="botbar">
   <div class="container">
     <div class="row">
       <div class="col-md-6 footer-pics">
         <div class="row">
+
           <div class="col-md-3 col-xs-6">
-            <a class="links_games" href="{% t footer.link.tokyo %}" target="_blank">
-          <img height="80" src="/images/2020_1.png">
-        </a>
+            <a href="{% t footer.link.tokyo %}" target="_blank" rel="noopener">
+              <img height="80" src="/images/layout/2020_1.png">
+            </a>
           </div>
           <div class="col-md-3 col-xs-6">
-            <a class="links_games" href="{% t footer.link.beijing %}" target="_blank">
-          <img height="80" src="/images/Beijing_2022_emblem.jpg">
-        </a>
+            <a href="{% t footer.link.beijing %}" target="_blank" rel="noopener">
+              <img height="80" src="/images/layout/Beijing_2022_emblem.jpg">
+            </a>
           </div>
-        
+
           <div class="col-md-3 col-xs-6">
-            <a class="links_games" href="{% t footer.link.buenos %}" target="_blank">
-          <img height="80" src="/images/Buenos_Aires_2018_logo.jpg">
-        </a>
+            <a href="{% t footer.link.buenos %}" target="_blank" rel="noopener">
+              <img height="80" src="/images/layout/Buenos_Aires_2018_logo.jpg">
+            </a>
           </div>
           <div class="col-md-3 col-xs-6">
-            <a class="links_games" href="{% t footer.link.pyeongChang %}" target="_blank">
-          <img height="80" src="/images/2018_2.png">
-        </a>
+            <a href="{% t footer.link.pyeongChang %}" target="_blank" rel="noopener">
+              <img height="80" src="/images/layout/2018_2.png">
+            </a>
           </div>
         </div>
-        
-        
-        
-        
       </div>
       <div class="col-md-6 footer-pics">
         <div class="links_social">
-          <a class="links_games w-inline-block" href="https://www.instagram.com/lausanne2020" target="_blank">
-            <img height="40" sizes="40px" src="/images/Instagram-logo.png">
+          <a href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
+            <img height="40" src="/images/layout/Instagram-logo.png">
           </a>
-          <a class="links_games w-inline-block" href="https://www.facebook.com/lausanne2020/" target="_blank">
-            <img height="40" sizes="40px" src="/images/facebook-icon.png">
+          <a href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
+            <img height="40" src="/images/layout/facebook-icon.png">
           </a>
-          <a class="w-inline-block" href="https://twitter.com/lausanne2020" target="_blank">
-            <img height="28" src="/images/20161107041729Twitter_bird_logo_2012.svg">
+          <a href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
+            <img height="28" src="/images/layout/twitter-icon.svg">
           </a>
         </div>
       </div>

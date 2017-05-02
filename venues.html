@@ -1,21 +1,17 @@
 ---
 layout: default
 ---
-{% assign section1 = site.data.contentful.spaces.sectionSites.sectionSites[0]%}
+
+{% assign section1 = site.data.contentful.spaces.sectionSites.sectionSites[0]%} 
 {% assign section2 = site.data.contentful.spaces.sectionSites.sectionSites[1]%}
+
 <div class="hero-discover">
-  <div class="enorme_claim_wrap"></div>
 </div>
 <div class="sites">
   <div class="container fade-in-module">
     <h1>
-      {% if site.lang == "fr" %}
-        {{ section1.titre }}
-      {% elsif site.lang == "de" %}
-        {{ section1.titreDe }}
-      {% else %}
-        {{ section1.titreEn }}
-      {% endif %}
+      {% if site.lang == "fr" %} {{ section1.titre }} {% elsif site.lang == "de" %} {{ section1.titreDe }} {% else %} {{ section1.titreEn
+      }} {% endif %}
     </h1>
     <p class="discover_1 discover_p fade-in-module">
       {% if site.lang == "fr" %}
@@ -35,17 +31,13 @@ layout: default
                 {{section1.titreSite1}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section1.descriptionSite1 }}
-                {% elsif site.lang == "de" %}
-                  {{ section1.descriptionSite1De }}
-                {% else %}
-                  {{ section1.descriptionSite1En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section1.descriptionSite1 }} {% elsif site.lang == "de" %} {{ section1.descriptionSite1De }}
+                {% else %} {{ section1.descriptionSite1En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section1.imageSite1.url }}?w=350&h=350&q=70" alt="{{section1.imageSite1.description}}">
+              <img src="{{ section1.imageSite1.url }}?w=700&h=700&q=70" srcset="{{ section1.imageSite1.url }}?w=350&h=350&q=70 350w, {{ section1.imageSite1.url }}?w=500&h=500&q=70 500w, {{ section1.imageSite1.url }}?w=700&h=700&q=70 700w"
+                alt="{{section1.imageSite1.description}}" />
             </div>
           </div>
         </a>
@@ -58,17 +50,13 @@ layout: default
                 {{section1.titreSite2}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section1.descriptionSite2 }}
-                {% elsif site.lang == "de" %}
-                  {{ section1.descriptionSite2De }}
-                {% else %}
-                  {{ section1.descriptionSite2En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section1.descriptionSite2 }} {% elsif site.lang == "de" %} {{ section1.descriptionSite2De }}
+                {% else %} {{ section1.descriptionSite2En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section1.imageSite2.url }}?w=350&h=350&q=70" alt="{{section1.imageSite2.description}}">
+              <img src="{{ section1.imageSite2.url }}?w=700&h=700&q=70" srcset="{{ section1.imageSite2.url }}?w=350&h=350&q=70 350w, {{ section1.imageSite2.url }}?w=500&h=500&q=70 500w, {{ section1.imageSite2.url }}?w=700&h=700&q=70 700w"
+                alt="{{section1.imageSite2.description}}" />
             </div>
           </div>
         </a>
@@ -81,17 +69,13 @@ layout: default
                 {{section1.titreSite3}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section1.descriptionSite3 }}
-                {% elsif site.lang == "de" %}
-                  {{ section1.descriptionSite3De }}
-                {% else %}
-                  {{ section1.descriptionSite3En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section1.descriptionSite3 }} {% elsif site.lang == "de" %} {{ section1.descriptionSite3De }}
+                {% else %} {{ section1.descriptionSite3En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section1.imageSite3.url }}?w=350&h=350&q=70" alt="{{section1.imageSite3.description}}">
+              <img src="{{ section1.imageSite3.url }}?w=700&h=700&q=70" srcset="{{ section1.imageSite3.url }}?w=350&h=350&q=70 350w, {{ section1.imageSite3.url }}?w=500&h=500&q=70 500w, {{ section1.imageSite3.url }}?w=700&h=700&q=70 700w"
+                alt="{{section1.imageSite3.description}}" />
             </div>
           </div>
         </a>
@@ -104,17 +88,13 @@ layout: default
                 {{section1.titreSite4}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section1.descriptionSite4 }}
-                {% elsif site.lang == "de" %}
-                  {{ section1.descriptionSite4De }}
-                {% else %}
-                  {{ section1.descriptionSite4En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section1.descriptionSite4 }} {% elsif site.lang == "de" %} {{ section1.descriptionSite4De }}
+                {% else %} {{ section1.descriptionSite4En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section1.imageSite4.url }}?w=350&h=350&q=70" alt="{{section1.imageSite4.description}}">
+              <img src="{{ section1.imageSite4.url }}?w=700&h=700&q=70" srcset="{{ section1.imageSite4.url }}?w=350&h=350&q=70 350w, {{ section1.imageSite4.url }}?w=500&h=500&q=70 500w, {{ section1.imageSite4.url }}?w=700&h=700&q=70 700w"
+                alt="{{section1.imageSite4.description}}" />
             </div>
           </div>
         </a>
@@ -130,13 +110,8 @@ layout: default
 <div class="sites">
   <div class="container fade-in-module">
     <h1>
-      {% if site.lang == "fr" %}
-        {{ section2.titre }}
-      {% elsif site.lang == "de" %}
-        {{ section2.titreDe }}
-      {% else %}
-        {{ section2.titreEn }}
-      {% endif %}
+      {% if site.lang == "fr" %} {{ section2.titre }} {% elsif site.lang == "de" %} {{ section2.titreDe }} {% else %} {{ section2.titreEn
+      }} {% endif %}
     </h1>
     <p class="discover_1 discover_p fade-in-module">
       {% if site.lang == "fr" %}
@@ -156,17 +131,13 @@ layout: default
                 {{section2.titreSite1}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section2.descriptionSite1 }}
-                {% elsif site.lang == "de" %}
-                  {{ section2.descriptionSite1De }}
-                {% else %}
-                  {{ section2.descriptionSite1En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section2.descriptionSite1 }} {% elsif site.lang == "de" %} {{ section2.descriptionSite1De }}
+                {% else %} {{ section2.descriptionSite1En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section2.imageSite1.url }}?w=350&h=350&q=70" alt="{{section2.imageSite1.description}}">
+              <img src="{{ section2.imageSite1.url }}?w=700&h=700&q=70" srcset="{{ section2.imageSite1.url }}?w=350&h=350&q=70 350w, {{ section2.imageSite1.url }}?w=500&h=500&q=70 500w, {{ section2.imageSite1.url }}?w=700&h=700&q=70 700w"
+                alt="{{section2.imageSite1.description}}" />
             </div>
           </div>
         </a>
@@ -179,17 +150,13 @@ layout: default
                 {{section2.titreSite2}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section2.descriptionSite2 }}
-                {% elsif site.lang == "de" %}
-                  {{ section2.descriptionSite2De }}
-                {% else %}
-                  {{ section2.descriptionSite2En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section2.descriptionSite2 }} {% elsif site.lang == "de" %} {{ section2.descriptionSite2De }}
+                {% else %} {{ section2.descriptionSite2En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section2.imageSite2.url }}?w=350&h=350&q=70" alt="{{section2.imageSite2.description}}">
+              <img src="{{ section2.imageSite2.url }}?w=700&h=700&q=70" srcset="{{ section2.imageSite2.url }}?w=350&h=350&q=70 350w, {{ section2.imageSite2.url }}?w=500&h=500&q=70 500w, {{ section2.imageSite2.url }}?w=700&h=700&q=70 700w"
+                alt="{{section2.imageSite2.description}}" />
             </div>
           </div>
         </a>
@@ -202,17 +169,13 @@ layout: default
                 {{section2.titreSite3}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section2.descriptionSite3 }}
-                {% elsif site.lang == "de" %}
-                  {{ section2.descriptionSite3De }}
-                {% else %}
-                  {{ section2.descriptionSite3En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section2.descriptionSite3 }} {% elsif site.lang == "de" %} {{ section2.descriptionSite3De }}
+                {% else %} {{ section2.descriptionSite3En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section2.imageSite3.url }}" alt="{{section2.imageSite3.description}}">
+              <img src="{{ section2.imageSite3.url }}?w=700&h=700&q=70" srcset="{{ section2.imageSite3.url }}?w=350&h=350&q=70 350w, {{ section2.imageSite3.url }}?w=500&h=500&q=70 500w, {{ section2.imageSite3.url }}?w=700&h=700&q=70 700w"
+                alt="{{section2.imageSite3.description}}" />
             </div>
           </div>
         </a>
@@ -225,17 +188,13 @@ layout: default
                 {{section2.titreSite4}}
               </div>
               <div class="description">
-                {% if site.lang == "fr" %}
-                  {{ section2.descriptionSite4 }}
-                {% elsif site.lang == "de" %}
-                  {{ section2.descriptionSite4De }}
-                {% else %}
-                  {{ section2.descriptionSite4En }}
-                {% endif %}
+                {% if site.lang == "fr" %} {{ section2.descriptionSite4 }} {% elsif site.lang == "de" %} {{ section2.descriptionSite4De }}
+                {% else %} {{ section2.descriptionSite4En }} {% endif %}
               </div>
             </div>
             <div class="img">
-              <img src="{{ section2.imageSite4.url }}?w=350&h=350&q=70" alt="{{section2.imageSite4.description}}">
+              <img src="{{ section2.imageSite4.url }}?w=700&h=700&q=70" srcset="{{ section2.imageSite4.url }}?w=350&h=350&q=70 350w, {{ section2.imageSite4.url }}?w=500&h=500&q=70 500w, {{ section2.imageSite4.url }}?w=700&h=700&q=70 700w"
+                alt="{{section2.imageSite4.description}}" />
             </div>
           </div>
         </a>

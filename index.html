@@ -20,7 +20,7 @@ layout: default
             <div class="col-md-8">
                 <p class="about_the_yog_p">
                     {% t pages.index.about.texte %}
-                    <a href="about">{% t pages.index.about.more %}</a>
+                    <strong> <a href="about">{% t pages.index.about.more %}</a></strong>
                 </p>
             </div>
         </div>
@@ -28,7 +28,7 @@ layout: default
 </div>
 <div class="news_section">
     <div class="container">
-        <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
+        <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
             <div class="come-in-module col-sm-6 col-md-4">
@@ -63,13 +63,13 @@ layout: default
 </div>
 <div class="marchandising_section">
     <div class="container">
-        <div class="row">
+        <div class="row flex vcenter">
             <div class="marchandising_col_1 col-md-6 fade-in-module">
-                <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
+                <h1 class="shop_cta">{% t pages.index.shop.title %}</h1>
             </div>
             <div class="col-md-6 fade-in-module">
-                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png"
-                    srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
+                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/home/lausanne_tshirt.png"
+                    srcset="images/home/lausanne_tshirt-p-500x338.png 500w, images/home/lausanne_tshirt.png 800w">
             </div>
         </div>
     </div>
@@ -88,75 +88,71 @@ layout: default
     </div>
 </div>
 <div class="newsletter_cta">
-    <div class="container">
-        <div class="newsletter fade-in-module">
-            <div class="newsletter-text">
-                <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
+    <div class="container flex vcenter fade-in-module">
+        <div class="newsletter-text">
+            <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
+        </div>
+        <form class="newsletter_cta_form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
+            netlify>
+            <div class="newsletter-form-adress">
+                <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
+                    required="required" type="email">
+                <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
             </div>
-            <div class="newsletter-form">
-                <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
-                    netlify>
-                    <div class="newsletter-form-adress">
-                        <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
-                            required="required" type="email">
-                        <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
-                    </div>
-                    <div class="newsletter-form-button">
-                        <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
-                    </div>
-                </form>
-                <div class="w-form-done">
-                    <div>{% t pages.index.newsletter.thanks %}</div>
-                </div>
-                <div class="w-form-fail">
-                    <div>{% t pages.index.newsletter.oops %}</div>
-                </div>
+            <div class="newsletter-form-button">
+                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
             </div>
+        </form>
+        <div class="success">
+            <div>{% t pages.index.newsletter.thanks %}</div>
+        </div>
+        <div class="error">
+            <div>{% t pages.index.newsletter.oops %}</div>
         </div>
     </div>
 </div>
 <div class="cio-sponsors">
     <div class="container">
         <img src="images/cio-partners/logo_olympic.png" alt="olympic" class="come-in-module">
-        <ul class="sponsors-list first come-in-module">
+        <ul class="sponsors-list come-in-module">
             <li>
-                <img src="images/cio-partners/Coca-Cola_logo.jpg" alt="Coca-Cola">
+                <img src="images/cio-partners/Coca-Cola_logo.png" alt="Coca-Cola">
             </li>
             <li>
-                <img src="images/cio-partners/alibaba-logo-01.png" alt="Alibaba Group">
+                <img src="images/cio-partners/alibaba-logo.png" alt="Alibaba Group">
             </li>
             <li>
-                <img src="images/cio-partners/Atos_logo.jpg" alt="Atos">
+                <img src="images/cio-partners/Atos_logo.png" alt="Atos">
             </li>
             <li>
-                <img src="images/cio-partners/Bridgestone_logo.jpg" alt="Bridgestone">
+                <img src="images/cio-partners/Bridgestone_logo.png" alt="Bridgestone">
             </li>
             <li>
-                <img src="images/cio-partners/Dow_logo.jpg" alt="Dow">
+                <img src="images/cio-partners/Dow_logo.png" alt="Dow">
             </li>
             <li>
-                <img src="images/cio-partners/GE_logo.jpg" alt="GE">
+                <img src="images/cio-partners/GE_logo.png" alt="GE">
             </li>
             <li>
-                <img src="images/cio-partners/Mcdonalds_logo.jpg" alt="McDonald's">
+                <img src="images/cio-partners/Mcdonalds_logo.png" alt="McDonald's">
             </li>
             <li>
-                <img src="images/cio-partners/Omega_logo.jpg" alt="Omega">
+                <img src="images/cio-partners/Omega_logo.png" alt="Omega">
             </li>
             <li>
-                <img src="images/cio-partners/Panasonic_logo.jpg" alt="Panasonic">
+                <img src="images/cio-partners/Panasonic_logo.png" alt="Panasonic">
             </li>
             <li>
-                <img src="images/cio-partners/PG_logo.jpg" alt="PG">
+                <img src="images/cio-partners/PG_logo.png" alt="PG">
             </li>
             <li>
-                <img src="images/cio-partners/Samsung_logo.jpg" alt="Samsung">
+                <img src="images/cio-partners/Samsung_logo.png" alt="Samsung">
             </li>
             <li>
-                <img src="images/cio-partners/Toyota_logo.jpg" alt="Toyota">
+                <img src="images/cio-partners/Toyota_logo.png" alt="Toyota">
             </li>
             <li>
-                <img src="images/cio-partners/Visa_logo.jpg" alt="Visa">
+                <img src="images/cio-partners/Visa_logo.png" alt="Visa">
             </li>
         </ul>
     </div>

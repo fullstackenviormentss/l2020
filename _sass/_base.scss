@@ -1,67 +1,260 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
+    min-height: 100%;
     font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
 }
 
-textarea {
-    resize: vertical;
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
 }
 
-// Hidden field in form contact against bot spam (leave the name in french)
-.cache {
-    display: none;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.links_social {
-    padding: 17px 0; // For polyfill
-    padding: 1vmin 0;
-    text-align: right;
+h1 {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: bold;
 }
 
-.botbar {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    a:hover,
-    a:focus {
-        text-decoration: none;
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 19px;
+    line-height: 27px;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+    &:focus {
+        outline: 0;
+    }
+    &:hover{
+        color:#fff;
     }
 }
 
-@media (max-width: 992px) {
-    .footer-pics {
+blockquote {
+    margin: 0 0 10px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #E2E2E2;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+figcaption {
+    margin-top: 5px;
+    text-align: center;
+}
+
+ul,
+ol {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 15px;
+    background-color: $purple-primary;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: button;
+}
+
+.accent {
+    color: $purple-primary !important;
+}
+
+
+/* --- Sections --- */
+
+.social_feed_section,
+.about_yog_1,
+.jobs,
+.sports,
+.key_numbers {
+    background-color: $purple-primary;
+    background-image: url('../images/layout/bkg_magenta.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    color: #fff;
+}
+
+.facts,
+.newsletter_cta,
+.about_yog_2,
+.single-news-content header,
+.sites,
+.news-page,
+.news_section {
+    background-color: $blue-primary;
+    background-image: url('../images/layout/bkg_blue.png');
+    background-position: 0px 0px;
+    background-size: cover;
+    color: #fff;
+}
+
+.newsletter_cta,
+.jobs,
+.about_yog,
+.sports,
+.facts,
+.key_numbers,
+.sites,
+.latestnews_section,
+.news-page,
+.news_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about_yog_1,
+.jobs,
+.single-news-content,
+.latestnews_section,
+.news-page {
+    margin-top: 150px;
+}
+
+
+/* Page about and venues */
+
+.about_yog,
+.sports,
+.facts,
+.key_numbers,
+.sites {
+    h1 {
         text-align: center;
     }
-    .footer-pics .links_social {
-        text-align: center;
-    }
-    .footer_link {
-        text-align: center;
-    }
-    .footer_logo {
-        text-align: center;
-    }
-    .copy {
-        margin-bottom: 20px;
-    }
-    .top_footer {
-        left: 0px;
-        top: -61px;
-        right: 0px;
-    }
-    .botbar .links_social {
-        padding: 20px 0 10px 0;
-        padding: 4vmin 0 1vmin 0;
-    }
 }
 
-.links_games {
-    margin-right: 20px;
+.flex {
+    @include flexbox;
+    &.vcenter {
+        @include align-items(center);
+    }
+    &.stretch {
+        @include align-items(stretch);
+    }
+    @media(max-width: 992px) {
+        @include flex-direction(column);
+    }
 }
 
 
 /* Box-shadow Inset */
 
-#main>div:nth-last-of-type(2n+1):not(.hero):not(.botbar):not(.footer) {
-    -webkit-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-    box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+#main>div:nth-last-of-type(2n+1) {
+    @include not('.hero',
+    '.botbar',
+    '.footer',
+    '.latestnews_section') {
+        -webkit-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.hero {
+    height: 800px;
+}
+
+.logo {
+    width: 235px;
+}
+
+@media (max-width: 991px) {
+    .h1_about_yog,
+    .about_the_yog_p,
+    .h1_newsletter_cta,
+    .marchandising_col_1,
+    .h1_news,
+    .p_news {
+        text-align: center;
+    }
+    .map {
+        width: 80%;
+    }
+    .marchandising_col_1 {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero {
+        height: 600px;
+    }
 }

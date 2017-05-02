@@ -11,7 +11,7 @@ layout: default
 	    {% capture title %}{% endcapture %}
 	    {% capture text %}{% endcapture %}
     <h1>{{page.titre}}</h1>
-    <p>{{ page.texteLong | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+    <p class="p_news">{{ page.texteLong | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
     <p class="news_date">
 		<time pubdate datetime="{{page.date | date_to_xmlschema}}" title="{{page.date | date_to_xmlschema | date: '%d.%m'}}">{{page.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
 	</p>

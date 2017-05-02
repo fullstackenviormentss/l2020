@@ -1,6 +1,40 @@
-#map {
+html .hero-discover {
     height: 400px;
+    background-image: url('../images/home/lausanne_overview.jpg');
+    background-attachment: fixed !important;
+    background-position-y: -440px;
+    background-repeat: no-repeat;
+    @media (min-width: 1651px) {
+        background-size: cover;
+    }
+    @media (max-width: 1450px) {
+        background-position-x: -200px;
+    }
+    @media (max-width: 1250px) {
+        background-position-x: -400px;
+    }
+    @media (max-width: 1050px) {
+        background-position-x: -600px;
+    }
+    @media (max-width: 850px) {
+        background-position-x: -800px;
+    }
+    @media (max-width: 650px) {
+        background-position-x: -1000px;
+    }
+    @media (max-width: 450px) {
+        background-position-x: -1200px;
+    }
+    .container {
+        padding: 305px 0 0 0;
+        @media (max-width: 479px) {
+            padding-top: 165px;
+        }
+    }
 }
+
+
+/* Sites square hover */
 
 .sqr {
     width: 100%;
@@ -25,7 +59,6 @@
     padding: 5px;
     width: 65%;
     height: 75px;
-    box-sizing: border-box;
     text-align: center;
     transform: translateY(-50%);
     position: absolute;
@@ -97,53 +130,12 @@
     top: 60%;
 }
 
-.sites {
-    .discover_p {
-        text-align: justify;
-        color: #fff;
-        font-size: 19px;
-        font-family: Montserrat, sans-serif;
-        line-height: 27px;
-        font-weight: 400;
-        text-align: justify;
-    }
-}
+/* Map */
 
-html .hero-discover {
+#map {
     height: 400px;
-    background-image: url(../images/lausanne_overview.jpg);
-    background-attachment: fixed !important;
-    background-position-y: -440px;
-    background-repeat: no-repeat;
-    @media (min-width: 1651px) {
-        background-size: cover;
-    }
-    @media (max-width: 1450px) {
-        background-position-x: -200px;
-    }
-    @media (max-width: 1250px) {
-        background-position-x: -400px;
-    }
-    @media (max-width: 1050px) {
-        background-position-x: -600px;
-    }
-    @media (max-width: 850px) {
-        background-position-x: -800px;
-    }
-    @media (max-width: 650px) {
-        background-position-x: -1000px;
-    }
-    @media (max-width: 450px) {
-        background-position-x: -1200px;
-    }
-    .container {
-        padding: 305px 0 0 0;
-        @media (max-width: 479px) {
-            padding-top: 165px;
-        }
-    }
 }
 
-.gm-style{
-    font-family:Montserrat, sans-serif !important;
+.gm-style {
+    font-family: Montserrat, sans-serif !important;
 }

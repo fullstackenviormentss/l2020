@@ -1,37 +1,11 @@
-.partners_section {
-    padding: 100px 150px;
-    @media(max-width: 768px) {
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-.partners {
-    display: flex;
-    justify-content: space-between;
-    &:first-child {
-        margin-bottom: 10px;
-    }
-    .partner {
-        flex-basis: 100px; // Optimal size for partner's logo: 100px*50px
-        margin: 0 10px;
-    }
-}
-
-.marchandising_section {
-    padding-bottom: 30px;
-}
-
 html .hero {
-    background-image: url(../images/lausanne_overview.jpg);
+    background-image: url('../images/home/lausanne_overview.jpg');
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
-
     @media (min-width: 2121px) {
         background-position-y: -400px;
     }
-    
     @media (min-width: 1921px) {
         background-position-y: -400px;
     }
@@ -68,8 +42,7 @@ html .hero {
 
 .the_claim {
     position: absolute;
-    font-family: Montserrat, sans-serif;
-    color: #0087cd;
+    color: $blue-primary;
     width: inherit;
     font-size: 81px;
     line-height: 90px;
@@ -95,32 +68,58 @@ html .hero {
     }
 }
 
-.about_the_yog_p {
-    text-align: justify;
-    hyphens: auto;
-    a {
-        color: #fff;
-        text-decoration: underline;
-        font-weight: bold;
-    }
+.about_yog_section {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: $purple-primary;
 }
 
 .h1_about_yog {
-    font-family: Montserrat, sans-serif;
+    margin-top: 0px;
+    font-size: 58px;
+    line-height: 60px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.newsletter_cta {
-    background-image: url(../images/bkg_blue.png);
-    h1 {
-        color: #fff;
+.about_the_yog_p {
+    margin-top: 20px;
+}
+
+.marchandising_section {
+    padding-bottom: 30px;
+}
+
+.shop_cta {
+    color: $purple-primary;
+}
+
+.newsletter-text {
+    padding-right: 10px;
+    max-width: 50%;
+    @media(max-width: 992px) {
+        max-width: 100%;
+        padding-right: 0;
     }
-    .newsletter_cta_btn {
-        background-color: #ce0071;
+}
+
+.newsletter_cta_form {
+    margin: 0;
+    width: 100%;
+    .newsletter-form-adress {
+        width: 75%;
+        padding-right: 20px;
+        padding-left: 20px;
     }
-    .newsletter_cta_field {
-        border: none;
+    input{
+        margin:0;
+    }
+    @media(max-width: 992px) {
+        @include flex-direction(row);
+        .newsletter-form-adress {
+            width: 100%;
+        }
     }
 }
 
@@ -128,11 +127,11 @@ html .hero {
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
-    .sponsors-list.first {
-        margin-top: 0;
+    // First olympic banner
+    .container>img {
+        padding-bottom: 40px;
     }
     .sponsors-list {
-        text-align: center;
         padding-left: 0;
     }
     .sponsors-list li {
@@ -140,75 +139,5 @@ html .hero {
         vertical-align: middle;
         margin: 0 34px 30px;
         min-width: 140px;
-    }
-}
-
-.parallax {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-
-.parallax__layer--base {
-    transform: translateZ(0);
-}
-
-.parallax__layer--back {
-    transform: translateZ(-1px);
-}
-
-.newsletter {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    .newsletter-text {
-        padding-right: 10px;
-        flex-basis: 50%;
-        max-width: 50%;
-        @media(max-width: 992px) {
-            flex-basis: 100%;
-            max-width: 100%;
-            padding-right: 0px;
-        }
-    }
-    .newsletter-form {
-        padding-left: 10px;
-        flex-basis: 50%;
-        max-width: 50%;
-        @media(max-width: 992px) {
-            flex-basis: 100%;
-            max-width: 100%;
-            padding-left: 0px;
-        }
-        .newsletter-form-adress {
-            flex-basis: 75%;
-            max-width: 75%;
-            padding-right: 20px;
-            @media(max-width: 992px) {
-                flex-basis: 100%;
-                padding-right: 0px;
-            }
-        }
-        .newsletter-form-button {
-            flex-basis: 25%;
-            max-width: 25%;
-            @media(max-width: 992px) {
-                flex-basis: 100%;
-            }
-        }
-        form {
-            flex-basis: 100%;
-            display: flex;
-            flex-wrap: wrap;
-        }
     }
 }
