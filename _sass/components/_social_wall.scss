@@ -34,14 +34,14 @@
         background: #fff;
     }
     .wrap_media {
-        height: 202px;
+        height: 200px;
         overflow: hidden;
         >a>img,
         >img,
         >a>iframe,
         >iframe,
         >video {
-            height: 202px;
+            height: 200px;
             /* Precise to avoid black line on iframe video */
             width: 101%;
             object-fit: cover;
@@ -56,7 +56,7 @@
             overflow: hidden;
             margin: 0;
             padding: 40px;
-            height: 202px;
+            height: 200px;
             position: absolute;
             background: #FAFAFA;
             opacity: 0;
@@ -85,6 +85,7 @@
                 margin-top: 5px;
                 margin-bottom: 5px;
                 color: #858585;
+                text-align:left;
                 a {
                     color: #858585;
                 }
@@ -104,7 +105,7 @@
     // Quote without media
     .no_media .wrap_media blockquote {
         opacity: 0.9;
-        height: 202px;
+        height: 200px;
         top: 15px;
     }
     // Status

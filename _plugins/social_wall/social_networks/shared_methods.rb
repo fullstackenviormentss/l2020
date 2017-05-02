@@ -12,7 +12,10 @@ module SharedMethods
 
   def get_url_best_picture(url)
     page = MetaInspector.new(url)
-    return page.images.best
+    image = page.images.largest # Less risk than page.images.best
+    image = page.images.best if !image
+
+    return image
   end
 
   # Video
