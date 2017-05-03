@@ -101,7 +101,11 @@ class FB
     video['provider'] = get_video_provider(@post['source'])
     video['source'] = parse_video(@post['source'])
     video['link'] = @post['link']
-    video['picture'] = @post['picture']
+
+    picture_formats = FB.get_object(1777916805855413)['format']
+    i_avg = (picture_formats.length.to_f/2).round # get the average quality
+
+    video['picture'] = picture_formats[i_avg-1]['picture']
 
     return video
   end
