@@ -29,11 +29,11 @@ form {
         &:-moz-placeholder,
         &::-moz-placeholder {
             // Not working when put together with webkit and ms
-            color: #999;
+            color: $gray-text;
         }
         &:-ms-input-placeholder,
         &::-webkit-input-placeholder {
-            color: #999;
+            color: $gray-text;
         }
     }
     textarea {
