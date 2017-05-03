@@ -4,7 +4,7 @@
 
 .icon-twitter,
 .icon-facebook {
-    color: #858585;
+    color: $gray-text;
 }
 
 .icon-twitter:hover {
@@ -84,16 +84,16 @@
                 font-size: 12px;
                 margin:0;
                 padding:0;
-                color: #858585;
+                color: $gray-text;
                 text-align:left;
                 a {
-                    color: #858585;
+                    color: $gray-text;
                 }
             }
             cite,
             cite a {
                 font-size: 10px;
-                color: #b6b6b6;
+                color: $gray-text-less;
             }
             .status_box {
                 max-height: 165px;
@@ -141,7 +141,7 @@
                 color: $purple-primary;
             }
             .username a {
-                color: #b6b6b6;
+                color: $gray-text-less;
                 font-size: 14px;
                 line-height: 20px;
                 font-weight: 300;
@@ -154,7 +154,7 @@
         margin: 0;
         height: 80px;
         text-align: left;
-        color: #858585;
+        color: $gray-text;
         font-size: 13px;
         line-height: 20px;
         font-family: sans-serif;
@@ -180,7 +180,7 @@
             padding: 2px;
         }
         time {
-            color: #b6b6b6;
+            color: $gray-text-less;
             font-size: 12px;
         }
         .icon_social {
