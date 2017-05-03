@@ -33,6 +33,9 @@ module Jekyll
       @site = site
       @base = base
 
+      # If params contains multiple languages
+      name = name[site.config['lang']] if name.is_a?(Hash)
+      
       # @dir is the directory where we want to output the page
       # @name is the name of the page to generate
       #
