@@ -28,9 +28,9 @@ layout: default
     <div class="row">
       {% for new in site.data.contentful.spaces.news.news limit:9 %}
 
-        {% capture dir %}news-{{site.lang}}{% endcapture %} {% if site.lang == "fr" %} {% capture link %}{{new.titre}}{% endcapture
-        %} {% elsif site.lang == "de" %} {% capture link %}{{new.titreDe}}{% endcapture %} {% else %} {% capture
-        link %}{{new.titreEn}}{% endcapture %} {% endif %}
+        {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %}
+        {% if site.lang == "fr" %}{% capture link %}{{new.titre}}{% endcapture %} {% elsif site.lang == "de" %} {% capture link %}{{new.titreDe}}{% endcapture %} {% else %} {% capture link %}{{new.titreEn}}{% endcapture %} {% endif %}
+          
         <div class="come-in-module col-sm-6 col-md-4">
            <a href="/{{ link | datapage_url: dir }}">
               <div class="new col-md-12">

@@ -35,7 +35,7 @@ sass:
   style: compressed
 
 languages: ["en","fr","de"]
-exclude_from_localizations: ["js","css","_sass"]
+exclude_from_localizations: ["js"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
 
 contentful:
   spaces:
@@ -69,18 +69,13 @@ contentful:
 
 page_gen:
   - data: 'contentful.spaces.news.news'
-    template: 'single-news-fr'
-    name: 'titre'
-    dir: 'news-fr'
-  - data: 'contentful.spaces.news.news'
-    template: 'single-news-de'
-    name: 'titreDe'
-    dir: 'news-de'
-  - data: 'contentful.spaces.news.news'
     template: 'single-news'
-    name: 'titreEn'
-    dir: 'news-en'
+    name:
+      fr: 'titre'
+      en: 'titreEn'
+      de: 'titreDe'
+    dir: 'news'
   - data: 'years'
     template: 'news-archives'
-    name: "year"
+    name: 'year'
     dir: 'news-archives'
