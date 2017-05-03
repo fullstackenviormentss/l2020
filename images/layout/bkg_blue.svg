@@ -1,0 +1,41 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2600 2009" xml:space="preserve">
+<style type="text/css">
+	path{fill:#000;opacity:.05;}
+	#background{fill:#007ec5;}
+	#circle{fill:#000;opacity:.05}
+	#arc{fill:none;stroke:#000;opacity:.05;stroke-width:220;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	g{
+	animation-name: move;
+    animation-duration: 300s;
+    animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	}
+	@keyframes move {
+    0% {
+        transform: rotate(0) translate(0, 0);
+	}
+	50%{
+		transform: rotate(-180deg) translate(-50%, -50%);
+	}
+	100%{
+		transform: rotate(-360deg) translate(0, 0);
+	}
+	}
+</style>
+<rect id="background" width="2600" height="2009"/>
+<g>
+<path class="rect_rounded" d="M1449,1290.5L1449,1290.5c-46.6-46.6-46.6-122.9,0-169.5L2632.7-62.8c46.6-46.6,122.9-46.6,169.5,0l0,0
+	c46.6,46.6,46.6,122.9,0,169.5L1618.4,1290.5C1571.8,1337.1,1495.6,1337.1,1449,1290.5z"/>
+<path class="rect_rounded" d="M1204.5,1046L1204.5,1046c-46.6-46.6-46.6-122.9,0-169.5L2333.2-252.3c46.6-46.6,122.9-46.6,169.5,0l0,0
+	c46.6,46.6,46.6,122.9,0,169.5L1373.9,1046C1327.3,1092.6,1251.1,1092.6,1204.5,1046z"/>
+<path class="rect_rounded" d="M99.5,2093.1L88.4,2082c-43.6-43.6-43.6-114.8,0-158.4l840.4-840.4c43.6-43.6,114.8-43.6,158.4,0l11.1,11.1
+	c43.6,43.6,43.6,114.8,0,158.4l-840.4,840.4C214.3,2136.7,143.1,2136.7,99.5,2093.1z"/>
+<path class="rect_rounded" d="M-147,1846.6l-11.1-11.1c-43.6-43.6-43.6-114.8,0-158.4l840.4-840.4c43.6-43.6,114.8-43.6,158.4,0l11.1,11.1
+	c43.6,43.6,43.6,114.8,0,158.4L11.4,1846.6C-32.2,1890.2-103.4,1890.2-147,1846.6z"/>
+<path id="arc" d="M2186,937c0,0,82,624,654,618s692-618,692-618"/>
+<path id="circle" d="M-204.3-352.3c-401,0-726.1,325.1-726.1,726.1s325.1,726.1,726.1,726.1s726.1-325.1,726.1-726.1
+	S196.7-352.3-204.3-352.3z M-204.3,861.3c-269.3,0-487.5-218.3-487.5-487.5s218.3-487.5,487.5-487.5s487.5,218.3,487.5,487.5
+	S64.9,861.3-204.3,861.3z"/>
+</g>
+</svg>
