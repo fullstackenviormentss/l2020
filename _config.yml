@@ -71,8 +71,8 @@ page_gen:
   - data: 'contentful.spaces.news.news'
     template: 'single-news'
     name:
-      fr: 'titre'
       en: 'titreEn'
+      fr: 'titre'
       de: 'titreDe'
     dir: 'news'
   - data: 'years'

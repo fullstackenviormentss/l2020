@@ -33,10 +33,10 @@ layout: default
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
 
             {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
-            {% if site.lang == "fr" %}{% capture link %}{{new.titre}}{% endcapture %} {% elsif site.lang == "de" %} {% capture link %}{{new.titreDe}}{% endcapture %} {% else %} {% capture link %}{{new.titreEn}}{% endcapture %} {% endif %}
+            {% capture link %}{{new.titreEn}}{% endcapture %} 
             
             <div class="come-in-module col-sm-6 col-md-4">
-                <a href="/{{ link | datapage_url: dir }}">
+                <a href="/{{ link | datapage_url: dir | split:'.html' | first }}">
                     <div class="new col-md-12">
                         <div class="wrap_media">
                             <img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">
@@ -57,7 +57,7 @@ layout: default
                 <div class="new_meta">
                     <p class="news_date">
                         <time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                        <a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a>
+                        <a href="/{{ link | datapage_url: dir | split:'.html' | first }}">{% t pages.index.news.plus %}</a>
                     </p>
                 </div>
             </div>
@@ -117,46 +117,46 @@ layout: default
 </div>
 <div class="cio-sponsors">
     <div class="container">
-        <img src="images/cio-partners/logo_olympic.png" alt="olympic" class="come-in-module">
+        <img src="/images/cio-partners/logo_olympic.png" alt="olympic" class="come-in-module">
         <ul class="sponsors-list come-in-module">
             <li>
-                <img src="images/cio-partners/Coca-Cola_logo.png" alt="Coca-Cola">
+                <img src="/images/cio-partners/Coca-Cola_logo.png" alt="Coca-Cola">
             </li>
             <li>
-                <img src="images/cio-partners/alibaba-logo.png" alt="Alibaba Group">
+                <img src="/images/cio-partners/alibaba-logo.png" alt="Alibaba Group">
             </li>
             <li>
-                <img src="images/cio-partners/Atos_logo.png" alt="Atos">
+                <img src="/images/cio-partners/Atos_logo.png" alt="Atos">
             </li>
             <li>
-                <img src="images/cio-partners/Bridgestone_logo.png" alt="Bridgestone">
+                <img src="/images/cio-partners/Bridgestone_logo.png" alt="Bridgestone">
             </li>
             <li>
-                <img src="images/cio-partners/Dow_logo.png" alt="Dow">
+                <img src="/images/cio-partners/Dow_logo.png" alt="Dow">
             </li>
             <li>
-                <img src="images/cio-partners/GE_logo.png" alt="GE">
+                <img src="/images/cio-partners/GE_logo.png" alt="GE">
             </li>
             <li>
-                <img src="images/cio-partners/Mcdonalds_logo.png" alt="McDonald's">
+                <img src="/images/cio-partners/Mcdonalds_logo.png" alt="McDonald's">
             </li>
             <li>
-                <img src="images/cio-partners/Omega_logo.png" alt="Omega">
+                <img src="/images/cio-partners/Omega_logo.png" alt="Omega">
             </li>
             <li>
-                <img src="images/cio-partners/Panasonic_logo.png" alt="Panasonic">
+                <img src="/images/cio-partners/Panasonic_logo.png" alt="Panasonic">
             </li>
             <li>
-                <img src="images/cio-partners/PG_logo.png" alt="PG">
+                <img src="/images/cio-partners/PG_logo.png" alt="PG">
             </li>
             <li>
-                <img src="images/cio-partners/Samsung_logo.png" alt="Samsung">
+                <img src="/images/cio-partners/Samsung_logo.png" alt="Samsung">
             </li>
             <li>
-                <img src="images/cio-partners/Toyota_logo.png" alt="Toyota">
+                <img src="/images/cio-partners/Toyota_logo.png" alt="Toyota">
             </li>
             <li>
-                <img src="images/cio-partners/Visa_logo.png" alt="Visa">
+                <img src="/images/cio-partners/Visa_logo.png" alt="Visa">
             </li>
         </ul>
     </div>

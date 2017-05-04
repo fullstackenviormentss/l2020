@@ -40,7 +40,7 @@
 
               {% for link in nav %}
 
-                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' |first}}{% endcapture %}
+                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
                 {% if currentpage == link.path %}
                   <a class="nav_link w--current" href="{{link.path}}">
                 {% else %}
@@ -51,9 +51,9 @@
               {% endfor %}
 
 
-              {% capture url_site_en %}{{ site.url }}{{ page.url}}{% endcapture %}
-              {% capture url_site_de %}{{ site.url }}/de{{ page.url  }}{% endcapture %}
-              {% capture url_site_fr %}{{ site.url }}/fr{{ page.url  }}{% endcapture %}
+              {% capture url_site_en %}{{ site.url }}{{ page.url | split:'.html' | first }}{% endcapture %}
+              {% capture url_site_de %}{{ site.url }}/de{{ page.url | split:'.html' | first }}{% endcapture %}
+              {% capture url_site_fr %}{{ site.url }}/fr{{ page.url | split:'.html' | first }}{% endcapture %}
 
               <div class="nav_lang">
               {% if site.lang == "en" %}
