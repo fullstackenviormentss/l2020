@@ -394,7 +394,8 @@ var formManagement = {
         $('.form-fail').show();
         console.log('error');
       });
-
+    
+    return false;
     });
   }
 };
