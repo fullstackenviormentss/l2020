@@ -1,200 +1,252 @@
-body{
-  font-family: Montserrat, sans-serif;
-}
-textarea {
-   resize:vertical;
-}
-
-// Hidden field in form contact against bot spam (leave the name in french)
-.cache{
-  display:none;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-// Custom Navigation Bar
+html {
+    height: 100%;
+}
 
-.navbar-custom {
-    background-color: white;
-    border-color: transparent;
-    .navbar-toggle {
-        font-size: 18px;
+body {
+    margin: 0;
+    min-height: 100%;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+h6 {
+    font-size: 12px;
+    line-height: 18px;
+    margin-top: 10px;
+}
+
+p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 19px;
+    line-height: 27px;
+}
+
+a {
+    color: #fff;
+    text-decoration: underline;
+    &:focus {
+        outline: 0;
     }
-    .container{
-      padding-left:0;
-    }
-}
-
-.nav_link, .nav_link:hover, .nav_link:visited, .nav_link:active {
-  font-family: Sanchez, sans-serif;
-  color: $blue-primary;
-  text-transform: uppercase;
-  text-decoration:none !important;
-}
-.nav_link span{
-  color: $blue-primary;
-}
-
-.nav_link.w--current {
-  border-bottom: 2px solid $purple-primary;
-  font-family: Sanchez, sans-serif;
-  color: $purple-primary;
-  font-weight: 400;
-}
-
-.nav_link.w--current span{
-  color: $purple-primary;
-}
-@media (min-width: 768px){
-  .nav_link.nav_lang{
-    padding-left: 5px;
-    padding-right:0;
-  }
-  .w-nav_lang{
-    display:inline;
-  }
-
-}
-@media (max-width: 767px){
-  .navbar-collapse .nav_link.nav_lang{
-    display:inline;
-    padding:0;
-  }
-  .nav_link{
-    margin-left: 20px;
-  }
-  .w-nav_lang{
-    padding:20px;
-  }
-}
-.nav_lang.accent{
-  color:$purple-primary;
-  font-weight: 700;
-}
-
-
-// Footer
-
-.footer{
-  position: relative;
-  z-index: 3000;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  background-color: $dark-blue;
-  .footer_link{
-    &:hover, &:focus{
-      color:#0087cd;
-    }
-  }
-}
-
-.top_footer{
-  position: absolute;
-  left: 0px;
-  top: -61px;
-  right: 0px;
-  display: block;
-  height: 111px;
-  padding-top: 0px;
-  background-image: url('/images/wave_footer_top.svg');
-  background-position: 50% 29%;
-  background-size: cover;
-  background-repeat: repeat-x;
-  background-attachment: scroll;
-}
-
-@media(min-width:768px) {
-    .navbar-custom {
-        padding: 17px 0;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        transition: all 0.3s;
-        border: none;
-    }
-    //Contact
-    .form-contact{
-      margin-left: 10px;
+    &:hover{
+        color:#fff;
     }
 }
 
-// Navbar Change on Scroll
-
-@media(max-width:767px) {
-  .w-nav-brand .logo{
-      padding:17px 10px 0 30px;
-  }
-    .navbar-header {
-      padding: 20px 0;
-      background-color: #FFF;
-      .navbar-toggle{
-        margin-bottom: -20px;
-        background-color: #C8C8C8;
-        border-radius: 0;
-        height: 70px;
-        color: white;
-        padding: 0 20px;
-        margin-top: 0px;
-
-        &.collapsed{
-          background-color: #FFF;
-          color:black;
-          .icon-nav{
-            color:#000;
-          }
-        }
-      }
-    }
-    .navbar-collapse {
-      margin-top: -10px;
-      background-color: #C8C8C8;
-        .nav_link {
-          display:block;
-        }
-    }
-    //Contact
-    .row{
-      margin:0;
-    }
-    //footer
-    .top_footer {
-        top: -60px;
+.wrap_a{
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited{
+        text-decoration:none;
     }
 }
-.botbar{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  a:hover, a:focus{
+
+blockquote {
+    margin: 0 0 10px 0;
+    padding: 10px 20px;
+    border-left: 5px solid #E2E2E2;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+figure {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+figcaption {
+    margin-top: 5px;
+    text-align: center;
+}
+
+ul,
+ol {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 15px;
+    background-color: $purple-primary;
+    color: white;
+    border: 0;
+    line-height: inherit;
     text-decoration: none;
-  }
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-appearance: button;
 }
-.links_social {
-  padding-top: 22px;
-  text-align: right;
+
+.flex {
+    @include flexbox;
+    &.vcenter {
+        @include align-items(center);
+    }
+    &.stretch {
+        @include align-items(stretch);
+    }
+    @media(max-width: 992px) {
+        @include flex-direction(column);
+    }
 }
-.header-pics .links_social{
-  padding-bottom: 22px;
-  padding-top:8px;
+
+.accent {
+    color: $purple-primary !important;
 }
-@media (max-width: 992px){
-  .footer-pics{
-    text-align: center;
-  }
-  .footer-pics .links_social {
-    text-align: center;
-  }
-  .footer_link {
-      text-align: center;
-  }
-  .footer_logo {
-      text-align: center;
-  }
-  .copy {
-      margin-bottom: 20px;
-  }
-  .top_footer {
-    left: 0px;
-    top: -61px;
-    right: 0px;
-  }
+
+
+/* --- Sections --- */
+
+.social_feed_section,
+.about_yog_1,
+.jobs,
+.sports,
+.key_numbers {
+    background-color: $purple-primary;
+    background-image: url('../images/layout/bkg_magenta.svg');
+    background-position: 50% 50%;
+    background-size: cover;
+    color: #fff;
 }
-.links_games {
-  margin-right: 20px;
+
+.facts,
+.newsletter_cta,
+.about_yog_2,
+.single-news-content header,
+.sites,
+.news-page,
+.news_section {
+    background-color: $blue-primary;
+    background-image: url('../images/layout/bkg_blue.svg');
+    background-position: 0px 0px;
+    background-size: cover;
+    color: #fff;
+}
+
+.newsletter_cta,
+.jobs,
+.about_yog,
+.sports,
+.facts,
+.key_numbers,
+.sites,
+.latestnews_section,
+.news-page,
+.news_section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.about_yog_1,
+.jobs,
+.single-news-content,
+.latestnews_section,
+.news-page {
+    margin-top: 150px;
+}
+
+
+/* Page about and venues */
+
+.about_yog,
+.sports,
+.facts,
+.key_numbers,
+.sites {
+    h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 991px) {
+    .h1_about_yog,
+    .about_the_yog_p,
+    .h1_newsletter_cta,
+    .marchandising_col_1,
+    .h1_news,
+    .p_news {
+        text-align: center;
+    }
+    .marchandising_col_1 {
+        padding-top: 50px;
+    }
+}
+
+/* Box-shadow Inset */
+
+#main>div:nth-last-of-type(2n+1) {
+    @include not('.hero',
+    '.botbar',
+    '.footer',
+    '.latestnews_section') {
+        -webkit-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+        box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
+    }
 }

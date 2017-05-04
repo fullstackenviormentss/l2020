@@ -1,0 +1,35 @@
+.footer {
+    position: relative;
+    color: #fff;
+    padding: 50px 0;
+    background-color: $dark-blue;
+    a {
+        color: #fff;
+        margin-bottom: 0px;
+        text-decoration: underline;
+        &:hover,
+        &:focus {
+            color: #0087cd;
+        }
+    }
+}
+
+.footer_copy p {
+    text-align: center;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.footer_nav {
+    text-align: right;
+}
+
+@media (max-width: 992px) {
+    .footer_logo,
+    .footer_copy,
+    .footer_nav,
+    .footer-pics,
+    .footer .links_social {
+        text-align: center;
+    }
+}

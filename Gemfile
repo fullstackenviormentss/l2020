@@ -11,18 +11,24 @@ ruby "2.3.3"
 # Happy Jekylling!
 gem 'dotenv', :groups => [:development, :test]
 
-gem "jekyll", "3.3.1"
+gem "jekyll", "3.4.3"
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 gem "koala", "~> 2.2"
 
 gem "twitter", "~> 6.0.0"
 
+gem "sinatra"
+
+gem "instagram"
+
 gem "mini_magick"
 
 gem 'nokogiri'
 
 gem 'metainspector'
+
+gem 'packr'
 
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"

@@ -1,0 +1,148 @@
+html .hero {
+    background-image: url('../images/home/lausanne_overview.jpg');
+    background-attachment: fixed !important;
+    background-repeat: no-repeat;
+    background-position-y: -200px;
+    height: 800px;
+    @media (min-width: 2121px) {
+        background-position-y: -400px;
+    }
+    @media (min-width: 1921px) {
+        background-position-y: -400px;
+    } // Width of image
+    @media (min-width: 1651px) {
+        background-size: cover;
+    }
+    @media (max-width: 1450px) {
+        background-position-x: -200px;
+    }
+    @media (max-width: 1250px) {
+        background-position-x: -400px;
+    }
+    @media (max-width: 1050px) {
+        background-position-x: -600px;
+    }
+    @media (max-width: 850px) {
+        background-position-x: -800px;
+    }
+    @media (max-width: 650px) {
+        background-position-x: -1000px;
+    }
+    @media (max-width: 479px) {
+        height: 600px;
+    }
+    @media (max-width: 450px) {
+        background-position-x: -1200px;
+        background-position-y: -350px;
+    }
+    .container {
+        padding: 305px 0 0 0;
+        @media (max-width: 479px) {
+            padding-top: 165px;
+        }
+    }
+}
+
+.the_claim {
+    position: absolute;
+    color: $blue-primary;
+    width: inherit;
+    font-size: 81px;
+    line-height: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    opacity: 0;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+@media (max-width: 768px) {
+    .the_claim {
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.about_yog_section {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: $purple-primary;
+}
+
+.h1_about_yog {
+    margin-top: 0px;
+    font-size: 58px;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.about_the_yog_p {
+    margin-top: 20px;
+}
+
+.marchandising_section {
+    padding-bottom: 30px;
+}
+
+.shop_cta {
+    color: $purple-primary;
+}
+
+.newsletter-text {
+    padding-right: 10px;
+    max-width: 50%;
+    @media(max-width: 991px) {
+        max-width: 100%;
+        padding-right: 0;
+    }
+}
+
+.newsletter_cta_form {
+    margin: 0;
+    width: 100%;
+    .newsletter-form-adress {
+        width: 75%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    input {
+        margin: 0;
+    }
+    @media(max-width: 991px) {
+        @include flex-direction(row);
+        .newsletter-form-adress {
+            width: 100%;
+        }
+    }
+}
+
+.cio-sponsors {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center; // First olympic banner
+    .container>img {
+        padding-bottom: 40px;
+    }
+    .sponsors-list {
+        padding-left: 0;
+    }
+    .sponsors-list li {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 34px 30px;
+        width: 140px;
+        @media (max-width: 479px) {
+            margin: 0 10px 30px;
+        }
+    }
+}

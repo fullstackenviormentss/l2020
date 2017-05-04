@@ -1,0 +1,190 @@
+/* ===========================================
+   Social Wall
+   =========================================== */
+
+.icon-twitter,
+.icon-facebook {
+    color: $gray-text;
+}
+
+.icon-twitter:hover {
+    color: #1da1f2;
+}
+
+.icon-facebook:hover {
+    color: #3b5998;
+}
+
+.social_wall {
+    color: $purple-primary;
+    a {
+        text-decoration: none;
+    }
+    .container {
+        padding: 0;
+        padding: 40px 0;
+    }
+    .item {
+        font-family: Montserrat, sans-serif;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .wrap_item {
+        height: 400px;
+        background: #fff;
+    }
+    .wrap_media {
+        height: 200px;
+        overflow: hidden;
+        >a>img,
+        >img,
+        >a>iframe,
+        >iframe,
+        >video {
+            height: 200px;
+            /* Precise to avoid black line on iframe video */
+            width: 101%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;'
+        }
+        >video.fullscreen {
+            object-fit: contain;
+            font-family: 'object-fit: contain;'
+        }
+        /* Social_wall Blockquote */
+        blockquote {
+            overflow:hidden;
+            padding: 20px 20px 0 20px;
+            height: 200px;
+            position: absolute;
+            background: #FAFAFA;
+            opacity: .1;
+            top: 0;
+            bottom:0;
+            margin:0;
+            margin-right: 15px;
+            border: 0;
+            &:hover {
+                transition: all 0.4s ease-in-out;
+                opacity: 0.9;
+            }
+            h1,
+            h1 a {
+                font-size: 14px;
+                line-height: 24px;
+                color: $purple-primary;
+                word-break: break-word;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                -ms-hyphens: auto;
+                hyphens: auto;
+                margin: 0;
+            }
+            p.desc {
+                font-size: 12px;
+                margin:0;
+                padding:0;
+                color: $gray-text;
+                text-align:left;
+                a {
+                    color: $gray-text;
+                }
+            }
+            cite,
+            cite a {
+                font-size: 10px;
+                color: $gray-text-less;
+            }
+            .status_box {
+                max-height: 165px;
+                position: relative;
+                overflow: hidden;
+            }
+        }
+    }
+    // Quote without media
+    .no_media .wrap_media blockquote {
+        opacity: 0.9;
+        height: 200px;
+        top: 15px;
+    }
+    // Status
+    .user_info {
+        padding: 10px 20px 0 20px;
+        margin-right: 0;
+        .profil_image,
+        .user_info,
+        .wrap_user_name,
+        .icon_social {
+            margin: 0;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .profile_image {
+            margin-right: 5px;
+            img {
+                /*border-radius: 50%;*/
+                width: 55px;
+            }
+        }
+        .wrap_user_name {
+            margin-left: -5px;
+            .user,
+            .username {
+                padding: 0;
+                margin: 0;
+                line-height: 0;
+            }
+            .user a {
+                font-size: 18px;
+                line-height: 24px;
+                color: $purple-primary;
+            }
+            .username a {
+                color: $gray-text-less;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 300;
+            }
+        }
+    }
+    /* Status/message */
+    p.status {
+        padding: 0 20px;
+        margin: 0;
+        height: 80px;
+        text-align: left;
+        color: $gray-text;
+        font-size: 13px;
+        line-height: 20px;
+        font-family: sans-serif;
+        a,
+        a:visited,
+        a:active,
+        a:link {
+            color: $blue-primary;
+            font-size: 13px;
+        }
+        a:hover {
+            color: #666;
+        }
+    }
+    /* Social_wall meta info */
+    .meta_info {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        background: #fff;
+        padding:0 20px 20px 20px;
+        a {
+            padding: 2px;
+        }
+        time {
+            color: $gray-text-less;
+            font-size: 12px;
+        }
+        .icon_social {
+            float: right;
+        }
+    }
+}

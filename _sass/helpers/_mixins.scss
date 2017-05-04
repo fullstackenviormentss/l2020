@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/icomoon.eot?gqhsat');
+  src:  url('../assets/fonts/icomoon.eot?gqhsat#iefix') format('embedded-opentype'),
+    url('../assets/fonts/icomoon.ttf?gqhsat') format('truetype'),
+    url('../assets/fonts/icomoon.woff?gqhsat') format('woff'),
+    url('../assets/fonts/icomoon.svg?gqhsat#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Use multiple not: http://stackoverflow.com/questions/5684160/can-i-have-multiple-not-selectors
+
+@mixin not($ignorList...) {
+    //if only a single value given
+    @if (length($ignorList) == 1){
+        //it is probably a list variable so set ignore list to the variable
+        $ignorList: nth($ignorList,1);
+    }
+    //set up an empty $notOutput variable
+    $notOutput: '';
+    //for each item in the list
+    @each $not in $ignorList {
+        //generate a :not([ignored_item]) segment for each item in the ignore list and put them back to back
+        $notOutput: $notOutput + ':not(#{$not})';
+    }
+    //output the full :not() rule including all ignored items
+    &#{$notOutput} {
+        @content;
+    }
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-down:before, .w-icon-arrow-down:before, .w-icon-dropdown-toggle:before {
+  content: "\e900";
+}
+.icon-slider-left:before, .w-icon-slider-left:before {
+  content: "\e901";
+}
+.icon-slider-right:before, .w-icon-slider-right:before {
+  content: "\e902";
+}
+.icon-nav:before, .w-icon-nav-menu:before {
+  content: "\e903";
+}
+.icon-home:before {
+  content: "\e904";
+}
+.icon-undo:before {
+  content: "\e967";
+}
+.icon-reply:before {
+  content: "\e96a";
+}
+.icon-heart:before {
+  content: "\e9da";
+}
+.icon-loop:before {
+  content: "\ea2d";
+}
+.icon-share:before {
+  content: "\ea7d";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}

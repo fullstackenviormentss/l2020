@@ -1,4 +1,4 @@
----
+--- 
 layout: default
 ---
 
@@ -20,7 +20,7 @@ layout: default
             <div class="col-md-8">
                 <p class="about_the_yog_p">
                     {% t pages.index.about.texte %}
-                    <a href="about">{% t pages.index.about.more %}</a>
+                    <strong> <a href="about">{% t pages.index.about.more %}</a></strong>
                 </p>
             </div>
         </div>
@@ -28,143 +28,136 @@ layout: default
 </div>
 <div class="news_section">
     <div class="container">
-        <h1 class="h1_big_news h1_newsletter_cta">{% t pages.index.news.title %}</h1>
+        <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>
         <div class="row">
             {% for new in site.data.contentful.spaces.news.news limit:3 %}
-            <div class="new col-md-4">
-            <div>
-              <img src="{{ new.image.url }}">
+
+            {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
+            {% capture link %}{{new.titreEn}}{% endcapture %} 
+            
+            <div class="come-in-module col-sm-6 col-md-4">
+                <a class="wrap_a" href="/{{ link | datapage_url: dir | split:'.html' | first }}">
+                    <div class="new col-md-12">
+                        <div class="wrap_media">
+                            <img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">
+                        </div>
+                        <h1 class="h1_news">
+                            {% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
+                            endif %}
+                        </h1>
+                        <p class="p_news">
+                            {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                            {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                            {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
+                        </p>
+
+                        
+                    </div>
+                </a>
+                <div class="new_meta">
+                    <p class="news_date">
+                        <time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+                        <a href="/{{ link | datapage_url: dir | split:'.html' | first }}">{% t pages.index.news.plus %}</a>
+                    </p>
+                </div>
             </div>
-            <h1 class="h1_news">
-            {% if site.lang == "fr" %}
-              {{ new.titre }}
-            {% elsif site.lang == "de" %}
-              {{ new.titreDe }}
-            {% else %}
-              {{ new.titreEn }}
-            {% endif %}
-            </h1>
-            <p class="p_news">
-              {% if site.lang == "fr" %}
-                {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% elsif site.lang == "de" %}
-                {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% else %}
-                {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-              {% endif %}
-            </p>
-            {% capture dir %}news-{{site.lang}}{% endcapture %}
-            {% if site.lang == "fr" %}
-              {% capture link %}{{new.titre}}{% endcapture %}
-            {% elsif site.lang == "de" %}
-              {% capture link %}{{new.titreDe}}{% endcapture %}
-            {% else %}
-              {% capture link %}{{new.titreEn}}{% endcapture %}
-            {% endif %}
-            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
-        </div>
             {% endfor %}
         </div>
     </div>
 </div>
 <div class="marchandising_section">
     <div class="container">
-        <div class="row">
-            <div class="marchandising_col_1 col-md-6">
-                <h1 class="h1_newsletter_cta shop_cta">{% t pages.index.shop.title %}</h1>
+        <div class="row flex vcenter">
+            <div class="marchandising_col_1 col-md-6 fade-in-module">
+                <h1 class="shop_cta">{% t pages.index.shop.title %}</h1>
             </div>
-            <div class="col-md-6">
-                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="images/lausanne_tshirt.png" srcset="images/lausanne_tshirt-p-500x338.png 500w, images/lausanne_tshirt.png 800w">
+            <div class="col-md-6 fade-in-module">
+                <img sizes="(max-width: 479px) 96vw, (max-width: 767px) 97vw, (max-width: 816px) 98vw, (max-width: 991px) 800px, 620px" src="/images/home/lausanne_tshirt.png"
+                    srcset="/images/home/lausanne_tshirt-p-500x338.png 500w, /images/home/lausanne_tshirt.png 800w">
             </div>
         </div>
     </div>
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
+         {% social_wall
 
-        {% social_wall 
-        
-            fb_username: lausanne2020, 
-            fb_amount: 5,
-            
-            tw_username: lausanne2020,
-            tw_amount: 4,
+            fb_username:lausanne2020,
+            fb_amount:5,
+
+            tw_username:lausanne2020,
+            tw_amount:4
         
         %}
-
     </div>
 </div>
 <div class="newsletter_cta">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
+    <div class="container flex vcenter fade-in-module">
+        <div class="newsletter-text">
+            <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
+        </div>
+        <form class="newsletter_cta_form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/"
+            netlify>
+            <div class="newsletter-form-adress">
+                <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
+                    required="required" type="email">
+                <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
             </div>
-            <div class="col-md-6">
-                <div class="">
-                    <form class="newsletter_cta_form" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="/" netlify>
-                        <div class="row">
-                            <div class="col-md-9">
-                                <input class="newsletter_cta_field w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}" required="required" type="email">
-                                <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
-                            </div>
-                            <div class="col-md-3">
-                                <input class="newsletter_cta_btn w-button" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
-                            </div>
-                        </div>
-                    </form>
-                    <div class="w-form-done">
-                        <div>{% t pages.index.newsletter.thanks %}</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>{% t pages.index.newsletter.oops %}</div>
-                    </div>
-                </div>
+            <div class="newsletter-form-button">
+                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
             </div>
+        </form>
+        <div class="success">
+            <div>{% t pages.index.newsletter.thanks %}</div>
+        </div>
+        <div class="error">
+            <div>{% t pages.index.newsletter.oops %}</div>
         </div>
     </div>
 </div>
-<div class="cio-sponsors container">
-    <img src="images/cio-partners/logo_olympic.png" alt="olympic">
-    <ul class="sponsors-list first">
-        <li>
-            <img src="images/cio-partners/Coca-Cola_logo.jpg" alt="Coca-Cola">
-        </li>
-        <li>
-            <img src="images/cio-partners/alibaba-logo-01.png" alt="Alibaba Group">
-        </li>
-        <li>
-            <img src="images/cio-partners/Atos_logo.jpg" alt="Atos">
-        </li>
-        <li>
-            <img src="images/cio-partners/Bridgestone_logo.jpg" alt="Bridgestone">
-        </li>
-        <li>
-            <img src="images/cio-partners/Dow_logo.jpg" alt="Dow">
-        </li>
-        <li>
-            <img src="images/cio-partners/GE_logo.jpg" alt="GE">
-        </li>
-        <li>
-            <img src="images/cio-partners/Mcdonalds_logo.jpg" alt="McDonald's">
-        </li>
-        <li>
-            <img src="images/cio-partners/Omega_logo.jpg" alt="Omega">
-        </li>
-        <li>
-            <img src="images/cio-partners/Panasonic_logo.jpg" alt="Panasonic">
-        </li>
-        <li>
-            <img src="images/cio-partners/PG_logo.jpg" alt="PG">
-        </li>
-        <li>
-            <img src="images/cio-partners/Samsung_logo.jpg" alt="Samsung">
-        </li>
-        <li>
-            <img src="images/cio-partners/Toyota_logo.jpg" alt="Toyota">
-        </li>
-        <li>
-            <img src="images/cio-partners/Visa_logo.jpg" alt="Visa">
-        </li>
-    </ul>
+<div class="cio-sponsors">
+    <div class="container">
+        <img src="/images/cio-partners/logo_olympic.png" alt="olympic" class="come-in-module">
+        <ul class="sponsors-list come-in-module">
+            <li>
+                <img src="/images/cio-partners/Coca-Cola_logo_200.png" alt="Coca-Cola">
+            </li>
+            <li>
+                <img src="/images/cio-partners/alibaba-logo_200.png" alt="Alibaba Group">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Atos_logo_200.png" alt="Atos">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Bridgestone_logo_200.png" alt="Bridgestone">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Dow_logo_200.png" alt="Dow">
+            </li>
+            <li>
+                <img src="/images/cio-partners/GE_logo_200.png" alt="GE">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Mcdonalds_logo_200.png" alt="McDonald's">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Omega_logo_200.png" alt="Omega">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Panasonic_logo_200.png" alt="Panasonic">
+            </li>
+            <li>
+                <img src="/images/cio-partners/PG_logo_200.png" alt="PG">
+            </li>
+            <li> 
+                <img src="/images/cio-partners/Samsung_logo_200.png" alt="Samsung">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Toyota_logo_200.png" alt="Toyota">
+            </li>
+            <li>
+                <img src="/images/cio-partners/Visa_logo_200.png" alt="Visa">
+            </li>
+        </ul>
+    </div>
 </div>

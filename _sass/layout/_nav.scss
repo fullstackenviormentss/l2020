@@ -1,0 +1,133 @@
+#mainNav {
+    font-family: Sanchez, sans-serif;
+    text-transform: uppercase;
+}
+
+.nav-brand {
+    position: relative;
+    float: left;
+}
+
+.logo {
+    width: 235px;
+}
+
+// Custom Navigation Bar
+.navbar-custom {
+    background-color: white;
+    .navbar-toggle {
+        font-size: 18px;
+    }
+    .container {
+        padding-left: 0;
+    }
+}
+
+.nav_link {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 20px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:visited {
+        color: $blue-primary;
+        text-decoration: none;
+    }
+    &.w--current {
+        color: $purple-primary;
+    }
+    &:hover{
+        color: $purple-primary;
+    }
+}
+
+.nav_lang .nav_link {
+    padding-right:3px;
+    padding-left:3px;
+}
+
+@media (max-width: 767px) {
+    .nav_link {
+        margin-left: 20px;
+    }
+    .navbar-collapse .nav_lang {
+        padding: 20px;
+        .nav_link {
+            display: inline;
+            padding: 0;
+        }
+    }
+}
+
+@media(min-width:768px) {
+    .navbar-custom {
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        padding: 17px 0;
+    }
+    .nav_lang {
+        display: inline;
+    }
+}
+
+@media(max-width:767px) {
+    .nav-brand .logo {
+        padding: 17px 10px 0 30px;
+    }
+    .logo{
+        width: 215px;
+    }
+    .navbar-header {
+        padding: 10px 0;
+        background-color: #FFF;
+        .navbar-toggle {
+            margin-bottom: -20px;
+            background-color: $gray-light;
+            border-radius: 0;
+            height: 70px;
+            color: white;
+            padding: 0 20px;
+            margin-top: 0px;
+            &.collapsed {
+                background-color: transparent;
+                color: black;
+                .icon-nav {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        margin-top: -1px;
+        background-color: $gray-light;
+        .nav_link {
+            display: block;
+        }
+    }
+}
+/* Line slider */
+
+.navbar-nav>.nav_link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1.5px;
+    background: $purple-primary;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.1s;
+}
+
+.navbar-nav>.nav_link.w--current::before {
+    transform: scale3d(1, 1, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.3s;
+}

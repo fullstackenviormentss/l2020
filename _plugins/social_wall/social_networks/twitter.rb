@@ -62,6 +62,7 @@ class TW
 
     post['social_network'] = 'twitter'
 
+    post['photo'] = photo_instagram if has_photo_instagram?
     post['photo'] = photo(:small) if has_photo? && (!has_ext_quote? || is_ext_quote_facebook?)
     post['video'] = video if has_video?
 
@@ -71,6 +72,7 @@ class TW
     post['ext_quote'] = ext_quote if has_ext_quote? && !has_ext_quote_video? && !is_ext_quote_facebook?
 
     post['message'] = parse_message(@post[:full_text]) if has_message?
+
     post['user'] = user_info
     post['meta'] = meta_info
 
@@ -98,6 +100,17 @@ class TW
     photo['format'] = photo_format(photo['width'], photo['height'])
     photo['src'] = data[:media_url] + ":#{size}"
     photo['src_full'] = data[:media_url]
+
+    return photo
+  end
+
+  def has_photo_instagram?
+    defined?(@post[:entities][:urls][0][:expanded_url]) && MetaInspector.new(@post[:entities][:urls][0][:expanded_url]).host =~ /www.instagram.com/
+  end
+
+  def photo_instagram
+    photo = Hash.new
+    photo['src'] = photo['src_full'] = get_url_best_picture(@post[:entities][:urls][0][:expanded_url])
 
     return photo
   end
@@ -136,7 +149,7 @@ class TW
   def int_quote
     quote = Hash.new
     quote['link'] = @post[:entities][:urls][0][:expanded_url] # Get the last url (usually the twitter status)
-    quote['picture'] = "#{@post[:quoted_status][:extended_entities][:media][0][:media_url]}:small" if has_int_quote_photo?
+    quote['picture'] = has_int_quote_photo? ? "#{@post[:quoted_status][:extended_entities][:media][0][:media_url]}:small" : get_url_best_picture(quote['link'])
     quote['source'] = @post[:quoted_status][:user][:screen_name]
     quote['title'] = @post[:quoted_status][:user][:name]
     quote['description'] = parse_message(@post[:quoted_status][:full_text])

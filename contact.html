@@ -3,30 +3,30 @@ layout: default
 ---
 <div class="latestnews_section">
   <div class="container">
-    <h1 class="h1_big_news h1_newsletter_cta">{% t pages.contact.title %}</h1>
+    <h1 class="h1_contact">{% t pages.contact.title %}</h1>
     <div class="row">
       <div class="col-md-6 form">
-          <form class="form form-contact" data-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
-            <label class="label" for="Firstname">{% t pages.contact.form.prenom.title %}</label>
-            <input class="fields w-input" data-name="Firstname" id="Firstname" maxlength="256" name="Firstname" placeholder="{% t pages.contact.form.prenom.placeholder %}" required="required" type="text">
+          <form class="form-contact" data-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
+            <label for="Firstname">{% t pages.contact.form.prenom.title %}</label>
+            <input data-name="Firstname" id="Firstname" maxlength="256" name="Firstname" placeholder="{% t pages.contact.form.prenom.placeholder %}" required="required" type="text">
             <p class="cache"><label>Bot field: <input name="champcache"></label></p>
-            <label class="label" for="Lastname">{% t pages.contact.form.nom.title %}</label>
-            <input class="fields w-input" data-name="Lastname" id="Lastname" maxlength="256" name="Lastname" placeholder="{% t pages.contact.form.nom.placeholder %}" required="required" type="text">
-            <label class="label" for="email">{% t pages.contact.form.email.title %}</label>
-            <input class="fields w-input" data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.contact.form.email.placeholder %}" required="required" type="email">
-            <label class="label" for="Message">{% t pages.contact.form.message.title %}</label>
-            <textarea class="msg-area w-input" data-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{% t pages.contact.form.message.placeholder %}" required="required"></textarea>
-            <input class="submit w-button" data-wait="Please wait..." type="submit" value="{% t pages.contact.form.envoyer %}">
+            <label for="Lastname">{% t pages.contact.form.nom.title %}</label>
+            <input data-name="Lastname" id="Lastname" maxlength="256" name="Lastname" placeholder="{% t pages.contact.form.nom.placeholder %}" required="required" type="text">
+            <label for="email">{% t pages.contact.form.email.title %}</label>
+            <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.contact.form.email.placeholder %}" required="required" type="email">
+            <label for="Message">{% t pages.contact.form.message.title %}</label>
+            <textarea data-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{% t pages.contact.form.message.placeholder %}" required="required"></textarea>
+            <input class="btn submit" data-wait="Please wait..." type="submit" value="{% t pages.contact.form.envoyer %}">
           </form>
-          <div class="succes w-form-done">
+          <div class="success form-done">
             <div>{% t pages.contact.form.thanks %}</div>
           </div>
-          <div class="error w-form-fail">
+          <div class="error form-fail">
             <div>Oops! Something went wrong while submitting the form</div>
           </div>
       </div>
       <div class="col-md-6">
-        <img class="img-contact" sizes="(max-width: 991px) 100vw, 620px" src="images/5808c9f5843e554215b96073_lausanne_overview-copy.jpg" srcset="images/5808c9f5843e554215b96073_lausanne_overview-copy-p-500x313.jpeg 500w, images/5808c9f5843e554215b96073_lausanne_overview-copy-p-800x500.jpeg 800w, images/5808c9f5843e554215b96073_lausanne_overview-copy-p-1080x675.jpeg 1080w, images/5808c9f5843e554215b96073_lausanne_overview-copy-p-1600x1000.jpeg 1600w, images/5808c9f5843e554215b96073_lausanne_overview-copy.jpg 1680w" width="100%">
+        <img class="img-contact hidden-sm" sizes="(max-width: 991px) 100vw, 620px" src="/images/contact/lausanne_overview.jpg" srcset="/images/contact/lausanne_overview-500x313.jpg 500w, /images/contact/lausanne_overview-800x500.jpg 800w, /images/contact/lausanne_overview-1080x675.jpg 1080w, /images/contact/lausanne_overview-1600x1000.jpg 1600w, /images/contact/lausanne_overview.jpg 1680w" width="100%">
         <p class="physique"><strong>Lausanne 2020</strong><br>Comité d'organisation<br>Maison du Sport International<br>Av. de Rhodanie 54, 1007, Lausanne</p>
       </div>
     </div>

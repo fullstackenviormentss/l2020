@@ -33,12 +33,18 @@ module Jekyll
       @site = site
       @base = base
 
+      filename = name
+
+      # If params contains multiple languages, set the correct name and set the same filename for every language
+      filename = name.values[0] if name.is_a?(Hash) # Main language is the first
+      name = name[site.config['lang']] if name.is_a?(Hash)
+      
       # @dir is the directory where we want to output the page
       # @name is the name of the page to generate
       #
       # the value of these variables changes according to whether we
       # want to generate named folders or not
-      filename = sanitize_filename(data[name]).to_s
+      filename = sanitize_filename(data[filename]).to_s
       if index_files
         @dir = dir + (index_files ? "/" + filename + "/" : "")
         @name =  "index" + "." + extension.to_s

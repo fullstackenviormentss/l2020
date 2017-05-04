@@ -1,0 +1,142 @@
+html .hero-discover {
+    height: 400px;
+    background-image: url('../images/home/lausanne_overview.jpg');
+    background-attachment: fixed !important;
+    background-position-y: -440px;
+    background-repeat: no-repeat;
+    @media (min-width: 1651px) {
+        background-size: cover;
+    }
+    @media (max-width: 1450px) {
+        background-position-x: -200px;
+    }
+    @media (max-width: 1250px) {
+        background-position-x: -400px;
+    }
+    @media (max-width: 1050px) {
+        background-position-x: -600px;
+    }
+    @media (max-width: 850px) {
+        background-position-x: -800px;
+    }
+    @media (max-width: 650px) {
+        background-position-x: -1000px;
+    }
+    @media (max-width: 450px) {
+        background-position-x: -1200px;
+    }
+    .container {
+        padding: 305px 0 0 0;
+        @media (max-width: 479px) {
+            padding-top: 165px;
+        }
+    }
+}
+
+
+/* Sites square hover */
+
+.sqr {
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+    background: #ececec;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.sqr .inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.sqr .inside .hover {
+    background: linear-gradient(180deg, rgba(206, 0, 113, .78), rgba(206, 0, 113, .78));
+    padding: 5px;
+    width: 65%;
+    height: 75px;
+    text-align: center;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 3;
+    overflow: hidden;
+    left: 0;
+    top: 50%;
+    right: 0;
+    margin: auto;
+    transition: all 400ms cubic-bezier(0.42, 0, 0, 0.99);
+}
+
+.sqr .inside .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.sqr:before {
+    display: block;
+    content: " ";
+    width: 100%;
+    padding-top: 91.78571%;
+}
+
+.sqr .inside .hover .title {
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    top: 50%;
+    width: 125px;
+    margin: auto;
+    transform: translateY(-50%);
+    transition: all 400ms cubic-bezier(0.42, 0, 0, 0.99);
+}
+
+.sqr .inside .hover .description {
+    font-size: 13px;
+    color: #fff;
+    opacity: 0;
+    height: 0;
+    transition: all 400ms cubic-bezier(0.42, 0, 0, 0.99);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    -ms-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    transform: translate(-50%);
+}
+
+.sqr .inside:hover .hover {
+    height: 100%;
+    width: 100%;
+}
+
+.sqr .inside:hover .hover .title {
+    transform: translateY(-75%);
+}
+
+.sqr .inside:hover .hover .description {
+    height: auto;
+    opacity: 1;
+    top: 60%;
+}
+
+/* Map */
+
+#map {
+    height: 400px;
+    color:$gray-text;
+}
+
+.gm-style {
+    font-family: Montserrat, sans-serif !important;
+}

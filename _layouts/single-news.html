@@ -1,25 +1,31 @@
 ---
 layout: default
+title: 'test'
 ---
 <div class="single-news-content">
 	<header>
 		<div class="news-image">
-	  	<img src="{{page.image.url}}" alt="">
+	  	<img src="{{page.image.url}}?w=700&h=500&q=80" alt="">
 	  </div>
 	</header>
 	<div class="container news-content">
-		{% if site.lang == "fr" %}
-	    {% capture title %}{{page.titre}}{% endcapture %}
-	    {% capture text %}{{page.texteLong}}{% endcapture %}
-	  {% elsif site.lang == "de" %}
-	    {% capture title %}{{page.titreDe}}{% endcapture %}
-	    {% capture text %}{{page.texteLongDe}}{% endcapture %}
-	  {% else %}
-	    {% capture title %}{{page.titreEn}}{% endcapture %}
-	    {% capture text %}{{page.texteLongEn}}{% endcapture %}
-	  {% endif %}
-    <h1>{{ title }}</h1>
-    <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
-    <p class="news_date">{{page.date | date: "%d.%m.%Y"}}</p>
+    {% if site.lang == "fr" %}
+    <h1>{{page.titre}}</h1>
+		<p class="p_news">{{ page.texteLong | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+		{% endif %}
+
+		{% if site.lang == "en" %}
+		<h1>{{page.titreEn}}</h1>
+		<p class="p_news">{{ page.texteLongEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+		{% endif %}
+
+		{% if site.lang == "de" %}
+		<h1>{{page.titreDe}}</h1>
+		<p class="p_news">{{ page.texteLongDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+		{% endif %}
+    
+    <p class="news_date">
+		<time pubdate datetime="{{page.date | date_to_xmlschema}}" title="{{page.date | date_to_xmlschema | date: '%d.%m'}}">{{page.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+	</p>
 	</div>
 </div>

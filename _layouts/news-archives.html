@@ -16,40 +16,36 @@ layout: default
 	      {% for new in site.data.contentful.spaces.news.news offset:offsetdependonyear %}
 	      	{% capture newyear %}{{ new.date | date: '%Y' }}{% endcapture %}
 	      	{% if newyear == pageyear %}
-	        <div class="col-md-4 new">
-	            <div>
-	              <img src="{{ new.image.url }}">
-	            </div>
-	            <h1 class="h1_news">
-	            {% if site.lang == "fr" %}
-	              {{ new.titre }}
-	            {% elsif site.lang == "de" %}
-	              {{ new.titreDe }}
-	            {% else %}
-	              {{ new.titreEn }}
-	            {% endif %}
-	            </h1>
-	            <p class="p_news">
-	              {% if site.lang == "fr" %}
-	                {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-	              {% elsif site.lang == "de" %}
-	                {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-	              {% else %}
-	                {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-	              {% endif %}
-	            </p>
-	            {% capture dir %}news-{{site.lang}}{% endcapture %}
-	            {% if site.lang == "fr" %}
-	              {% capture link %}{{new.titre}}{% endcapture %}
-	            {% elsif site.lang == "de" %}
-	              {% capture link %}{{new.titreDe}}{% endcapture %}
-	            {% else %}
-	              {% capture link %}{{new.titreEn}}{% endcapture %}
-	            {% endif %}
-	            <p class="news_date">{{new.date | date: "%d.%m.%Y"}}<a href="/{{ link | datapage_url: dir }}">{% t pages.index.news.plus %}</a></p>
-	          </div>
+
+					  {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
+            {% capture link %}{{new.titreEn}}{% endcapture %} 
+	        <div class="come-in-module col-sm-6 col-md-4">
+						<a class="wrap_a" href="/{{ link | datapage_url: dir | split:'.html' | first }}">
+							<div class="new col-md-12">
+								<div class="wrap_media">
+									<img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">
+								</div>
+								<h1 class="h1_news">
+											{% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
+											endif %}
+									</h1>
+									<p class="p_news">
+											{% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+											{% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+											{% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
+									</p>
+							</div>
+						</a>
+	          <div class="new_meta">
+								<p class="news_date">
+										<time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+										<a href="/{{ link | datapage_url: dir | split:'.html' | first }}">{% t pages.index.news.plus %}</a>
+								</p>
+						</div>
+					</div>
 	          {% endif %}
 	      {% endfor %}
-	    </div>
+			</div>
+	  </div>
   </div>
 </div>
