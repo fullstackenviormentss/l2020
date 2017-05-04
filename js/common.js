@@ -423,7 +423,7 @@ var mapManagement = {
     if (window.location.href.indexOf("/de/") > -1) {
       lang = "de";
     }
-    $.getJSON("mapdata/venues.json", function (data) {
+    $.getJSON("/mapdata/venues.json", function (data) {
       $.each(data, function (key, val) {
         var myLatLng = {
           lat: val.lat,
@@ -432,7 +432,7 @@ var mapManagement = {
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: mapManagement.map,
-          icon: '../images/venues/location_v2.png',
+          icon: '/images/venues/location_v2.png',
           title: 'Hello World!'
         });
         var content = "<h1>" + val.title_en + "</h1><p>" + val.texte_en + "</p><p><a href=" + val.lienEn + " target='_blank'>More</a></p>";

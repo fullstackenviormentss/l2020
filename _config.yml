@@ -35,7 +35,7 @@ sass:
   style: compressed
 
 languages: ["en","fr","de"]
-exclude_from_localizations: ["js"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
+exclude_from_localizations: ["js", "images", "mapdata"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
 
 contentful:
   spaces:
