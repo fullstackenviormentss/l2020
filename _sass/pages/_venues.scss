@@ -5,8 +5,16 @@ html .hero-discover {
     background-position-y: -440px;
     background-repeat: no-repeat;
     @media (min-width: 1651px) {
+        background-position-y: -600px;
         background-size: cover;
     }
+    @media (min-width: 1921px) {
+        background-position-y: -600px;
+    } // Width of image
+    @media (min-width: 2121px) {
+        background-position-y: -650px;
+    }
+
     @media (max-width: 1450px) {
         background-position-x: -200px;
     }
@@ -130,11 +138,12 @@ html .hero-discover {
     top: 60%;
 }
 
+
 /* Map */
 
 #map {
     height: 400px;
-    color:$gray-text;
+    color: $gray-text;
 }
 
 .gm-style {

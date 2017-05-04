@@ -4,9 +4,6 @@ html .hero {
     background-repeat: no-repeat;
     background-position-y: -200px;
     height: 800px;
-    @media (min-width: 2121px) {
-        background-position-y: -400px;
-    }
     @media (min-width: 1921px) {
         background-position-y: -400px;
     } // Width of image
