@@ -8,8 +8,7 @@ html .hero {
     }
     @media (min-width: 1921px) {
         background-position-y: -400px;
-    }
-    // Width of image
+    } // Width of image
     @media (min-width: 1651px) {
         background-size: cover;
     }
@@ -98,7 +97,7 @@ html .hero {
 .newsletter-text {
     padding-right: 10px;
     max-width: 50%;
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
         max-width: 100%;
         padding-right: 0;
     }
@@ -112,10 +111,10 @@ html .hero {
         padding-right: 20px;
         padding-left: 20px;
     }
-    input{
-        margin:0;
+    input {
+        margin: 0;
     }
-    @media(max-width: 992px) {
+    @media(max-width: 991px) {
         @include flex-direction(row);
         .newsletter-form-adress {
             width: 100%;
@@ -126,8 +125,7 @@ html .hero {
 .cio-sponsors {
     padding-top: 80px;
     padding-bottom: 80px;
-    text-align: center;
-    // First olympic banner
+    text-align: center; // First olympic banner
     .container>img {
         padding-bottom: 40px;
     }
@@ -139,5 +137,8 @@ html .hero {
         vertical-align: middle;
         margin: 0 34px 30px;
         min-width: 140px;
+        @media (max-width: 479px) {
+            margin: 0 10px 30px;
+        }
     }
 }

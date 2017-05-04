@@ -36,7 +36,7 @@ layout: default
             {% capture link %}{{new.titreEn}}{% endcapture %} 
             
             <div class="come-in-module col-sm-6 col-md-4">
-                <a href="/{{ link | datapage_url: dir | split:'.html' | first }}">
+                <a class="wrap_a" href="/{{ link | datapage_url: dir | split:'.html' | first }}">
                     <div class="new col-md-12">
                         <div class="wrap_media">
                             <img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">

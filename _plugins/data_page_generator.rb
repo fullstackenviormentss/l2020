@@ -38,10 +38,6 @@ module Jekyll
       # If params contains multiple languages, set the correct name and set the same filename for every language
       filename = name.values[0] if name.is_a?(Hash) # Main language is the first
       name = name[site.config['lang']] if name.is_a?(Hash)
-
-      puts filename
-
-      puts name
       
       # @dir is the directory where we want to output the page
       # @name is the name of the page to generate

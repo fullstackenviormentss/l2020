@@ -90,6 +90,16 @@ a {
     }
 }
 
+.wrap_a{
+    &,
+    &:focus,
+    &:hover,
+    &:active,
+    &:visited{
+        text-decoration:none;
+    }
+}
+
 blockquote {
     margin: 0 0 10px 0;
     padding: 10px 20px;
@@ -230,10 +240,6 @@ ol {
 
 .hero {
     height: 800px;
-}
-
-.logo {
-    width: 235px;
 }
 
 @media (max-width: 991px) {
