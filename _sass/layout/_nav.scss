@@ -31,12 +31,12 @@
     text-align: left;
     margin-left: auto;
     margin-right: auto;
-    color: $blue-primary;
     &,
     &:hover,
     &:active,
     &:focus,
     &:visited {
+        color: $blue-primary;
         text-decoration: none;
     }
     &.w--current {
