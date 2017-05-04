@@ -13,7 +13,7 @@ $(document).ready(function () {
     options = {
       debug: true,
       cacheLength: 4,
-      blacklist: '.nav_lang',
+      blacklist: '.nav_lang, .form',
       prefetch: true,
       onStart: {
         duration: 350, // Duration of our animation
