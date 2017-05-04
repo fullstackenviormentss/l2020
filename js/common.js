@@ -374,7 +374,6 @@ var formManagement = {
         addressBookID = "1082131";
       }
 
-      /*
       if (el.indexOf("newsletter") !== -1) {
         $.post("https://api.mailpro.com/v2/email/add.xml", {
           IDClient: "155853",
@@ -383,7 +382,6 @@ var formManagement = {
           EmailList: email + ",,," + lang
         });
       }
-      */
 
       // Put the results in a div
       posting.done(function () {
