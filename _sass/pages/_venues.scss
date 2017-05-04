@@ -144,6 +144,9 @@ html .hero-discover {
 #map {
     height: 400px;
     color: $gray-text;
+    a{
+        color: $gray-text;
+    }
 }
 
 .gm-style {

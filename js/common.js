@@ -254,7 +254,6 @@ var navHover = {
       .mouseenter(function () {
         $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
         $(this).addClass('w--current');
-        console.log($(this).attr('href'));
       })
       .mouseleave(function () {
         $(".nav_link.w--current").removeClass('w--current');
@@ -385,10 +384,10 @@ var formManagement = {
 
       // Put the results in a div
       posting.done(function () {
-        $('.w-form-done').show();
+        $('.success').show();
       });
       posting.fail(function () {
-        $('.w-form-fail').show();
+        $('.error').show();
       });
 
     });
