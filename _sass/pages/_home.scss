@@ -3,6 +3,7 @@ html .hero {
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
+    height: 800px;
     @media (min-width: 2121px) {
         background-position-y: -400px;
     }
@@ -26,6 +27,9 @@ html .hero {
     }
     @media (max-width: 650px) {
         background-position-x: -1000px;
+    }
+    @media (max-width: 479px) {
+        height: 600px;
     }
     @media (max-width: 450px) {
         background-position-x: -1200px;

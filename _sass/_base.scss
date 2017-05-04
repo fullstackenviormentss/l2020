@@ -143,6 +143,19 @@ ol {
     -webkit-appearance: button;
 }
 
+.flex {
+    @include flexbox;
+    &.vcenter {
+        @include align-items(center);
+    }
+    &.stretch {
+        @include align-items(stretch);
+    }
+    @media(max-width: 992px) {
+        @include flex-direction(column);
+    }
+}
+
 .accent {
     color: $purple-primary !important;
 }
@@ -211,19 +224,19 @@ ol {
     }
 }
 
-.flex {
-    @include flexbox;
-    &.vcenter {
-        @include align-items(center);
+@media (max-width: 991px) {
+    .h1_about_yog,
+    .about_the_yog_p,
+    .h1_newsletter_cta,
+    .marchandising_col_1,
+    .h1_news,
+    .p_news {
+        text-align: center;
     }
-    &.stretch {
-        @include align-items(stretch);
-    }
-    @media(max-width: 992px) {
-        @include flex-direction(column);
+    .marchandising_col_1 {
+        padding-top: 50px;
     }
 }
-
 
 /* Box-shadow Inset */
 
@@ -235,32 +248,5 @@ ol {
         -webkit-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
         box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-    }
-}
-
-.hero {
-    height: 800px;
-}
-
-@media (max-width: 991px) {
-    .h1_about_yog,
-    .about_the_yog_p,
-    .h1_newsletter_cta,
-    .marchandising_col_1,
-    .h1_news,
-    .p_news {
-        text-align: center;
-    }
-    .map {
-        width: 80%;
-    }
-    .marchandising_col_1 {
-        padding-top: 50px;
-    }
-}
-
-@media (max-width: 479px) {
-    .hero {
-        height: 600px;
     }
 }
