@@ -50,8 +50,6 @@ var pageLoad = {
   funcBefore: function () {
     headerSocialsManager.init();
 
-    navHover.init();
-
     titleSlider.clear();
     scrollEffects.clear();
 
@@ -64,6 +62,8 @@ var pageLoad = {
     scrollEffects.clear();
     titleSlider.init();
     scrollEffects.init();
+
+    navHover.init();
 
     flipIcons.init();
 
@@ -254,6 +254,7 @@ var navHover = {
       .mouseenter(function () {
         $(".nav_link.w--current").removeClass('w--current').addClass('w--page-current');
         $(this).addClass('w--current');
+        console.log($(this).attr('href'));
       })
       .mouseleave(function () {
         $(".nav_link.w--current").removeClass('w--current');
