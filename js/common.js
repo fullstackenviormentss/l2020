@@ -385,9 +385,11 @@ var formManagement = {
       // Put the results in a div
       posting.done(function () {
         $('.success').show();
+        console.log('success');
       });
       posting.fail(function () {
         $('.error').show();
+        console.log('error');
       });
 
     });
