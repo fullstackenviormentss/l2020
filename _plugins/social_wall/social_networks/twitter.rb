@@ -98,8 +98,8 @@ class TW
     photo['width'] = data[:sizes][size][:w].to_i
     photo['height'] = data[:sizes][size][:h].to_i
     photo['format'] = photo_format(photo['width'], photo['height'])
-    photo['src'] = data[:media_url] + ":#{size}"
-    photo['src_full'] = data[:media_url]
+    photo['src'] = data[:media_url_https] + ":#{size}"
+    photo['src_full'] = data[:media_url_https]
 
     return photo
   end
@@ -130,7 +130,7 @@ class TW
     video['provider'] = 'twitter'
     video['source'] = parse_video(selected_video[:url])
 
-    video['picture'] = @post[:extended_entities][:media][0][:media_url]
+    video['picture'] = @post[:extended_entities][:media][0][:media_url_https]
 
     return video
   end
@@ -143,13 +143,13 @@ class TW
   end
 
   def has_int_quote_photo?
-    defined?(@post[:quoted_status][:extended_entities][:media][0][:media_url]) && @post[:quoted_status][:extended_entities][:media][0][:type] == 'photo'
+    defined?(@post[:quoted_status][:extended_entities][:media][0][:media_url_https]) && @post[:quoted_status][:extended_entities][:media][0][:type] == 'photo'
   end
 
   def int_quote
     quote = Hash.new
     quote['link'] = @post[:entities][:urls][0][:expanded_url] # Get the last url (usually the twitter status)
-    quote['picture'] = has_int_quote_photo? ? "#{@post[:quoted_status][:extended_entities][:media][0][:media_url]}:small" : get_url_best_picture(quote['link'])
+    quote['picture'] = has_int_quote_photo? ? "#{@post[:quoted_status][:extended_entities][:media][0][:media_url_https]}:small" : get_url_best_picture(quote['link'])
     quote['source'] = @post[:quoted_status][:user][:screen_name]
     quote['title'] = @post[:quoted_status][:user][:name]
     quote['description'] = parse_message(@post[:quoted_status][:full_text])
@@ -184,7 +184,7 @@ class TW
     quote['link'] = @post[:entities][:urls][0][:expanded_url]
 
     # Use the fetched Twitter picture if existing
-    quote['picture'] = has_photo? ? @post[:extended_entities][:media][0][:media_url] + ":small" : page.images.best
+    quote['picture'] = has_photo? ? @post[:extended_entities][:media][0][:media_url_https] + ":small" : page.images.best
 
     quote['source'] = page.host
     quote['title'] = page.best_title
