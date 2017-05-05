@@ -24,7 +24,8 @@ layout: default
     </p>
     <div class="row-sites row">
       <div class="col-md-3 col-sm-6 come-in-module">
-        <a class="sqr" title="{{section1.titreSite1}}" href="#!">
+        <a class="sqr" title="{{section1.titreSite1}}" href='{% if site.lang == "fr" %} {{ section1.lienSite1 }} {% elsif site.lang == "de" %} {{ section1.lienSite1De }}
+                {% else %} {{ section1.lienSite1En }} {% endif %}'>
           <div class="inside">
             <div class="hover">
               <div class="title">

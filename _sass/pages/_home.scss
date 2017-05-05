@@ -129,6 +129,7 @@ html .hero {
     text-align: center; // First olympic banner
     .container>img {
         padding-bottom: 40px;
+        width:325px;
     }
     .sponsors-list {
         padding-left: 0;
@@ -138,8 +139,5 @@ html .hero {
         vertical-align: middle;
         margin: 0 34px 30px;
         width: 140px;
-        @media (max-width: 479px) {
-            margin: 0 10px 30px;
-        }
     }
 }
