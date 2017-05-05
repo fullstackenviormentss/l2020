@@ -216,8 +216,9 @@ class TW
 
   def user_info
     user = Hash.new
+    puts @post[:user]
     user['username'] = @post[:user][:screen_name]
-    user['profile_image'] = parse_profile_image(@post[:user][:profile_image_url])
+    user['profile_image'] = parse_profile_image(@post[:user][:profile_image_url_https])
     user['url'] = "http://twitter.com/#{@post[:user][:screen_name]}"
     user['name'] = @post[:user][:name]
 
