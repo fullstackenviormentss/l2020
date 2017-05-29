@@ -386,6 +386,9 @@ var formManagement = {
       // Put the results in a div
       posting.done(function () {
         $('.form-done').show();
+        $('input[type="submit"]').prop('disabled',true);
+        $('input[type="submit"]').val('✓');
+        $('input[type="submit"]').addClass('submitted');
         console.log('success');
       });
       posting.fail(function () {
