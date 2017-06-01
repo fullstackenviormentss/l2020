@@ -30,6 +30,9 @@ class FB
 
     posts_FB = FB.method(meth).call(username, amount)
 
+    # Remove event for the moment cause no large image is available easily
+    posts_FB = posts_FB.select{ |post| post['type'] != 'event'}
+
     return posts_FB.map{ |post| FB.new(post, post['created_time']) }
   end
 
