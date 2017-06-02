@@ -112,9 +112,11 @@ class INSTA
   def user_info
     user = Hash.new
     user['username'] = @post['user']['username']
-    user['profile_image'] = @post['user']['profile_picture']
+    user['profile_image'] = @post['user']['profile_picture'].sub(/^http:\/\/([a-z0-9._\/-]+)/i, 'https://\1');
     user['url'] = "https://www.instagram.com/#{user['username']}"
     user['name'] = @post['user']['full_name']
+
+    puts user
 
     return user
   end
