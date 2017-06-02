@@ -55,7 +55,6 @@ class FB
 
     post['social_network'] = 'facebook'
 
-
     post['photo'] = photo if has_photo?
     post['video'] = video if has_video?
 

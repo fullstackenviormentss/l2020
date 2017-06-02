@@ -80,13 +80,16 @@ layout: default
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
-         {% social_wall
-
+        {% social_wall
+        
             fb_username:lausanne2020,
-            fb_amount:5,
+            fb_amount:3,
 
             tw_username:lausanne2020,
-            tw_amount:4
+            tw_amount:3,
+
+            insta_username:2041300508,
+            insta_amount:3
         
         %}
     </div>
@@ -96,7 +99,7 @@ layout: default
         <div class="newsletter-text">
             <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
         </div>
-        <form class="newsletter_cta_form form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="#" netlify>
+        <form class="newsletter_cta_form form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-test-newsletter" action="#" netlify>
             <div class="newsletter-form-adress">
                 <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
                     required="required" type="email">
