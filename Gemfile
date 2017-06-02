@@ -18,9 +18,11 @@ gem "koala", "~> 2.2"
 
 gem "twitter", "~> 6.0.0"
 
+gem "hashie"
+
 gem "sinatra"
 
-gem "instagram"
+gem "instagram", :git => 'git://github.com/gunnertech/instagram-ruby-gem.git'
 
 gem "mini_magick"
 
