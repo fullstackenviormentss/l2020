@@ -50,9 +50,11 @@
         }
         >video.fullscreen {
             object-fit: contain;
-            width: 100%; // Important for chrome
-            height: 100%; // Important for chrome
             font-family: 'object-fit: contain;'
+        }
+        // Random Issue on chrome
+        >video::-webkit-media-controls-fullscreen-button {
+            display: none;
         }
         /* Social_wall Blockquote */
         blockquote {

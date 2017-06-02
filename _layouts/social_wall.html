@@ -21,7 +21,7 @@
       
         {% if video.provider == "facebook" or video.provider == "twitter" or video.provider == "instagram" %}
 
-          <video preload="auto" poster="{{ video.picture }}">
+          <video preload="auto" poster="{{ video.picture }}" controlsList="nodownload">
             <source src="{{ video.source}}" type="video/mp4"> Your browser does not support the video tag.
           </video>
 
