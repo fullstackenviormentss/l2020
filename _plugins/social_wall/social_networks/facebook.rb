@@ -30,9 +30,6 @@ class FB
 
     posts_FB = FB.method(meth).call(username, amount)
 
-    # Remove event for the moment cause no large image is available easily
-    posts_FB = posts_FB.select{ |post| post['type'] != 'event'}
-
     return posts_FB.map{ |post| FB.new(post, post['created_time']) }
   end
 
@@ -44,7 +41,7 @@ class FB
     @graph.get_object(object)
   end
 
-  # Get picture with the following standard size: thumbnail, album, normal
+  # Get picture with the following standard size: small, normal, album, large, square
   # Don't return width & height data
   def self.get_picture_data(object_id, size)
     @graph.get_picture_data(object_id, 'type' => size)
@@ -76,18 +73,20 @@ class FB
   # Photo
 
   def has_photo?
-    @post['type'] == 'photo'
+    @post['type'] == 'photo' || @post['type'] == 'event'
   end
 
   def photo
     data = FB.get_object(@post['object_id'])
-    src_full = FB.get_picture_data(@post['object_id'], 'normal')['data']['url']
+    src_full = FB.get_picture_data(@post['object_id'], 'normal')['data']['url'] if @post['type'] == 'photo'
+    src_full = FB.get_object(@post['object_id'] +'?fields=cover')['cover']['source'] if @post['type'] == 'event'
 
     photo = Hash.new
     photo['width'] = data['width'].to_i
     photo['height'] = data['height'].to_i
     photo['format'] = photo_format(photo['width'], photo['height'])
     photo['src'] = data['source']
+    photo['src'] = src_full if @post['type'] == 'event'
     photo['src_full'] = src_full
 
     return photo
