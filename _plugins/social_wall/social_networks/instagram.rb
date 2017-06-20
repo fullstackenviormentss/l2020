@@ -116,8 +116,6 @@ class INSTA
     user['url'] = "https://www.instagram.com/#{user['username']}"
     user['name'] = @post['user']['full_name']
 
-    puts user
-
     return user
   end
 

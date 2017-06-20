@@ -33,10 +33,16 @@ pages:
   jobs:
     title: Emplois
     texte: |
-            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020. 
+            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
+    texteEmpty: |
+            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
             Aucun poste n’est actuellement à pourvoir au sein du comité d’organisation.
+    from: A partir du
+    readFile: En savoir plus
   about:
-    title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
+    title1: |
+            Les Jeux Olympiques de la Jeunesse : 
+            Concourir, apprendre et partager !
     texte1: |
             Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans.
             

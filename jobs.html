@@ -1,10 +1,50 @@
----
+--- 
 layout: default
 ---
+
 <div class="jobs">
 	<div class="container">
 		<h1>{% t pages.jobs.title %}</h1>
 		{% capture text %}{%t pages.jobs.texte %}{% endcapture %}
-		<p>{{ text | markdownify | newline_to_br }}</p>
+
+		{% if site.data.contentful.spaces.jobs.jobs == "" or site.data.contentful.spaces.jobs.jobs == nil  %}
+			{% capture textEmpty %}{%t pages.jobs.texteEmpty %}{% endcapture %}
+			<p>{{ textEmpty | markdownify | newline_to_br }}</p>
+		{% else %}
+			<p>{{ text | markdownify | newline_to_br }}</p>
+		{%endif %}
+		
+		{% for new in site.data.contentful.spaces.jobs.jobs %}
+
+            {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
+            {% capture link %}{{new.titreEn}}{% endcapture %}
+
+            <div class="come-in-module col-sm-6 col-md-4">
+                <a class="wrap_a" href="{{ new.file.url }}">
+                    <div class="new col-md-12">
+                        <h1 class="h1_news">
+                            {% if site.lang == "fr" %} {{ new.title }} {% elsif site.lang == "de" %} {{ new.titleDe }} {% else %} {{ new.titleEn }} {%
+                            endif %}
+                        </h1>
+						<p class="p_news p_news_from">
+							{% t pages.jobs.from %} {{new.fromDate | date_to_xmlschema | date: "%d.%m.%Y"}}
+						</p>
+                        <p class="p_news">
+                            {% if site.lang == "fr" %} {{ new.description | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                            {% elsif site.lang == "de" %} {{ new.descriptionDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+                            {% else %} {{ new.descriptionEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
+                        </p>
+
+                    </div>
+                </a>
+                <div class="new_meta">
+					<p class="news_date">
+						<time pubdate datetime="{{new.publishDate | date_to_xmlschema}}" title="{{new.publishDate | date_to_xmlschema | date: '%d.%m'}}">{{new.publishDate | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+                        <a target="_blank" rel="noopener noreferrer" href="{{ new.file.url }}">{% t pages.jobs.readFile %}</a>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+
 	</div>
 </div>

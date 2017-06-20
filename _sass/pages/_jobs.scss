@@ -1,7 +1,14 @@
-.jobs{
-    p{
-	    margin-top: 20px;
-		font-size: 19px;
-		line-height: 42px;
+.jobs {
+    .container>p {
+        margin-top: 20px;
+        font-size: 19px;
+        line-height: 42px;
+    }
+    .new {
+        height: 300px;
+    }
+    .p_news_from {
+        padding-top: 0;
+        margin-top: 0;
     }
 }

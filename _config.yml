@@ -66,6 +66,12 @@ contentful:
         cda_query:
           content_type: news
           order: -fields.date
+    - jobs: # Jekyll _data folder identifier - Required
+        space: ENV_CONTENTFUL_SPACE_ID # Required
+        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
+        cda_query:
+          content_type: jobs
+          order: -fields.publishDate
 
 page_gen:
   - data: 'contentful.spaces.news.news'

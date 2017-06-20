@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/gunnertech/instagram-ruby-gem.git
+  revision: 44cbace8f4cf72e3794fe8af388dc5ce79b8456c
+  specs:
+    instagram (1.1.6)
+      faraday (>= 0.7)
+      faraday_middleware (>= 0.8)
+      hashie (>= 0.4.0)
+      multi_json (~> 1.0, >= 1.0.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -28,6 +38,7 @@ GEM
     ffi (1.9.18)
     ffi (1.9.18-x64-mingw32)
     forwardable-extended (2.6.0)
+    hashie (3.5.5)
     http (2.2.1)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
@@ -37,10 +48,6 @@ GEM
       domain_name (~> 0.5)
     http-form_data (1.0.1)
     http_parser.rb (0.6.0)
-    instagram (0.3.2)
-      addressable
-      nibbler (>= 1.2.0)
-      yajl-ruby
     jekyll (3.4.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -91,7 +98,6 @@ GEM
     multipart-post (2.0.0)
     naught (1.1.0)
     nesty (1.0.2)
-    nibbler (1.3.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     nokogiri (1.7.0.1-x64-mingw32)
@@ -132,7 +138,6 @@ GEM
       unf_ext
     unf_ext (0.0.7.2)
     unf_ext (0.0.7.2-x64-mingw32)
-    yajl-ruby (1.3.0)
 
 PLATFORMS
   ruby
@@ -140,7 +145,8 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
-  instagram
+  hashie
+  instagram!
   jekyll (= 3.4.3)
   jekyll-contentful-data-import
   jekyll-feed (~> 0.6)
