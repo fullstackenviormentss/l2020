@@ -123,7 +123,7 @@ pages:
         number: "13"
         text: Jours de compétition et festivals
       fact5: 
-        number: "3000" 
+        number: "3’000" 
         text: Bénévoles
   contact:
     title: Contact
