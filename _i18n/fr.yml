@@ -1,5 +1,5 @@
 meta: 
-  desc: "Lausanne 2020 – les 3ème Jeux Olympiques de la Jeunesse d’hiver ont lieu du 10 au 19 janvier 2020. Les sites de compétition sont : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets et St. Moritz"
+  desc: "Lausanne 2020 – les 3ème Jeux Olympiques de la Jeunesse d’hiver ont lieu du 10 au 22 janvier 2020. Les sites de compétition sont : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets et St. Moritz"
 pages:
   index:
     title1:
@@ -58,7 +58,7 @@ pages:
             - <b>Fédérer et faire participer</b> toute la région, l’ensemble du pays ainsi que la France voisine autour d’un événement rassembleur et diffuseur d’énergie positive.
             - <b>Promouvoir</b> la paix entre les peuples en créant un environnement propice au « vivre ensemble ».
 
-            <span class="important-dates">Lausanne 2020 se déroulera du 10 au 19 janvier 2020 !</span>
+            <span class="important-dates">Lausanne 2020 se déroulera du 10 au 22 janvier 2020 !</span>
     sports_title: Les sports
     sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
     sports:
@@ -111,7 +111,7 @@ pages:
     facts:
       title: Lausanne 2020 en chiffres
       fact1: 
-        number: "1200" 
+        number: "1’880" 
         text: Athlètes entre 15 et 18 ans
       fact2: 
         number: "70" 
@@ -120,10 +120,10 @@ pages:
         number: 3ème 
         text: Jeux Olympiques de la Jeunesse d’hiver
       fact4: 
-        number: "10"
+        number: "13"
         text: Jours de compétition et festivals
       fact5: 
-        number: "3000" 
+        number: "3’000" 
         text: Bénévoles
   contact:
     title: Contact

@@ -1,5 +1,5 @@
 meta: 
-  desc: "Lausanne 2020 – the 3rd Winter Youth Olympic Games will be held from January 10th to 19th 2020. The competition venues are : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets and St. Moritz"
+  desc: "Lausanne 2020 – the 3rd Winter Youth Olympic Games will be held from January 10th to 22nd 2020. The competition venues are : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets and St. Moritz"
 pages:
   index:
     title1:
@@ -58,7 +58,7 @@ pages:
             - <b>Unite and involve</b> the whole region, the country of Switzerland, as well as neighboring France, to create a unifying event that spreads positivity.
             - <b>Promote</b> values of peace between people by creating an environment conducive to “living together”.
 
-            <span class="important-dates">Lausanne 2020 will take place from January 10th to 19th , 2020.</span>
+            <span class="important-dates">Lausanne 2020 will take place from January 10th to 22nd , 2020.</span>
     sports_title: Sports
     sports_texte: "The sports programme of the 3rd edition of the Winter Youth Olympic Games is similar to the programme of the Winter Olympic Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
     sports:
@@ -111,7 +111,7 @@ pages:
     facts:
       title: Lausanne 2020 in numbers
       fact1: 
-        number: 1’200 
+        number: 1’880 
         text: Athletes between 15 and 18 years
       fact2: 
         number: "70" 
@@ -120,7 +120,7 @@ pages:
         number: 3rd 
         text: Winter Youth Olympic Games
       fact4: 
-        number: "10" 
+        number: "13" 
         text: Days of competition and festivals
       fact5: 
         number: 3’000 
