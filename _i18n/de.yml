@@ -111,7 +111,7 @@ pages:
     facts:
       title: Lausanne 2020 in Zahlen
       fact1: 
-        number: 1’200 
+        number: 1’880 
         text: Athleten im Alter von 15 bis 18 Jahren
       fact2: 
         number: "70" 
@@ -120,7 +120,7 @@ pages:
         number: "3." 
         text: Olympische Jugend-Winterspiele
       fact4: 
-        number: "10"
+        number: "13"
         text: Tage Wettkämpfe und Festivitäten
       fact5: 
         number: 3’000 
