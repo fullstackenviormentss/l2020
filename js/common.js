@@ -150,8 +150,6 @@ var flipIcons = {
    Hide show socials icons on header
    =========================================== */
 
-/* ===========================================
-
 var headerSocialsManager = {
   init: function () {
     $(window).scroll(function () {
@@ -168,8 +166,6 @@ var headerSocialsManager = {
     })
   }
 };
-
-   =========================================== */
 
 var scrollEffects = {
   slideInMods: $(".come-in-module"),
