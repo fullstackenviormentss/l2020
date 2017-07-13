@@ -25,6 +25,8 @@ pages:
     shop:
       title: Tous les produits Lausanne 2020 bientôt disponibles!
       button: Shop!
+    socialwall:
+      title: Social Media Feed
     newsletter:
       part1: Faites partie de l’aventure Lausanne 2020 et recevez les dernières nouvelles !
       part2: Lausanne2020!
