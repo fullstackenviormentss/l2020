@@ -9,23 +9,6 @@ layout: default
         <h1 class="the_claim">{% t pages.index.title3.part1 %}<br/><span class="accent">{% t pages.index.title3.part2 %}</span></h1>
     </div>
 </div>
-<div class="about_yog_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="h1_about_yog">
-                    {% capture about_title %}{% t pages.index.about.title %}{% endcapture %} {{ about_title | newline_to_br }}
-                </h1>
-            </div>
-            <div class="col-md-8">
-                <p class="about_the_yog_p">
-                    {% t pages.index.about.texte %}
-                    <strong> <a href="about">{% t pages.index.about.more %}</a></strong>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="news_section">
     <div class="container">
         <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>
@@ -62,6 +45,23 @@ layout: default
                 </div>
             </div>
             {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="about_yog_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h1 class="h1_about_yog">
+                    {% capture about_title %}{% t pages.index.about.title %}{% endcapture %} {{ about_title | newline_to_br }}
+                </h1>
+            </div>
+            <div class="col-md-8">
+                <p class="about_the_yog_p">
+                    {% t pages.index.about.texte %}
+                    <strong> <a href="about">{% t pages.index.about.more %}</a></strong>
+                </p>
+            </div>
         </div>
     </div>
 </div>
