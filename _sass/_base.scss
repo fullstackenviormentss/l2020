@@ -259,3 +259,20 @@ input[type=submit]{
         box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
     }
 }
+
+/* More news link */
+
+.more-news-button {
+   text-align: right;
+   margin-right: 15px;
+}
+
+.more-news-btn {
+   padding: 9px 15px;
+   background-color: #ce0071;
+   color: white;
+   border: 0;
+   line-height: inherit;
+   text-decoration: none;
+   border-radius: 0;
+}
