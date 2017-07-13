@@ -25,6 +25,8 @@ pages:
     shop:
       title: All the Lausanne 2020 goodies available soon!
       button: Shop!
+    socialwall:
+      title: Social Media Feed
     newsletter:
       part1: Be part of the Lausanne 2020 adventure and receive the latest news!
       part2: Lausanne2020!
