@@ -117,17 +117,18 @@ pages:
         number: 1’880 
         text: Athleten im Alter von 15 bis 18 Jahren
       fact2: 
-        number: "70" 
+        number: "+70" 
         text: Nationen
       fact3: 
-        number: "3." 
-        text: Olympische Jugend-Winterspiele
+        number: "8 Sportarten" 
+        text: 16 Sportdisziplinen und 81 Wettkämpfe
       fact4: 
-        number: "13"
-        text: Tage Wettkämpfe und Festivitäten
-      fact5: 
-        number: 3’000 
+        number: "+3000"
         text: Volunteers
+      fact5: 
+        number: Gleichstellung 
+        text: der Geschlechter
+    singleevent: 3 Regionen - 2 Länder - 1 einzigartiges Event
   contact:
     title: Kontakt
     form:
