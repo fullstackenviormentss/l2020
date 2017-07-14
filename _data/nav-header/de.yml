@@ -2,8 +2,7 @@
   path: "/de/"
 - title: "News"
   path: "/de/news"
-- title: "Über uns"
-  path: "/de/about"
 - title: "Wettkampfstätten"
   path: "/de/venues"
-
+- title: "Über uns"
+  path: "/de/about"
