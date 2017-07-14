@@ -11,6 +11,11 @@ layout: default
       <div class="about-image">
         {% capture text %}{%t pages.about.texte1 %}{% endcapture %}
         <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+        <div class="about-more-button">
+            <a class="about-more-btn" target="_blank" rel="noopener noreferrer" href="https://www.olympic.org/youth-olympic-games">
+                {% t pages.about.more %}
+            </a>
+        </div>
       </div>
     </div>
   </div>
