@@ -61,7 +61,7 @@ pages:
             Valoriser et responsabiliser la jeunesse en lui permettant de devenir une ambassadrice des valeurs positives du sport, d’acquérir de nouveaux talents et de s’accomplir en devenant les leaders de demain. Ceci en faisant des Jeux Olympiques de la Jeunesse un laboratoire d’innovation; incubateur d’idées pour la jeunesse et en puisant dans l’héritage et les atouts uniques de la Suisse en termes de formation, de culture et d’innovation.
 
             <span class="important-dates">Lausanne 2020 se déroulera du 10 au 22 janvier 2020 !</span>
-    sports_title: Les sports
+    sports_title: Les disciplines sportives
     sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
     sports:
       biathlon:
@@ -109,6 +109,7 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/fr/surf-des-neiges"
+    sports_new: Pour la première fois dans l’histoire des Jeux Olympiques, le ski alpinisme fera également partie du programme olympique.
     sports_fin: Découvrez les sites de compétition <b><a href="venues" class="link_site">ici</a></b>
     facts:
       title: Lausanne 2020 en chiffres
