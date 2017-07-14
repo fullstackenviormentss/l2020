@@ -364,35 +364,35 @@ layout: default
         <div class="fact">
           <div class="wrap_facts">
             <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact1.number %}</h1>
-            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/maillot_white.png" srcset="/images/about/facts/maillot_white-p-500x500.png 500w, /images/about/facts/maillot_white-p-800x800.png 800w" width="130">
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/Athlete.png" width="130">
             <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact1.text %}</h1>
           </div>
         </div>
         <div class="fact">
           <div class="wrap_facts">
             <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact2.number %}</h1>
-            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/globe_white.png" srcset="/images/about/facts/globe_white-p-500x500.png 500w, /images/about/facts/globe_white-p-800x800.png 800w" width="130">
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/Nation.png" width="130">
             <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact2.text %}</h1>
           </div>
         </div>
         <div class="fact">
           <div class="wrap_facts">
             <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact3.number %}</h1>
-            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/boule_neige_white.png" srcset="/images/about/facts/boule_neige_white-p-500x500.png 500w, /images/about/facts/boule_neige_white-p-800x800.png 800w" width="130">
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/Medal.png" width="130">
             <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact3.text %}</h1>
           </div>
         </div>
         <div class="fact">
           <div class="wrap_facts">
             <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact4.number %}</h1>
-            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/calendrier.png" width="130">
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/Volunteer.png" width="130">
             <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact4.text %}</h1>
           </div>
         </div>
         <div class="fact">
           <div class="wrap_facts">
             <h1 class="h1_facts" data-ix="fadeindown">{% t pages.about.facts.fact5.number %}</h1>
-            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/benevole.png" width="130">
+            <img class="img_facts" data-ix="fadeinscaleup" sizes="130px" src="/images/about/facts/Equality.png" width="130">
             <h1 class="h2_facts" data-ix="fadeintop">{% t pages.about.facts.fact5.text %}</h1>
           </div>
         </div>
@@ -401,31 +401,9 @@ layout: default
 </div>
 <div class="key_numbers">
   <div class="container fade-in-module">
-    <h1>
-    {% assign keyn = site.data.contentful.spaces.keyNumbers.keyNumbers[0]%}
-    {% if site.lang == "fr" %}
-      {{ keyn.titre }}
-    {% elsif site.lang == "en" %}
-      {{ keyn.titreEn }}
-    {% else %}
-      {{ keyn.titreDe }}
-    {% endif %}
-    </h1>
-    <div class="row_about_yog_2 row">
-      <div class="col-md-7">
-        <p class="key_numbers_text">
-        {% if site.lang == "fr" %}
-          {{ keyn.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-        {% elsif site.lang == "en" %}
-          {{ keyn.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-        {% else %}
-          {{ keyn.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-        {% endif %}
-        </p>
-      </div>
-      <div class="col-md-5 key_numbers_img">
-        <img src="{{ keyn.image.url }}?w=750&h=500&q=70">
-      </div>
+    <h1>{% t pages.about.singleevent %}</h1>
+    <div class="singleevent_img">
+        <img src="/images/about/venue_plan_juin2017_web.png">
     </div>
   </div>
 </div>
