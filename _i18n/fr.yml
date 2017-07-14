@@ -117,17 +117,18 @@ pages:
         number: "1’880" 
         text: Athlètes entre 15 et 18 ans
       fact2: 
-        number: "70" 
+        number: "+70" 
         text: Nations
       fact3: 
-        number: 3ème 
-        text: Jeux Olympiques de la Jeunesse d’hiver
+        number: "8 sports"
+        text: 16 disciplines et 81 épreuves
       fact4: 
-        number: "13"
-        text: Jours de compétition et festivals
-      fact5: 
-        number: "3’000" 
+        number: "+3000"
         text: Bénévoles
+      fact5: 
+        number: EGALITE 
+        text: DES GENRES
+    singleevent: 3 régions – 2 pays – 1 événement unique
   contact:
     title: Contact
     form:
