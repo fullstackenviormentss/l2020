@@ -61,7 +61,7 @@ pages:
             Valorize and give responsibility to youth by providing them an opportunity to become ambassadors of positive sports’ values, to acquire new talents and to reach self-accomplishment by becoming the tomorrow’s leaders. All this while making the Youth Olympic Games a creative laboratory; incubator of ideas of youth, for youth, while drawing inspiration from Switzerland’s heritage and unique assets in education, culture and innovation.
 
             <span class="important-dates">Lausanne 2020 will take place from January 10th to 22nd , 2020.</span>
-    sports_title: Sports
+    sports_title: The sport disciplines
     sports_texte: "The sports programme of the 3rd edition of the Winter Youth Olympic Games is similar to the programme of the Winter Olympic Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
     sports:
       biathlon:
@@ -109,6 +109,7 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
+    sports_new: For the first time in the history of the Olympic Games, Ski Mountaineering will be part of the Olympic programme !
     sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
     facts:
       title: Lausanne 2020 in numbers
