@@ -48,36 +48,6 @@
 }
 
 
-/* Sports */
-
-.sports {
-    .pictos-grp {
-        margin-bottom: 20px;
-        @media (max-width: 991px) {
-            div {
-                text-align: center;
-            }
-        }
-        @media (max-width: 600px) {
-            min-height: 200px;
-        }
-    }
-    .links_sports {
-        display: inline-block;
-        margin-top: 10px;
-        font-size: 16px;
-        text-decoration: none;
-        &:hover{
-            text-decoration:underline;
-        }
-    }
-}
-
-.about_the_yog_p.descr_pictos {
-    text-align: center;
-}
-
-
 /* Facts */
 
 @media (max-width: 992px) {
