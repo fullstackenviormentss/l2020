@@ -129,6 +129,8 @@ pages:
         number: Gleichstellung 
         text: der Geschlechter
     singleevent: 3 Regionen - 2 Länder - 1 einzigartiges Event
+    heritage:
+      title: Das Vermächtnis von Lausanne 2020
   contact:
     title: Kontakt
     form:
