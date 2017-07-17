@@ -172,11 +172,11 @@ input[type=submit]{
 
 /* --- Sections --- */
 
+.facts,
 .social_feed_section,
 .about_yog_1,
 .jobs,
-.sports,
-.key_numbers {
+.sports {
     background-color: $purple-primary;
     background-image: url('../images/layout/bkg_magenta.svg');
     background-position: 50% 50%;
@@ -184,13 +184,14 @@ input[type=submit]{
     color: #fff;
 }
 
-.facts,
+
 .newsletter_cta,
 .about_yog_2,
 .single-news-content header,
 .sites,
 .news-page,
-.news_section {
+.news_section,
+.key_numbers {
     background-color: $blue-primary;
     background-image: url('../images/layout/bkg_blue.svg');
     background-position: 0px 0px;
