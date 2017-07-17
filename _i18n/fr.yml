@@ -129,6 +129,8 @@ pages:
         number: EGALITE 
         text: DES GENRES
     singleevent: 3 régions – 2 pays – 1 événement unique
+    heritage:
+      title: L'héritage Lausanne 2020
   contact:
     title: Contact
     form:
