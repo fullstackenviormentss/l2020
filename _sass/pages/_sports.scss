@@ -1,52 +1,6 @@
-.sports,
-.key_numbers {
-    p {
-        margin-bottom: 50px;
-    }
+.sports {
+    margin-top: 150px;
 }
-
-
-/* about_yog */
-
-.about_yog {
-    ul li {
-        margin-top: 0;
-        font-size: 19px;
-        line-height: 27px;
-        text-align: justify;
-    }
-    .important-dates {
-        font-size: 22px;
-        font-weight: bold;
-    }
-    .about-content {
-        @include flex-wrap(wrap);
-        .about-text,
-        .about-image {
-            @include flex-basis(50%);
-            @media (max-width: 768px) {
-                @include flex-basis(100%);
-            }
-        }
-    }
-    &.about_yog_1 {
-        .about-image {
-            padding-left: 10px;
-        }
-        .about-text {
-            padding-right: 10px;
-        }
-    }
-    &.about_yog_2 {
-        .about-image {
-            padding-left: 15px;
-        }
-        .about-text {
-            padding-right: 2px;
-        }
-    }
-}
-
 
 /* Sports */
 
@@ -71,63 +25,4 @@
             text-decoration:underline;
         }
     }
-}
-
-.about_the_yog_p.descr_pictos {
-    text-align: center;
-}
-
-
-/* Facts */
-
-@media (max-width: 992px) {
-    .facts-entities {
-        @include flex-wrap(wrap);
-    }
-}
-
-.fact {
-    margin-top: 20px;
-    @include flex-basis(0);
-    @include flex-grow(1);
-    @media (max-width: 992px) {
-        @include flex-basis(100%);
-    }
-}
-
-@media (min-width: 768px) {
-    .fact:nth-child(odd) .wrap_facts h1 {
-        padding-top: 40px;
-    }
-}
-
-.h1_facts {
-    margin-bottom: 0px;
-    font-family: Sanchez, sans-serif;
-}
-
-.h2_facts {
-    margin-top: 0px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.h2_facts.fade-in-top {
-    padding-top: 10px !important;
-}
-
-.img_facts {
-    display: block;
-    margin-top: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-bottom: 20px;
-}
-
-
-/* Key Numbers */
-
-.singleevent_img {
-    padding-top: 20px;
-    text-align: center;
 }
