@@ -129,6 +129,8 @@ pages:
         number: GENDER 
         text: EQUALITY
     singleevent: 3 regions - 2 countries - 1 single event
+    heritage:
+      title: The heritage of Lausanne 2020
   contact:
     title: Contact
     form:
