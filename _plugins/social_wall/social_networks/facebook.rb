@@ -35,7 +35,7 @@ class FB
   end
 
   def self.connections(username, count)
-    @graph.get_connections(username,'posts',{limit: count, fields: ['object_id', 'message', 'message_tags', 'id','type', 'from', 'picture', 'link', 'created_time', 'status_type', 'caption', 'name', 'description']})
+    @graph.get_connections(username,'posts',{limit: count, fields: ['object_id', 'message', 'message_tags', 'source', 'id','type', 'from', 'picture', 'link', 'created_time', 'status_type', 'caption', 'name', 'description']})
   end
 
   def self.get_object(object)
