@@ -59,7 +59,7 @@ class INSTA
   # Photo
 
   def has_photo?
-    @post['type'] == 'image'
+    @post['type'] == 'image' || @post['type'] == 'carousel'
   end
 
   def photo
