@@ -45,6 +45,21 @@ html .hero-discover {
     margin-top: 150px;
 }
 
+#inside:hover + #box {
+    display:block;
+}
+
+#box {
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-align: center;
+    background: rgba(206, 0, 113, 0.78);
+    display: none;
+}
+
 /* Sites square hover */
 
 .sqr {
