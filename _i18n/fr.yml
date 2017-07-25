@@ -130,7 +130,30 @@ pages:
         text: DES GENRES
     singleevent: 3 régions – 2 pays – 1 événement unique
     heritage:
-      title: L'héritage Lausanne 2020
+      title1: L'héritage Lausanne 2020
+      txt1: |
+            Les Jeux Olympiques de la Jeunesse sont un véritable catalyseur de projet et représentent une grande chance d’investir de manière durable et intelligente dans le sport, la formation, la culture et les infrastructures. 
+            Ils laisseront un héritage positif pour la ville de Lausanne, le canton de Vaud et le sport en Suisse.
+      txt2: |
+            L’un des héritages phares du projet Lausanne 2020 est notamment l’accélération de la construction de la résidence d’étudiants VORTEX qui deviendra le Village Olympique le temps des Jeux. 
+            Ce bâtiment accueillera 1 200 étudiants universitaires et hôtes académiques et répondra à un besoin exprimé depuis de nombreuses années.
+      title2: Héritage sportif
+      txt3: |
+            Une autre construction qui verra le jour pour les Jeux Olympiques de la Jeunesse est le nouvel Espace Malley, qui abritera plusieurs installations sportives, dont une patinoire (capacité de 9 700 places), et sera à disposition des jeunes athlètes. Ce projet remédie au manque cruel d’infrastructures sportives en Suisse romande.
+      txt4: |
+            Outre ces deux constructions majeures, Lausanne 2020 permet notamment le développement des projets suivants : 
+            -	la mise en place de centres de formation pour la relève sportive en Suisse romande ;
+            -	un accord avec le département du Jura français pour l’utilisation des infrastructures sportives gratuitement pendant 20 ans ;
+            -	un soutien à la création d’un nouveau sport dans la région : le Short Track ;
+            -	un apprentissage local spécifique à la gestion du sport et à l’organisation d’événements sportif d’envergure ;
+            -	la promotion d’une nouvelle génération de managers de sport.
+      txt5: "D’autre part, des projets concrets de promotion de sports d’hiver pour tous sont également en cours."
+      title3: Héritage éducatif
+      txt6: |
+            L’héritage éducatif de Lausanne 2020 va se traduire avec le fort partenariat engagé avec l’Université de Lausanne (UNIL), l’Ecole Polytechnique Fédérale (EPFL) et l’Ecole Hôtelière de Lausanne (EHL) par l’identification et la valorisation de compétences déjà existantes et la création de nouvelles au sein de la jeunesse locale.
+            Pour ce faire, il est donné aux jeunes l’opportunité de s’investir et d’avoir des responsabilités dans l’organisation des Jeux Olympiques de la Jeunesse.
+            Ces compétences pourront être réutilisées lors d’organisation de prochains événements sportifs internationaux qui va rejaillir durablement sur la région.
+      txt7: "De plus, cette transmission va s’étendre aux plus jeunes générations grâce aux liens tissés avec les enfants des écoles de la région."
   contact:
     title: Contact
     form:
