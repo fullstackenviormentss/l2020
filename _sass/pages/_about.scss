@@ -54,6 +54,10 @@
     .facts-entities {
         @include flex-wrap(wrap);
     }
+    .himage1, .himage2, .himage3 {
+        float: none;
+        width: 80%;
+    }
 }
 
 .fact {
@@ -100,4 +104,15 @@
 .singleevent_img {
     padding-top: 20px;
     text-align: center;
+}
+
+/* Heritage */
+
+.himage1, .himage2, .himage3 {
+    width:30%;
+    float:left;
+}
+
+.himage2, .himage3 {
+    margin-left: 5%;
 }
