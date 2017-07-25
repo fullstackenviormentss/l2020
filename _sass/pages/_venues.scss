@@ -54,6 +54,9 @@ html .hero-discover {
     text-align: center;
     background-color: #ce0071;
     margin-bottom: 50px;
+    @media (max-width: 991px) {
+        font-size: 14px;
+    }
 }
 
 /* Sites square hover */
