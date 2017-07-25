@@ -54,7 +54,7 @@ html .hero-discover {
     text-align: center;
     background-color: #ce0071;
     margin-bottom: 50px;
-    @media (min-width: 1201px) {
+    @media (max-width: 1201px) {
         font-size: 14px;
     }
     @media (max-width: 991px){
