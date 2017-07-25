@@ -60,6 +60,7 @@
         margin-left: auto !important;
         margin-right: auto !important;
         margin-bottom: 20px;
+        min-height: 0 !important;
     }
 }
 
@@ -143,4 +144,10 @@
     margin-top: 10%;
     margin-right: 5%;
     min-height:500px;
+}
+
+@media (max-width: 1200px) {
+    #hListImg {
+        min-height: 600px;
+    }
 }
