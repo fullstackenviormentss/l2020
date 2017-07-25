@@ -4,6 +4,8 @@
   path: "/de/news"
 - title: "Wettkampfstätten"
   path: "/de/venues"
+- title: "Sportarten"
+  path: "/de/sports"
 - title: "Über uns"
   path: "/de/about"
 - title: "Jobs"

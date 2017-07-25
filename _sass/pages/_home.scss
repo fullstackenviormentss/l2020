@@ -1,5 +1,5 @@
 html .hero {
-    background-image: url('../images/home/lausanne_overview.jpg');
+    background-image: url('../images/home/lausanne_overview2.jpg');
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
@@ -42,7 +42,7 @@ html .hero {
 
 .the_claim {
     position: absolute;
-    color: $blue-primary;
+    color: #FFFFFF;
     width: inherit;
     font-size: 81px;
     line-height: 90px;
@@ -76,7 +76,7 @@ html .hero {
 }
 
 .h1_about_yog {
-    margin-top: 0px;
+    margin-top: 20px;
     font-size: 58px;
     line-height: 60px;
     text-transform: uppercase;
