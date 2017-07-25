@@ -5,10 +5,10 @@ layout: default
   <div class="container fade-in-module">
     <h1>{% t pages.about.title1 %}</h1>
     <div class="about-content flex vcenter">
-      <div class="about-image">
+      <div class="about-text">
         <img src="/images/about/photo_CIO.jpg" alt="">
       </div>
-      <div class="about-text">
+      <div class="about-image">
         {% capture text %}{%t pages.about.texte1 %}{% endcapture %}
         <p>{{ text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
         <div class="about-more-button">
@@ -87,7 +87,7 @@ layout: default
 <div class="heritage">
   <div class="container fade-in-module">
     <h1>{% t pages.about.heritage.title1 %}</h1>
-    <div class="about-content flex">
+    <div class="about-content">
       <div class="about-text">
         {% capture text %}{%t pages.about.heritage.txt1 %}{% endcapture %}
         <p>{{ text | markdownify }}</p>
