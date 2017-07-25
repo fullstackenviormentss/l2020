@@ -130,30 +130,26 @@ pages:
         text: der Geschlechter
     singleevent: 3 Regionen - 2 Länder - 1 einzigartiges Event
     heritage:
-      title1: L'héritage Lausanne 2020
+      title1: Das Erbe von Lausanne 2020
       txt1: |
-            Les Jeux Olympiques de la Jeunesse sont un véritable catalyseur de projet et représentent une grande chance d’investir de manière durable et intelligente dans le sport, la formation, la culture et les infrastructures. 
-            Ils laisseront un héritage positif pour la ville de Lausanne, le canton de Vaud et le sport en Suisse.
+            Die Olympischen Jugendspiele sind ein wahrhaftiger Projektkatalysator und bieten eine grossartige Gelegenheit, um auf langfristige und intelligente Weise in den Sport, die Bildung, die Kultur und die Infrastrukturen zu investieren. Sie werden ein positives Vermächtnis für die Stadt Lausanne, den Kanton Waadt und den Schweizer Sport hinterlassen.
       txt2: |
-            L’un des héritages phares du projet Lausanne 2020 est notamment l’accélération de la construction de la résidence d’étudiants VORTEX qui deviendra le Village Olympique le temps des Jeux. 
-            Ce bâtiment accueillera 1 200 étudiants universitaires et hôtes académiques et répondra à un besoin exprimé depuis de nombreuses années.
-      title2: Héritage sportif
+            Eines der bekanntesten Erben des Projekts Lausanne 2020 ist insbesondere die Beschleunigung des Baus der Studentenresidenz VORTEX, welche während den Spielen zum Olympischen Dorf wird. Dieses Gebäude wird insgesamt 1’200 Studenten und akademische Gäste beherbergen und deckt somit ein Bedürfnis, welches seit vielen Jahren vorhanden war.
+      title2: Sportliches Erbe
       txt3: |
-            Une autre construction qui verra le jour pour les Jeux Olympiques de la Jeunesse est le nouvel Espace Malley, qui abritera plusieurs installations sportives, dont une patinoire (capacité de 9 700 places), et sera à disposition des jeunes athlètes. Ce projet remédie au manque cruel d’infrastructures sportives en Suisse romande.
+            Ein weiterer Bau, welcher pünktlich zu den Olympischen Jugendspielen fertig wird ist das neue Espace Malley. Die Multisportstätte wird unter anderem eine neue Eishalle (mit einer Kapazität von 9’700 Plätzen) beinhalten, welche den Athleten im 2020 zur Verfügung stehen wird. Auch dieses Projekt kommt einem jahrelangen Mangel an Sportinfrastrukturen in der Westschweiz entgegen.
       txt4: |
-            Outre ces deux constructions majeures, Lausanne 2020 permet notamment le développement des projets suivants : 
-            -	la mise en place de centres de formation pour la relève sportive en Suisse romande ;
-            -	un accord avec le département du Jura français pour l’utilisation des infrastructures sportives gratuitement pendant 20 ans ;
-            -	un soutien à la création d’un nouveau sport dans la région : le Short Track ;
-            -	un apprentissage local spécifique à la gestion du sport et à l’organisation d’événements sportif d’envergure ;
-            -	la promotion d’une nouvelle génération de managers de sport.
-      txt5: "D’autre part, des projets concrets de promotion de sports d’hiver pour tous sont également en cours."
-      title3: Héritage éducatif
+            Nebst diesen beiden Bauten gewährleistet Lausanne 2020 die Entwicklung folgender Projekte : 
+      list1: ' -	Die Errichtung von Nachwuchstrainingszentren in der Westschweiz;'
+      list2: ' -	Ein Abkommen mit dem Departement des französischen Juras zur kostenlosen Benützung der Sportstätten in den nächsten 20 Jahren ;'
+      list3: ' -	Die Unterstützung zum Aufbau einer neuen Sportart in der Region: Short Track ;'
+      list4: ' -	Die spezifische lokale Errungenschaft von Kompetenzen zur Organisation und Koordination von sportlichen Grossanlässen ;'
+      list5: ' -	Die Förderung einer neuen Generation von Sportmanagern.'
+      list6: ' Darüber hinaus sind zahlreiche konkrete Projekte für die allgemeine Wintersportförderung im Gange.'
+      title3: Erbe auf Bildungsebene
       txt6: |
-            L’héritage éducatif de Lausanne 2020 va se traduire avec le fort partenariat engagé avec l’Université de Lausanne (UNIL), l’Ecole Polytechnique Fédérale (EPFL) et l’Ecole Hôtelière de Lausanne (EHL) par l’identification et la valorisation de compétences déjà existantes et la création de nouvelles au sein de la jeunesse locale.
-            Pour ce faire, il est donné aux jeunes l’opportunité de s’investir et d’avoir des responsabilités dans l’organisation des Jeux Olympiques de la Jeunesse.
-            Ces compétences pourront être réutilisées lors d’organisation de prochains événements sportifs internationaux qui va rejaillir durablement sur la région.
-      txt7: "De plus, cette transmission va s’étendre aux plus jeunes générations grâce aux liens tissés avec les enfants des écoles de la région."
+            Das pädagogische Erbe von Lausanne 2020 wird durch die fruchtbare Zusammenarbeit mit der Universität Lausanne (UNIL), der Eidgenössischen Technischen Hochschule Lausanne (EPFL) und der Hotelfachschule Lausanne (EHL) zum Ausdruck kommen. Bereits vorhandene Kompetenzen werden identifiziert und wertgeschätzt und neue Errungenschaften kommen dank der lokalen Jugend zustande. Dabei wird den jungen Menschen der Region die Möglichkeit gegeben, sich für die Olympischen Jugendspiele zu investieren und Verantwortung in der Organisation zu übernehmen. Diese erworbenen Fähigkeiten können ihnen bei zukünftigen Organisationen von internationalen Sportveranstaltungen zugutekommen.
+      txt7: "Darüber hinaus werden auch alle Primar- und Sekundarschulen der Region in das Projekt «Lausanne 2020» integriert."
   contact:
     title: Kontakt
     form:
