@@ -16,7 +16,7 @@ layout: default
             <source src="/videos/WEB_lausanne2020.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <div class="about-more-button">
+        <div class="about-more-button" id="more_video">
             {% if site.lang == "fr" %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/fr/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a>
             {% elsif site.lang == "de" %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/de/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a>
             {% else %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a> {% endif %}
