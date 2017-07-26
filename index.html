@@ -12,11 +12,15 @@ layout: default
 <div class="video_section">
     <div class="container">
         <h1 class="h1_video_section">{% t pages.index.title_video %}</h1>
-        <video class="home_video" width="600" controls poster="/images/home/video.jpg">
+        <video class="home_video" width="70%" controls poster="/images/home/video.jpg">
             <source src="/videos/WEB_lausanne2020.mp4" type="video/mp4">
             Your browser does not support HTML5 video.
         </video>
-        <p class="info_video_section">{% t pages.index.text_video %}</p>
+        <div class="about-more-button">
+            <a class="about-more-btn" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/de/news/the-lausanne-2020-generation">
+                {% t pages.index.text_video %}
+            </a>
+        </div>
     </div>
 </div>
 <div class="news_section">
