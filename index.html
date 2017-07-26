@@ -9,6 +9,20 @@ layout: default
         <h1 class="the_claim">{% t pages.index.title4.part1 %}<br/><span class="accent">{% t pages.index.title4.part2 %}</span></h1>
     </div>
 </div>
+<div class="video_section">
+    <div class="container">
+        <h1 class="h1_video_section">{% t pages.index.title_video %}</h1>
+        <video class="home_video" width="70%" controls poster="/images/home/video.jpg">
+            <source src="/videos/WEB_lausanne2020.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="about-more-button" id="more_video">
+            {% if site.lang == "fr" %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/fr/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a>
+            {% elsif site.lang == "de" %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/de/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a>
+            {% else %} <a class="about-more-btn" id="text_video" target="_blank" rel="noopener noreferrer" href="https://www.lausanne2020.com/news/the-lausanne-2020-generation">{% t pages.index.text_video %}</a> {% endif %}
+        </div>
+    </div>
+</div>
 <div class="news_section">
     <div class="container">
         <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>

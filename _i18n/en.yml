@@ -14,6 +14,8 @@ pages:
     title4:
       part1: Lausanne 2020
       part2: See you in January 2020
+    title_video: Olympic Day 2017
+    text_video: More
     news:
       title: News
       plus: read more
@@ -138,6 +140,9 @@ pages:
       title2: Athletic legacy
       txt3: |
             Another construction project that will see the day for the Youth Olympic Games is Espace Malley, which encompasses several athletic installations, one of which is an ice rink (capacity of 9,700 seats), that will be available to young athletes. This project solves the problem of a genuine lack of sports infrastructures in the French-speaking part of Switzerland.
+      webcam1: |
+               You can follow the development of the Espace Malley live, or watch the integrity of the construction works accelerated until today, by consulting the webcams of the construction site. To do so, 
+      webcam1link: please click here.
       txt4: |
             Besides these two major constructions, Lausanne 2020 will promote the following projects:  
       list1: ' -  the creation of training centers for the future athletes of the French-speaking part of Switzerland;'

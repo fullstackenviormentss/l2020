@@ -14,6 +14,8 @@ pages:
     title4:
       part1: Lausanne 2020
       part2: Wir sehen uns im Januar 2020
+    title_video: Olympic Day 2017
+    text_video: Mehr Infos
     news:
       title: News
       plus: weiterlesen
@@ -138,6 +140,9 @@ pages:
       title2: Sportliches Erbe
       txt3: |
             Ein weiterer Bau, welcher pünktlich zu den Olympischen Jugendspielen fertig wird ist das neue Espace Malley. Die Multisportstätte wird unter anderem eine neue Eishalle (mit einer Kapazität von 9’700 Plätzen) beinhalten, welche den Athleten im 2020 zur Verfügung stehen wird. Auch dieses Projekt kommt einem jahrelangen Mangel an Sportinfrastrukturen in der Westschweiz entgegen.
+      webcam1: |
+               Verfolgen Sie die Fortschritte der Bauarbeiten des Espace Malley live oder sehen Sie sich den vollständigen Bauprozess bis heute im Time-laps Modus an, indem Sie die Webcams der Baustelle abrufen.
+      webcam1link : '   Hier klicken'
       txt4: |
             Nebst diesen beiden Bauten gewährleistet Lausanne 2020 die Entwicklung folgender Projekte : 
       list1: ' -	Die Errichtung von Nachwuchstrainingszentren in der Westschweiz;'
