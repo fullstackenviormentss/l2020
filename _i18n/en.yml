@@ -111,6 +111,9 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
+      skimo:
+        text: Ski Mountaineering
+        link: "http://www.ismf-ski.org/"
     sports_new: For the first time in the history of the Olympic Games, Ski Mountaineering will be part of the Olympic programme !
     sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
     facts:
