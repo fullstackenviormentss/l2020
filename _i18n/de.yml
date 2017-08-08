@@ -111,6 +111,9 @@ pages:
       snowboard:
         text: Snowboard
         link: "https://www.olympic.org/snowboard"
+      skimo:
+        text: Skitourenrennen
+        link: "http://www.ismf-ski.org/"
     sports_new: Zum ersten Mal in der Geschichte der Olympischen Spiele wird Ski Mountaineering (Skitourenrennen) Teil des Olympischen Programms sein.
     sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
     facts:
