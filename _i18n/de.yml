@@ -36,6 +36,8 @@ pages:
       placeholder: Emailadresse
       thanks: Vielen Dank für deine Anmeldung!
       oops: Oops! Something went wrong while submitting the form
+    privacy:
+      link: Datenschutzerklärung und Nutzungsbedingungen
   news:
     archive_link: Archiv
   jobs:
