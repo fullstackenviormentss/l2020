@@ -38,7 +38,7 @@ pages:
       oops: Oops! Something went wrong while submitting the form
     privacy:
       text: Politique de confidentialité et conditions d'utilisation
-      link: "l2020/images/home/PrivacyPolicy_FR.pdf"
+      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_FR.pdf"
   news:
     archive_link: Archive
   jobs:
