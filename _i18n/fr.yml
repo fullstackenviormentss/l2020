@@ -37,7 +37,8 @@ pages:
       thanks: Merci. Votre inscription a bien été prise en compte.
       oops: Oops! Something went wrong while submitting the form
     privacy:
-      link: Politique de confidentialité et conditions d'utilisation
+      text: Politique de confidentialité et conditions d'utilisation
+      link: "l2020/images/home/PrivacyPolicy_FR.pdf"
   news:
     archive_link: Archive
   jobs:
