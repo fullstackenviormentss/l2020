@@ -36,6 +36,8 @@ pages:
       placeholder: Adresse email
       thanks: Merci. Votre inscription a bien été prise en compte.
       oops: Oops! Something went wrong while submitting the form
+    privacy:
+      link: Politique de confidentialité et conditions d'utilisation
   news:
     archive_link: Archive
   jobs:
