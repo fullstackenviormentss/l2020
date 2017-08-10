@@ -37,7 +37,8 @@ pages:
       placeholder: Email address
       oops: Oops! Something went wrong while submitting the form
     privacy:
-      link: Privacy policy and terms of use
+      text: Privacy policy and terms of use
+      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy.pdf"
   news:
     archive_link: Archive
   jobs:
