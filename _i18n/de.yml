@@ -37,7 +37,8 @@ pages:
       thanks: Vielen Dank für deine Anmeldung!
       oops: Oops! Something went wrong while submitting the form
     privacy:
-      link: Datenschutzerklärung und Nutzungsbedingungen
+      text: Datenschutzerklärung und Nutzungsbedingungen
+      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_DE.pdf"
   news:
     archive_link: Archiv
   jobs:
