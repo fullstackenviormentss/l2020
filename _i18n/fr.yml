@@ -45,7 +45,7 @@ pages:
     texteEmpty: |
             Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
             Aucun poste n’est actuellement à pourvoir au sein du comité d’organisation.
-    from: A partir du
+    from: "Délai de postulation :"
     readFile: En savoir plus
   about:
     title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
