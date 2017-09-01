@@ -45,7 +45,7 @@ pages:
     texteEmpty: |
             Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020.
             Unser Organisationskomitee hat momentan keine offenen Stellen zu besetzen.
-    from: Bewerbungsfrist :
+    from: "Bewerbungsfrist :"
     readFile: Mehr Infos
   about:
     title1: "Die Olympischen Jugendspiele : Wetteifern, lernen und teilen!"
