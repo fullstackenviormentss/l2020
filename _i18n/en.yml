@@ -45,7 +45,7 @@ pages:
     texteEmpty: |
             Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
             No position has been opened in the Organizing committee at the time being.
-    from: From the
+    from: "Application deadline :"
     readFile: read more
   about:
     title1: "The Youth Olympic Games : Compete, learn and share!"
