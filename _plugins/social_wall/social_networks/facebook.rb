@@ -57,6 +57,7 @@ class FB
     post['social_network'] = 'facebook'
 
     post['photo'] = photo if has_photo?
+    post['photo'] = photo_cover if has_photo_cover?
     post['video'] = video if has_video?
 
     post['ext_quote'] = ext_quote if has_ext_quote?
@@ -73,20 +74,34 @@ class FB
   # Photo
 
   def has_photo?
-    @post['type'] == 'photo' || @post['type'] == 'event'
+    @post['type'] == 'photo'
   end
 
   def photo
     data = FB.get_object(@post['object_id'] +'?fields=width,height,source')
-    src_full = FB.get_picture_data(@post['object_id'], 'normal')['data']['url'] if @post['type'] == 'photo'
-    src_full = FB.get_object(@post['object_id'] +'?fields=cover')['cover']['source'] if @post['type'] == 'event'
+    src_full = FB.get_picture_data(@post['object_id'], 'normal')['data']['url']
 
     photo = Hash.new
     photo['width'] = data['width'].to_i
     photo['height'] = data['height'].to_i
     photo['format'] = photo_format(photo['width'], photo['height'])
     photo['src'] = data['source']
-    photo['src'] = src_full if @post['type'] == 'event'
+    photo['src_full'] = src_full
+
+    return photo
+  end
+
+  # Photo_Cover
+
+  def has_photo_cover?
+    @post['type'] == 'event'
+  end
+
+  def photo_cover
+    src_full = FB.get_object(@post['object_id'] +'?fields=cover')['cover']['source']
+
+    photo = Hash.new
+    photo['src'] = src_full
     photo['src_full'] = src_full
 
     return photo

@@ -1,3 +1,4 @@
+require_relative 'shared_methods.rb'
 require "hashie"
 require "sinatra"
 require "instagram"
