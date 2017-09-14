@@ -118,13 +118,12 @@ class FB
     video['provider'] = get_video_provider(@post['source'])
     video['source'] = parse_video(@post['source'])
     video['link'] = @post['link']
-    video['id'] = /\/videos\/(?:t\.\d+\/)?(\d+)/i.match(@post['link'])[1]
-
-    picture_formats = FB.get_object(video['id'] +'?fields=format')['format']
-    i_avg = (picture_formats.length.to_f/2).round # get the average quality
-
-    video['picture'] = picture_formats[i_avg-1]['picture']
-
+    if video['provider'] == 'Youtube'
+      video['id'] = /\/videos\/(?:t\.\d+\/)?(\d+)/i.match(@post['link'])[1]
+      picture_formats = FB.get_object(video['id'] +'?fields=format')['format']
+      i_avg = (picture_formats.length.to_f/2).round # get the average quality
+      video['picture'] = picture_formats[i_avg-1]['picture']
+    end
     return video
   end
 
