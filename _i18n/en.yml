@@ -14,8 +14,9 @@ pages:
     title4:
       part1: Lausanne 2020
       part2: See you in January 2020
-    title_video: Olympic Day 2017
-    text_video: More
+    title_shop: A vos marques, prêt : SHOPPEZ !
+    text_shop: Tous les produits Lausanne 2020 sont désormais disponible dans notre e-shop.
+    link_shop: https://lausanne2020.many-ways.ch/fr
     news:
       title: News
       plus: read more
