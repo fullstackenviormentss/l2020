@@ -14,9 +14,10 @@ pages:
     title4:
       part1: Lausanne 2020
       part2: See you in January 2020
-    title_shop: On your marks, ready : SHOP !
-    text_shop: All the Lausanne 2020 goodies are now avaiable in our e-shop.
-    link_shop: https://lausanne2020.many-ways.ch/en
+    title_shop: "On your marks, ready : SHOP !"
+    text_shop: "All the Lausanne 2020 goodies are now avaiable in our e-shop."
+    link_shop: "https://lausanne2020.many-ways.ch/en"
+    img_shop: "/images/home/EN_horizontal.png"
     news:
       title: News
       plus: read more
