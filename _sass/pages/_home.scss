@@ -1,37 +1,32 @@
 html .hero {
     background-image: url('../images/home/lausanne_overview4.jpg');
-    background-attachment: fixed !important;
-    background-repeat: no-repeat;
-    background-position-y: -200px;
-    height: 800px;
-    /** 
+    background-size: cover;
     @media (min-width: 1921px) {
-        background-position-y: -400px;
+        height: 900px;
     } // Width of image
     @media (min-width: 1651px) {
-        background-size: cover;
+        height: 800px;
     }
     @media (max-width: 1450px) {
-        background-position-x: -200px;
+        height: 800px;
     }
     @media (max-width: 1250px) {
-        background-position-x: -400px;
+        height: 700px;
     }
     @media (max-width: 1050px) {
-        background-position-x: -600px;
+        height: 700px;
     }
     @media (max-width: 850px) {
-        background-position-x: -800px;
+        height: 700px;
     }
     @media (max-width: 650px) {
-        background-position-x: -1000px;
+        height: 400px;
     }
     @media (max-width: 479px) {
-        height: 600px;
+        height: 400px;
     }
     @media (max-width: 450px) {
-        background-position-x: -1200px;
-        background-position-y: -350px;
+        height: 400px;
     }
     **/
     .container {
