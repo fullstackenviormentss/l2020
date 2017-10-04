@@ -48,6 +48,13 @@ html .hero {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.h2_shop_section {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 24px;
 }
 
 #text_video {
@@ -119,6 +126,10 @@ html .hero {
         max-width: 100%;
         padding-right: 0;
     }
+}
+
+.newsletter-cta-btn {
+    background-color: #017ec5;
 }
 
 .newsletter_cta_form {
