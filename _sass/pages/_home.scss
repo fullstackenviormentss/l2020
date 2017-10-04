@@ -1,5 +1,5 @@
 html .hero {
-    background-image: url('../images/home/lausanne_overview2.jpg');
+    background-image: url('../images/home/lausanne_overview4.jpg');
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
@@ -40,10 +40,14 @@ html .hero {
     }
 }
 
-.video_section {
+.shop_section {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+.h1_shop_section {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
 }
 
 #text_video {
