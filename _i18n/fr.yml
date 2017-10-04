@@ -17,6 +17,7 @@ pages:
     title_shop: A vos marques, prêt : SHOPPEZ !
     text_shop: Tous les produits Lausanne 2020 sont désormais disponible dans notre e-shop.
     link_shop: https://lausanne2020.many-ways.ch/fr
+    img_shop: /images/home/FR_horizontal.png
     news:
       title: News
       plus: Lire la suite
