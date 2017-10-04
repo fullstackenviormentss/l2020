@@ -172,13 +172,13 @@ input[type=submit]{
 
 /* --- Sections --- */
 
+.newsletter_cta,
 .facts,
-.social_feed_section,
 .about_yog_1,
 .jobs,
 .sports,
 .heritage,
-.video_section,
+.shop_section,
 .about_yog_section {
     background-color: $purple-primary;
     background-image: url('../images/layout/bkg_magenta.svg');
@@ -188,7 +188,7 @@ input[type=submit]{
 }
 
 
-.newsletter_cta,
+.social_feed_section,
 .about_yog_2,
 .single-news-content header,
 .sites,
