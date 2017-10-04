@@ -1,5 +1,6 @@
 html .hero {
     background-image: url('../images/home/lausanne_overview4.jpg');
+    /** 
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
@@ -32,6 +33,7 @@ html .hero {
         background-position-x: -1200px;
         background-position-y: -350px;
     }
+    **/
     .container {
         padding: 305px 0 0 0;
         @media (max-width: 479px) {
