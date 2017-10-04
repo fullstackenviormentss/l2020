@@ -1,10 +1,10 @@
 html .hero {
     background-image: url('../images/home/lausanne_overview4.jpg');
-    /** 
     background-attachment: fixed !important;
     background-repeat: no-repeat;
     background-position-y: -200px;
     height: 800px;
+    /** 
     @media (min-width: 1921px) {
         background-position-y: -400px;
     } // Width of image
