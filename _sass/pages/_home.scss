@@ -1,40 +1,37 @@
 html .hero {
     background-image: url('../images/home/lausanne_overview4.jpg');
-    background-attachment: fixed !important;
-    background-repeat: no-repeat;
-    background-position-y: -200px;
-    height: 800px;
-    @media (min-width: 1921px) {
-        background-position-y: -400px;
+    background-size: cover;
+    height: 900px;
+    @media (max-width: 1921px) {
+        height: 900px;
     } // Width of image
-    @media (min-width: 1651px) {
-        background-size: cover;
+    @media (max-width: 1651px) {
+        height: 900px;
     }
     @media (max-width: 1450px) {
-        background-position-x: -200px;
+        height: 900px;
     }
     @media (max-width: 1250px) {
-        background-position-x: -400px;
+        height: 700px;
     }
     @media (max-width: 1050px) {
-        background-position-x: -600px;
+        height: 700px;
     }
     @media (max-width: 850px) {
-        background-position-x: -800px;
+        height: 700px;
     }
     @media (max-width: 650px) {
-        background-position-x: -1000px;
+        height: 400px;
     }
     @media (max-width: 479px) {
-        height: 600px;
+        height: 400px;
     }
     @media (max-width: 450px) {
-        background-position-x: -1200px;
-        background-position-y: -350px;
+        height: 400px;
     }
     .container {
         padding: 305px 0 0 0;
-        @media (max-width: 479px) {
+        @media (max-width: 650px) {
             padding-top: 165px;
         }
     }
@@ -72,12 +69,10 @@ html .hero {
     animation-direction: alternate;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1350px) {
     .the_claim {
         font-size: 30px;
         line-height: 35px;
-        text-align: center;
-        width: 100%;
     }
 }
 
