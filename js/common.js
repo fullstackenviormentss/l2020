@@ -430,6 +430,9 @@ var mapManagement = {
     if (window.location.href.indexOf("/de/") > -1) {
       lang = "de";
     }
+    if (window.location.href.indexOf("/it/") > -1) {
+      lang = "it";
+    }
     $.getJSON("/mapdata/venues.json", function (data) {
       $.each(data, function (key, val) {
         var myLatLng = {
@@ -448,6 +451,9 @@ var mapManagement = {
         }
         if (lang == "de") {
           var content = "<h1>" + val.title_de + "</h1><p>" + val.texte_de + "</p><p><a href=" + val.lienDe + " target='_blank'>Mehr Infos</a></p>";
+        }
+        if (lang == "it") {
+          var content = "<h1>" + val.title_it + "</h1><p>" + val.texte_it + "</p><p><a href=" + val.lienIt + " target='_blank'>A traduire dans common.js(456)</a></p>";
         }
         var infowindow = new google.maps.InfoWindow({
           content: content
@@ -728,6 +734,23 @@ var localeTimeAgo = {
     months: "%d Monaten",
     year: "etwa einem Jahr",
     years: "%d Jahren"
+  },
+  it: {
+    prefixAgo: "a traduire dans common.js(739-753)",
+    prefixFromNow: "a traduire dans common.js(739-753)",
+    suffixAgo: "a traduire dans common.js(739-753)",
+    suffixFromNow: "a traduire dans common.js(739-753)",
+    seconds: "a traduire dans common.js(739-753)",
+    minute: "a traduire dans common.js(739-753)",
+    minutes: "a traduire dans common.js(739-753)",
+    hour: "a traduire dans common.js(739-753)",
+    hours: "a traduire dans common.js(739-753)",
+    day: "a traduire dans common.js(739-753)",
+    days: "a traduire dans common.js(739-753)",
+    month: "a traduire dans common.js(739-753)",
+    months: "a traduire dans common.js(739-753)",
+    year: "a traduire dans common.js(739-753)",
+    years: "a traduire dans common.js(739-753)"
   },
   fr: {
     prefixAgo: "il y a",
