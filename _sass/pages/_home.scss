@@ -37,10 +37,21 @@ html .hero {
     }
 }
 
-.video_section {
+.shop_section {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+}
+
+.h1_shop_section {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 30px;
+}
+
+.h2_shop_section {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 24px;
 }
 
 #text_video {
@@ -110,6 +121,10 @@ html .hero {
         max-width: 100%;
         padding-right: 0;
     }
+}
+
+.newsletter-cta-btn.btn {
+    background-color: #017ec5;
 }
 
 .newsletter_cta_form {
