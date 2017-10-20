@@ -25,7 +25,7 @@ pages:
       autres: Plus de news
     about:
       title: A propos
-      texte: Du 10 au 22 janvier 2020, Lausanne accueillera la 3e édition des Jeux Olympiques de la Jeunesse d’hiver. Vingt-huit ans après l’obtention de son titre de Capitale Olympique, Lausanne devient Ville Olympique en accueillant le second plus grand événement multisport hivernal après les Jeux Olympiques d’hiver et offre à de jeunes athlètes une expérience olympique inoubliable. La culture, les performances et l’éducation se rencontrent pour former un réel festival du sport!
+      texte: Du 10 au 22 janvier 2020, Lausanne accueillera la 3e édition des Jeux Olympiques de la Jeunesse d’hiver. Vingt-six ans après l’obtention de son titre de Capitale Olympique, Lausanne devient Ville Olympique en accueillant le second plus grand événement multisport hivernal après les Jeux Olympiques d’hiver et offre à de jeunes athlètes une expérience olympique inoubliable. La culture, les performances et l’éducation se rencontrent pour former un réel festival du sport!
       more: En savoir plus
     shop:
       title: Tous les produits Lausanne 2020 bientôt disponibles!
@@ -51,7 +51,7 @@ pages:
     texteEmpty: |
             Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
             Aucun poste n’est actuellement à pourvoir au sein du comité d’organisation.
-    from: A partir du
+    from: "Délai de postulation :"
     readFile: En savoir plus
   about:
     title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
@@ -119,7 +119,7 @@ pages:
         link: "https://www.olympic.org/fr/surf-des-neiges"
       skimo:
         text: Ski Alpinisme
-        link: "http://www.ismf-ski.org/"
+        link: "https://www.olympic.org/fr/news/gravir-le-sommet-olympique-tout-ce-que-vous-devez-savoir-sur-le-ski-alpinisme"
     sports_new: Pour la première fois dans l’histoire des Jeux Olympiques, le ski alpinisme fera également partie du programme olympique.
     sports_fin: Découvrez les sites de compétition <b><a href="venues" class="link_site">ici</a></b>
     facts:

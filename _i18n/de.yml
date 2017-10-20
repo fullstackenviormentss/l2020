@@ -25,7 +25,7 @@ pages:
       autres: Mehr News
     about:
       title: Über uns
-      texte: Vom 10. bis 22. Januar 2020 trägt Lausanne die 3. Auflage der Olympischen Jugend-Winterspiele aus. 28 Jahre nach der Vergabe des Titels «Olympische Hauptstadt» wird Lausanne zur Olympischen Stadt, in dem sie das zweitgrösste Winter Multisportevent nach den Olympischen Winterspielen organisiert und somit den jungen Athleten eine einzigarte und unvergessliche olympische Erfahrung bietet. Die Kultur, die Höchstleistungen und die Bildung finden zusammen und bilden ein wahrhaftes Sportfestival!
+      texte: Vom 10. bis 22. Januar 2020 trägt Lausanne die 3. Auflage der Olympischen Jugend-Winterspiele aus. 26 Jahre nach der Vergabe des Titels «Olympische Hauptstadt» wird Lausanne zur Olympischen Stadt, in dem sie das zweitgrösste Winter Multisportevent nach den Olympischen Winterspielen organisiert und somit den jungen Athleten eine einzigarte und unvergessliche olympische Erfahrung bietet. Die Kultur, die Höchstleistungen und die Bildung finden zusammen und bilden ein wahrhaftes Sportfestival!
       more: Mehr Infos
     shop:
       title: Alle Lausanne 2020 Fan-Artikel demnächst verfügbar!
@@ -51,7 +51,7 @@ pages:
     texteEmpty: |
             Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020.
             Unser Organisationskomitee hat momentan keine offenen Stellen zu besetzen.
-    from: Ab
+    from: "Bewerbungsfrist :"
     readFile: Mehr Infos
   about:
     title1: "Die Olympischen Jugendspiele : Wetteifern, lernen und teilen!"
@@ -119,7 +119,7 @@ pages:
         link: "https://www.olympic.org/snowboard"
       skimo:
         text: Skitourenrennen
-        link: "http://www.ismf-ski.org/"
+        link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
     sports_new: Zum ersten Mal in der Geschichte der Olympischen Spiele wird Ski Mountaineering (Skitourenrennen) Teil des Olympischen Programms sein.
     sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
     facts:

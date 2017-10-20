@@ -25,7 +25,7 @@ pages:
       autres: More news
     about:
       title: About
-      texte: From January 10th to the 22nd 2020, Lausanne welcomes the third edition of the Winter Youth Olympic Games. 28 years after obtaining the title of Olympic Capital, Lausanne will become an Olympic city by hosting the second largest multisport winter event after the Winter Olympics. This event will offer a unique and unforgettable Olympic experience to young athletes. The combination of culture, performance and education will give birth to a genuine celebration of sports!
+      texte: From January 10th to the 22nd 2020, Lausanne welcomes the third edition of the Winter Youth Olympic Games. 26 years after obtaining the title of Olympic Capital, Lausanne will become an Olympic city by hosting the second largest multisport winter event after the Winter Olympics. This event will offer a unique and unforgettable Olympic experience to young athletes. The combination of culture, performance and education will give birth to a genuine celebration of sports!
       more: More
     shop:
       title: All the Lausanne 2020 goodies available soon!
@@ -51,7 +51,7 @@ pages:
     texteEmpty: |
             Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
             No position has been opened in the Organizing committee at the time being.
-    from: From the
+    from: "Application deadline :"
     readFile: read more
   about:
     title1: "The Youth Olympic Games : Compete, learn and share!"
@@ -119,7 +119,7 @@ pages:
         link: "https://www.olympic.org/snowboard"
       skimo:
         text: Ski Mountaineering
-        link: "http://www.ismf-ski.org/"
+        link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
     sports_new: For the first time in the history of the Olympic Games, Ski Mountaineering will be part of the Olympic programme !
     sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
     facts:
