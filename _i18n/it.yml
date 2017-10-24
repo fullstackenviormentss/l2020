@@ -62,6 +62,10 @@ pages:
     title2: L’ambizione di Losanna
     texte2: |
             Losanna 2020 rappresenta l’ambizione di creare una nuova piattaforma sportiva per la gioventù coinvolgendola attivamente alla preparazione e organizzazione dell’evento.
+            Si tratta di implicare tutta la popolazione locale, regionale e addirittura nazionale attorno a un evento unico e che unifica in favore di un mondo migliore.
+            Valorizzare e responsabilizzare i giovani permettendo loro di diventare ambasciatori dei valori positivi dello sport, d’acquisire nuovi talenti e di realizzarsi diventando i leader di domani. Tutto ciò facendo dei Giochi Olimpici Giovanili un laboratorio creativo; incubatore d’idee di giovani per i giovani, attingendo al patrimonio e ai vantaggi unici della Svizzera in termini di formazione, cultura e innovazione.
+            
+            <span class="important-dates"> Losanna 2020 si svolgerà dal 10 al 22 gennaio 2020! </span>
     sports_title: le discipline sportive
     sports_texte: "Il programma sportivo della terza edizione dei Giochi Olimpici Giovanili invernali è simile al programma dei Giochi Olimpici invernali, con delle varianti e innovazioni nelle discipline proposte dalle federazioni internazionali. Gli sport in programma sono:"
     sports:
@@ -114,7 +118,7 @@ pages:
         text: Sci alpinismo
         link: "http://www.ismf-ski.org/"
     sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico. 
-    sports_fin: Scoprite le sedi delle gare<b><a href="venues" class="link_site">ici</a></b>
+    sports_fin: Scoprite le sedi delle gare <b><a href="venues" class="link_site">qui</a></b>
     facts:
       title: Losanna 2020 in cifre
       fact1: 
