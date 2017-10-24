@@ -50,6 +50,15 @@ pages:
             Attualmente non ci sono posti disponibili all’interno del comitato d’organizzazione.
     from: "Limite per l’inoltro della sua offerta:" 
     readFile: Scopri di più
+  about:
+    title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
+    texte1: |
+            I Giochi Olimpici Giovanili sono una manifestazione sportiva Olimpica internazionale al più alto livello per atleti dai 15 ai 18 anni.
+
+            Associano prestazioni sportive, cultura ed educazione durante un vero festival dello sport. Hanno l’obbiettivo di incoraggiare la gioventù ad adottare e vivere i valori positivi dello sport – il rispetto dell’altro, di sé stessi, del nostro ambiente, l’amicizia fra i popoli e le culture, l’eccellenza nel dono di sé – e divenirne gli ambasciatori in tutto il mondo.
+           
+            Attraverso la propria vocazione, i Giochi Olimpici Giovanili vogliono essere un esempio portatore d’innovazione per gli eventi sportivi del futuro. 
+    more: Saperne di più
   contact:
     title: Contatto
     form
