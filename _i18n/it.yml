@@ -117,7 +117,38 @@ pages:
       skimo:
         text: Sci alpinismo
         link: "http://www.ismf-ski.org/"
-    sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico. 
+    sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico.
+    sports_fin: Scoprite le sedi delle gare<b><a href="venues" class="link_site">ici</a></b>
+    facts:
+      title: Losanna 2020 in cifre
+      fact1: 
+        number: "1’880" 
+        text: Atleti tra i 15 e 18 anni
+      fact2: 
+        number: "+70" 
+        text: Nazioni
+      fact3: 
+        number: "8 sport"
+        text: 16 discipline e 81 gare
+      fact4: 
+        number: "+3000"
+        text: Volontari
+      fact5: 
+        number: PARITA
+        text: DEI GENERI
+    singleevent: 3 regioni – 2 paesi – 1 singolo evento
+    heritage:
+      title1: L’eredità Losanna 2020
+      txt1: |
+            I Giochi Olimpici Giovanili sono un vero catalizzatore di progetti e rappresentano una grande opportunità d’investimento in maniera sostenibile e intelligente nello sport, formazione, cultura e nelle infrastrutture. Lasceranno un’eredità positiva per la città di Losanna, il cantone Vallese e lo sport in Svizzera. 
+      txt2: |
+            Una delle eredità principali del progetto Losanna 2020 sarà l’accelerazione della costruzione della residenza per studenti VORTEX, che diventerà Villaggio Olimpico durante il periodo dei Giochi. Questo edificio accoglierà 1'200 studenti universitari e ospiti accademici e risponderà a un bisogno di lunga data.
+      webcam2: |
+               Potete seguire in diretta l’avanzamento dei lavori del Vortex via la webcam, A tale scopo,
+      webcam2link: cliccate qui.
+      title2: Eredità sportiva
+      txt3: |
+            Un’altra costruzione che sarà portata a compimento per i Giochi Olimpici Giovanili sarà il nuovo Espace Malley, che comprenderà varie istallazioni sportive, tra le quali una pista di pattinaggio (con 9'700 posti) e sarà a disposizione dei giovani atleti. Questo progetto rimedierà a una forte mancanza d’infrastrutture sportive nella Svizzera romanda.
   contact:
     title: Contatto
     form
