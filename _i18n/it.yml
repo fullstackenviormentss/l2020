@@ -168,7 +168,7 @@ pages:
       txt7: "Inoltre, questa trasmissione si estenderà alle generazioni più giovani grazie ai contatti creati con le scuole della regione."
   contact:
     title: Contatto
-    form
+    form:
       prenom:
         title: Nome
         placeholder: Inserisca il suo nome
