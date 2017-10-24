@@ -67,6 +67,57 @@ pages:
             
             <span class="important-dates"> Losanna 2020 si svolgerà dal 10 al 22 gennaio 2020! </span>
     sports_title: le discipline sportive
+    sports_texte: "Il programma sportivo della terza edizione dei Giochi Olimpici Giovanili invernali è simile al programma dei Giochi Olimpici invernali, con delle varianti e innovazioni nelle discipline proposte dalle federazioni internazionali. Gli sport in programma sono:"
+    sports:
+      biathlon:
+        text: Biathlon
+        link: "https://www.olympic.org/fr/biathlon" 
+      bobsleigh:
+        text: Bob
+        link: "https://www.olympic.org/fr/bobsleigh"
+      combine-nordique: 
+        text: Combinata nordica
+        link: "https://www.olympic.org/fr/combine-nordique"
+      curling:
+        text: Curling
+        link: "https://www.olympic.org/fr/curling"
+      hockey-sur-glace:
+        text: Hockey su ghiaccio
+        link: "https://www.olympic.org/fr/hockey-sur-glace"
+      luge:
+        text: Slittino
+        link: "https://www.olympic.org/fr/luge"
+      patinage-artistique:
+        text: Pattinaggio artistico 
+        link: "https://www.olympic.org/fr/patinage-artistique"
+      patinage-vitesse:
+        text: Pattinaggio di velocità
+        link: "https://www.olympic.org/fr/patinage-de-vitesse"
+      short-track:
+        text: Pattinaggio di velocità su short track
+        link: "https://www.olympic.org/fr/patinage-de-vitesse-sur-piste-courte"
+      saut-a-ski:
+        text: Salto con gli sci
+        link: "https://www.olympic.org/fr/saut-a-ski"
+      skeleton:
+        text: Skeleton
+        link: "https://www.olympic.org/fr/skeleton"
+      ski-freestyle:
+        text: Sci acrobatico
+        link: "https://www.olympic.org/fr/ski-acrobatique"
+      ski-alpin:
+        text: Sci alpino
+        link: "https://www.olympic.org/fr/ski-alpin"
+      ski-de-fond:
+        text: Sci di fondo
+        link: "https://www.olympic.org/fr/ski-de-fond"
+      snowboard:
+        text: Snowboard
+        link: "https://www.olympic.org/fr/surf-des-neiges"
+      skimo:
+        text: Sci alpinismo
+        link: "http://www.ismf-ski.org/"
+    sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico. 
   contact:
     title: Contatto
     form
