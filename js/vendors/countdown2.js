@@ -2,7 +2,6 @@
 /* the js */
 
 (function($){
-	var data = {"targetDate":1577872800}
 	$.fn.countdown = function(custom_options) {
 		var options = {
 			'lang': "fr"
