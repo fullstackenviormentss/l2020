@@ -18,7 +18,22 @@ layout: default
         </a>
     </div>
 </div>
-<div w3-include-html="/omega_countdown/index.html"></div>
+<div class="countdown">
+    <div id="ad">
+        <div id="montre">
+            <img src="/omega_countdown/montre.jpg" id="montre" />
+            <div id="aiguilles">
+                <div id="day"></div>
+                <img id="heures" src="/omega_countdown/heures.png" />
+                <img id="minutes" src="/omega_countdown/minutes.png" />
+                <img id="secondes" src="/omega_countdown/secondes.png" />                
+            </div>
+        </div>
+        <img src="/omega_countdown/logo.png" id="logo">
+        <div id="border"></div>
+        <a href="javascript:void(0)" onclick="javascript:window.open(window.clickTag)" id="clickArea"></a>
+    </div>
+</div>
 <div class="news_section">
     <div class="container">
         <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>
