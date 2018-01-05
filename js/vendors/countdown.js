@@ -18,7 +18,6 @@ window.onload = function() {
         var min = date.getMinutes();
         var sec = date.getSeconds();
         var miliSec = date.getMilliseconds();
-        min = 30;
         var secRot = (sec * 360) / 60;
         var miliSecToSecRot = (miliSec * 360) / 60000;
         sRot = secRot + miliSecToSecRot;
