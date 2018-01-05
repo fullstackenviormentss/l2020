@@ -107,4 +107,4 @@ function Resize() {
 function onResize() {
     Resize();
 };
-window.addEventListener("resize", onResize);
+window.addEventListener("Resize", onResize);
