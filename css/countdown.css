@@ -1,0 +1,160 @@
+.countdown_container {
+	position: relative;
+	width: 180px;
+	max-width: 180px;
+	height: 165px;
+	border: 0 solid #9f9f9f;
+	background-color: white;
+	background-image: url(../img/bg.png);
+	background-repeat:no-repeat;
+	background-size: 100%;
+}
+.countdown_container:after {
+	padding-top: 88%;
+	display: block;
+	content: "";
+}
+.border {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 180px;
+	height: 165px;
+	border: 1px solid #9f9f9f;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.logo {
+	position: absolute;
+	top: 23%;
+	left: 0px;
+	width: 100%;
+	text-align: center;
+}
+.logo img {
+	width: 60%;
+}
+
+a.omega_link {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.clock, .countdown {
+	display: none;
+	position: absolute;
+	left: 0;
+	text-align: center;
+}
+
+.cd_item {
+	font-family: "OmegaCT", Arial, sans-serif;
+	display: inline-block;
+	color: black;
+}
+
+#final-countdown { opacity: 0; }
+.current-time {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	font-weight: 800;
+	font-size: 30px;
+	top: 110px;
+	letter-spacing: 2px;
+	opacity: 0;
+}
+
+.countdown {
+	width: 100%;
+	top: 69%;
+}
+.countdown .cd_item {
+	width: 25%;
+	height: 45px;
+	background-image: url(../img/separator.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+    background-size: contain;
+	margin-left: -5px;
+}
+
+.countdown .cd_item_last {
+	background-image: none;
+}
+
+.countdown .days {
+	width: 29%;
+}
+.countdown .hours {
+	width: 25%;
+}
+.countdown .cd_label {
+	font-weight: normal;
+	font-size: 12px;
+	text-align: center;
+	display: block;
+	margin: 3px 0 5px 0;
+}
+
+.cd_remain {
+	font-weight: bold;
+	font-size: 17px;
+	display: block;
+	text-align: center;
+}
+
+.countdown p {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 2px 0 0 0;
+	font-family: "OmegaCT", Arial, sans-serif;
+	color: #be072f;
+	font-size: 16px;
+	text-align: center;
+}
+.countdown img {
+	display: block;
+	margin: 0 auto;
+}
+
+/* clock specifics */
+.clock {
+	position: absolute;
+	bottom: 15%;
+	text-align: center;
+	width: 100%;
+	font-size: 30px;
+	top: 110px;
+}
+
+.clock .cd_item {
+	display: inline-block;
+	color: black;
+	width: 13%;
+	width: auto;
+	font-weight: bold;
+	text-align: center;
+}
+.clock .inter {
+	display: inline-block;
+	font-weight: bold;
+	width: 4%;
+	width: auto;
+	margin: 0 -5px;
+	color: black;
+	padding-top: 0px;
+	text-align: center;
+}
+
+
+.countdown_container img.retina {
+	display: none;
+}
+
