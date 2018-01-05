@@ -131,7 +131,7 @@
             if (options.timestamp) {
                 target = options.timestamp;
                 update_remaining();
-                window.setInterval(update_remaining(), 1000);
+                setInterval(update_remaining(), 1000);
             } else {
                 $.ajax({
                     type: "GET",
@@ -147,7 +147,7 @@
                         setInterval(update_remaining, 1000);
                     }
                 });
-            };
+            }
         })
     }
 });
