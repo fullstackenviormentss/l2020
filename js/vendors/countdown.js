@@ -18,17 +18,17 @@
                 number = "0" + number;
             }
             return number;
-        }
+        };
 
 		var local_get_time = function(tz_offset) {
 			var utc = new Date().getTime() / 1000;
 			var local = utc - tz_offset * 60;
 			return local;
-		}
+		};
 		var utc_get_time = function() {
 			var utc = new Date().getTime() / 1000;
 			return utc;
-		}
+		};
 
 		var translations = {
 			'de': {
@@ -61,7 +61,7 @@
 			}
 
 
-		}
+		};
 		$.extend(options, custom_options);
 		translations = translations[options.lang];
 
@@ -127,7 +127,7 @@
 						_self.find(".days_label").html(translations.days);
 					}
                 }
-            }
+            };
 
 			if (options.timestamp) {
 				target = options.timestamp;
