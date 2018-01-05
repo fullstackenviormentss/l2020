@@ -7,7 +7,7 @@
 		var options = {
 			'lang': "fr"
 			// 'timestamp': integer
-		}
+		};
 
 		//var timestamp_url = './buenos-aires.php?callback=var%20data%20=';
 		var timestamp_url = 'https://countdown.omegawatches.com/minisites/buenosaires2018/buenos-aires.php';
@@ -16,19 +16,19 @@
             number = String(number);
             if (number.length < 2) {
                 number = "0" + number;
-            }
+            };
             return number;
-        }
+        };
 
 		var local_get_time = function(tz_offset) {
 			var utc = new Date().getTime() / 1000;
 			var local = utc - tz_offset * 60;
 			return local;
-		}
+		};
 		var utc_get_time = function() {
 			var utc = new Date().getTime() / 1000;
 			return utc;
-		}
+		};
 
 		var translations = {
 			'de': {
@@ -58,10 +58,10 @@
 				'hours': "HRS",
 				'minutes': "MINS",
 				'seconds': "SEGS"
-			}
+			};
 
 
-		}
+		};
 		$.extend(options, custom_options);
 		translations = translations[options.lang];
 
@@ -98,7 +98,7 @@
 						$all_countdown_digits.hide(0);
 					} else {
 						$all_countdown_digits.show(0);
-					}
+					};
                 } else if (timeDiff <= 0) {
 					// clock mode
 					$clock.show(0);
@@ -125,9 +125,9 @@
 						_self.find(".days_label").html(translations.day);
 					} else if (diffDays == 0) {
 						_self.find(".days_label").html(translations.days);
-					}
-                }
-            }
+					};
+                };
+            };
 
 			if (options.timestamp) {
 				target = options.timestamp;
@@ -148,7 +148,7 @@
 	                    setInterval(update_remaining, 1000);
 	                }
 	            });
-			}
+			};
 		});
 	}
 })(jQuery);
