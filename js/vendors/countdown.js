@@ -51,7 +51,7 @@ window.onload = function() {
     var tweenS = TweenLite.to(secondes, 1, { count: 360, ease: Power3.easeInOut });
     var tweenM = TweenLite.to(minutes, 1, { delay: 0.3, count: 360, ease: Power3.easeInOut });
     var tweenH = TweenLite.to(heures, 1, { delay: 0.6, count: 360, ease: Power3.easeInOut });
-}
+};
 function Resize() {
     console.log("resize");
     var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth || document.body.offsetWidth;
