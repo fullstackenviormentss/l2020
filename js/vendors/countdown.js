@@ -7,7 +7,7 @@
 		var options = {
 			'lang': "fr"
 			// 'timestamp': integer
-		}
+		};
 
 		//var timestamp_url = './buenos-aires.php?callback=var%20data%20=';
 		var timestamp_url = 'https://countdown.omegawatches.com/minisites/buenosaires2018/buenos-aires.php';
