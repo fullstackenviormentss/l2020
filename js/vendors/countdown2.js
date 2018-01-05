@@ -5,7 +5,7 @@
 	$.fn.countdown = function(custom_options) {
 		var options = {
 			'lang': "fr"
-			'timestamp': integer;
+			//'timestamp': integer
 		};
 
 		//var timestamp_url = './buenos-aires.php?callback=var%20data%20=';
