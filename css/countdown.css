@@ -14,7 +14,7 @@
 	display: block;
 	content: "";
 }
-.border {
+.countdown_container .border {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -26,18 +26,18 @@
 	box-sizing: border-box;
 }
 
-.logo {
+.countdown_container .logo {
 	position: absolute;
 	top: 23%;
 	left: 0px;
 	width: 100%;
 	text-align: center;
 }
-.logo img {
+.countdown_container .logo img {
 	width: 60%;
 }
 
-a.omega_link {
+.countdown_container a.omega_link {
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -46,20 +46,20 @@ a.omega_link {
 	height: 100%;
 	cursor: pointer;
 }
-.clock, .countdown {
+.countdown_container .clock, .countdown_container .countdown {
 	display: none;
 	position: absolute;
 	left: 0;
 	text-align: center;
 }
 
-.cd_item {
+.countdown_container .cd_item {
 	font-family: "OmegaCT", Arial, sans-serif;
 	display: inline-block;
 	color: black;
 }
 
-#final-countdown { opacity: 0; }
+.countdown_container #final-countdown { opacity: 0; }
 .current-time {
 	width: 100%;
 	position: absolute;
@@ -71,11 +71,11 @@ a.omega_link {
 	opacity: 0;
 }
 
-.countdown {
+.countdown_container .countdown {
 	width: 100%;
 	top: 69%;
 }
-.countdown .cd_item {
+.countdown_container .countdown .cd_item {
 	width: 25%;
 	height: 45px;
 	background-image: url(../img/separator.png);
@@ -85,17 +85,17 @@ a.omega_link {
 	margin-left: -5px;
 }
 
-.countdown .cd_item_last {
+.countdown_container .countdown .cd_item_last {
 	background-image: none;
 }
 
-.countdown .days {
+.countdown_container .countdown .days {
 	width: 29%;
 }
-.countdown .hours {
+.countdown_container .countdown .hours {
 	width: 25%;
 }
-.countdown .cd_label {
+.countdown_container .countdown .cd_label {
 	font-weight: normal;
 	font-size: 12px;
 	text-align: center;
@@ -103,14 +103,14 @@ a.omega_link {
 	margin: 3px 0 5px 0;
 }
 
-.cd_remain {
+.countdown_container .cd_remain {
 	font-weight: bold;
 	font-size: 17px;
 	display: block;
 	text-align: center;
 }
 
-.countdown p {
+.countdown_container .countdown p {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 2px 0 0 0;
@@ -119,13 +119,13 @@ a.omega_link {
 	font-size: 16px;
 	text-align: center;
 }
-.countdown img {
+.countdown_container .countdown img {
 	display: block;
 	margin: 0 auto;
 }
 
 /* clock specifics */
-.clock {
+.countdown_container .clock {
 	position: absolute;
 	bottom: 15%;
 	text-align: center;
@@ -134,7 +134,7 @@ a.omega_link {
 	top: 110px;
 }
 
-.clock .cd_item {
+.countdown_container .clock .cd_item {
 	display: inline-block;
 	color: black;
 	width: 13%;
@@ -142,7 +142,7 @@ a.omega_link {
 	font-weight: bold;
 	text-align: center;
 }
-.clock .inter {
+.countdown_container .clock .inter {
 	display: inline-block;
 	font-weight: bold;
 	width: 4%;
