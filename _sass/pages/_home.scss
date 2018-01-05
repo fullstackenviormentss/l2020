@@ -174,32 +174,32 @@ html .hero {
 }
 @font-face {
     font-family: 'OMEGACT';
-    src: url('fonts/OmegaCT-Regular.eot'); /* IE9 Compat Modes */
-    src: url('fonts/OmegaCT-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('fonts/OmegaCT-Regular.woff') format('woff'), /* Modern Browsers */
-         url('fonts/OmegaCT-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('fonts/OmegaCT-Regular.svg#OmegaCT-Regular') format('svg'); /* Legacy iOS */
+    src: url('../omega_countdown/fonts/OmegaCT-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../omega_countdown/fonts/OmegaCT-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../omega_countdown/fonts/OmegaCT-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../omega_countdown/fonts/OmegaCT-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../omega_countdown/fonts/OmegaCT-Regular.svg#OmegaCT-Regular') format('svg'); /* Legacy iOS */
     font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
 @font-face {
     font-family: 'OmegaCT';
-    src: url('../fonts/omegact-regular-webfont.eot');
-    src: url('../fonts/omegact-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/omegact-regular-webfont.woff') format('woff'),
-         url('../fonts/omegact-regular-webfont.ttf') format('truetype'),
-         url('../fonts/omegact-regular-webfont.svg#omega_ctregular') format('svg');
+    src: url('../omega_countdown/omegact-regular-webfont.eot');
+    src: url('../omega_countdown/omegact-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../omega_countdown/omegact-regular-webfont.woff') format('woff'),
+         url('../omega_countdown/omegact-regular-webfont.ttf') format('truetype'),
+         url('../omega_countdown/omegact-regular-webfont.svg#omega_ctregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'OmegaCT';
-    src: url('../fonts/omegact-bold-webfont.eot');
-    src: url('../fonts/omegact-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/omegact-bold-webfont.woff') format('woff'),
-         url('../fonts/omegact-bold-webfont.ttf') format('truetype'),
-         url('../fonts/omegact-bold-webfont.svg#omega_ctbold') format('svg');
+    src: url('../omega_countdown/omegact-bold-webfont.eot');
+    src: url('../omega_countdown/omegact-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../omega_countdown/omegact-bold-webfont.woff') format('woff'),
+         url('../omega_countdown/omegact-bold-webfont.ttf') format('truetype'),
+         url('../omega_countdown/omegact-bold-webfont.svg#omega_ctbold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
