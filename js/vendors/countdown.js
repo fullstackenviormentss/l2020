@@ -35,7 +35,7 @@ window.onload = function() {
         if (Day < 10) {
             day.style.fontSize = "18px";
         };
-        trace(min);
+        console.trace(min);
         degres++;
         heures.style.msTransform = "rotate(" + (hRot + heures.count) + "deg)";
         minutes.style.msTransform = "rotate(" + (mRot + minutes.count) + "deg)";
