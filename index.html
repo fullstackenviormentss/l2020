@@ -45,15 +45,15 @@ layout: default
                 var min = date.getMinutes();
                 var sec = date.getSeconds();
                 var miliSec = date.getMilliseconds();
-                //min = 30;
+                min = 30;
                 var secRot = (sec * 360) / 60;
                 var miliSecToSecRot = (miliSec * 360) / 60000;
                 sRot = secRot + miliSecToSecRot;
-                ///
+                
                 var minRot = (min * 360) / 60;
                 var secToMinRot = (sec * 360) / 3600;
                 mRot = minRot + secToMinRot;
-                ///
+                
                 var heurRot = (heure * 360) / 12;
                 var minToHeurRot = (min * 360) / 720;
                 hRot = heurRot + minToHeurRot;
@@ -64,7 +64,7 @@ layout: default
                 if (Day < 10) {
                     day.style.fontSize = "18px";
                 }
-                //trace(min);
+                trace(min);
                 degres++;
                 heures.style.msTransform = "rotate(" + (hRot + heures.count) + "deg)";
                 minutes.style.msTransform = "rotate(" + (mRot + minutes.count) + "deg)";
