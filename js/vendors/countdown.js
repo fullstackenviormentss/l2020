@@ -33,7 +33,7 @@ window.onload = function() {
         day.innerHTML = Day;
         if (Day < 10) {
             day.style.fontSize = "18px";
-        }
+        };
         trace(min);
         degres++;
         heures.style.msTransform = "rotate(" + (hRot + heures.count) + "deg)";
@@ -46,7 +46,7 @@ window.onload = function() {
         minutes.style.webkitTransform = "rotate(" + (mRot + minutes.count) + "deg)";
         secondes.style.webkitTransform = "rotate(" + (sRot + secondes.count) + "deg)";
         setTimeout(wtii, 10);
-    }
+    };
     wtii();
     var tweenS = TweenLite.to(secondes, 1, { count: 360, ease: Power3.easeInOut });
     var tweenM = TweenLite.to(minutes, 1, { delay: 0.3, count: 360, ease: Power3.easeInOut });
