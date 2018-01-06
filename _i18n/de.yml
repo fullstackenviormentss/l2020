@@ -184,6 +184,16 @@ pages:
         placeholder: gib hier deine Nachricht ein
       envoyer: Senden
       thanks: Vielen Dank für deine Anfrage. Wir werden dir so schnell wie möglich antworten!
+  venues:
+    title: Plätze ohne Wettkämpfe
+    subtitle1: Olympisches Dorf der Jugend
+    text1: Bevor im Herbst des Jahres 2020 ein Studentenwohnheim eröffnet wird, wird der Vortex im Januar desselben Jahres die Athleten und die nationalen olympischen Komitees der Olympischen Jugendspiele Lausanne 2020 empfangen. Ein elliptisches Gebäude im Herzen des Campus der Universität Lausanne, institutioneller Partner von Lausanne 2020.
+    link1: https://www.cpev.ch/immobilier/vortex
+    textlink1: Mehr Infos und webcams
+    subtitle2: Platz der Siegerehrung
+    text2: Die Medaillenzeremonie findet im Stadtteil Flon statt, einem lebhaften Ort im Herzen von Lausanne.
+    link2: https://flon.ch/de/
+    textlink2: Mehr erfahren
 footer:
   link:
     tokyo: "https://tokyo2020.jp/en/"
