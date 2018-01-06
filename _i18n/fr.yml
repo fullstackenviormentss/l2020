@@ -186,6 +186,16 @@ pages:
         placeholder: Ecrivez votre message ici
       envoyer: Envoyer
       thanks: Nous vous remercions de votre demande. Nous vous répondrons dans les plus brefs délais !
+  venues:
+    title: Les sites non-compétition
+    subtitle1: Village Olympique de la Jeunesse
+    text1: Avant de devenir une résidence estudiantine dès la rentrée 2020, le Vortex accueillera, en janvier de la même année, les athlètes et comités nationaux olympiques des Jeux Olympiques de la Jeunesse Lausanne 2020. Ce bâtiment en ellipse est situé au cœur du campus de l'Université de Lausanne, partenaire institutionnel de Lausanne 2020.
+    link1: https://www.cpev.ch/immobilier/vortex
+    textlink1: Plus d'informations et webcams
+    subtitle2: Place des médailles
+    text2: La cérémonie de remise des médailles se déroulera dans le Quartier du Flon, lieu animé en plein cœur de Lausanne.
+    link2: https://flon.ch/fr/
+    textlink2: Plus d'informations
 footer:
   link:
     tokyo: "https://tokyo2020.jp/fr/"
