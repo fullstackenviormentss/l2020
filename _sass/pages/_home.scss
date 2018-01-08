@@ -1,6 +1,4 @@
 html .hero {
-    background-image: url('../images/home/lausanne_overview4.jpg');
-    background-size: cover;
     height: 900px;
     @media (max-width: 1921px) {
         height: 900px;
@@ -28,12 +26,6 @@ html .hero {
     }
     @media (max-width: 450px) {
         height: 400px;
-    }
-    .container {
-        padding: 305px 0 0 0;
-        @media (max-width: 650px) {
-            padding-top: 165px;
-        }
     }
 }
 
