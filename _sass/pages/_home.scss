@@ -156,3 +156,16 @@ html .hero {
         width: 140px;
     }
 }
+
+.carousel_container {
+    margin-top: 150px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 991px) {
+        margin-top: 210px;
+    }
+    @media (max-width: 767px) {
+        margin-top: 125px;
+    }
+}
