@@ -159,9 +159,8 @@ html .hero {
 
 .carousel_container {
     margin-top: 150px;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     @media (max-width: 991px) {
         margin-top: 210px;
     }
@@ -174,9 +173,4 @@ html .hero {
     top: 50px;
     width: 96.66666666666666%;
     color: #FFF;
-}
-.carousel-inner.item {
-    display: none;
-    position: relative;
-    transition: 2s ease-in-out left;
 }
