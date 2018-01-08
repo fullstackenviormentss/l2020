@@ -78,6 +78,10 @@
     .nav_lang {
         display: inline;
     }
+    .row.socials.slidedown.smartphone {
+        visibility: hidden;
+        position: absolute;
+    }
 }
 
 @media(max-width:767px) {
