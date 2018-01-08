@@ -146,6 +146,17 @@
     }
     
 }
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px)
+  and (orientation: landscape) {
+      .links_social {
+          text-align:left;
+          margin-left: 15px;
+      }
+}
+
 /* Line slider */
 
 .navbar-nav>.nav_link::before {
