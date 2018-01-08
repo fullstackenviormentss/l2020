@@ -178,5 +178,5 @@ html .hero {
 .carousel-inner.item {
     display: none;
     position: relative;
-    .transition(2s ease-in-out left);
+    transition: 2s ease-in-out left;
 }
