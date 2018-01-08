@@ -70,6 +70,17 @@
     .navbar-collapse.collapse.in {
         max-height: 380px;
     }
+    .row.socials.slidedown.smartphone {
+        visibility: visible;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        padding-top:10px;
+    }
+    .navbar-header {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 @media(min-width:768px) {
