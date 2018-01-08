@@ -136,3 +136,12 @@
 .omega_countdown {
     padding-left:280px;
 }
+@media(max-width:767px) {
+   .omega_countdown {
+        padding-left:0px;
+        padding-top:20px;
+    }
+    .omega_img {
+        width:150px;
+    }
+}
