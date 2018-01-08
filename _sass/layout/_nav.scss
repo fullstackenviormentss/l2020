@@ -82,10 +82,8 @@
 
 @media(max-width:767px) {
     .nav-brand .logo {
-        padding: 17px 10px 0 30px;
-    }
-    .logo{
-        width: 200px;
+        margin: 30px 0 0 30px;
+        width: 250px;
     }
     .navbar-header {
         padding: 10px 0;
@@ -114,6 +112,11 @@
             display: block;
         }
     }
+    .row.socials.slidedown {
+        visibility: hidden;
+        position: absolute;
+    }
+    .
 }
 /* Line slider */
 
