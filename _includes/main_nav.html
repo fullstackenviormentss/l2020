@@ -28,83 +28,80 @@
           </div>
         </div>
       </div>
-        <a class="nav-brand" href="{{nav[0].path}}">
-          <img class="logo" src="/images/layout/logo-LS2020-YOG-DNA_235.png" width="235" />
+      <a class="nav-brand" href="{{nav[0].path}}">
+        <img class="logo" src="/images/layout/logo-LS2020-YOG-DNA_235.png" width="235" />
+      </a>
+      
+      <div class="omega_countdown">
+        <a class="omega_link" href="">
+          <img class="omega_img" src="/images/home/countdown.png" />
         </a>
-      
-        <div class="omega_countdown">
-          <a class="omega_link" href="">
-            <img class="omega_img" src="/images/home/countdown.png" />
-          </a>
-        </div>
+      </div>
         
-        <div class="social_smartphone">
-          <div class="row socials slidedown">
-            <div class="col-md-6 col-md-offset-6 header-pics navbar-right">
-              <div class="links_social">
-                <a href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
-                  <img height="30" src="/images/layout/Instagram-logo.png">
-                </a>
-                <a href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
-                  <img height="30" src="/images/layout/facebook-icon.png">
-                </a>
-                <a href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
-                  <img height="24" src="/images/layout/twitter-icon.svg">
-                </a>
-                <a href="https://www.youtube.com/channel/UCcEgzQvjtLp7UCdsXfuHbyQ" target="_blank" rel="noopener">
-                  <img height="24" src="/images/layout/YouTube-icon.png">
-                </a>
-              </div>
+      <div class="row socials slidedown smartphone">
+        <div class="col-md-6 col-md-offset-6 header-pics navbar-right">
+            <div class="links_social">
+              <a href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
+                <img height="30" src="/images/layout/Instagram-logo.png">
+              </a>
+              <a href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
+                <img height="30" src="/images/layout/facebook-icon.png">
+              </a>
+              <a href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
+                <img height="24" src="/images/layout/twitter-icon.svg">
+              </a>
+              <a href="https://www.youtube.com/channel/UCcEgzQvjtLp7UCdsXfuHbyQ" target="_blank" rel="noopener">
+                <img height="24" src="/images/layout/YouTube-icon.png">
+              </a>
             </div>
           </div>
         </div>
+      </div>
       
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
-                <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
-            </button>
-        </div>
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+              <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
+          </button>
+      </div>
 
-        <div class="navbar-collapse collapse" id="main-navbar">
-            <div class="nav navbar-nav navbar-right">
+      <div class="navbar-collapse collapse" id="main-navbar">
+          <div class="nav navbar-nav navbar-right">
 
-              {% for link in nav %}
+            {% for link in nav %}
 
-                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
-                {% capture folderpath %}{{ link.path }}/{% endcapture %}
-                {% if currentpage == link.path or currentpage == folderpath %}
-                  <a class="nav_link w--current" href="{{link.path}}">
-                {% else %}
-                  <a class="nav_link" href="{{link.path}}">
-                {% endif %}
-
-                {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
-              {% endfor %}
-
-
-              {% capture url_site_en %}{{ site.url }}{{ page.url | split:'.html' | first }}{% endcapture %}
-              {% capture url_site_de %}{{ site.url }}/de{{ page.url | split:'.html' | first }}{% endcapture %}
-              {% capture url_site_fr %}{{ site.url }}/fr{{ page.url | split:'.html' | first }}{% endcapture %}
-
-              <div class="nav_lang">
-              {% if site.lang == "en" %}
-                <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
-                <a href="{{ url_site_en }}" data-language="en" class="language nav_link accent">en</a>
-                <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
-              {% elsif site.lang == "fr" %}
-                <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link accent">fr</a>
-                <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
-                <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
-              {% elsif site.lang == "de" %}
-                <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
-                <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
-                <a href="{{ url_site_de }}" data-language="de" class="language nav_link accent">de</a>
+              {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
+              {% capture folderpath %}{{ link.path }}/{% endcapture %}
+              {% if currentpage == link.path or currentpage == folderpath %}
+                <a class="nav_link w--current" href="{{link.path}}">
+              {% else %}
+                <a class="nav_link" href="{{link.path}}">
               {% endif %}
-              </div>
 
+              {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
+            {% endfor %}
+
+
+            {% capture url_site_en %}{{ site.url }}{{ page.url | split:'.html' | first }}{% endcapture %}
+            {% capture url_site_de %}{{ site.url }}/de{{ page.url | split:'.html' | first }}{% endcapture %}
+            {% capture url_site_fr %}{{ site.url }}/fr{{ page.url | split:'.html' | first }}{% endcapture %}
+
+            <div class="nav_lang">
+            {% if site.lang == "en" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link accent">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+            {% elsif site.lang == "fr" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link accent">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+            {% elsif site.lang == "de" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link accent">de</a>
+            {% endif %}
             </div>
           </div>
-          
+        </div>  
       </div>
   </nav>
   <script src="{{site.url}}/js/vendors/client.language.detection.min.js"></script>
