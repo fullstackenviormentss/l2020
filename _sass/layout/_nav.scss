@@ -148,8 +148,9 @@
 }
 
 @media only screen 
-  and (max-device-width: 767px)
-  and (orientation: landscape) {
+    and (min-device-width: 480px) 
+    and (max-device-width: 640px) 
+    and (orientation: landscape) {
       .links_social {
           text-align:left;
           margin-left: 15px;
