@@ -10,6 +10,11 @@ html .hero {
     }
     @media (max-width: 1501px) {
         height: 700px;
+        .the_claim {
+            font-size: 30px;
+            line-height: 60px;
+            font-weight: 600;
+        }
     }
     @media (max-width: 1250px) {
         height: 700px;
