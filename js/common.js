@@ -291,7 +291,7 @@ var titleSlider = {
       } else {
         $(titleSlider.el + ":first").removeClass(titleSlider.elRemoveClass).addClass(titleSlider.elAddClass);
       }
-    }, 3500);
+    }, 5000);
   },
   clear: function () {
     $(titleSlider.el).removeClass('fade-in');
