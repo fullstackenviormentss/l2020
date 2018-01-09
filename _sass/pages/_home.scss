@@ -6,7 +6,7 @@ html .hero {
         height: 900px;
     } // Width of image
     @media (max-width: 1651px) {
-        height: 900px;
+        height: 800px;
     }
     @media (max-width: 1501px) {
         height: 700px;
@@ -17,14 +17,15 @@ html .hero {
         }
     }
     @media (max-width: 1250px) {
-        height: 700px;
+        height: 600px;
+        margin-top: 50px;
     }
     @media (max-width: 1155px) {
-        height: 600px;
+        height: 500px;
         margin-top:100px;
     }
     @media (max-width: 990px) {
-        height: 500px;
+        height: 400px;
         margin-top:150px;
     }
     @media (max-width: 830px) {
