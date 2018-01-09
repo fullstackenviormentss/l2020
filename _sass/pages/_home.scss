@@ -35,9 +35,22 @@ html .hero {
         margin-top: 100px;
     }
     .container {
-        padding: 230px 0 0 0;
+        padding: 150px 0 0 0;
+        @media (max-width: 1155px) {
+            padding-top: 50px;
+            .the_claim {
+                font-size: 45px;
+                line-height: 50px;
+                font-weight: 600;
+            }
+        }
         @media (max-width: 650px) {
-            padding-top: 105px;
+            padding-top: 20px;
+            .the_claim {
+                font-size: 45px;
+                line-height: 50px;
+                font-weight: 600;
+            }
         }
     }
 }
@@ -70,9 +83,9 @@ html .hero {
     position: absolute;
     color: #FFFFFF;
     width: inherit;
-    font-size: 81px;
-    line-height: 90px;
-    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+    font-weight: 600;
     text-transform: uppercase;
     opacity: 0;
     -webkit-animation-duration: 2s;
@@ -83,13 +96,6 @@ html .hero {
     animation-fill-mode: both;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-}
-
-@media (max-width: 1350px) {
-    .the_claim {
-        font-size: 30px;
-        line-height: 35px;
-    }
 }
 
 .about_yog_section {
