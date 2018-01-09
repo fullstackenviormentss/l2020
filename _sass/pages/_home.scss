@@ -1,11 +1,11 @@
 .the_claim {
     @media (max-width: 1350px) {
-        font-size: 30px;
-        line-height: 35px;
+        font-size: 30px !important;
+        line-height: 35px !important;
     }
     @media (max-width: 767px) {
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 15px !important;
+        line-height: 25px !important;
     }
 }
 
@@ -37,9 +37,9 @@
     position: absolute;
     color: #FFFFFF;
     width: inherit;
-    font-size: 45px;
-    line-height: 70px;
-    font-weight: 700;
+    font-size: 45px !important;
+    line-height: 70px !important;
+    font-weight: 700 !important;
     text-transform: uppercase;
     opacity: 0;
     -webkit-animation-duration: 1.5s;
