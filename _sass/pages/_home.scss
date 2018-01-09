@@ -30,14 +30,23 @@ html .hero {
     @media (max-width: 830px) {
         height: 400px;
         margin-top:150px;
+        .the_claim {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            padding-left:30px;
+        }
+    }
+    @media (max-width: 767px) {
+        margin-top: 80px;
     }
     @media (max-width: 680px) {
         height: 300px;
-        margin-top: 100px;
+        margin-top: 80px;
     }
     @media (max-width: 510px) {
         height: 200px;
-        margin-top: 100px;
+        margin-top: 80px;
     }
     .container {
         padding: 150px 0 0 0;
