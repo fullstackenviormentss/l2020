@@ -184,6 +184,16 @@ pages:
         placeholder: Enter your message here
       envoyer: Send
       thanks: Thank you very much for your request. We will reply as soon as possible!
+  venues:
+    title: Non-competitions venues
+    subtitle1: Youth Olympic Village
+    text1: Before becoming a student residence in autumn 2020, the Vortex will host, in January of the same year, the athletes and National Olympic Committees of the Lausanne 2020 Youth Olympic Games. This elliptical building is located in the heart of the campus of the University of Lausanne, institutional partner of Lausanne 2020.
+    link1: https://www.cpev.ch/immobilier/vortex
+    textlink1: More informations and webcams
+    subtitle2: Medal Plaza
+    text2: The medal ceremony will take place in the Quartier du Flon, a lively place in the heart of Lausanne.
+    link2: https://flon.ch/en/
+    textlink2: Learn more
 footer:
   link:
     tokyo: "https://tokyo2020.jp/en/"
