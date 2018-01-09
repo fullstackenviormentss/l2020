@@ -39,15 +39,24 @@ html .hero {
         }
     }
     @media (max-width: 767px) {
+        height:300px;
         margin-top: 80px;
     }
     @media (max-width: 680px) {
         height: 300px;
         margin-top: 80px;
     }
-    @media (max-width: 510px) {
+    @media (max-width: 550px) {
         height: 200px;
         margin-top: 80px;
+        .the_claim {
+            .the_claim {
+            font-size: 20px;
+            line-height: 30px;
+            font-weight: 600;
+            padding-left:30px;
+            padding-top:10px;
+        }
     }
     .container {
         padding: 150px 0 0 0;
