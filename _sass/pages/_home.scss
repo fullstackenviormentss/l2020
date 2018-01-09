@@ -1,31 +1,11 @@
-html .hero {
-    height: 900px;
-    @media (max-width: 1921px) {
-        height: 900px;
-    } // Width of image
-    @media (max-width: 1651px) {
-        height: 900px;
+.the_claim {
+    @media (max-width: 1350px) {
+        font-size: 30px;
+        line-height: 35px;
     }
-    @media (max-width: 1450px) {
-        height: 900px;
-    }
-    @media (max-width: 1250px) {
-        height: 700px;
-    }
-    @media (max-width: 1050px) {
-        height: 700px;
-    }
-    @media (max-width: 850px) {
-        height: 700px;
-    }
-    @media (max-width: 650px) {
-        height: 400px;
-    }
-    @media (max-width: 479px) {
-        height: 400px;
-    }
-    @media (max-width: 450px) {
-        height: 400px;
+    @media (max-width: 767px) {
+        font-size: 15px;
+        line-height: 25px;
     }
 }
 
@@ -57,26 +37,19 @@ html .hero {
     position: absolute;
     color: #FFFFFF;
     width: inherit;
-    font-size: 81px;
-    line-height: 90px;
+    font-size: 45px;
+    line-height: 70px;
     font-weight: 700;
     text-transform: uppercase;
     opacity: 0;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-}
-
-@media (max-width: 1350px) {
-    .the_claim {
-        font-size: 30px;
-        line-height: 35px;
-    }
 }
 
 .about_yog_section {
