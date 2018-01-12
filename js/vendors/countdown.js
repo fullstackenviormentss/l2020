@@ -182,7 +182,7 @@
 	                },
 	                success: function() {
 	                    // target = new Date(data.targetDate).getTime();
-	                    target = new Date(1578596400).getTime();
+	                    target = new Date(1578682800).getTime();
 						update_remaining();
 	                    setInterval(update_remaining, 1000);
 	                }
