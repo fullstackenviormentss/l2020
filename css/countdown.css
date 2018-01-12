@@ -1,43 +1,41 @@
+body{
+	overflow: hidden;
+}
 .countdown_container {
 	position: relative;
-	width: 180px;
-	max-width: 180px;
-	height: 165px;
+	width: 484px;
+	height: 153px;
 	border: 0 solid #9f9f9f;
 	background-color: white;
-	background-image: url(../img/bg.png);
 	background-repeat:no-repeat;
 	background-size: 100%;
+	transform-origin: top left;
+	-moz-transform-origin: top left;
+	-webkit-transform-origin: top left;
+	-o-transform-origin: top left;
 }
-.countdown_container:after {
-	padding-top: 88%;
-	display: block;
-	content: "";
-}
-.countdown_container .border {
+.border {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 180px;
-	height: 165px;
+	width: 100%;
+	height: 100%;
 	border: 1px solid #9f9f9f;
+    max-width: 484px;
+    max-height: 153px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-.countdown_container .logo {
-	position: absolute;
-	top: 23%;
-	left: 0px;
-	width: 100%;
-	text-align: center;
-}
-.countdown_container .logo img {
-	width: 60%;
+*{
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
 }
 
-.countdown_container a.omega_link {
+a.omega_link {
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -46,109 +44,79 @@
 	height: 100%;
 	cursor: pointer;
 }
-.countdown_container .clock, .countdown_container .countdown {
-	display: none;
+.countdown {
+	/* display: none; */
+	opacity: 0;
 	position: absolute;
+	top: 0;
 	left: 0;
-	text-align: center;
+	width: 100%;
+	height: 100%;
+	/* text-align: center; */
 }
 
-.countdown_container .cd_item {
+.cd_item {
 	font-family: "OmegaCT", Arial, sans-serif;
 	display: inline-block;
-	color: black;
+	color: #535353;
 }
 
-.countdown_container #final-countdown { opacity: 0; }
+#final-countdown { opacity: 0; }
 .current-time {
-	width: 100%;
+	/* width: 100%; */
 	position: absolute;
 	text-align: center;
 	font-weight: 800;
-	font-size: 30px;
-	top: 110px;
+	font-size: 2.625em;
+	top: 62px;
+	right: 55px;
 	letter-spacing: 2px;
 	opacity: 0;
 }
 
-.countdown_container .countdown {
-	width: 100%;
-	top: 69%;
-}
-.countdown_container .countdown .cd_item {
-	width: 25%;
-	height: 45px;
-	background-image: url(../img/separator.png);
-	background-repeat: no-repeat;
-	background-position: right center;
-    background-size: contain;
-	margin-left: -5px;
-}
 
-.countdown_container .countdown .cd_item_last {
-	background-image: none;
-}
-
-.countdown_container .countdown .days {
-	width: 29%;
-}
-.countdown_container .countdown .hours {
-	width: 25%;
-}
-.countdown_container .countdown .cd_label {
-	font-weight: normal;
-	font-size: 12px;
-	text-align: center;
-	display: block;
-	margin: 3px 0 5px 0;
-}
-
-.countdown_container .cd_remain {
-	font-weight: bold;
-	font-size: 17px;
-	display: block;
-	text-align: center;
-}
-
-.countdown_container .countdown p {
+.countdown p {
 	text-transform: uppercase;
 	font-weight: bold;
 	margin: 2px 0 0 0;
 	font-family: "OmegaCT", Arial, sans-serif;
 	color: #be072f;
-	font-size: 16px;
+	font-size: 1;
 	text-align: center;
 }
-.countdown_container .countdown img {
+.countdown img {
 	display: block;
 	margin: 0 auto;
 }
 
 /* clock specifics */
-.countdown_container .clock {
+.clock {
 	position: absolute;
-	bottom: 15%;
-	text-align: center;
-	width: 100%;
-	font-size: 30px;
-	top: 110px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 3em;
+    top: 56px;
+    right: 30px;
+    letter-spacing: 2px;
+    /* display: none; */
+    opacity: 0;
 }
 
-.countdown_container .clock .cd_item {
+.clock .cd_item {
 	display: inline-block;
-	color: black;
+	color: #535353;
 	width: 13%;
 	width: auto;
 	font-weight: bold;
 	text-align: center;
 }
-.countdown_container .clock .inter {
+.clock .inter {
 	display: inline-block;
 	font-weight: bold;
 	width: 4%;
 	width: auto;
 	margin: 0 -5px;
-	color: black;
+	color: #535353;
 	padding-top: 0px;
 	text-align: center;
 }
@@ -156,5 +124,82 @@
 
 .countdown_container img.retina {
 	display: none;
+}
+.cd_label, .cd_remain{
+    position: absolute;
+}
+.days_label.cd_label {
+    top: 10px;
+    right: 45px;
+    font-size: 2.25em;
+    /* font-weight: bold; */
+    color: #757575;
+    letter-spacing: 2px;
+}
+.days .cd_remain{
+    top: 10px;
+    right: 175px;
+    font-size: 2.250em;
+    font-weight: bold;
+    color: #535353;
+}
+.hours_label.cd_label, .minutes_label.cd_label, .seconds_label.cd_label{
+    font-size: 1.25em;
+    /* font-weight: bold; */
+    color: #535353;
+}
+#en .hours_label.cd_label{
+	top: 75px;
+    right: 212px;
+}
+#en .minutes_label.cd_label{
+	top: 75px;
+    right: 117px;
+}
+#en .seconds_label.cd_label{
+	top: 75px;
+    right: 22px;
+}
+#de .hours_label.cd_label{
+	top: 75px;
+    right: 221px;
+}
+#de .minutes_label.cd_label{
+	top: 75px;
+    right: 122px;
+}
+#de .seconds_label.cd_label{
+	top: 75px;
+    right: 40px;
+}
+#fr .hours_label.cd_label{
+	top: 75px;
+    right: 212px;
+}
+#fr .minutes_label.cd_label{
+	top: 75px;
+    right: 122px;
+}
+#fr .seconds_label.cd_label{
+	top: 75px;
+    right: 27px;
+}
+.hours .cd_remain, .minutes .cd_remain, .seconds .cd_remain{
+    font-size: 2.375em;
+    font-weight: bold;
+    color: #535353;
+    letter-spacing: 2px;	
+}
+.hours .cd_remain{
+    top: 95px;
+    right: 204px;
+}
+.minutes .cd_remain{
+    top: 95px;
+    right: 116px;
+}
+.seconds .cd_remain{
+    top: 95px;
+    right: 21px;
 }
 
