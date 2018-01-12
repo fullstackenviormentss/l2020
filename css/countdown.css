@@ -19,6 +19,9 @@ body{
 	-webkit-transform-origin: top left;
 	-o-transform-origin: top left;
 }
+.countdown_numbers {
+	line-height: 1.42857143;
+}
 .border {
 	position: absolute;
 	top: 0;
