@@ -1,6 +1,11 @@
 body{
 	overflow: hidden;
 }
+
+.ad {
+	position: relative;
+	float: right;
+}
 .countdown_container {
 	position: relative;
 	width: 484px;
