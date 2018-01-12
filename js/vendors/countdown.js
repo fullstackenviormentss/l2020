@@ -36,7 +36,7 @@
 		var options = {
 			'lang': "en"
 			// 'timestamp': integer
-		}
+		};
 
 		//var timestamp_url = './buenos-aires.php?callback=var%20data%20=';
 		var timestamp_url = 'https://countdown.omegawatches.com/minisites/buenosaires2018/buenos-aires.php';
@@ -47,17 +47,17 @@
                 number = "0" + number;
             }
             return number;
-        }
+        };
 
 		var local_get_time = function(tz_offset) {
 			var utc = new Date().getTime() / 1000;
 			var local = utc - tz_offset * 60;
 			return local;
-		}
+		};
 		var utc_get_time = function() {
 			var utc = new Date().getTime() / 1000;
 			return utc;
-		}
+		};
 
 		var translations = {
 			'de': {
@@ -90,7 +90,7 @@
 			}
 
 
-		}
+		};
 		$.extend(options, custom_options);
 		translations = translations[options.lang];
 
@@ -99,10 +99,10 @@
 			var _self = $(this);
 			var tz_offset = new Date().getTimezoneOffset();
 			var $countdown = _self.find(".countdown");
-            var $days = _self.find(".days_remaining");
-            var $hours = _self.find(".hours_remaining");
-            var $minutes = _self.find(".minutes_remaining");
-            var $seconds = _self.find(".seconds_remaining");
+			    var $days = _self.find(".days_remaining");
+			    var $hours = _self.find(".hours_remaining");
+			    var $minutes = _self.find(".minutes_remaining");
+			    var $seconds = _self.find(".seconds_remaining");
 			var $all_countdown_digits = _self.find(".cd_remain");
 			var $clock = _self.find(".clock");
             var $clock_hours = _self.find(".clock_hours");
@@ -165,7 +165,7 @@
 						// $countdown.show(0);
 					}, 1000);
                 }
-            }
+            };
 
 			if (options.timestamp) {
 				target = options.timestamp;
