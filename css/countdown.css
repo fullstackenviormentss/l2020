@@ -2,7 +2,7 @@ body{
 	overflow: hidden;
 }
 
-.ad {
+#ad {
 	position: relative;
 	float: right;
 }
