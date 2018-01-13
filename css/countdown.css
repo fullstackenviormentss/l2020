@@ -3,7 +3,7 @@
 	float: right;
 }
 .countdown_container {
-	transform: scale(0.8);
+	transform: scale(0.8) !important;
 	position: relative;
 	width: 484px;
 	height: 153px;
