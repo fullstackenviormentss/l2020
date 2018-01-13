@@ -24,9 +24,11 @@
     }
 }
 
-.links_social a {
+.links_social {
     @media (max-width: 991px) {
-	    margin-right: 5px;
+	    a {
+		    margin-right: 5px;
+    	    }
     }
 }
 
