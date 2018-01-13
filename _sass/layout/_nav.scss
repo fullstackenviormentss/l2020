@@ -12,6 +12,13 @@
     float: left;
     width: 30%;
     margin-top: 15px;
+    @media (max-width: 991px) {
+		width: 25%;
+        text-align: left;
+        a {
+            margin-right: 5px;
+        }
+	}
 }
 
 #main-navbar {
