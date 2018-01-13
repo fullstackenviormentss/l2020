@@ -21,9 +21,14 @@
     @media (max-width: 991px) {
 	width: 25%;
         text-align: left;
-        a {
-            margin-right: 5px;
-        }
+    }
+}
+
+.links_social a {
+    @media (max-width: 991px) {
+	    a {
+            	margin-right: 5px;
+            }
     }
 }
 
