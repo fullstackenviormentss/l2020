@@ -2,9 +2,21 @@
 	position: relative;
 	float: right;
 	height: 123px;
+	@media (max-width: 1199px) {
+		height: 102px;
+	}
+	@media (max-width: 991px) {
+		height: 79px;
+	}
 }
 .countdown_container {
 	transform: scale(0.8) !important;
+	@media (max-width: 1199px) {
+		transform: scale(0.7) !important;
+	}
+	@media (max-width: 991px) {
+		transform: scale(0.5) !important;
+	}
 	position: relative;
 	margin-left: 20%;
 	width: 484px;
