@@ -14,11 +14,11 @@
 	width: 30%;
 	margin-top: 15px;  
     }
-    @media (min-width: 992px) {
+    @media (max-width: 1199px) {
 	width: 30%;
 	margin-top: 35px;    
     }
-    @media (min-width: 767px) {
+    @media (min-width: 991px) {
 	width: 25%;
         text-align: left;
         a {
