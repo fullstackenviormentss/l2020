@@ -10,13 +10,16 @@
 
 .socials {
     float: left;
-    width: 30%;
-    margin-top: 15px;
-    @media (max-width: 1199px) {
+    @media (min-width: 1200px) {
+	width: 30%;
+	margin-top: 15px;  
+    }
+    @media (min-width: 992px) {
+	width: 30%;
 	margin-top: 35px;    
     }
-    @media (max-width: 991px) {
-		width: 25%;
+    @media (min-width: 767px) {
+	width: 25%;
         text-align: left;
         a {
             margin-right: 5px;
