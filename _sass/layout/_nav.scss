@@ -54,8 +54,8 @@
 }
 
 .nav-brand .logo {
-	width: 80%; 
-	margin-left: 10%;
+	width: 80% !important; 
+	margin-left: 10% !important;
 	@media (max-width: 512px) {
 		width: 90% !important;
 		margin-left: 5% !important;
@@ -157,10 +157,6 @@
 }
 
 @media(max-width:767px) {
-    .nav-brand .logo {
-        margin: 30px 0 0 30px;
-        width: 150px;
-    }
     .navbar-header {
         background-color: #FFF;
         .navbar-toggle {
