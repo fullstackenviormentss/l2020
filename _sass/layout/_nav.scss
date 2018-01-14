@@ -38,6 +38,9 @@
 		position: relative;
 		margin-top: 10px;
     	}
+	@media (max-width: 640px) {
+		width: 40%;
+    	}
 }
 
 .desktop {
