@@ -110,6 +110,16 @@
     .nav_link {
         margin-left: 20px;
     }
+    #main-navbar {
+    	float: left;
+    }
+    .navbar-collapse {
+	margin-left: 0;
+    }
+    .navbar-right {
+	width: 100%;
+	float: left;
+    }
     .navbar-collapse .nav_lang {
         padding: 20px;
         .nav_link {
@@ -119,7 +129,7 @@
     }
     .navbar-collapse.collapse.in {
         max-height: 380px;
-        width: 110%;
+        width: 100%;
     }
     .row.socials.slidedown.smartphone {
         visibility: visible;
