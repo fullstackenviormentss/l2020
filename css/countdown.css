@@ -34,7 +34,7 @@
 @media (max-width: 512px) {
 	#ad {
 		height: 62px;
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 	.countdown_container {
 		transform: scale(0.3) !important;	
@@ -45,7 +45,7 @@
 @media (max-width: 459px) {
 	#ad {
 		height: 62px;
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 	.countdown_container {
 		transform: scale(0.3) !important;	
@@ -59,7 +59,7 @@
 @media (max-width: 390px) {
 	#ad {
 		height: 62px;
-		margin-top: 20px;
+		margin-top: 10px;
 	}
 	.countdown_container {
 		transform: scale(0.3) !important;	
