@@ -53,7 +53,7 @@
 		margin-top: 10px;
 	}
 	.countdown_container .border {
-		height: 145.2px;
+		height: 145.2px !important;
 	}
 }
 @media (max-width: 390px) {
@@ -67,7 +67,7 @@
 		margin-top: 10px;
 	}
 	.countdown_container .border {
-		height: 145.2px;
+		height: 145.2px !important;
 	}
 }
 #ad {
