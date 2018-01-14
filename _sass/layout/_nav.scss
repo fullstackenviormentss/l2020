@@ -41,12 +41,22 @@
 	@media (max-width: 640px) {
 		width: 40%;
     	}
+	@media (max-width: 512px) {
+		width: 65%;
+    	}
 }
 
 .desktop {
 	@media (max-width: 767px) {
 		visibility: hidden;
 		position: absolute;
+    	}
+}
+
+.nav-brand .logo {
+	@media (max-width: 512px) {
+		width: 90%;
+		margin-left: 5px;
     	}
 }
 
