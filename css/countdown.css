@@ -22,6 +22,14 @@
 		transform: scale(0.5) !important;	
 	}
 }
+@media (max-width: 767px) {
+	#ad {
+		height: 62px;
+	}
+	.countdown_container {
+		transform: scale(0.4) !important;	
+	}
+}
 #ad {
 	position: relative;
 	float: right;
