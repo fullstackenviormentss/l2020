@@ -54,6 +54,8 @@
 }
 
 .nav-brand .logo {
+	width: 80%; 
+	margin-left: 10%;
 	@media (max-width: 512px) {
 		width: 90%;
 		margin-left: 5px;
