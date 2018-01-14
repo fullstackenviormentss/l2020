@@ -42,6 +42,20 @@
 		margin-top: 10px;
 	}
 }
+@media (max-width: 459px) {
+	#ad {
+		height: 62px;
+		margin-top: 20px;
+	}
+	.countdown_container {
+		transform: scale(0.3) !important;	
+		margin-left: 20%;
+		margin-top: 10px;
+	}
+	.countdown_container .border {
+		height: 145.2px;
+	}
+}
 @media (max-width: 390px) {
 	#ad {
 		height: 62px;
