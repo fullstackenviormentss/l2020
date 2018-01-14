@@ -30,6 +30,22 @@
     }
 }
 
+.smartphone {
+	visibility: hidden;
+	position: absolute;
+	@media (max-width: 767px) {
+		visibility: visible;
+		position: relative;
+    	}
+}
+
+.desktop {
+	@media (max-width: 767px) {
+		visibility: hidden;
+		position: absolute;
+    	}
+}
+
 #main-navbar {
     float: right;
 }
