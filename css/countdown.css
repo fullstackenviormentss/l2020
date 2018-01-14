@@ -25,6 +25,7 @@
 @media (max-width: 767px) {
 	#ad {
 		height: 62px;
+		margin-top: 10px;
 	}
 	.countdown_container {
 		transform: scale(0.4) !important;	
