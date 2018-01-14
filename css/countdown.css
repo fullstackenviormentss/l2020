@@ -34,16 +34,6 @@
 @media (max-width: 512px) {
 	#ad {
 		height: 62px;
-		margin-top: 10px;
-	}
-	.countdown_container {
-		transform: scale(0.4) !important;	
-		margin-left: 10%;
-		margin-top: 10px;
-	}
-}
-@media (max-width: 456px) {
-	#ad {
 		margin-top: 20px;
 	}
 	.countdown_container {
