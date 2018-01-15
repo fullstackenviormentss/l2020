@@ -26,12 +26,13 @@ layout: default
 									<img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">
 								</div>
 								<h1 class="h1_news">
-											{% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% else %} {{ new.titreEn }} {%
+											{% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% elsif site.lang == "it" %} {{ new.titreIT }} {% else %} {{ new.titreEn }} {%
 											endif %}
 									</h1>
 									<p class="p_news">
 											{% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-											{% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+											{% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+											{% elsif site.lang == "it" %} {{ new.texteIt | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
 											{% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
 									</p>
 							</div>
