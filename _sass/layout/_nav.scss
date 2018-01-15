@@ -61,7 +61,33 @@
 		margin-left: 5% !important;
     	}
 }
+@media only screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+    	.socials {
+    		float: left;
+		width: 25%;
+        	text-align: left;
+    	}
+	.socials_links {
+		margin-right: 5px !important;
+    	}
+	.smartphone {
+		visibility: visible;
+		position: relative;
+		margin-top: 10px;
+		width: 65%;
+    	}
+	.desktop {
+		visibility: hidden;
+		position: absolute;
+    	}
+	.nav-brand .logo {
+		width: 90% !important;
+		margin-left: 5% !important;
+    	}
+	
+}
 
+}
 #main-navbar {
     float: right;
 }
