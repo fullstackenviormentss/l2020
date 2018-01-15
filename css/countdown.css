@@ -70,6 +70,20 @@
 		height: 145.2px !important;
 	}
 }
+@media only screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+	#ad {
+		height: 62px;
+		margin-top: 10px;
+	}
+	.countdown_container {
+		transform: scale(0.3) !important;	
+		margin-left: 10% !important;
+		margin-top: 10px !important;
+	}
+	.countdown_container .border {
+		height: 145.2px !important;
+	}
+}
 #ad {
 	position: relative;
 	float: right;
