@@ -7,6 +7,9 @@
 {% if site.lang == "de" %}
   {% assign nav = site.data.nav-header.de %}
 {% endif %}
+{% if site.lang == "it" %}
+  {% assign nav = site.data.nav-header.it %}
+{% endif %}
 
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
     <div class="container">
@@ -58,20 +61,29 @@
               {% capture url_site_en %}{{ site.url }}{{ page.url | split:'.html' | first }}{% endcapture %}
               {% capture url_site_de %}{{ site.url }}/de{{ page.url | split:'.html' | first }}{% endcapture %}
               {% capture url_site_fr %}{{ site.url }}/fr{{ page.url | split:'.html' | first }}{% endcapture %}
+              {% capture url_site_it %}{{ site.url }}/it{{ page.url | split:'.html' | first }}{% endcapture %}
 
               <div class="nav_lang">
               {% if site.lang == "en" %}
                 <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
                 <a href="{{ url_site_en }}" data-language="en" class="language nav_link accent">en</a>
                 <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+                <a href="{{ url_site_it }}" data-language="it" class="language nav_link">it</a>
               {% elsif site.lang == "fr" %}
                 <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link accent">fr</a>
                 <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
                 <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+                <a href="{{ url_site_it }}" data-language="it" class="language nav_link">it</a>
+              {% elsif site.lang == "it" %}
+                <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
+                <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
+                <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+                <a href="{{ url_site_it }}" data-language="it" class="language nav_link accent">it</a>
               {% elsif site.lang == "de" %}
                 <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
                 <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
                 <a href="{{ url_site_de }}" data-language="de" class="language nav_link accent">de</a>
+                <a href="{{ url_site_it }}" data-language="it" class="language nav_link">it</a>
               {% endif %}
               </div>
 
