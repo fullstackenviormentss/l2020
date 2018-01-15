@@ -47,9 +47,21 @@
 	  <div id="border" class="border"></div>	
         </div>
         <a class="omega_link" target="_blank" href="https://www.omegawatches.com"></a>
-        <script type="text/javascript">
-          $('#countdown_container_tag').countdown({'lang': 'fr' });
-        </script>
+        {% if site.lang == "en" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'en' });
+        	</script>
+	{% endif %}
+	{% if site.lang == "fr" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'fr' });
+        	</script>
+	{% endif %}
+	{% if site.lang == "de" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'fr' });
+        	</script>
+	{% endif %}
       </div>  
       <div class="socials slidedown smartphone col-lg-4 col-md-4">
 	  <div class="links_social">
