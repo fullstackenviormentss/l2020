@@ -118,7 +118,7 @@ pages:
         text: Sci alpinismo
         link: "http://www.ismf-ski.org/"
     sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico.
-    sports_fin: Scoprite le sedi delle gare<b><a href="venues" class="link_site">ici</a></b>
+    sports_fin: <b><a href="venues" class="link_site">Scoprite le sedi delle gare</a></b>
     facts:
       title: Losanna 2020 in cifre
       fact1: 
