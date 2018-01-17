@@ -119,13 +119,6 @@
 	box-sizing: border-box;
 }
 
-*{
-	-webkit-backface-visibility:hidden;
-	-moz-backface-visibility:hidden;
-	-o-backface-visibility:hidden;
-	backface-visibility:hidden;
-}
-
 a.omega_link {
 	display: block;
 	position: absolute;
