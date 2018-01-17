@@ -1,0 +1,191 @@
+meta: 
+  desc: "Losanna 2020 – i terzi Giochi Olimpici Giovanili invernali si svolgeranno dal 10 al 22 gennaio 2020. Le sedi delle gare sono : Losanna, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets e St. Moritz"
+pages:
+  index:
+    title1:
+      part1: Losanna 2020
+      part2: E’ qui che tutto inizia! 
+    title2:
+      part1: Losanna 2020
+      part2: Patrimonio, Esperienza, Innovazione
+    title3:
+      part1: Losanna 2020
+      part2: Cultura, Sport, Educazione
+    title4:
+      part1: Losanna 2020
+      part2: Appuntamento a gennaio 2020 
+    title_video: Giornata Olimpica 2017
+    text_video: Scopri di più 
+    news:
+      title: News 
+      plus: Continua
+      autres: Tutte le news 
+    about:
+      title: Chi siamo
+      texte: Dal 10 al 22 gennaio 2020, Losanna accoglierà la terza edizione dei Giochi Olimpici Giovanili invernali. A ventisei anni dall’ottenimento del titolo di Capitale Olimpica, Losanna diventa Città Olimpica accogliendo il secondo più grande avvenimento invernale polisportivo dopo i Giochi Olimpici invernali e offrendo ai giovani atleti un’esperienza olimpica indimenticabile. La cultura, le prestazioni e l’educazione si incontrano dando vita ad una vera celebrazione dello sport!
+      more: Scopri di più
+    shop:
+      title: Tutti i prodotti Losanna 2020 saranno presto disponibili!
+      button: Shop!
+    socialwall:
+      title: Social Media Feed 
+    newsletter:
+      part1: Partecipate all’avventura Losanna 2020 e ricevete le ultime informazioni! 
+      part2: Losanna 2020!
+      button: Mi annuncio
+      placeholder: Indirizzo e-mail 
+      thanks: Grazie. Abbiamo ricevuto la sua iscrizione!
+      oops: Ehm…! Qualcosa non ha funzionato durante la trasmissione del formulario. 
+    privacy:
+      text: Norme di tutela della confidenzialità e termini di utilizzo
+      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_FR.pdf" 
+  news:
+    archive_link: Archivio
+  jobs:
+    title: Offerte di lavoro 
+    texte: |
+             Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
+    texteEmpty: |
+            Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
+            Attualmente non ci sono posti disponibili all’interno del comitato d’organizzazione.
+    from: "Limite per l’inoltro della sua offerta:" 
+    readFile: Scopri di più
+  about:
+    title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
+    texte1: |
+            I Giochi Olimpici Giovanili sono una manifestazione sportiva Olimpica internazionale al più alto livello per atleti dai 15 ai 18 anni.
+
+            Associano prestazioni sportive, cultura ed educazione durante un vero festival dello sport. Hanno l’obbiettivo di incoraggiare la gioventù ad adottare e vivere i valori positivi dello sport – il rispetto dell’altro, di sé stessi, del nostro ambiente, l’amicizia fra i popoli e le culture, l’eccellenza nel dono di sé – e divenirne gli ambasciatori in tutto il mondo.
+           
+            Attraverso la propria vocazione, i Giochi Olimpici Giovanili vogliono essere un esempio portatore d’innovazione per gli eventi sportivi del futuro. 
+    more: Saperne di più
+    title2: L’ambizione di Losanna
+    texte2: |
+            Losanna 2020 rappresenta l’ambizione di creare una nuova piattaforma sportiva per la gioventù coinvolgendola attivamente alla preparazione e organizzazione dell’evento.
+            Si tratta di implicare tutta la popolazione locale, regionale e addirittura nazionale attorno a un evento unico e che unifica in favore di un mondo migliore.
+            Valorizzare e responsabilizzare i giovani permettendo loro di diventare ambasciatori dei valori positivi dello sport, d’acquisire nuovi talenti e di realizzarsi diventando i leader di domani. Tutto ciò facendo dei Giochi Olimpici Giovanili un laboratorio creativo; incubatore d’idee di giovani per i giovani, attingendo al patrimonio e ai vantaggi unici della Svizzera in termini di formazione, cultura e innovazione.
+            
+            <span class="important-dates"> Losanna 2020 si svolgerà dal 10 al 22 gennaio 2020! </span>
+    sports_title: le discipline sportive
+    sports_texte: "Il programma sportivo della terza edizione dei Giochi Olimpici Giovanili invernali è simile al programma dei Giochi Olimpici invernali, con delle varianti e innovazioni nelle discipline proposte dalle federazioni internazionali. Gli sport in programma sono:"
+    sports:
+      biathlon:
+        text: Biathlon
+        link: "https://www.olympic.org/fr/biathlon" 
+      bobsleigh:
+        text: Bob
+        link: "https://www.olympic.org/fr/bobsleigh"
+      combine-nordique: 
+        text: Combinata nordica
+        link: "https://www.olympic.org/fr/combine-nordique"
+      curling:
+        text: Curling
+        link: "https://www.olympic.org/fr/curling"
+      hockey-sur-glace:
+        text: Hockey su ghiaccio
+        link: "https://www.olympic.org/fr/hockey-sur-glace"
+      luge:
+        text: Slittino
+        link: "https://www.olympic.org/fr/luge"
+      patinage-artistique:
+        text: Pattinaggio artistico 
+        link: "https://www.olympic.org/fr/patinage-artistique"
+      patinage-vitesse:
+        text: Pattinaggio di velocità
+        link: "https://www.olympic.org/fr/patinage-de-vitesse"
+      short-track:
+        text: Pattinaggio di velocità su short track
+        link: "https://www.olympic.org/fr/patinage-de-vitesse-sur-piste-courte"
+      saut-a-ski:
+        text: Salto con gli sci
+        link: "https://www.olympic.org/fr/saut-a-ski"
+      skeleton:
+        text: Skeleton
+        link: "https://www.olympic.org/fr/skeleton"
+      ski-freestyle:
+        text: Sci acrobatico
+        link: "https://www.olympic.org/fr/ski-acrobatique"
+      ski-alpin:
+        text: Sci alpino
+        link: "https://www.olympic.org/fr/ski-alpin"
+      ski-de-fond:
+        text: Sci di fondo
+        link: "https://www.olympic.org/fr/ski-de-fond"
+      snowboard:
+        text: Snowboard
+        link: "https://www.olympic.org/fr/surf-des-neiges"
+      skimo:
+        text: Sci alpinismo
+        link: "http://www.ismf-ski.org/"
+    sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico.
+    sports_fin: <b><a href="venues" class="link_site">Scoprite le sedi delle gare</a></b>
+    facts:
+      title: Losanna 2020 in cifre
+      fact1: 
+        number: "1’880" 
+        text: Atleti tra i 15 e 18 anni
+      fact2: 
+        number: "+70" 
+        text: Nazioni
+      fact3: 
+        number: "8 sport"
+        text: 16 discipline e 81 gare
+      fact4: 
+        number: "+3000"
+        text: Volontari
+      fact5: 
+        number: PARITA
+        text: DEI GENERI
+    singleevent: 3 regioni – 2 paesi – 1 singolo evento
+    heritage:
+      title1: L’eredità Losanna 2020
+      txt1: |
+            I Giochi Olimpici Giovanili sono un vero catalizzatore di progetti e rappresentano una grande opportunità d’investimento in maniera sostenibile e intelligente nello sport, formazione, cultura e nelle infrastrutture. Lasceranno un’eredità positiva per la città di Losanna, il cantone Vallese e lo sport in Svizzera. 
+      txt2: |
+            Una delle eredità principali del progetto Losanna 2020 sarà l’accelerazione della costruzione della residenza per studenti VORTEX, che diventerà Villaggio Olimpico durante il periodo dei Giochi. Questo edificio accoglierà 1'200 studenti universitari e ospiti accademici e risponderà a un bisogno di lunga data.
+      webcam2: |
+               Potete seguire in diretta l’avanzamento dei lavori del Vortex via la webcam, A tale scopo,
+      webcam2link: cliccate qui.
+      title2: Eredità sportiva
+      txt3: |
+            Un’altra costruzione che sarà portata a compimento per i Giochi Olimpici Giovanili sarà il nuovo Espace Malley, che comprenderà varie istallazioni sportive, tra le quali una pista di pattinaggio (con 9'700 posti) e sarà a disposizione dei giovani atleti. Questo progetto rimedierà a una forte mancanza d’infrastrutture sportive nella Svizzera romanda.
+      webcam1: |
+               Potete seguire in diretta l’avanzamento dei lavori di Espace Malley, o rivedere l’integrità dei lavori eseguiti sino ad oggi in versione accelerata, consultando le webcams del cantiere. A tale scopo,
+      webcam1link: cliccare qui.
+      txt4: |
+            Oltre a queste due importanti costruzioni, Losanna 2020 permette di sviluppare i progetti seguenti: 
+      list1: ' -	la creazione di centri di formazione per i futuri atleti nella Svizzera romanda;'
+      list2: ' -	un accordo con il dipartimento del Giura francese per l’utilizzo gratuito di infrastrutture sportive per 20 anni;'
+      list3: ' -	un sostegno alla creazione d’un nuovo sport nella regione: lo Short Track;'
+      list4: ' -	un apprendistato locale specifico alla gestione dello sport e all’organizzazione di importanti eventi sportivi;'
+      list5: ' -	la promozione d’una nuova generazione di managers dello sport.'
+      list6: ' Inoltre sono anche in corso altri progetti concreti per la promozione di sport invernali per tutti.'
+      title3: Eredità educativa
+      txt6: |
+            L’eredità educativa di Losanna 2020 risulterà dal forte partenariato avviato con l’Università di Losanna (UNIL), la Scuola Politecnica Federale di Losanna (EPFL) e la Scuola Alberghiera di Losanna (EHL) attraverso l’identificazione e la valorizzazione delle competenze già esistenti e la creazione di nuove competenze nella gioventù locale. 
+            Concretamente: dando ai giovani l’opportunità di investirsi e di avere delle responsabilità nell’organizzazione dei Giochi Olimpici Giovanili. 
+            Queste competenze potranno essere riutilizzate per l’organizzazione di futuri e continui avvenimenti sportivi internazionali nella regione.
+      txt7: "Inoltre, questa trasmissione si estenderà alle generazioni più giovani grazie ai contatti creati con le scuole della regione."
+  contact:
+    title: Contatto
+    form:
+      prenom:
+        title: Nome
+        placeholder: Inserisca il suo nome
+      nom:
+        title: Cognome
+        placeholder: Inserisca il suo cognome
+      email:
+        title: Indirizzo e-mail
+        placeholder: Inserisca il suo indirizzo e-mail
+      message:
+        title: Messaggio
+        placeholder: Scriva qui il suo messaggio
+      envoyer: Inviare
+      thanks: La ringraziamo per il suo messaggio. Le risponderemo al più breve!
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/fr/"
+    beijing: "http://www.beijing2022.cn/fr/"
+    buenos: "http://www.buenosaires2018.com/fr/"
+    pyeongChang: "https://www.pyeongchang2018.com/fr/index"

@@ -23,7 +23,7 @@ layout: default
                 <a class="wrap_a" href="{{ new.file.url }}">
                     <div class="new col-md-12">
                         <h1 class="h1_news">
-                            {% if site.lang == "fr" %} {{ new.title }} {% elsif site.lang == "de" %} {{ new.titleDe }} {% else %} {{ new.titleEn }} {%
+                            {% if site.lang == "fr" %} {{ new.title }} {% elsif site.lang == "de" %} {{ new.titleDe }} {% elsif site.lang == "it" %} {{ new.titleIt }} {% else %} {{ new.titleEn }} {%
                             endif %}
                         </h1>
 						<p class="p_news p_news_from">
@@ -32,6 +32,7 @@ layout: default
                         <p class="p_news">
                             {% if site.lang == "fr" %} {{ new.description | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                             {% elsif site.lang == "de" %} {{ new.descriptionDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+			    {% elsif site.lang == "it" %} {{ new.descriptionIt | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                             {% else %} {{ new.descriptionEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
                         </p>
 

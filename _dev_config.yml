@@ -33,7 +33,7 @@ exclude:
 sass:
   sass_dir: _sass
 
-languages: ["en","fr","de"]
+languages: ["en","fr","de","it"]
 exclude_from_localizations: ["js","css","_sass"]
 
 contentful:

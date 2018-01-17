@@ -9,8 +9,8 @@ title: 'test'
 	  </div>
 	</header>
 	<div class="container news-content">
-    {% if site.lang == "fr" %}
-    <h1>{{page.titre}}</h1>
+    		{% if site.lang == "fr" %}
+    		<h1>{{page.titre}}</h1>
 		<p class="p_news">{{ page.texteLong | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
 		{% endif %}
 
@@ -22,6 +22,11 @@ title: 'test'
 		{% if site.lang == "de" %}
 		<h1>{{page.titreDe}}</h1>
 		<p class="p_news">{{ page.texteLongDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
+		{% endif %}
+
+		{% if site.lang == "it" %}
+		<h1>{{page.titreIt}}</h1>
+		<p class="p_news">{{ page.texteLongIt | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
 		{% endif %}
     
     <p class="news_date">

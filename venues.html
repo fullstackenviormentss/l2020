@@ -8,7 +8,7 @@ layout: default
 <div class="sites" id="sites1">
   <div class="container fade-in-module">
     <h1>
-      {% if site.lang == "fr" %} {{ section1.titre }} {% elsif site.lang == "de" %} {{ section1.titreDe }} {% else %} {{ section1.titreEn
+      {% if site.lang == "fr" %} {{ section1.titre }} {% elsif site.lang == "de" %} {{ section1.titreDe }} {% elsif site.lang == "it" %} {{ section1.titreIt }} {% else %} {{ section1.titreEn
       }} {% endif %}
     </h1>
     <p class="discover_1 discover_p fade-in-module">
@@ -16,6 +16,8 @@ layout: default
         {{ section1.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% elsif site.lang == "de" %}
         {{ section1.descriptionDe | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+      {% elsif site.lang == "it" %}
+        {{ section1.descriptionIt | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
         {{ section1.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
@@ -23,7 +25,7 @@ layout: default
     <div class="row-sites row">
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section1.titreSite1}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section1.lienSite1Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite1De }}
+            href='{% if site.lang == "fr" %} {{ section1.lienSite1Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite1De }} {% elsif site.lang == "it" %} {{ section1.lienSite1It }}
           {% else %} {{ section1.lienSite1En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -38,7 +40,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section1.titreSite2}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section1.lienSite2Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite2De }}
+            href='{% if site.lang == "fr" %} {{ section1.lienSite2Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite2De }} {% elsif site.lang == "it" %} {{ section1.lienSite2It }}
           {% else %} {{ section1.lienSite2En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -53,7 +55,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section1.titreSite3}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section1.lienSite3Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite3De }}
+            href='{% if site.lang == "fr" %} {{ section1.lienSite3Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite3De }}  {% elsif site.lang == "it" %} {{ section1.lienSite3It }}
           {% else %} {{ section1.lienSite3En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -68,7 +70,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section1.titreSite4}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section1.lienSite4Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite4De }}
+            href='{% if site.lang == "fr" %} {{ section1.lienSite4Fr }} {% elsif site.lang == "de" %} {{ section1.lienSite4De }}  {% elsif site.lang == "it" %} {{ section1.lienSite4It }}
           {% else %} {{ section1.lienSite4En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -100,6 +102,8 @@ layout: default
         {{ section2.description | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% elsif site.lang == "de" %}
         {{ section2.descriptionDe | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
+      {% elsif site.lang == "it" %}
+        {{ section2.descriptionIt | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% else %}
         {{ section2.descriptionEn | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
       {% endif %}
@@ -107,7 +111,7 @@ layout: default
     <div class="row-sites row">
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section2.titreSite1}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section2.lienSite1Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite1De }}
+            href='{% if site.lang == "fr" %} {{ section2.lienSite1Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite1De }} {% elsif site.lang == "it" %} {{ section2.lienSite1It }}
           {% else %} {{ section2.lienSite1En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -122,7 +126,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section2.titreSite2}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section2.lienSite2Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite2De }}
+            href='{% if site.lang == "fr" %} {{ section2.lienSite2Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite2De }} {% elsif site.lang == "it" %} {{ section2.lienSite2It }}
           {% else %} {{ section2.lienSite2En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -137,7 +141,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section2.titreSite3}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section2.lienSite3Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite3De }}
+            href='{% if site.lang == "fr" %} {{ section2.lienSite3Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite3De }} {% elsif site.lang == "it" %} {{ section2.lienSite3It }}
           {% else %} {{ section2.lienSite3En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -152,7 +156,7 @@ layout: default
       </div>
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{section2.titreSite4}}" target="_blank" rel="noopener noreferrer"
-            href='{% if site.lang == "fr" %} {{ section2.lienSite4Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite4De }}
+            href='{% if site.lang == "fr" %} {{ section2.lienSite4Fr }} {% elsif site.lang == "de" %} {{ section2.lienSite4De }} {% elsif site.lang == "it" %} {{ section2.lienSite4It }}
           {% else %} {{ section2.lienSite4En }} {% endif %}'>
           <div class="blockSite">
             <div class="imgSite">
@@ -168,3 +172,38 @@ layout: default
     </div>
   </div>
 </div>
+<div class="sites" id="sites2">
+  <div class="container fade-in-module">
+    <h1 class="venues_title">
+      {% t pages.venues.title %}
+    </h1>
+    <h3 class="venues_subtitle">
+      {% t pages.venues.subtitle1 %}
+    </h3>
+    <div class="venues_txt">
+      <p class="about_venues">
+        {% t pages.venues.text1 %}
+        <br> &nbsp;
+        <br>
+        <a class="venues_link" target="_blank" rel="noopener noreferrer" href='{% t pages.venues.link1 %}'>{% t pages.venues.textlink1 %}</a>
+      </p>
+    </div>
+    <div class="venues_img">
+      <img src="/images/venues/Vortex_Copyright.png" />
+    </div>
+    <h3 class="venues_subtitle">
+      {% t pages.venues.subtitle2 %}
+    </h3>
+    <div class="venues_txt">
+      <p class="about_venues">
+        {% t pages.venues.text2 %}
+        <br> &nbsp;
+        <br>
+        <a class="venues_link" target="_blank" rel="noopener noreferrer" href='{% t pages.venues.link2 %}'>{% t pages.venues.textlink2 %}</a>
+      </p>
+    </div>
+    <div class="venues_img">
+      <img src="/images/venues/Flon.png" />
+    </div>
+  </div>     
+</div>     

@@ -430,6 +430,9 @@ var mapManagement = {
     if (window.location.href.indexOf("/de/") > -1) {
       lang = "de";
     }
+    if (window.location.href.indexOf("/it/") > -1) {
+      lang = "it";
+    }
     $.getJSON("/mapdata/venues.json", function (data) {
       $.each(data, function (key, val) {
         var myLatLng = {
@@ -448,6 +451,9 @@ var mapManagement = {
         }
         if (lang == "de") {
           var content = "<h1>" + val.title_de + "</h1><p>" + val.texte_de + "</p><p><a href=" + val.lienDe + " target='_blank'>Mehr Infos</a></p>";
+        }
+        if (lang == "it") {
+          var content = "<h1>" + val.title_it + "</h1><p>" + val.texte_it + "</p><p><a href=" + val.lienIt + " target='_blank'>A traduire dans common.js(456)</a></p>";
         }
         var infowindow = new google.maps.InfoWindow({
           content: content
@@ -728,6 +734,23 @@ var localeTimeAgo = {
     months: "%d Monaten",
     year: "etwa einem Jahr",
     years: "%d Jahren"
+  },
+  it: {
+    prefixAgo: "da",
+    prefixFromNow: "entro",
+    suffixAgo: "",
+    suffixFromNow: "",
+    seconds: "meno di un minuto",
+    minute: "circa un minuto",
+    minutes: "circa %d minuti",
+    hour: "circa un’ora",
+    hours: "circa %d ore",
+    day: "circa un giorno",
+    days: "circa %d giorni",
+    month: "circa un mese",
+    months: "circa %d mesi",
+    year: "un anno",
+    years: "%d anni"
   },
   fr: {
     prefixAgo: "il y a",
