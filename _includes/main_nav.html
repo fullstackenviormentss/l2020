@@ -12,52 +12,116 @@
 {% endif %}
 
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
-    <div class="container">
-      <div class="row socials slidedown">
-        <div class="col-md-6 col-md-offset-6 header-pics navbar-right">
-          <div class="links_social">
-            <a href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
-              <img height="30" src="/images/layout/Instagram-logo.png">
-            </a>
-            <a href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
-              <img height="30" src="/images/layout/facebook-icon.png">
-            </a>
-            <a href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
-              <img height="24" src="/images/layout/twitter-icon.svg">
-            </a>
-            <a href="https://www.youtube.com/channel/UCcEgzQvjtLp7UCdsXfuHbyQ" target="_blank" rel="noopener">
-              <img height="24" src="/images/layout/YouTube-icon.png">
-            </a>
+    <div class="container" style="padding-right: 0;">
+      <a class="nav-brand" href="{{nav[0].path}}" style="width:50%;">
+        <img class="logo" src="/images/layout/Lausanne2020-Emblem.png" />
+      </a>
+      
+      <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" ></script>
+      <script src="../js/vendors/countdown.js" type="text/javascript" ></script>
+      <link rel="stylesheet" type="text/css" href="../css/countdown.css">
+      <link rel="stylesheet" type="text/css" href="../css/omegact.css">
+
+      <div id="ad" style="width:50%">
+	<div id="countdown_container_tag" class="countdown_container">
+	  <div class="logo">
+	    <img src="../omega_countdown/official-timekeeper-omega-fr.jpg">
+	    <!-- <img class="retina" src="../omega_countdown/official-timekeeper-omega.svg"> -->
+	  </div>
+			
+          <div id="fr" class="countdown">
+
+            <img src="../omega_countdown/line.png">
+            <div class="countdown_numbers">
+              <div class="days cd_item"><span class="days_label cd_label"></span><span class="days_remaining cd_remain">00</span></div>
+              <div class="hours cd_item"><span class="hours_label cd_label"></span><span class="hours_remaining cd_remain">00</span></div>
+              <div class="minutes cd_item"><span class="minutes_label cd_label"></span><span class="minutes_remaining cd_remain">00</span></div>
+              <div class="seconds cd_item cd_item_last"><span class="seconds_label cd_label"></span><span class="seconds_remaining cd_remain">00</span></div>
+            </div>
+            <p></p>
           </div>
+          <div class="clock">
+            <div class="hours cd_item"><span class="clock_hours clock_digit">00</span></div>
+            <div class="inter">:</div>
+	    <div class="minutes cd_item"><span class="clock_minutes clock_digit">00</span></div>
+	    <div class="inter">:</div>
+	    <div class="seconds cd_item cd_item_last"><span class="clock_seconds clock_digit">00</span></div>
+	  </div>
+	  <div id="border" class="border"></div>	
         </div>
+        <a class="omega_link" target="_blank" href="https://www.omegawatches.com"></a>
+        {% if site.lang == "en" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'en' });
+        	</script>
+	{% endif %}
+	{% if site.lang == "it" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'en' });
+        	</script>
+	{% endif %}
+	{% if site.lang == "fr" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'fr' });
+        	</script>
+	{% endif %}
+	{% if site.lang == "de" %}
+  		<script type="text/javascript">
+          		$('#countdown_container_tag').countdown({'lang': 'de' });
+        	</script>
+	{% endif %}
+      </div>  
+      <div class="socials slidedown smartphone col-lg-4 col-md-4">
+	  <div class="links_social">
+	    <a class="socials_links" href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
+	      <img height="30" src="/images/layout/Instagram-logo.png">
+	    </a>
+	    <a class="socials_links" href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
+	      <img height="30" src="/images/layout/facebook-icon.png">
+	    </a>
+	    <a class="socials_links" href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
+	      <img height="24" src="/images/layout/twitter-icon.svg">
+	    </a>
+	    <a class="socials_links" href="https://www.youtube.com/channel/UCcEgzQvjtLp7UCdsXfuHbyQ" target="_blank" rel="noopener">
+	      <img height="24" src="/images/layout/YouTube-icon.png">
+	    </a>
+	  </div>    
       </div>
-        <a class="nav-brand" href="{{nav[0].path}}">
-          <img class="logo" src="/images/layout/Lausanne2020-Emblem.png" width="235" />
-        </a>
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+              <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
+          </button>
+      </div>
+      <div class="socials slidedown desktop col-lg-4 col-md-4">
+	  <div class="links_social">
+	    <a class="socials_links" href="https://www.instagram.com/lausanne2020" target="_blank" rel="noopener">
+	      <img height="30" src="/images/layout/Instagram-logo.png">
+	    </a>
+	    <a class="socials_links" href="https://www.facebook.com/lausanne2020/" target="_blank" rel="noopener">
+	      <img height="30" src="/images/layout/facebook-icon.png">
+	    </a>
+	    <a class="socials_links" href="https://twitter.com/lausanne2020" target="_blank" rel="noopener">
+	      <img height="24" src="/images/layout/twitter-icon.svg">
+	    </a>
+	    <a class="socials_links" href="https://www.youtube.com/channel/UCcEgzQvjtLp7UCdsXfuHbyQ" target="_blank" rel="noopener">
+	      <img height="24" src="/images/layout/YouTube-icon.png">
+	    </a>
+	  </div>    
+      </div>
+      <div class="navbar-collapse collapse col-lg-8 col-md-8" id="main-navbar">
+          <div class="nav navbar-nav navbar-right" style="float: right; margin-right: 0;">
+            {% for link in nav %}
 
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
-                <span class="sr-only">Toggle navigation</span><div class="icon-nav"></div><i class="fa fa-bars"></i>
-            </button>
-        </div>
+              {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
+              {% capture folderpath %}{{ link.path }}/{% endcapture %}
+              {% if currentpage == link.path or currentpage == folderpath %}
+                <a class="nav_link w--current" href="{{link.path}}">
+              {% else %}
+                <a class="nav_link" href="{{link.path}}">
+              {% endif %}
 
-        <div class="navbar-collapse collapse" id="main-navbar">
-            <div class="nav navbar-nav navbar-right">
-
-              {% for link in nav %}
-
-                {% capture currentpage %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
-                {% capture folderpath %}{{ link.path }}/{% endcapture %}
-                {% if currentpage == link.path or currentpage == folderpath %}
-                  <a class="nav_link w--current" href="{{link.path}}">
-                {% else %}
-                  <a class="nav_link" href="{{link.path}}">
-                {% endif %}
-
-                {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
-              {% endfor %}
-
-
+              {{link.title | replace:'2020', '<span class="accent">2020</span>'}}</a>
+            {% endfor %}
               {% capture url_site_en %}{{ site.url }}{{ page.url | split:'.html' | first }}{% endcapture %}
               {% capture url_site_de %}{{ site.url }}/de{{ page.url | split:'.html' | first }}{% endcapture %}
               {% capture url_site_fr %}{{ site.url }}/fr{{ page.url | split:'.html' | first }}{% endcapture %}
@@ -86,10 +150,24 @@
                 <a href="{{ url_site_it }}" data-language="it" class="language nav_link">it</a>
               {% endif %}
               </div>
-
+            <div class="nav_lang">
+            {% if site.lang == "en" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link accent">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+            {% elsif site.lang == "fr" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link accent">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link">de</a>
+            {% elsif site.lang == "de" %}
+              <a href="{{ url_site_fr }}" data-language="fr" class="language nav_link">fr</a>
+              <a href="{{ url_site_en }}" data-language="en" class="language nav_link">en</a>
+              <a href="{{ url_site_de }}" data-language="de" class="language nav_link accent">de</a>
+            {% endif %}
             </div>
           </div>
-          
+        </div>  
       </div>
+    </div>
   </nav>
   <script src="{{site.url}}/js/vendors/client.language.detection.min.js"></script>

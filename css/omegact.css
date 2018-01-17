@@ -1,0 +1,21 @@
+
+@font-face {
+    font-family: 'OmegaCT';
+    src: url('../fonts/omegact-regular-webfont.eot');
+    src: url('../fonts/omegact-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/omegact-regular-webfont.woff') format('woff'),
+         url('../fonts/omegact-regular-webfont.ttf') format('truetype'),
+         url('../fonts/omegact-regular-webfont.svg#omega_ctregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OmegaCT';
+    src: url('../fonts/omegact-bold-webfont.eot');
+    src: url('../fonts/omegact-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/omegact-bold-webfont.woff') format('woff'),
+         url('../fonts/omegact-bold-webfont.ttf') format('truetype'),
+         url('../fonts/omegact-bold-webfont.svg#omega_ctbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
