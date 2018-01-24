@@ -14,9 +14,9 @@ pages:
     title4:
       part1: Lausanne 2020
       part2: See you in January 2020
-    text_shop: "All the Lausanne 2020 goodies are now available in our"
-    txt_shop: " Online Shop."
-    text_shop2: ""
+    text_shop: "All the Lausanne 2020 goodies are now available in our "
+    txt_shop: "Online Shop"
+    text_shop2: "."
     link_shop: "https://lausanne2020.many-ways.ch/en"
     img_shop: "/images/home/EN_horizontal.png"
     news:
