@@ -14,8 +14,11 @@ pages:
     title4:
       part1: Losanna 2020
       part2: Appuntamento a gennaio 2020 
-    title_video: Giornata Olimpica 2017
-    text_video: Scopri di più 
+    text_shop: "All the Lausanne 2020 goodies are now available in our "
+    txt_shop: "Online Shop"
+    text_shop2: "."
+    link_shop: "https://lausanne2020.many-ways.ch/en"
+    img_shop: "/images/home/EN_horizontal.png"
     news:
       title: News 
       plus: Continua
@@ -24,9 +27,6 @@ pages:
       title: Chi siamo
       texte: Dal 10 al 22 gennaio 2020, Losanna accoglierà la terza edizione dei Giochi Olimpici Giovanili invernali. A ventisei anni dall’ottenimento del titolo di Capitale Olimpica, Losanna diventa Città Olimpica accogliendo il secondo più grande avvenimento invernale polisportivo dopo i Giochi Olimpici invernali e offrendo ai giovani atleti un’esperienza olimpica indimenticabile. La cultura, le prestazioni e l’educazione si incontrano dando vita ad una vera celebrazione dello sport!
       more: Scopri di più
-    shop:
-      title: Tutti i prodotti Losanna 2020 saranno presto disponibili!
-      button: Shop!
     socialwall:
       title: Social Media Feed 
     newsletter:
