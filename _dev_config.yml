@@ -25,15 +25,16 @@ url: "http://localhost:4000/" # the base hostname & protocol for your site, e.g.
 # Build settings
 markdown: kramdown
 highlighter: rouge
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-prismic
 exclude:
   - Gemfile
   - Gemfile.lock
 sass:
   sass_dir: _sass
 
-languages: ["en","fr","de"]
+languages: ["en","de"]
 exclude_from_localizations: ["js","css","_sass"]
 
 contentful:
@@ -65,3 +66,27 @@ contentful:
         access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
         cda_query:
           content_type: keyNumbers
+
+prismic:
+    # Your repository endpoint
+    endpoint: https://testjoj2020.prismic.io/api
+    access_token: MC5XbWlBdGlJQUFMWUd0TmRm.Wz3vv71R77-9FAIwKA3vv70q77-977-977-9CFZEXX5xRu-_vQjvv73vv73vv73vv70w77-977-977-9
+    # Collections, key is used to access in the site.prismic.collections
+    # template variable
+    links:
+        news:
+            permalink: /prismic/news/:slug-:id/
+    collections:
+        # Example for a "posts" collection
+        news:
+            # Query the documents by type (optional)
+            type: news
+            # Permalink used to generate the output files. This should match an
+            # entry in "links", so documents link to the right output files
+            permalink: /prismic/news/:slug
+            # Layout file for this collection
+            layout: prismic_news.html
+            # Max quantity of items (optional, default is 20)
+            page_size: 100
+            # Generate output files or not (default: false)
+            output: true

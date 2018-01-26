@@ -11,7 +11,7 @@ ruby "2.3.3"
 # Happy Jekylling!
 gem 'dotenv', :groups => [:development, :test]
 
-gem "jekyll", "3.4.3"
+gem "jekyll", "3.7.0"
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 gem "koala", "~> 2.2"
@@ -31,6 +31,8 @@ gem 'nokogiri'
 gem 'metainspector'
 
 gem 'packr'
+
+gem "jekyll-prismic" , :path => "/Users/adrienbigler/Documents/sysin/code/rails/custom-gems/jekyll-prismic"
 
 group :jekyll_plugins do
   gem "jekyll-contentful-data-import"
