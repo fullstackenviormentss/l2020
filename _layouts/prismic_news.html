@@ -4,11 +4,17 @@
 <html>
 
   <body>
-  	{{site.prismic.document}}
-    <h1>***</h1>
-		{{page.document.fragments.titre.html}}
-		{{page.document.fragments.image.html}}
-		<h1>***</h1>
+    
+     {% for post in site.prismicData.collections.news %}
+    <article>
+      <header>
+        {{ post.fragments.title.html }}
+      </header>
+      <div class="body">
+        {{ post.fragments.body.text }}
+      </div>
+    </article>
+    {% endfor %}
 
 		{{page}}
 

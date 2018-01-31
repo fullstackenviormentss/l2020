@@ -26,7 +26,7 @@ url: "https://www.lausanne2020.com" # the base hostname & protocol for your site
 markdown: kramdown
 highlighter: rouge
 plugins:
-  - jekyll-feed
+  - jekyll-with-prismic
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -34,67 +34,17 @@ sass:
   sass_dir: _sass
   style: compressed
 
-languages: ["en","fr","de"]
 exclude_from_localizations: ["js", "images", "mapdata"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
-
-contentful:
-  spaces:
-    - venues: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: venues
-    - sectionSites: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: sectionSites
-          order: -sys.createdAt
-    - partnersLogos: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: partnersLogos
-    - keyNumbers: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: keyNumbers
-    - news: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: news
-          order: -fields.date
-    - jobs: # Jekyll _data folder identifier - Required
-        space: ENV_CONTENTFUL_SPACE_ID # Required
-        access_token: ENV_CONTENTFUL_ACCESS_TOKEN # Required
-        cda_query:
-          content_type: jobs
-          order: -fields.publishDate
-
-page_gen:
-  - data: 'contentful.spaces.news.news'
-    template: 'single-news'
-    name:
-      en: 'titreEn'
-      fr: 'titre'
-      de: 'titreDe'
-    dir: 'news'
-  - data: 'years'
-    template: 'news-archives'
-    name: 'year'
-    dir: 'news-archives'
 
 prismic:
     # Your repository endpoint
-    endpoint: https://testjoj2020.prismic.io/api
-    access_token: MC5XbWlBdGlJQUFMWUd0TmRm.Wz3vv71R77-9FAIwKA3vv70q77-977-977-9CFZEXX5xRu-_vQjvv73vv73vv73vv70w77-977-977-9
+    endpoint: 'https://l2020.prismic.io/api'
+    access_token: MC5XbkNtalNRQUFFS3I4UE1T.F--_ve-_ve-_vQoE77-977-977-977-9fi_vv71o77-977-9cO-_ve-_ve-_ve-_vW4277-977-9G--_ve-_vV4k77-9RQ
     # Collections, key is used to access in the site.prismic.collections
     # template variable
     links:
         news:
-            permalink: /prismic/news/:slug-:id/
+            permalink: /:lang/news/:slug-:id/
     collections:
         # Example for a "posts" collection
         news:
@@ -102,7 +52,7 @@ prismic:
             type: news
             # Permalink used to generate the output files. This should match an
             # entry in "links", so documents link to the right output files
-            permalink: /prismic/news/:slug
+            permalink: /:lang/news/:slug
             # Layout file for this collection
             layout: prismic_news.html
             # Max quantity of items (optional, default is 20)

@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.3.3"
+ruby "2.3.5"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -11,7 +11,7 @@ ruby "2.3.3"
 # Happy Jekylling!
 gem 'dotenv', :groups => [:development, :test]
 
-gem "jekyll", "3.7.0"
+gem "jekyll"
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 gem "koala", "~> 2.2"
@@ -32,23 +32,11 @@ gem 'metainspector'
 
 gem 'packr'
 
-gem "jekyll-prismic" , :path => "/Users/adrienbigler/Documents/sysin/code/rails/custom-gems/jekyll-prismic"
+gem "jekyll-with-prismic" , :path => "../jekyll-with-prismic"
 
-group :jekyll_plugins do
-  gem "jekyll-contentful-data-import"
-  gem "jekyll-multiple-languages-plugin"
-end
+#gem "jekyll-with-prismic" , :git => "git://github.com/MediaComem/jekyll-with-prismic.git"
 
 group :development do
     require 'resolv'
     require 'resolv-replace'
-end
-
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
 end
