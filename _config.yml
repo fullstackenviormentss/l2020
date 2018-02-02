@@ -77,3 +77,6 @@ prismic:
       page_size: 100
       # Generate output files or not (default: false)
       output: true
+    venues:
+      # Query the documents by type (optional)
+      type: venues
