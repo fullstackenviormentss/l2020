@@ -11,7 +11,7 @@ ruby "2.3.3"
 # Happy Jekylling!
 gem 'dotenv', :groups => [:development, :test]
 
-gem "jekyll", "3.4.3"
+gem "jekyll"
 gem 'wdm', '~> 0.1.0' if Gem.win_platform?
 
 gem "koala", "~> 2.2"
@@ -22,7 +22,7 @@ gem "hashie"
 
 gem "sinatra"
 
-gem "instagram", :git => 'git://github.com/gunnertech/instagram-ruby-gem.git'
+gem "instagram", :git => 'https://github.com/gunnertech/instagram-ruby-gem.git'
 
 gem "mini_magick"
 
@@ -32,21 +32,11 @@ gem 'metainspector'
 
 gem 'packr'
 
-group :jekyll_plugins do
-  gem "jekyll-contentful-data-import"
-  gem "jekyll-multiple-languages-plugin"
-end
+gem "jekyll-with-prismic" , :git => 'https://github.com/MediaComem/jekyll-with-prismic.git', :branch => 'multiple-languages'
+
+#gem "jekyll-with-prismic" , :git => "git://github.com/MediaComem/jekyll-with-prismic.git"
 
 group :development do
     require 'resolv'
     require 'resolv-replace'
-end
-
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-# gem "github-pages", group: :jekyll_plugins
-
-# If you have any plugins, put them here!
-group :jekyll_plugins do
-   gem "jekyll-feed", "~> 0.6"
 end

@@ -1,14 +1,8 @@
-{% if site.lang == "en" %}
+{% if site.lang == "en-gb" %}
   {% assign nav = site.data.nav-footer.en %}
 {% endif %}
-{% if site.lang == "fr" %}
+{% if site.lang == "fr-fr" %}
   {% assign nav = site.data.nav-footer.fr %}
-{% endif %}
-{% if site.lang == "de" %}
-  {% assign nav = site.data.nav-footer.de %}
-{% endif %}
-{% if site.lang == "it" %}
-  {% assign nav = site.data.nav-footer.it %}
 {% endif %}
 
 <div class="footer">
@@ -18,10 +12,7 @@
         <img src="/images/layout/Lausanne2020-Emblem-white.png" width="307">
       </div>
       <div class="footer_copy col-md-4">
-        <p>copyrights © 2017 | Lausanne2020</p>
-        <p>Press contact : <a href="mailto:lise.cordey@lausanne2020.com?Subject=Press%20contact" >Lise Cordey</a>, +41 58 715 20 21
-        <p><a href="{% t pages.index.privacy.link %}" target="_blank" rel="noopener noreferrer">{% t pages.index.privacy.text %}</a></p>
-        <p>Built with ❤ by <a target="_blank" rel="noopener noreferrer" href="http://blog.comem.ch/2017/05/04/les-jeux-olympiques-du-code/">HEIG-VD</a></p>
+        site.prismicData.single.base.footer_content.html
       </div>
       <div class="footer_nav col-md-4">
         <ul class="list-unstyled">
@@ -43,32 +34,32 @@
         <div class="row">
 
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.pyeongChang %}" target="_blank" rel="noopener">
+            <a href="https://www.pyeongchang2018.com/" target="_blank" rel="noopener">
               <img height="80" src="/images/layout/2018_2.png">
             </a>
           </div>
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.buenos %}" target="_blank" rel="noopener">
+            <a href="http://www.buenosaires2018.com/" target="_blank" rel="noopener">
               <img height="80" src="/images/home/BA.png">
             </a>
           </div>
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.tokyo %}" target="_blank" rel="noopener">
+            <a href="https://tokyo2020.jp/" target="_blank" rel="noopener">
               <img height="80" src="/images/layout/2020_1.png">
             </a>
           </div>
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.beijing %}" target="_blank" rel="noopener">
+            <a href="http://www.beijing2022.cn/" target="_blank" rel="noopener">
               <img height="80" src="/images/layout/Beijing_2022_emblem.jpg">
             </a>
           </div>
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.paris %}" target="_blank" rel="noopener">
+            <a href="http://paris2024.org/" target="_blank" rel="noopener">
               <img height="80" src="/images/home/Paris.jpg">
             </a>
           </div>
           <div class="col-md-2 col-xs-6">
-            <a href="{% t footer.link.losAngeles %}" target="_blank" rel="noopener">
+            <a href="https://www.olympic.org/la-2028" target="_blank" rel="noopener">
               <img height="80" src="/images/home/LA.png">
             </a>
           </div>

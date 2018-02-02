@@ -1,47 +1,40 @@
 --- 
 layout: default
 ---
+{% assign document = site.prismicData.single.page_home %} 
 <div class="hero">
     <div class="container">
-        <h1 class="the_claim">{% t pages.index.title1.part1 %}<br/><span class="accent">{% t pages.index.title1.part2 %}</span></h1>
-        <h1 class="the_claim">{% t pages.index.title2.part1 %}<br/><span class="accent">{% t pages.index.title2.part2 %}</span></h1>
-        <h1 class="the_claim">{% t pages.index.title3.part1 %}<br/><span class="accent">{% t pages.index.title3.part2 %}</span></h1>
-        <h1 class="the_claim">{% t pages.index.title4.part1 %}<br/><span class="accent">{% t pages.index.title4.part2 %}</span></h1>
+        {% for post in document.fragments.claims_list.group_documents %}
+        <h1 class="the_claim">{{post.fragments.claim.text}}<br/><span class="accent">{{post.fragments.claim_part_2.text}}</span></h1>
+        {% endfor %}
     </div>
 </div>
 <div class="news_section">
     <div class="container">
-        <h1 class="h1_big_news">{% t pages.index.news.title %}</h1>
+        <h1 class="h1_big_news">{{document.fragments.news.text}}</h1>
         <div class="row">
-            {% for new in site.data.contentful.spaces.news.news limit:3 %}
-
-            {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
-            {% capture link %}{{new.titreEn}}{% endcapture %} 
-            
+            {% for new in site.prismicData.collections.news limit:3 %}
+            {% capture link %}{{new.slug}}{% endcapture %}       
             <div class="come-in-module col-sm-6 col-md-4">
-                <a class="wrap_a" href="/{{ link | datapage_url: dir | split:'.html' | first }}">
+                <a class="wrap_a" href="/news/{{ link | datapage_url: dir | split:'.html' | first }}">
                     <div class="new col-md-12">
                         <div class="wrap_media">
-                            <img class="grow" src="{{ new.image.url }}?w=400&h=400&q=70">
+                            <img class="grow" src="{{ new.fragments.image.url }}">
                         </div>
                         <h1 class="h1_news">
-                            {% if site.lang == "fr" %} {{ new.titre }} {% elsif site.lang == "de" %} {{ new.titreDe }} {% elsif site.lang == "it" %} {{ new.titreIt }} {% else %} {{ new.titreEn }} {%
-                            endif %}
+                            {{new.fragments.title.text}}
                         </h1>
                         <p class="p_news">
-                            {% if site.lang == "fr" %} {{ new.texte | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-                            {% elsif site.lang == "de" %} {{ new.texteDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-                            {% elsif site.lang == "it" %} {{ new.texteIt | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
-                            {% else %} {{ new.texteEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
+                            {{ new.fragments.lead.text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                         </p>
 
-                        
+
                     </div>
                 </a>
                 <div class="new_meta">
                     <p class="news_date">
-                        <time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                        <a href="/{{ link | datapage_url: dir | split:'.html' | first }}">{% t pages.index.news.plus %}</a>
+                        <time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.fragments.publication_date.html | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+                        <a href="/news/{{ link | datapage_url: dir | split:'.html' | first }}">{{document.fragments.individual_news_link_to_read_more.text}}</a>
                     </p>
                 </div>
             </div>
@@ -49,7 +42,7 @@ layout: default
         </div>
         <div class="more-news-button">
             <a class="more-news-btn" rel="noopener noreferrer" href="https://www.lausanne2020.com/fr/news">
-                {% t pages.index.news.autres %}
+                {{document.fragments.news_link_to_watch_all.text}}
             </a>
         </div>
     </div>
@@ -59,13 +52,13 @@ layout: default
         <div class="row">
             <div class="col-md-4">
                 <h1 class="h1_about_yog">
-                    {% capture about_title %}{% t pages.index.about.title %}{% endcapture %} {{ about_title | newline_to_br }}
+                    {{document.fragments.about_title.text | newline_to_br }}
                 </h1>
             </div>
             <div class="col-md-8">
                 <p class="about_the_yog_p">
-                    {% t pages.index.about.texte %}
-                    <strong> <a href="about">{% t pages.index.about.more %}</a></strong>
+                    {{document.fragments.about_content.text | newline_to_br }}
+                    <strong> <a href="about">{{document.fragments.about_link_more.text | newline_to_br }}</a></strong>
                 </p>
             </div>
         </div>
@@ -73,7 +66,7 @@ layout: default
 </div>
 <div class="social_feed_section social_wall">
     <div class='container'>
-        <h1 class="h1_big_news" style="color:white;">{% t pages.index.socialwall.title %}</h1>
+        <h1 class="h1_big_news" style="color:white;">{{ document.fragments.social_wall_title.text }}</h1>
  
             {% social_wall
         
@@ -91,32 +84,32 @@ layout: default
 </div>
 <div class="shop_section">
     <div class="container">
-        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{% t pages.index.text_shop %}<a rel="noopener noreferrer" href="{% t pages.index.link_shop %}">{% t pages.index.txt_shop %}</a>{% t pages.index.text_shop2 %}</h2>
-        <a rel="noopener noreferrer" href="{% t pages.index.link_shop %}">
-            <img src="{% t pages.index.img_shop %}" alt="Shop!" width="50%" style="margin-bottom: 30px;">
+        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.text}}</h2>
+        <a rel="noopener noreferrer" href="{{document.fragments.shop_link.url}}">
+            <img src="{{ document.fragments.shop_image.url }}" alt="Shop!" width="50%" style="margin-bottom: 30px;">
         </a>
     </div>
 </div>
 <div class="newsletter_cta">
     <div class="container flex vcenter fade-in-module">
         <div class="newsletter-text">
-            <h1 class="h1_newsletter_cta">{% t pages.index.newsletter.part1 %}</h1>
+            <h1 class="h1_newsletter_cta">{{ document.fragments.newsletter_heading.text }}</h1>
         </div>
         <form class="newsletter_cta_form form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="#" netlify>
             <div class="newsletter-form-adress">
-                <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.index.newsletter.placeholder %}"
+                <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{{ document.fragments.newsletter_email_placeholder.text }}"
                     required="required" type="email">
                 <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
             </div>
             <div class="newsletter-form-button">
-                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{% t pages.index.newsletter.button %}">
+                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{{ document.fragments.newsletter_submit_button.text }}">
             </div>
         </form>
         <div class="success form-done">
-            <div>{% t pages.index.newsletter.thanks %}</div>
+            <div>to_translate</div>
         </div>
         <div class="error form-fail">
-            <div>{% t pages.index.newsletter.oops %}</div>
+            <div>to_translate</div>
         </div>
     </div>
 </div>
