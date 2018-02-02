@@ -20,7 +20,7 @@ $(document).ready(function () {
   truncateText.init(".status", "");
   truncateText.init(".wrap_item blockquote", "");
 
-  jQuery.timeago.settings.strings = localeTimeAgo[$("#lang")[0].lang];
+  jQuery.timeago.settings.strings = localeTimeAgo[$("html").attr("lang")];
   jQuery("time").timeago();
 
   formManagement.init("#email-form-newsletter");
