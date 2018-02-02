@@ -45,7 +45,11 @@ sass:
 
 exclude_from_localizations: ["asset","css","images","js","mapdata","videos", "favicon.png", "readme.md","Stats_SiteInternet_30.07.17.pptx.zip"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
 # languages: [fr-fr,it-it,de-de,en-gb]
-languages: [fr-fr,en-gb]
+languages: 
+  fr-fr:
+    path: 'fr'
+  en-gb:
+    path: 'en'
 
 prismic:
   # Your repository endpoint
