@@ -5,13 +5,13 @@ layout: default
 <div class="hero">
 	<div class="container">
 		{% for post in document.fragments.claims_list.group_documents %}
-		<h1 class="the_claim">{{post.fragments.claim.html}}<br/><span class="accent">{{post.fragments.claim_part_2.html}}</span></h1>
+		<h1 class="the_claim">{{post.fragments.claim.text}}<br/><span class="accent">{{post.fragments.claim_part_2.text}}</span></h1>
 		{% endfor %}
 	</div>
 </div>
 <div class="news_section">
 	<div class="container">
-		<h1 class="h1_big_news">{{document.fragments.news.html}}</h1>
+		<h1 class="h1_big_news">{{document.fragments.news.text}}</h1>
 		<div class="row">
 			{% for new in site.prismicData.collections.news limit:3 %}
 			{% capture link %}{{new.slug}}{% endcapture %}       
@@ -22,10 +22,10 @@ layout: default
 							<img class="grow" src="{{ new.fragments.image.url }}">
 						</div>
 						<h1 class="h1_news">
-							{{new.fragments.title.html}}
+							{{new.fragments.title.text}}
 						</h1>
 						<p class="p_news">
-							{{ new.fragments.lead.html | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
+							{{ new.fragments.lead.text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
 						</p>
 
 
@@ -34,7 +34,7 @@ layout: default
 				<div class="new_meta">
 					<p class="news_date">
 						<time pubdate datetime="{{new.date | date_to_xmlschema}}" title="{{new.date | date_to_xmlschema | date: '%d.%m'}}">{{new.fragments.publication_date.html | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-						<a href="/news/{{ link | datapage_url: dir | split:'.html' | first }}">{{document.fragments.individual_news_link_to_read_more.html}}</a>
+						<a href="/news/{{ link | datapage_url: dir | split:'.html' | first }}">{{document.fragments.individual_news_link_to_read_more.text}}</a>
 					</p>
 				</div>
 			</div>
@@ -42,7 +42,7 @@ layout: default
 		</div>
 		<div class="more-news-button">
 			<a class="more-news-btn" rel="noopener noreferrer" href="https://www.lausanne2020.com/fr/news">
-				{{document.fragments.news_link_to_watch_all.html}}
+				{{document.fragments.news_link_to_watch_all.text}}
 			</a>
 		</div>
 	</div>
@@ -52,13 +52,13 @@ layout: default
 		<div class="row">
 			<div class="col-md-4">
 				<h1 class="h1_about_yog">
-					{{document.fragments.about_title.html | newline_to_br }}
+					{{document.fragments.about_title.text | newline_to_br }}
 				</h1>
 			</div>
 			<div class="col-md-8">
 				<p class="about_the_yog_p">
-					{{document.fragments.about_content.html | newline_to_br }}
-					<strong> <a href="about">{{document.fragments.about_link_more.html | newline_to_br }}</a></strong>
+					{{document.fragments.about_content.text | newline_to_br }}
+					<strong> <a href="about">{{document.fragments.about_link_more.text | newline_to_br }}</a></strong>
 				</p>
 			</div>
 		</div>
@@ -66,7 +66,7 @@ layout: default
 </div>
 <div class="shop_section">
     <div class="container">
-        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.html}}</h2>
+        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.text}}</h2>
         <a rel="noopener noreferrer" href="{{document.fragments.shop_link.url}}">
             <img src="{{ document.fragments.shop_image.url }}" alt="Shop!" width="50%" style="margin-bottom: 30px;">
         </a>
@@ -75,7 +75,7 @@ layout: default
 <div class="newsletter_cta">
     <div class="container flex vcenter fade-in-module">
         <div class="newsletter-text">
-            <h1 class="h1_newsletter_cta">{{ document.fragments.newsletter_heading.html }}</h1>
+            <h1 class="h1_newsletter_cta">{{ document.fragments.newsletter_heading.text }}</h1>
         </div>
         <form class="newsletter_cta_form form flex stretch" data-name="Email Form" id="email-form-newsletter" name="email-form-newsletter" action="#" netlify>
             <div class="newsletter-form-adress">
@@ -84,7 +84,7 @@ layout: default
                 <input data-name="Lang" id="lang" maxlength="2" name="lang" value="{{ site.lang }}" required="required" type="hidden">
             </div>
             <div class="newsletter-form-button">
-                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{{ document.fragments.newsletter_submit_button.html }}">
+                <input class="newsletter_cta_btn btn" data-wait="Please wait..." type="submit" value="{{ document.fragments.newsletter_submit_button.text }}">
             </div>
         </form>
         <div class="success form-done">
