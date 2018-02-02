@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{site.lang}}">
 
 {% include head.html %}
 
 <body>
   <div id="main">
-    <span id="lang" lang="{{site.lang}}"></span>
-    {% include main_nav.html %} {{ content }} {% include footer.html %}
-  
+    {% include main_nav.html %} 
+    
+    {{ content }} 
+    
+    {% include footer.html %}
   </div>
 
   {% include end-scripts.html %}

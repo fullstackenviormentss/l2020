@@ -1,91 +1,32 @@
 $(document).ready(function () {
 
-  // First load
-  pageLoad.funcBefore();
-  pageLoad.funcAfter();
   polyfill.initGlobal();
+  titleSlider.init();
+  scrollEffects.init();
 
-  /* ===========================================
-   Global ajax transition page function
-   =========================================== */
+  navHover.init();
 
-  var $page = $('#main'),
-    options = {
-      debug: true,
-      cacheLength: 4,
-      blacklist: '.nav_lang, .form',
-      prefetch: true,
-      onStart: {
-        duration: 350, // Duration of our animation
-        render: function ($container) {
-          // Add your CSS animation reversing class
-          $container.addClass('is-exiting');
-          // Restart your animation
-          smoothState.restartCSSAnimations();
+  flipIcons.init();
 
-        }
-      },
-      onReady: {
-        duration: 0,
-        render: function ($container, $newContent) {
-          // Remove your CSS animation reversing class
-          $container.removeClass('is-exiting');
-          // Inject the new content
-          $container.html($newContent);
-        }
-      },
-      onBefore: function ($container, $newContent) {
-        pageLoad.funcBefore();
+  video.FSbackgroundChange();
+  video.hoverControls();
 
-      },
-      onAfter: function ($container, $newContent) {
-        pageLoad.funcAfter();
-      }
-    },
-    smoothState = $page.smoothState(options).data('smoothState');
+  // Google Map
+  if ($("#map").length) {
+    mapManagement.init();
+  }
+
+  truncateText.init(".new", ".news_date");
+  truncateText.init(".status", "");
+  truncateText.init(".wrap_item blockquote", "");
+
+  jQuery.timeago.settings.strings = localeTimeAgo[$("#lang")[0].lang];
+  jQuery("time").timeago();
+
+  formManagement.init("#email-form-newsletter");
+  formManagement.init("#email-form-contact");
 
 });
-
-var pageLoad = {
-  funcBefore: function () {
-    headerSocialsManager.init();
-
-    titleSlider.clear();
-    scrollEffects.clear();
-
-  },
-  funcAfter: function () {
-
-    titleSlider.clear();
-    scrollEffects.clear();
-    titleSlider.init();
-    scrollEffects.init();
-
-    navHover.init();
-
-    flipIcons.init();
-
-    video.FSbackgroundChange();
-    video.hoverControls();
-
-    // Google Map
-    if ($("#map").length) {
-      mapManagement.init();
-    }
-
-    truncateText.init('.new', '.news_date');
-    truncateText.init('.status', '');
-    truncateText.init('.wrap_item blockquote', '');
-
-    jQuery.timeago.settings.strings = localeTimeAgo[$('#lang')[0].lang];
-    jQuery("time").timeago();
-
-    formManagement.init("#email-form-newsletter");
-    formManagement.init("#email-form-contact");
-
-    polyfill.initPage();
-  }
-};
 
 var polyfill = {
   // Function which listen to added elements and are initiated only one time
@@ -103,8 +44,6 @@ var polyfill = {
         });
 
     }
-  },
-  initPage: function () {
     // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
       $.getScript('./js/vendors/polyfill/flexibility.js')
