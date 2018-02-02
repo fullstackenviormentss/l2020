@@ -7,7 +7,7 @@
     "lienDe": "{{ venue.fragments.title.text }}",
     "lienEn": "{{ venue.fragments.title.text }}",
     "lienIt": "{{ venue.fragments.title.text }}",
-    "lat": {{ venue.fragments.position.text }},
-    "lng": {{ venue.fragments.title.text }}
+    "lat": {{ venue.fragments.position.latitude }},
+    "lng": {{ venue.fragments.position.longitude }}
   }{% if forloop.last == false %},{% endif %}
 {% endfor %}]

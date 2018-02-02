@@ -11,7 +11,7 @@ GIT
 PATH
   remote: ../jekyll-with-prismic
   specs:
-    jekyll-with-prismic (0.2.1)
+    jekyll-with-prismic (0.2.2)
       jekyll (~> 3.7.0)
       prismic.io (~> 1.6.1)
 
