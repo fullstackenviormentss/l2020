@@ -34,28 +34,30 @@ sass:
   sass_dir: _sass
   style: compressed
 
-exclude_from_localizations: ["js", "images", "mapdata"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
+exclude_from_localizations: ["mapdata","js", "images", "css", "Stats_SiteInternet_30.07.17.pptx.zip"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
+# languages: [fr-fr,it-it,de-de,en-gb]
+languages: [fr-fr,en-gb]
 
 prismic:
-    # Your repository endpoint
-    endpoint: 'https://l2020.prismic.io/api'
-    access_token: MC5XbkNtalNRQUFFS3I4UE1T.F--_ve-_ve-_vQoE77-977-977-977-9fi_vv71o77-977-9cO-_ve-_ve-_ve-_vW4277-977-9G--_ve-_vV4k77-9RQ
-    # Collections, key is used to access in the site.prismic.collections
-    # template variable
-    links:
-        news:
-            permalink: /:lang/news/:slug-:id/
-    collections:
-        # Example for a "posts" collection
-        news:
-            # Query the documents by type (optional)
-            type: news
-            # Permalink used to generate the output files. This should match an
-            # entry in "links", so documents link to the right output files
-            permalink: /:lang/news/:slug
-            # Layout file for this collection
-            layout: prismic_news.html
-            # Max quantity of items (optional, default is 20)
-            page_size: 100
-            # Generate output files or not (default: false)
-            output: true
+  # Your repository endpoint
+  endpoint: 'https://l2020.prismic.io/api'
+  access_token: MC5XbkNtalNRQUFFS3I4UE1T.F--_ve-_ve-_vQoE77-977-977-977-9fi_vv71o77-977-9cO-_ve-_ve-_ve-_vW4277-977-9G--_ve-_vV4k77-9RQ
+  # Collections, key is used to access in the site.prismic.collections
+  # template variable
+  links:
+    news:
+      permalink: /news/:slug-:id/
+  collections:
+    # Example for a "posts" collection
+    news:
+      # Query the documents by type (optional)
+      type: news
+      # Permalink used to generate the output files. This should match an
+      # entry in "links", so documents link to the right output files
+      permalink: /news/:slug
+      # Layout file for this collection
+      layout: prismic_news.html
+      # Max quantity of items (optional, default is 20)
+      page_size: 100
+      # Generate output files or not (default: false)
+      output: true
