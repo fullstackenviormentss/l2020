@@ -37,7 +37,7 @@ sass:
   style: compressed
 
 exclude_from_localizations: ["asset","css","images","js","mapdata","videos", "favicon.png", "readme.md","Stats_SiteInternet_30.07.17.pptx.zip"] # should incluse css, but there are some issues with excluding not static files: https://github.com/Anthony-Gaudino/jekyll-multiple-languages-plugin/issues/75
-exclude: ["about","contact","jobs","preview","sports","venues","news"]
+exclude: ["about","contact","jobs","preview","sports","venues"]
 # languages: [fr-fr,it-it,de-de,en-gb]
 languages: [fr-fr,en-gb]
 
@@ -49,7 +49,7 @@ prismic:
   # template variable
   links:
     news:
-      permalink: /news/:slug-:id/
+      permalink: /news/:slug/
   collections:
     # Example for a "posts" collection
     news:
@@ -59,7 +59,7 @@ prismic:
       # entry in "links", so documents link to the right output files
       permalink: /news/:slug
       # Layout file for this collection
-      layout: prismic_news.html
+      layout: single-news.html
       # Max quantity of items (optional, default is 20)
       page_size: 100
       # Generate output files or not (default: false)
