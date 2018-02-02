@@ -27,6 +27,8 @@ markdown: kramdown
 highlighter: rouge
 plugins:
   - jekyll-with-prismic
+include:
+  - _redirects
 exclude:
   - Gemfile
   - Gemfile.lock
