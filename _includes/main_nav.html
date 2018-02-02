@@ -10,18 +10,13 @@
       <a class="nav-brand" href="{{nav[0].path}}" style="width:50%;">
         <img class="logo" src="/images/layout/Lausanne2020-Emblem.png" />
       </a>
-      
-      <script src="https://code.jquery.com/jquery-1.11.3.min.js" type="text/javascript" ></script>
-      <script src="/js/vendors/countdown.js" type="text/javascript" ></script>
-      <link rel="stylesheet" type="text/css" href="../css/countdown.css">
-      <link rel="stylesheet" type="text/css" href="../css/omegact.css">
 
       <div id="ad" style="width:50%">
-	<div id="countdown_container_tag" class="countdown_container">
-	  <div class="logo">
-	    <img src="/assets/omega_countdown/official-timekeeper-omega-fr.jpg">
-	    <!-- <img class="retina" src="../assets/omega_countdown/official-timekeeper-omega.svg"> -->
-	  </div>
+        <div id="countdown_container_tag" class="countdown_container">
+          <div class="logo">
+            <img src="/assets/omega_countdown/official-timekeeper-omega-fr.jpg">
+            <!-- <img class="retina" src="../assets/omega_countdown/official-timekeeper-omega.svg"> -->
+          </div>
 			
           <div id="fr" class="countdown">
 
@@ -44,26 +39,6 @@
 	  <div id="border" class="border"></div>	
         </div>
         <a class="omega_link" target="_blank" href="https://www.omegawatches.com"></a>
-        {% if site.lang == "en" %}
-  		<script type="text/javascript">
-          		$('#countdown_container_tag').countdown({'lang': 'en' });
-        	</script>
-	{% endif %}
-	{% if site.lang == "it" %}
-  		<script type="text/javascript">
-          		$('#countdown_container_tag').countdown({'lang': 'en' });
-        	</script>
-	{% endif %}
-	{% if site.lang == "fr" %}
-  		<script type="text/javascript">
-          		$('#countdown_container_tag').countdown({'lang': 'fr' });
-        	</script>
-	{% endif %}
-	{% if site.lang == "de" %}
-  		<script type="text/javascript">
-          		$('#countdown_container_tag').countdown({'lang': 'de' });
-        	</script>
-	{% endif %}
       </div>  
       <div class="socials slidedown smartphone col-lg-4 col-md-4">
 	  <div class="links_social">
