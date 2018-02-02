@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.3.5"
+# ruby "2.3.5"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
@@ -22,7 +22,7 @@ gem "hashie"
 
 gem "sinatra"
 
-gem "instagram", :git => 'git://github.com/gunnertech/instagram-ruby-gem.git'
+gem "instagram", :git => 'https://github.com/gunnertech/instagram-ruby-gem.git'
 
 gem "mini_magick"
 
@@ -32,7 +32,7 @@ gem 'metainspector'
 
 gem 'packr'
 
-gem "jekyll-with-prismic" , :git => 'git://github.com/MediaComem/jekyll-with-prismic.git', :branch => 'multiple-languages'
+gem "jekyll-with-prismic" , :git => 'https://github.com/MediaComem/jekyll-with-prismic.git', :branch => 'multiple-languages'
 
 #gem "jekyll-with-prismic" , :git => "git://github.com/MediaComem/jekyll-with-prismic.git"
 
