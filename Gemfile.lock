@@ -1,13 +1,4 @@
 GIT
-  remote: https://github.com/MediaComem/jekyll-with-prismic.git
-  revision: f02439e3f227c78542e378c53d83968f2213d049
-  branch: multiple-languages
-  specs:
-    jekyll-with-prismic (0.1.1)
-      jekyll (~> 3.7.0)
-      prismic.io (~> 1.6.1)
-
-GIT
   remote: https://github.com/gunnertech/instagram-ruby-gem.git
   revision: 44cbace8f4cf72e3794fe8af388dc5ce79b8456c
   specs:
@@ -16,6 +7,13 @@ GIT
       faraday_middleware (>= 0.8)
       hashie (>= 0.4.0)
       multi_json (~> 1.0, >= 1.0.3)
+
+PATH
+  remote: ../jekyll-with-prismic
+  specs:
+    jekyll-with-prismic (0.2.0)
+      jekyll (~> 3.7.0)
+      prismic.io (~> 1.6.1)
 
 GEM
   remote: https://rubygems.org/
