@@ -8,8 +8,10 @@ GIT
       hashie (>= 0.4.0)
       multi_json (~> 1.0, >= 1.0.3)
 
-PATH
-  remote: ../jekyll-with-prismic
+GIT
+  remote: https://github.com/MediaComem/jekyll-with-prismic.git
+  revision: f02439e3f227c78542e378c53d83968f2213d049
+  branch: multiple-languages
   specs:
     jekyll-with-prismic (0.1.1)
       jekyll (~> 3.7.0)

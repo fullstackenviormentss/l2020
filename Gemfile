@@ -32,7 +32,7 @@ gem 'metainspector'
 
 gem 'packr'
 
-gem "jekyll-with-prismic" , :path => "../jekyll-with-prismic"
+gem "jekyll-with-prismic" , :git => 'https://github.com/MediaComem/jekyll-with-prismic.git', :branch => 'multiple-languages'
 
 #gem "jekyll-with-prismic" , :git => "git://github.com/MediaComem/jekyll-with-prismic.git"
 
