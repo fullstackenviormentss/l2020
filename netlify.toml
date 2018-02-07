@@ -1,0 +1,5 @@
+[context.production]
+  command = "jekyll contentful --rebuild"
+
+[context.branch-deploy]
+  command = "jekyll build"
