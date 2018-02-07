@@ -1,9 +1,4 @@
-{% if site.lang == "en-gb" %}
-  {% assign nav = site.data.nav-header.en %}
-{% endif %}
-{% if site.lang == "fr-fr" %}
-  {% assign nav = site.data.nav-header.fr %}
-{% endif %}
+{% assign nav = site.data.[site.lang].nav.header %}
 
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
     <div class="container" style="padding-right: 0;">

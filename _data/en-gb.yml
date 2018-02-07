@@ -1,45 +1,31 @@
+nav:
+  header:
+    - title: "Home"
+      path: "/"
+    - title: "News"
+      path: "/news"
+    - title: "Venues"
+      path: "/venues"
+    - title: "Sports"
+      path: "/sports"
+    - title: "About"
+      path: "/about"
+  footer:
+    - title: "Home"
+      path: "/"
+    - title: "News"
+      path: "/news"
+    - title: "Venues"
+      path: "/venues"
+    - title: "Sports"
+      path: "/sports"
+    - title: "About"
+      path: "/about"
+    - title: "Jobs"
+      path: "/jobs"
+    - title: "Contact"
+      path: "/contact"
 pages:
-  index:
-    title1:
-      part1: Lausanne 2020
-      part2: This is where it starts!
-    title2:
-      part1: Lausanne 2020
-      part2: Legacy, Expertise, Innovation
-    title3:
-      part1: Lausanne 2020
-      part2: Culture, Sport, Education
-    title4:
-      part1: Lausanne 2020
-      part2: See you in January 2020
-    text_shop: "All the Lausanne 2020 goodies are now available in our "
-    txt_shop: "Online Shop"
-    text_shop2: "."
-    link_shop: "https://lausanne2020.many-ways.ch/en"
-    img_shop: "/images/home/EN_horizontal.png"
-    news:
-      title: News
-      plus: read more
-      autres: More news
-    about:
-      title: About
-      texte: From January 10 to 22 2020, Lausanne will be welcoming the third edition of the Winter Youth Olympic Games. Twenty-six years after obtaining the title of Olympic Capital, Lausanne will become an Olympic city by hosting the second largest multisports winter event after the Olympic Winter Games. This event will offer a unique and unforgettable Olympic experience to young athletes. The combination of culture, performance and education will give rise to a genuine celebration of sports!
-      more: More
-    shop:
-      title: All the Lausanne 2020 goodies available soon!
-      button: Shop!
-    socialwall:
-      title: Social Media Feed
-    newsletter:
-      part1: Be part of the Lausanne 2020 adventure and keep up with the latest news!
-      part2: Lausanne2020!
-      button: Let’s go
-      thanks: Thank you! Your submission has been received!
-      placeholder: Email address
-      oops: Oops! Something went wrong while submitting the form
-    privacy:
-      text: Privacy policy and terms of use
-      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy.pdf"
   news:
     archive_link: Archive
   about:
