@@ -1,5 +1,3 @@
-meta: 
-  desc: "Lausanne 2020 – the 3rd Winter Youth Olympic Games will be held from January 10th to 22nd 2020. The competition venues are : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets and St. Moritz"
 pages:
   index:
     title1:
@@ -44,15 +42,6 @@ pages:
       link: "https://www.lausanne2020.com/images/home/PrivacyPolicy.pdf"
   news:
     archive_link: Archive
-  jobs:
-    title: Jobs
-    texte: |
-            Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
-    texteEmpty: |
-            Thank you for your interest in the Lausanne 2020 Youth Olympic Games.
-            No position has been opened in the Organizing committee at the time being.
-    from: "Application deadline :"
-    readFile: read more
   about:
     title1: "The Youth Olympic Games : Compete, learn and share!"
     texte1: |

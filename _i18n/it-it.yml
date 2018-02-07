@@ -1,5 +1,3 @@
-meta: 
-  desc: "Losanna 2020 – i terzi Giochi Olimpici Giovanili invernali si svolgeranno dal 10 al 22 gennaio 2020. Le sedi delle gare sono : Losanna, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets e St. Moritz"
 pages:
   index:
     title1:
@@ -41,15 +39,6 @@ pages:
       link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_FR.pdf" 
   news:
     archive_link: Archivio
-  jobs:
-    title: Offerte di lavoro 
-    texte: |
-             Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
-    texteEmpty: |
-            Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
-            Attualmente non ci sono posti disponibili all’interno del comitato d’organizzazione.
-    from: "Limite per l’inoltro della sua offerta:" 
-    readFile: Scopri di più
   about:
     title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
     texte1: |

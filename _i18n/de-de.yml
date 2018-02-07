@@ -1,5 +1,3 @@
-meta:
-  desc: "Lausanne 2020 – die dritten Olympischen Jugend-Winterspiele, welche vom 10. bis 22. Januar 2020 stattfinden. Die Wettkampfstätten sind Lausanne, Morges, Vallée de Joux, Les Tuffes, Leysin, Villars, Les Diablerets und St. Moritz"
 pages:
   index:
     title1:
@@ -44,15 +42,6 @@ pages:
       link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_DE.pdf"
   news:
     archive_link: Archiv
-  jobs:
-    title: Jobs
-    texte: |
-            Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020.
-    texteEmpty: |
-            Vielen Dank für dein Interesse an den Olympischen Jugendspielen Lausanne 2020.
-            Unser Organisationskomitee hat momentan keine offenen Stellen zu besetzen.
-    from: "Bewerbungsfrist :"
-    readFile: Mehr Infos
   about:
     title1: "Die Olympischen Jugendspiele : Wetteifern, lernen und teilen!"
     texte1: |

@@ -1,5 +1,3 @@
-meta: 
-  desc: "Lausanne 2020 – les 3ème Jeux Olympiques de la Jeunesse d’hiver ont lieu du 10 au 22 janvier 2020. Les sites de compétition sont : Lausanne, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets et St. Moritz"
 pages:
   index:
     title1:
@@ -44,15 +42,6 @@ pages:
       link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_FR.pdf"
   news:
     archive_link: Archive
-  jobs:
-    title: Emplois
-    texte: |
-            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
-    texteEmpty: |
-            Merci pour l’intérêt que vous portez aux Jeux Olympiques de la Jeunesse Lausanne 2020.
-            Aucun poste n’est actuellement à pourvoir au sein du comité d’organisation.
-    from: "Délai de postulation :"
-    readFile: En savoir plus
   about:
     title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
     texte1: |

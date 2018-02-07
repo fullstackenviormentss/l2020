@@ -1,47 +1,43 @@
 --- 
 layout: default
 ---
-
+{% assign document = site.prismicData.single.page_job %} 
 <div class="jobs">
 	<div class="container">
-		<h1>{% t pages.jobs.title %}</h1>
-		{% capture text %}{%t pages.jobs.texte %}{% endcapture %}
-
-		{% if site.data.contentful.spaces.jobs.jobs == "" or site.data.contentful.spaces.jobs.jobs == nil  %}
-			{% capture textEmpty %}{%t pages.jobs.texteEmpty %}{% endcapture %}
-			<p>{{ textEmpty | markdownify | newline_to_br }}</p>
+        <h1>{{ document.fragments.title.text }}</h1>
+        
+		{% if site.prismicData.collections.jobs == "" or site.prismicData.collections.jobs == nil  %}
+			<p>{{ document.fragments.description_no_job.text | markdownify | newline_to_br }}</p>
 		{% else %}
-			<p>{{ text | markdownify | newline_to_br }}</p>
+			<p>{{ document.fragments.description.text | markdownify | newline_to_br }}</p>
 		{%endif %}
 		
-		{% for new in site.data.contentful.spaces.jobs.jobs %}
-
-            {% capture dir %}{% unless site.lang == "en" %}{{site.lang}}/{% endunless %}news{% endcapture %} 
-            {% capture link %}{{new.titreEn}}{% endcapture %}
+        {% for job in site.prismicData.collections.jobs %}
 
             <div class="come-in-module col-sm-6 col-md-4">
-                <a class="wrap_a" href="{{ new.file.url }}">
+                <a class="wrap_a" href="{{ job.fragments.file.url }}">
                     <div class="new col-md-12">
                         <h1 class="h1_news">
-                            {% if site.lang == "fr" %} {{ new.title }} {% elsif site.lang == "de" %} {{ new.titleDe }} {% elsif site.lang == "it" %} {{ new.titleIt }} {% else %} {{ new.titleEn }} {%
-                            endif %}
+                            {{ job.fragments.title.text }}
                         </h1>
 						<p class="p_news p_news_from">
-							{% t pages.jobs.from %} {{new.fromDate | date_to_xmlschema | date: "%d.%m.%Y"}}
+                            {{ document.fragments.from.text }} {{ job.fragments.from_date.date | date_to_xmlschema | date: "%d.%m.%Y" }}
 						</p>
                         <p class="p_news">
-                            {% if site.lang == "fr" %} {{ new.description | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-                            {% elsif site.lang == "de" %} {{ new.descriptionDe | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-			    {% elsif site.lang == "it" %} {{ new.descriptionIt | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
-                            {% else %} {{ new.descriptionEn | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} {% endif %}
+                            {{ job.fragments.description.text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}} 
                         </p>
 
                     </div>
                 </a>
                 <div class="new_meta">
 					<p class="news_date">
-						<time pubdate datetime="{{new.publishDate | date_to_xmlschema}}" title="{{new.publishDate | date_to_xmlschema | date: '%d.%m'}}">{{new.publishDate | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                        <a target="_blank" rel="noopener noreferrer" href="{{ new.file.url }}">{% t pages.jobs.readFile %}</a>
+                        <time 
+                            pubdate datetime="{{job.fragments.publication_date.date | date_to_xmlschema}}" 
+                            title="{{job.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">
+                            {{job.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}
+                        </time>
+
+                        <a target="_blank" rel="noopener noreferrer" href="{{ job.fragments.file.url }}">{{ document.fragments.read_file.text }}</a>
                     </p>
                 </div>
             </div>
