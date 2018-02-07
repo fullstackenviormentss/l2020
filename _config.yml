@@ -34,7 +34,6 @@ exclude:
   - Gemfile.lock
   - readme.md
   - about
-  - contact
   - preview
   - sports
   - venues

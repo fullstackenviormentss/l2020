@@ -1,25 +1,27 @@
 ---
 layout: default
 ---
+
+{% assign form = site.data[site.lang].pages.contact %}
 <div class="latestnews_section">
   <div class="container">
-    <h1 class="h1_contact">{% t pages.contact.title %}</h1>
+    <h1 class="h1_contact">{{ form.title }}</h1>
     <div class="row">
       <div class="col-md-6 form">
-          <form class="form form-contact" data-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
-            <label for="Firstname">{% t pages.contact.form.prenom.title %}</label>
-            <input data-name="Firstname" id="Firstname" maxlength="256" name="Firstname" placeholder="{% t pages.contact.form.prenom.placeholder %}" required="required" type="text">
+          <form class="form form-contact" form-name="Email Form" id="email-form-contact" netlify-honeypot="champcache" name="email-form-contact" action="#" netlify>
+            <label for="Firstname">{{ form.form.prenom.title }}</label>
+            <input form-name="Firstname" id="Firstname" maxlength="256" name="Firstname" placeholder="{{ form.form.prenom.placeholder }}" required="required" type="text">
             <p class="cache"><label>Bot field: <input name="champcache"></label></p>
-            <label for="Lastname">{% t pages.contact.form.nom.title %}</label>
-            <input data-name="Lastname" id="Lastname" maxlength="256" name="Lastname" placeholder="{% t pages.contact.form.nom.placeholder %}" required="required" type="text">
-            <label for="email">{% t pages.contact.form.email.title %}</label>
-            <input data-name="Email" id="email" maxlength="256" name="email" placeholder="{% t pages.contact.form.email.placeholder %}" required="required" type="email">
-            <label for="Message">{% t pages.contact.form.message.title %}</label>
-            <textarea data-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{% t pages.contact.form.message.placeholder %}" required="required"></textarea>
-            <input class="btn submit" data-wait="Please wait..." type="submit" value="{% t pages.contact.form.envoyer %}">
+            <label for="Lastname">{{ form.form.nom.title }}</label>
+            <input form-name="Lastname" id="Lastname" maxlength="256" name="Lastname" placeholder="{{ form.form.nom.placeholder }}" required="required" type="text">
+            <label for="email">{{ form.form.email.title }}</label>
+            <input form-name="Email" id="email" maxlength="256" name="email" placeholder="{{ form.form.email.placeholder }}" required="required" type="email">
+            <label for="Message">{{ form.form.message.title }}</label>
+            <textarea form-name="Message" id="Message" maxlength="5000" name="Message" placeholder="{{ form.form.message.placeholder }}" required="required"></textarea>
+            <input class="btn submit" form-wait="Please wait..." type="submit" value="{{ form.form.envoyer }}">
           </form>
           <div class="success form-done">
-            <div>{% t pages.contact.form.thanks %}</div>
+            <div>{{ form.form.thanks }}</div>
           </div>
           <div class="error form-fail">
             <div>Oops! Something went wrong while submitting the form</div>
