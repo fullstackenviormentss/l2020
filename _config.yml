@@ -33,7 +33,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - readme.md
-  - about
   - preview
 
 sass:

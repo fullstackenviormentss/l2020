@@ -28,24 +28,6 @@ nav:
 pages:
   news:
     archive_link: Archive
-  about:
-    title1: "The Youth Olympic Games : Compete, learn and share!"
-    texte1: |
-            The Youth Olympic Games are an international Olympic sporting event of the highest level for athletes aged 15 to 18.
-            
-            They combine sports performance, culture and education in an authentic celebration of sport with a festive atmosphere. The aim is to encourage young people to adopt and represent the positive values of sport - respect for others, for themselves and for our environment; friendship between people and cultures; and, excellence in self-giving - and to become sports ambassadors throughout the world.
-            
-            Through its mission, the Youth Olympic Games aspire to be a leading example of innovation for sporting events of the future.
-    more: Learn more
-    title2: The Lausanne 2020 ambition
-    texte2: |
-            Lausanne 2020 is seeking to create a new sports platform for young people by actively involving them in the preparation and organisation of the event. 
-            This means engaging the local, regional and even national population around a unique, unifying occasion, that seeks to create a better world. 
-            Promoting and giving responsibility to young people by providing them with an opportunity to become ambassadors of positive sports values, acquire new talents and achieve self-accomplishment by becoming the leaders of tomorrow. All this while making the Youth Olympic Games a creative laboratory; an incubator of ideas from young people, for young people, drawing inspiration from Switzerland’s heritage and unique assets in education, culture and innovation.
-
-            <span class="important-dates">The Lausanne 2020 Games will take place from 10 to 22 January 2020.</span>
-    sports_title: The sport disciplines
-    sports_texte: "The sports programme of the 3<sup>rd</sup> edition of the Winter Youth Olympic Games is similar to the programme of the Olympic Winter Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
   sports:
     biathlon:
       text: Biathlon
@@ -95,6 +77,24 @@ pages:
     skimo:
       text: Ski mountaineering
       link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
+  about:
+    title1: "The Youth Olympic Games : Compete, learn and share!"
+    texte1: |
+            The Youth Olympic Games are an international Olympic sporting event of the highest level for athletes aged 15 to 18.
+            
+            They combine sports performance, culture and education in an authentic celebration of sport with a festive atmosphere. The aim is to encourage young people to adopt and represent the positive values of sport - respect for others, for themselves and for our environment; friendship between people and cultures; and, excellence in self-giving - and to become sports ambassadors throughout the world.
+            
+            Through its mission, the Youth Olympic Games aspire to be a leading example of innovation for sporting events of the future.
+    more: Learn more
+    title2: The Lausanne 2020 ambition
+    texte2: |
+            Lausanne 2020 is seeking to create a new sports platform for young people by actively involving them in the preparation and organisation of the event. 
+            This means engaging the local, regional and even national population around a unique, unifying occasion, that seeks to create a better world. 
+            Promoting and giving responsibility to young people by providing them with an opportunity to become ambassadors of positive sports values, acquire new talents and achieve self-accomplishment by becoming the leaders of tomorrow. All this while making the Youth Olympic Games a creative laboratory; an incubator of ideas from young people, for young people, drawing inspiration from Switzerland’s heritage and unique assets in education, culture and innovation.
+
+            <span class="important-dates">The Lausanne 2020 Games will take place from 10 to 22 January 2020.</span>
+    sports_title: The sport disciplines
+    sports_texte: "The sports programme of the 3<sup>rd</sup> edition of the Winter Youth Olympic Games is similar to the programme of the Olympic Winter Games with variations and innovations in the disciplines that are proposed by the International Federations. The sports on the programme are:"
     sports_new: For the first time in the history of the Olympic Games, ski mountaineering will be part of the Olympic programme !
     sports_fin: Discover the venues <b><a href="venues" class="link_site">here</a></b>
     facts:
