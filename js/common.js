@@ -375,7 +375,7 @@ var mapManagement = {
           icon: '/images/venues/location_v2.png',
           title: 'Click!'
         });
-        var content = "<h1>" + val.title + "</h1><p>" + val.description + "</p><p><a href=" + val.link + " target='_blank'>More</a></p>";
+        var content = "<h1>" + val.title + "</h1><p>" + val.description + "</p><p><a href=" + val.link + " target='_blank'>" + val.link_text + "</a></p>";
         var infowindow = new google.maps.InfoWindow({
           content: content
         });

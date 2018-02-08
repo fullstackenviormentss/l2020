@@ -5,6 +5,7 @@
     "title": "{{ venue.fragments.title.text }}",
     "link": "{{ venue.fragments.link.url }}",
     "description": "{{ venue.fragments.description.text }}",
+    "link_text": "{{ venue.fragments.link_text.text }}",
     "lat": {{ venue.fragments.position.latitude }},
     "lng": {{ venue.fragments.position.longitude }}
   }{% if forloop.last == false %},{% endif %}

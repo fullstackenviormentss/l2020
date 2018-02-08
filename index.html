@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign document = site.prismicData.single.page_home %} 
-<div class="hero">
+<div class="hero" style="background-image: url('{{ document.fragments.claims_image.url }}');">
     <div class="container">
     {% for post in document.fragments.claims_list.group_documents %}
         <h1 class="the_claim">{{post.fragments.claim.text}}<br/><span class="accent">{{post.fragments.claim_part_2.text}}</span></h1>

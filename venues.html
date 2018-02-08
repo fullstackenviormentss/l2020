@@ -12,18 +12,19 @@ layout: default
     <p class="discover_1 discover_p fade-in-module">
       {{ document.fragments.content_section_1.text | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
     </p>
+    <div class="row-sites row">
     {% for post in document.fragments.venues_section_1.group_documents %}
-      <div class="row-sites row">
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{site.prismicData.contentById[post.fragments.venue.id].fragments.title.text}}" target="_blank" rel="noopener noreferrer"
             href='{{site.prismicData.contentById[post.fragments.venue.id].fragments.link.url}}'>
           <div class="blockSite">
             <div class="imgSite">
-              <img src="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.url}}"
-                alt="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.alt}}" />
+              <img alt="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.alt}}" 
+              src="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.url}}" 
+              srcset="{{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.url }} {{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.width }}w, {{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.view_mobile_url }} {{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.view_mobile_width }}w" />
             </div>
             <div class="textSite">
-              {{site.prismicData.contentById[post.fragments.venue.id].fragments.description.text}}
+              {{site.prismicData.contentById[post.fragments.venue.id].fragments.title.text}}
             </div>
           </div>
         </a>
@@ -33,33 +34,33 @@ layout: default
   </div>
 </div>
 <div class="map_section" data-ix="scroll-nav">
-  <div id="map">
-
-  </div>
+  <div id="map"></div>
 </div>
 <div class="sites">
   <div class="container fade-in-module">
     <p class="discover_1 discover_p fade-in-module">
       {{ document.fragments.content_section_2.text | markdownify | remove: '<p>' | remove: '</p>' | newline_to_br}}
     </p>
+    <div class="row-sites row">
     {% for post in document.fragments.venues_section_2.group_documents %}
-      <div class="row-sites row">
       <div class="col-md-3 col-sm-6 come-in-module">
         <a class="lienSite" title="{{site.prismicData.contentById[post.fragments.venue.id].fragments.title.text}}" target="_blank" rel="noopener noreferrer"
             href='{{site.prismicData.contentById[post.fragments.venue.id].fragments.link.url}}'>
           <div class="blockSite">
             <div class="imgSite">
-              <img src="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.url}}"
-                alt="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.alt}}" />
+              <img alt="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.alt}}" 
+              src="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.url}}" 
+              srcset="{{site.prismicData.contentById[post.fragments.venue.id].fragments.image.url}} {{site.prismicData.contentById[post.fragments.venue.id].fragments.image.width }}w, {{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.view_mobile_url }} {{ site.prismicData.contentById[post.fragments.venue.id].fragments.image.view_mobile_width }}w" />
             </div>
             <div class="textSite">
-              {{site.prismicData.contentById[post.fragments.venue.id].fragments.description.text}}
+              {{site.prismicData.contentById[post.fragments.venue.id].fragments.title.text}}
             </div>
           </div>
         </a>
       </div>
     {% endfor %}
   </div>
+</div>
 </div>
 <div class="sites" id="sites2">
   <div class="container fade-in-module">

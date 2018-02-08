@@ -223,50 +223,34 @@ input[type=submit]{
 .jobs,
 .single-news-content,
 .latestnews_section,
-.news-page {
+.news-page,
+.sports,
+#sites1 {
     margin-top: 220px;
 }
 
 @media (max-width: 991px) {
-    .h1_about_yog,
-    .about_the_yog_p,
-    .h1_newsletter_cta,
-    .marchandising_col_1,
-    .h1_news,
-    .news-page .p_news, .news_section .p_news {
-        text-align: center;
-    }
-    .marchandising_col_1 {
-        padding-top: 50px;
-    }
     .about_yog_1,
     .sites1,
     .jobs,
     .single-news-content,
     .latestnews_section,
-    .news-page {
+    .news-page,
+    .sports,
+    #sites1 {
         margin-top: 170px;
     }
 }
 
 @media (max-width: 768px) {
-    .h1_about_yog,
-    .about_the_yog_p,
-    .h1_newsletter_cta,
-    .marchandising_col_1,
-    .h1_news,
-    .news-page .p_news, .news_section .p_news {
-        text-align: center;
-    }
-    .marchandising_col_1 {
-        padding-top: 50px;
-    }
     .about_yog_1,
     .sites1,
     .jobs,
     .single-news-content,
     .latestnews_section,
-    .news-page {
+    .news-page,
+    .sports,
+    #sites1 {
         margin-top: 130px;
     }
 }
