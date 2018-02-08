@@ -4,7 +4,7 @@ layout: default
 <div class="single-news-content">
 	<header>
 		<div class="news-image">
-	  	<img src="{{page.image.url}}?w=700&h=500&q=80" alt="">
+			<img alt="{{ page.document.fragments.image.alt }}" src="{{ page.document.fragments.image.view_mobile_url }}" srcset="{{ page.document.fragments.image.url }} {{ page.document.fragments.image.width }}w, {{ page.document.fragments.image.view_mobile_url }} {{ page.document.fragments.image.view_mobile_width }}w" />
 	  </div>
 	</header>
 	<div class="container news-content">
@@ -12,7 +12,7 @@ layout: default
 		<p class="p_news">{{ page.document.fragments.body.html | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}</p>
     
     <p class="news_date">
-		<time pubdate datetime="{{page.document.fragements.date | date_to_xmlschema}}" title="{{page.document.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">{{page.document.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-	</p>
+			<time pubdate datetime="{{page.document.fragments.publication_date.date | date_to_xmlschema}}" title="{{page.document.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">{{page.document.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+		</p>
 	</div>
 </div>

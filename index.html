@@ -19,7 +19,7 @@ layout: default
                 <a class="wrap_a" href="/{{ site.langShort }}/news/{{ news_item.slug }}">
                     <div class="new col-md-12">
                         <div class="wrap_media">
-                            <img class="grow" src="{{ news_item.fragments.image.url }}" srcset="{{ news_item.fragments.image.url }} {{ news_item.fragments.image.width }}w, {{ news_item.fragments.image.view_desktop_url }} {{ news_item.fragments.image.view_desktop_width }}w" />
+                            <img class="grow" alt="{{ news_item.fragments.image.alt }}" src="{{ news_item.fragments.image.url }}" srcset="{{ news_item.fragments.image.url }} {{ news_item.fragments.image.width }}w, {{ news_item.fragments.image.view_mobile_url }} {{ news_item.fragments.image.view_mobile_width }}w" />
                         </div>
                         <h1 class="h1_news">
                             {{news_item.fragments.title.text}}
