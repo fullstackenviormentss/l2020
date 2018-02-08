@@ -283,19 +283,6 @@ input[type=submit]{
     }
 }
 
-/* Box-shadow Inset */
-
-#main>div:nth-last-of-type(2n+1) {
-    @include not('.hero',
-    '.botbar',
-    '.footer',
-    '.latestnews_section') {
-        -webkit-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-        -moz-box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-        box-shadow: inset 10px 10px 59px -10px rgba(0, 0, 0, 0.4);
-    }
-}
-
 /* More news link */
 
 .more-news-button {
