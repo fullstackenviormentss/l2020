@@ -368,7 +368,7 @@ var mapManagement = {
           lat: val.lat,
           lng: val.lng
         };
-        console.log(myLatLng)
+        console.log(myLatLng);
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: mapManagement.map,

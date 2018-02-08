@@ -159,6 +159,7 @@ pages:
         placeholder: gib hier deine Nachricht ein
       envoyer: Senden
       thanks: Vielen Dank für deine Anfrage. Wir werden dir so schnell wie möglich antworten!
+      error: Oops! Something went wrong while submitting the form
   venues:
     title: Plätze ohne Wettkämpfe
     subtitle1: Olympisches Dorf der Jugend

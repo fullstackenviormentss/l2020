@@ -159,6 +159,7 @@ pages:
         placeholder: Enter your message here
       envoyer: Send
       thanks: Thank you very much for your request. We will reply as soon as possible!
+      error: Oops! Something went wrong while submitting the form
   venues:
     title: Non-competitions venues
     subtitle1: Youth Olympic Village

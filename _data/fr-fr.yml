@@ -161,6 +161,7 @@ pages:
         placeholder: Ecrivez votre message ici
       envoyer: Envoyer
       thanks: Nous vous remercions de votre demande. Nous vous répondrons dans les plus brefs délais !
+      error: Oops! Something went wrong while submitting the form
   venues:
     title: Les sites hors compétitions
     subtitle1: Village Olympique de la Jeunesse

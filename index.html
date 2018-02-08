@@ -39,7 +39,7 @@ layout: default
             {% endfor %}
         </div>
         <div class="more-news-button">
-            <a class="more-news-btn" rel="noopener noreferrer" href="https://www.lausanne2020.com/fr/news">
+            <a class="more-news-btn" rel="noopener noreferrer" href="/{{ site.langShort }}/news/">
                 {{document.fragments.news_link_to_watch_all.text}}
             </a>
         </div>
@@ -65,6 +65,14 @@ layout: default
 <div class="social_feed_section social_wall">
     <div class='container'>
         <h1 class="h1_big_news" style="color:white;">{{ document.fragments.social_wall_title.text }}</h1>
+
+        {% social_wall
+        
+            insta_username:2041300508,
+            insta_amount:3
+    
+        %}
+
     </div>
 </div>
 <div class="shop_section">
@@ -91,10 +99,10 @@ layout: default
             </div>
         </form>
         <div class="success form-done">
-            <div>to_translate</div>
+            <div>{{ document.fragments.newsletter_success.text }}</div>
         </div>
         <div class="error form-fail">
-            <div>to_translate</div>
+            <div>{{ document.fragments.newsletter_error.text }}</div>
         </div>
     </div>
 </div>
