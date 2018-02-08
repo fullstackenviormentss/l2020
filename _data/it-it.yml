@@ -28,24 +28,6 @@ nav:
 pages:
   news:
     archive_link: Archivio
-  about:
-    title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
-    texte1: |
-            I Giochi Olimpici Giovanili sono una manifestazione sportiva Olimpica internazionale al più alto livello per atleti dai 15 ai 18 anni.
-
-            Associano prestazioni sportive, cultura ed educazione durante un vero festival dello sport. Hanno l’obbiettivo di incoraggiare la gioventù ad adottare e vivere i valori positivi dello sport – il rispetto dell’altro, di sé stessi, del nostro ambiente, l’amicizia fra i popoli e le culture, l’eccellenza nel dono di sé – e divenirne gli ambasciatori in tutto il mondo.
-           
-            Attraverso la propria vocazione, i Giochi Olimpici Giovanili vogliono essere un esempio portatore d’innovazione per gli eventi sportivi del futuro. 
-    more: Saperne di più
-    title2: L’ambizione di Losanna
-    texte2: |
-            Losanna 2020 rappresenta l’ambizione di creare una nuova piattaforma sportiva per la gioventù coinvolgendola attivamente alla preparazione e organizzazione dell’evento.
-            Si tratta di implicare tutta la popolazione locale, regionale e addirittura nazionale attorno a un evento unico e che unifica in favore di un mondo migliore.
-            Valorizzare e responsabilizzare i giovani permettendo loro di diventare ambasciatori dei valori positivi dello sport, d’acquisire nuovi talenti e di realizzarsi diventando i leader di domani. Tutto ciò facendo dei Giochi Olimpici Giovanili un laboratorio creativo; incubatore d’idee di giovani per i giovani, attingendo al patrimonio e ai vantaggi unici della Svizzera in termini di formazione, cultura e innovazione.
-            
-            <span class="important-dates"> Losanna 2020 si svolgerà dal 10 al 22 gennaio 2020! </span>
-    sports_title: le discipline sportive
-    sports_texte: "Il programma sportivo della terza edizione dei Giochi Olimpici Giovanili invernali è simile al programma dei Giochi Olimpici invernali, con delle varianti e innovazioni nelle discipline proposte dalle federazioni internazionali. Gli sport in programma sono:"
   sports:
     biathlon:
       text: Biathlon
@@ -95,6 +77,24 @@ pages:
     skimo:
       text: Sci alpinismo
       link: "http://www.ismf-ski.org/"
+  about:
+    title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
+    texte1: |
+            I Giochi Olimpici Giovanili sono una manifestazione sportiva Olimpica internazionale al più alto livello per atleti dai 15 ai 18 anni.
+
+            Associano prestazioni sportive, cultura ed educazione durante un vero festival dello sport. Hanno l’obbiettivo di incoraggiare la gioventù ad adottare e vivere i valori positivi dello sport – il rispetto dell’altro, di sé stessi, del nostro ambiente, l’amicizia fra i popoli e le culture, l’eccellenza nel dono di sé – e divenirne gli ambasciatori in tutto il mondo.
+           
+            Attraverso la propria vocazione, i Giochi Olimpici Giovanili vogliono essere un esempio portatore d’innovazione per gli eventi sportivi del futuro. 
+    more: Saperne di più
+    title2: L’ambizione di Losanna
+    texte2: |
+            Losanna 2020 rappresenta l’ambizione di creare una nuova piattaforma sportiva per la gioventù coinvolgendola attivamente alla preparazione e organizzazione dell’evento.
+            Si tratta di implicare tutta la popolazione locale, regionale e addirittura nazionale attorno a un evento unico e che unifica in favore di un mondo migliore.
+            Valorizzare e responsabilizzare i giovani permettendo loro di diventare ambasciatori dei valori positivi dello sport, d’acquisire nuovi talenti e di realizzarsi diventando i leader di domani. Tutto ciò facendo dei Giochi Olimpici Giovanili un laboratorio creativo; incubatore d’idee di giovani per i giovani, attingendo al patrimonio e ai vantaggi unici della Svizzera in termini di formazione, cultura e innovazione.
+            
+            <span class="important-dates"> Losanna 2020 si svolgerà dal 10 al 22 gennaio 2020! </span>
+    sports_title: le discipline sportive
+    sports_texte: "Il programma sportivo della terza edizione dei Giochi Olimpici Giovanili invernali è simile al programma dei Giochi Olimpici invernali, con delle varianti e innovazioni nelle discipline proposte dalle federazioni internazionali. Gli sport in programma sono:"
     sports_new: Per la prima volta nella storia dei Giochi Olimpici, lo sci alpinismo farà anche parte del programma olimpico.
     sports_fin: <b><a href="venues" class="link_site">Scoprite le sedi delle gare</a></b>
     facts:

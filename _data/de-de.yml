@@ -28,24 +28,6 @@ nav:
 pages:
   news:
     archive_link: Archiv
-  about:
-    title1: "Die Olympischen Jugendspiele : Wetteifern, lernen und teilen!"
-    texte1: |
-            Die Olympischen Jugendspiele sind ein internationaler olympischer Spitzensportanlass für Athletinnen und Athleten im Alter von 15 bis 18 Jahren.
-
-            Sie verbinden sportliche Höchstleistungen mit Kultur und Bildung zu einem einzigartigen Sportfest und haben zum Ziel, die Jugend zu ermutigen, die positiven Werte des Sports anzunehmen und zu leben. Dies sind der Respekt gegenüber anderen, sich selbst und unserer Umwelt, die Freundschaft zwischen Völkern und Kulturen und sportliche Höchstleistung. Weiter sollen die Jugendlichen Sportbotschafter in der ganzen Welt werden.
-            
-            Die Olympischen Jugendspiele sind ein führendes Beispiel der Innovation für die Sportanlässe der Zukunft. 
-    more: Mehr dazu
-    title2: Die Ambition von Lausanne 2020
-    texte2: |
-            Lausanne 2020 ist die Ambition, eine neue Sportplattform für die Jugend zu schaffen, die diese aktiv in die Vorbereitung und Organisation des Events miteinbezieht.
-            Es geht darum, die gesamte lokale, regionale und nationale Bevölkerung zu Gunsten einer besseren Welt für ein einzigartiges und zusammenführendes Event miteinzubeziehen.
-            Wir wollen die Jugendlichen wertschätzen und ihnen Verantwortung übergeben, indem sie zu Botschaftern der positiven Werte des Sports werden, neue Talente in sich entdecken und sich als zukünftige Leader entwickeln können. Die Olympischen Jugendspiele werden zum Innovationslabor und zum Brutkasten neuer Ideen für die Jugend, indem auf das Erbe und die einzigartigen Stärken der Schweiz in den Bereichen Bildung, Kultur und Innovation zurückgegriffen wird.
-
-            <span class="important-dates">Lausanne 2020 findet vom 10. bis 22. Januar 2020 statt.</span>
-    sports_title: Die Sportdisziplinen
-    sports_texte: "Das sportliche Programm der dritten Olympischen Jugend-Winterspiele ähnelt dem der Olympischen Winterspiele, beinhaltet aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen, sind:"
   sports:
     biathlon:
       text: Biathlon
@@ -95,6 +77,24 @@ pages:
     skimo:
       text: Skitourenrennen
       link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
+  about:
+    title1: "Die Olympischen Jugendspiele : Wetteifern, lernen und teilen!"
+    texte1: |
+            Die Olympischen Jugendspiele sind ein internationaler olympischer Spitzensportanlass für Athletinnen und Athleten im Alter von 15 bis 18 Jahren.
+
+            Sie verbinden sportliche Höchstleistungen mit Kultur und Bildung zu einem einzigartigen Sportfest und haben zum Ziel, die Jugend zu ermutigen, die positiven Werte des Sports anzunehmen und zu leben. Dies sind der Respekt gegenüber anderen, sich selbst und unserer Umwelt, die Freundschaft zwischen Völkern und Kulturen und sportliche Höchstleistung. Weiter sollen die Jugendlichen Sportbotschafter in der ganzen Welt werden.
+            
+            Die Olympischen Jugendspiele sind ein führendes Beispiel der Innovation für die Sportanlässe der Zukunft. 
+    more: Mehr dazu
+    title2: Die Ambition von Lausanne 2020
+    texte2: |
+            Lausanne 2020 ist die Ambition, eine neue Sportplattform für die Jugend zu schaffen, die diese aktiv in die Vorbereitung und Organisation des Events miteinbezieht.
+            Es geht darum, die gesamte lokale, regionale und nationale Bevölkerung zu Gunsten einer besseren Welt für ein einzigartiges und zusammenführendes Event miteinzubeziehen.
+            Wir wollen die Jugendlichen wertschätzen und ihnen Verantwortung übergeben, indem sie zu Botschaftern der positiven Werte des Sports werden, neue Talente in sich entdecken und sich als zukünftige Leader entwickeln können. Die Olympischen Jugendspiele werden zum Innovationslabor und zum Brutkasten neuer Ideen für die Jugend, indem auf das Erbe und die einzigartigen Stärken der Schweiz in den Bereichen Bildung, Kultur und Innovation zurückgegriffen wird.
+
+            <span class="important-dates">Lausanne 2020 findet vom 10. bis 22. Januar 2020 statt.</span>
+    sports_title: Die Sportdisziplinen
+    sports_texte: "Das sportliche Programm der dritten Olympischen Jugend-Winterspiele ähnelt dem der Olympischen Winterspiele, beinhaltet aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen, sind:"
     sports_new: Zum ersten Mal in der Geschichte der Olympischen Spiele wird Ski Mountaineering (Skitourenrennen) Teil des Olympischen Programms sein.
     sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
     facts:

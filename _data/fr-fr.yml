@@ -28,24 +28,6 @@ nav:
 pages:
   news:
     archive_link: Archive
-  about:
-    title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
-    texte1: |
-            Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans.
-            
-            Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport. Ils ont comme objectif d’encourager la jeunesse à adopter et vivre selon les valeurs positives du sport – le respect de l’autre, de soi, de notre environnement, l’amitié entre les peuples et les cultures, l’excellence dans le don de soi – et à en devenir les ambassadeurs à travers le monde.
-            
-            Par leur vocation, les Jeux Olympiques de la Jeunesse veulent être un incubateur d’innovation pour les événements sportifs du futur.
-    more: En apprendre plus
-    title2: L'ambition de Lausanne 2020
-    texte2: |
-            Lausanne 2020, c’est l’ambition de créer un plateforme sportive nouvelle pour la jeunesse en l’impliquant activement dans la préparation et l’organisation de l’événement.
-            Il s’agit d’engager toute la population locale, régionale et même nationale autour d’un événement unique et fédérateur en faveur d’un monde meilleur.
-            Valoriser et responsabiliser la jeunesse en lui permettant de devenir une ambassadrice des valeurs positives du sport, d’acquérir de nouveaux talents et de s’accomplir en devenant les leaders de demain. Ceci en faisant des Jeux Olympiques de la Jeunesse un laboratoire d’innovation; incubateur d’idées pour la jeunesse et en puisant dans l’héritage et les atouts uniques de la Suisse en termes de formation, de culture et d’innovation.
-
-            <span class="important-dates">Lausanne 2020 se déroulera du 10 au 22 janvier 2020 !</span>
-    sports_title: Les disciplines sportives
-    sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
   sports:
     biathlon:
       text: Biathlon
@@ -95,7 +77,25 @@ pages:
     skimo:
       text: Ski Alpinisme
       link: "https://www.olympic.org/fr/news/gravir-le-sommet-olympique-tout-ce-que-vous-devez-savoir-sur-le-ski-alpinisme"
+  about:
+    title1: "Les Jeux Olympiques de la Jeunesse : Concourir, apprendre et partager !"
+    texte1: |
+            Les Jeux Olympiques de la Jeunesse sont un événement sportif Olympique international du plus haut niveau pour les athlètes âgés de 15 à 18 ans.
+            
+            Ils associent la performance sportive, la culture et l'éducation dans un réel festival du sport. Ils ont comme objectif d’encourager la jeunesse à adopter et vivre selon les valeurs positives du sport – le respect de l’autre, de soi, de notre environnement, l’amitié entre les peuples et les cultures, l’excellence dans le don de soi – et à en devenir les ambassadeurs à travers le monde.
+            
+            Par leur vocation, les Jeux Olympiques de la Jeunesse veulent être un incubateur d’innovation pour les événements sportifs du futur.
+    more: En apprendre plus
+    title2: L'ambition de Lausanne 2020
+    texte2: |
+            Lausanne 2020, c’est l’ambition de créer un plateforme sportive nouvelle pour la jeunesse en l’impliquant activement dans la préparation et l’organisation de l’événement.
+            Il s’agit d’engager toute la population locale, régionale et même nationale autour d’un événement unique et fédérateur en faveur d’un monde meilleur.
+            Valoriser et responsabiliser la jeunesse en lui permettant de devenir une ambassadrice des valeurs positives du sport, d’acquérir de nouveaux talents et de s’accomplir en devenant les leaders de demain. Ceci en faisant des Jeux Olympiques de la Jeunesse un laboratoire d’innovation; incubateur d’idées pour la jeunesse et en puisant dans l’héritage et les atouts uniques de la Suisse en termes de formation, de culture et d’innovation.
+
+            <span class="important-dates">Lausanne 2020 se déroulera du 10 au 22 janvier 2020 !</span>
+    sports_title: Les disciplines sportives
     sports_new: Pour la première fois dans l’histoire des Jeux Olympiques, le ski alpinisme fera également partie du programme olympique.
+    sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
     sports_fin: Découvrez les sites de compétition <b><a href="venues" class="link_site">ici</a></b>
     facts:
       title: Lausanne 2020 en chiffres
