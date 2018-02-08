@@ -1,9 +1,4 @@
-{% if site.lang == "en-gb" %}
-  {% assign nav = site.data.nav-footer.en %}
-{% endif %}
-{% if site.lang == "fr-fr" %}
-  {% assign nav = site.data.nav-footer.fr %}
-{% endif %}
+{% assign nav = site.data[site.lang].nav.footer %}
 
 <div class="footer">
   <div class="container">

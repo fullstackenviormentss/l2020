@@ -7,7 +7,7 @@ layout: default
 {% assign news2019 = 0 %}
 {% assign news2020 = 0 %}
 {% for new in site.prismicData.collections.news %}
-  {% capture newyear %}{{ new.fragments.publication_date.date | date: '%Y' }}{% endcapture %}
+  {% capture newyear %}{{ news_item.fragments.publication_date.date | date: '%Y' }}{% endcapture %}
   {% if newyear == '2017' %}
     {% assign news2017 = news2017 | plus: 1 %}
   {% endif %}
@@ -26,28 +26,25 @@ layout: default
     <h1 class="h1_big_news h1_newsletter_cta">News</h1>
       
     <div class="row">
-      {% for new in site.prismicData.collections.news limit:9 %}
-        {% capture link %}{{new.slug}}{% endcapture %} 
+      {% for news_item in site.prismicData.collections.news limit:9 %}
         <div class="come-in-module col-sm-6 col-md-4">
-           <a class="wrap_a" href="/{{site.lang}}/news/{{ link }}">
+           <a class="wrap_a" href="/{{ site.langShort }}/news/{{ news_item.slug }}">
               <div class="new col-md-12">
                   <div class="wrap_media">
-                      <img class="grow" src="{{ new.fragments.image.url }}?w=400&h=400&q=70">
+                    <img class="grow" src="{{ news_item.fragments.image.url }}" srcset="{{ news_item.fragments.image.url }} {{ news_item.fragments.image.width }}w, {{ news_item.fragments.image.view_desktop_url }} {{ news_item.fragments.image.view_desktop_width }}w">
                   </div>
                   <h1 class="h1_news">
-                      {{ new.fragments.title.text }}
+                      {{ news_item.fragments.title.text }}
                   </h1>
                   <p class="p_news">
-                      {{ new.body.text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
+                      {{ news_item.body.text | markdownify | newline_to_br | remove: '<p>' | remove: '</p>'}}
                   </p>
-                  
-                  
               </div>
             </a>
             <div class="new_meta">
                 <p class="news_date">
-                    <time pubdate datetime="{{new.fragments.publication_date.date | date_to_xmlschema}}" title="{{new.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">{{new.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                    <a href="/{{site.lang}}/news/{{ link }}">{{ site.prismicData.single.page_home.fragments.individual_news_link_to_read_more.text }}</a>
+                    <time pubdate datetime="{{news_item.fragments.publication_date.date | date_to_xmlschema}}" title="{{news_item.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">{{news_item.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
+                    <a href="/{{site.lang}}/news/{{ news_item.slug }}">{{ site.prismicData.single.page_home.fragments.individual_news_link_to_read_more.text }}</a>
                 </p>
             </div>
         </div>

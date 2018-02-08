@@ -33,7 +33,7 @@ var polyfill = {
   initGlobal: function () {
     // Objectfit
     if (!Modernizr.objectfit) {
-      $.getScript('./js/vendors/polyfill/ofi.min.js')
+      $.getScript('/js/vendors/polyfill/ofi.min.js')
         .done(function () {
           objectFitImages(null, {
             watchMQ: true
@@ -46,7 +46,7 @@ var polyfill = {
     }
     // Flexbox
     if (!Modernizr.flexbox || !Modernizr.flexwrap) {
-      $.getScript('./js/vendors/polyfill/flexibility.js')
+      $.getScript('/js/vendors/polyfill/flexibility.js')
         .done(function () {
           console.log("flexibility loaded");
           $('.newsletter, .newsletter form, .about-content').attr("data-style", "display: flex;");
@@ -59,7 +59,7 @@ var polyfill = {
     }
     // Vmin, vw ...vh
     if (!Modernizr.cssvminunit || !Modernizr.cssvwunit) {
-      $.getScript('./js/vendors/polyfill/vminpoly.js')
+      $.getScript('/js/vendors/polyfill/vminpoly.js')
         .fail(function () {
           console.log('Vmin polyfill failed to load');
         });

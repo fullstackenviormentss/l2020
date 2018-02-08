@@ -1,55 +1,33 @@
-meta: 
-  desc: "Losanna 2020 – i terzi Giochi Olimpici Giovanili invernali si svolgeranno dal 10 al 22 gennaio 2020. Le sedi delle gare sono : Losanna, Morges, Vallée de Joux, les Tuffes, Leysin, Villars, les Diablerets e St. Moritz"
+nav:
+  header:
+    - title: "Home"
+      path: "/it/"
+    - title: "News"
+      path: "/it/news"
+    - title: "Sedi"
+      path: "/it/venues"
+    - title: "Sport"
+      path: "/it/sports"  
+    - title: "Chi siamo"
+      path: "/it/about"
+  footer:
+    - title: "Home"
+      path: "/it/"
+    - title: "News"
+      path: "/it/news"
+    - title: "Sedi"
+      path: "/it/venues"
+    - title: "Sport"
+      path: "/it/sports"
+    - title: "Chi siamo"
+      path: "/it/about"
+    - title: "Offerte di lavoro"
+      path: "/it/jobs"
+    - title: "Contatto"
+      path: "/it/contact"
 pages:
-  index:
-    title1:
-      part1: Losanna 2020
-      part2: E’ qui che tutto inizia! 
-    title2:
-      part1: Losanna 2020
-      part2: Patrimonio, Esperienza, Innovazione
-    title3:
-      part1: Losanna 2020
-      part2: Cultura, Sport, Educazione
-    title4:
-      part1: Losanna 2020
-      part2: Appuntamento a gennaio 2020 
-    text_shop: "All the Lausanne 2020 goodies are now available in our "
-    txt_shop: "Online Shop"
-    text_shop2: "."
-    link_shop: "https://lausanne2020.many-ways.ch/en"
-    img_shop: "/images/home/EN_horizontal.png"
-    news:
-      title: News 
-      plus: Continua
-      autres: Tutte le news 
-    about:
-      title: Chi siamo
-      texte: Dal 10 al 22 gennaio 2020, Losanna accoglierà la terza edizione dei Giochi Olimpici Giovanili invernali. A ventisei anni dall’ottenimento del titolo di Capitale Olimpica, Losanna diventa Città Olimpica accogliendo il secondo più grande avvenimento invernale polisportivo dopo i Giochi Olimpici invernali e offrendo ai giovani atleti un’esperienza olimpica indimenticabile. La cultura, le prestazioni e l’educazione si incontrano dando vita ad una vera celebrazione dello sport!
-      more: Scopri di più
-    socialwall:
-      title: Social Media Feed 
-    newsletter:
-      part1: Partecipate all’avventura Losanna 2020 e ricevete le ultime informazioni! 
-      part2: Losanna 2020!
-      button: Mi annuncio
-      placeholder: Indirizzo e-mail 
-      thanks: Grazie. Abbiamo ricevuto la sua iscrizione!
-      oops: Ehm…! Qualcosa non ha funzionato durante la trasmissione del formulario. 
-    privacy:
-      text: Norme di tutela della confidenzialità e termini di utilizzo
-      link: "https://www.lausanne2020.com/images/home/PrivacyPolicy_FR.pdf" 
   news:
     archive_link: Archivio
-  jobs:
-    title: Offerte di lavoro 
-    texte: |
-             Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
-    texteEmpty: |
-            Grazie per il suo interesse ai Giochi Olimpici Giovanili Losanna 2020.
-            Attualmente non ci sono posti disponibili all’interno del comitato d’organizzazione.
-    from: "Limite per l’inoltro della sua offerta:" 
-    readFile: Scopri di più
   about:
     title1: "I Giochi Olimpici Giovanili: Competere, imparare e condividere!"
     texte1: |

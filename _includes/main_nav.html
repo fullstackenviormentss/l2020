@@ -1,9 +1,4 @@
-{% if site.lang == "en-gb" %}
-  {% assign nav = site.data.nav-header.en %}
-{% endif %}
-{% if site.lang == "fr-fr" %}
-  {% assign nav = site.data.nav-header.fr %}
-{% endif %}
+{% assign nav = site.data[site.lang].nav.header %}
 
 <nav id="mainNav" class="navbar navbar-custom navbar-fixed-top">
     <div class="container" style="padding-right: 0;">
@@ -15,12 +10,12 @@
         <div id="countdown_container_tag" class="countdown_container">
           <div class="logo">
             <img src="/assets/omega_countdown/official-timekeeper-omega-fr.jpg">
-            <!-- <img class="retina" src="../assets/omega_countdown/official-timekeeper-omega.svg"> -->
+            <!-- <img class="retina" src="/assets/omega_countdown/official-timekeeper-omega.svg"> -->
           </div>
 			
           <div id="fr" class="countdown">
 
-            <img src="../assets/omega_countdown/line.png">
+            <img src="/assets/omega_countdown/line.png">
             <div class="countdown_numbers">
               <div class="days cd_item"><span class="days_label cd_label"></span><span class="days_remaining cd_remain">00</span></div>
               <div class="hours cd_item"><span class="hours_label cd_label"></span><span class="hours_remaining cd_remain">00</span></div>
