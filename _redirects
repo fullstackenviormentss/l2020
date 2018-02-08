@@ -5,7 +5,7 @@
 /  /es  302  Language=es
 /  /en  302
 /news  /en/news  302
-/news/:splat  /en/news/:splat  302
+/news/:splat  /en/news/:splat  302!
 /venues  /en/venues  302
 /venues/:splat  /en/venues/:splat  302
 /sports  /en/sports  302
