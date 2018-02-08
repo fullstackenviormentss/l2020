@@ -5,14 +5,14 @@
 /  /es  302  Language=es
 /  /en  302
 /news  /en/news  302
-/news/*  /en/news/*  302!
+/news/*  /en/news/:splat  302!
 /venues  /en/venues  302
-/venues/:splat  /en/venues/:splat  302
+/venues/*  /en/venues/:splat  302
 /sports  /en/sports  302
-/sports/:splat  /en/sports/:splat  302
+/sports/*  /en/sports/:splat  302
 /about  /en/about  302
-/about/:splat  /en/about/:splat  302
+/about/*  /en/about/:splat  302
 /jobs  /en/jobs  302
-/jobs/:splat  /en/jobs/:splat  302
+/jobs/*  /en/jobs/:splat  302
 /contact  /en/contact  302
-/contact/:splat  /en/contact/:splat  302
+/contact/*  /en/contact/:splat  302
