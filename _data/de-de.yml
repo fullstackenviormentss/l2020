@@ -46,55 +46,55 @@ pages:
             <span class="important-dates">Lausanne 2020 findet vom 10. bis 22. Januar 2020 statt.</span>
     sports_title: Die Sportdisziplinen
     sports_texte: "Das sportliche Programm der dritten Olympischen Jugend-Winterspiele ähnelt dem der Olympischen Winterspiele, beinhaltet aber Variationen und Innovationen in den von den Internationalen Verbänden angebotenen Disziplinen. Die Sportarten, die auf dem Programm stehen, sind:"
-    sports:
-      biathlon:
-        text: Biathlon
-        link: "https://www.olympic.org/biathlon"
-      bobsleigh:
-        text: Bob
-        link: "https://www.olympic.org/bobsleigh"
-      combine-nordique:
-        text: Nordische Kombination
-        link: "https://www.olympic.org/nordic-combined"
-      curling:
-        text: Curling
-        link: "https://www.olympic.org/curling"
-      hockey-sur-glace:
-        text: Eishockey
-        link: "https://www.olympic.org/ice-hockey"
-      luge:
-        text: Rodeln
-        link: "https://www.olympic.org/luge"
-      patinage-artistique:
-        text: Eiskunstlauf
-        link: "https://www.olympic.org/figure-skating"
-      patinage-vitesse:
-        text: Eisschnelllauf
-        link: "https://www.olympic.org/speed-skating"
-      short-track:
-        text: Short Track
-        link: "https://www.olympic.org/short-track-speed-skating"
-      saut-a-ski:
-        text: Skispringen
-        link: "https://www.olympic.org/ski-jumping"
-      skeleton:
-        text: Skeleton
-        link: "https://www.olympic.org/skeleton"
-      ski-freestyle:
-        text: Ski Freestyle
-        link: "https://www.olympic.org/freestyle-skiing"
-      ski-alpin:
-        text: Ski alpin
-        link: "https://www.olympic.org/alpine-skiing"
-      ski-de-fond:
-        text: Langlauf
-        link: "https://www.olympic.org/cross-country-skiing"
-      snowboard:
-        text: Snowboard
-        link: "https://www.olympic.org/snowboard"
-      skimo:
-        text: Skitourenrennen
-        link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
+  sports:
+    biathlon:
+      text: Biathlon
+      link: "https://www.olympic.org/biathlon"
+    bobsleigh:
+      text: Bob
+      link: "https://www.olympic.org/bobsleigh"
+    combine-nordique:
+      text: Nordische Kombination
+      link: "https://www.olympic.org/nordic-combined"
+    curling:
+      text: Curling
+      link: "https://www.olympic.org/curling"
+    hockey-sur-glace:
+      text: Eishockey
+      link: "https://www.olympic.org/ice-hockey"
+    luge:
+      text: Rodeln
+      link: "https://www.olympic.org/luge"
+    patinage-artistique:
+      text: Eiskunstlauf
+      link: "https://www.olympic.org/figure-skating"
+    patinage-vitesse:
+      text: Eisschnelllauf
+      link: "https://www.olympic.org/speed-skating"
+    short-track:
+      text: Short Track
+      link: "https://www.olympic.org/short-track-speed-skating"
+    saut-a-ski:
+      text: Skispringen
+      link: "https://www.olympic.org/ski-jumping"
+    skeleton:
+      text: Skeleton
+      link: "https://www.olympic.org/skeleton"
+    ski-freestyle:
+      text: Ski Freestyle
+      link: "https://www.olympic.org/freestyle-skiing"
+    ski-alpin:
+      text: Ski alpin
+      link: "https://www.olympic.org/alpine-skiing"
+    ski-de-fond:
+      text: Langlauf
+      link: "https://www.olympic.org/cross-country-skiing"
+    snowboard:
+      text: Snowboard
+      link: "https://www.olympic.org/snowboard"
+    skimo:
+      text: Skitourenrennen
+      link: "https://www.olympic.org/news/climbing-the-olympic-summit-everything-you-need-to-know-about-ski-mountaineering"
     sports_new: Zum ersten Mal in der Geschichte der Olympischen Spiele wird Ski Mountaineering (Skitourenrennen) Teil des Olympischen Programms sein.
     sports_fin: Entdecke <b><a href="venues" class="link_site">hier</a></b> die Wettkampfstätten
     facts:

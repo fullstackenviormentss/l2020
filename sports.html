@@ -1,11 +1,12 @@
 ---
 layout: default
 ---
-
+{% assign document = site.prismicData.single.page_sports%}
+{% assign sports_data = site.data[site.lang].pages.sports %}
 <div class="sports">
   <div class="container">
-    <h1>{% t pages.about.sports_title %}</h1>
-    <p>{% t pages.about.sports_texte %}</p>
+    <h1>{{document.fragments.title.text}}</h1>
+    <p>{{document.fragments.content.text}}</p>
     <div class="pictos visible-md visible-lg row">
       <div class="col-md-8">
         <div class="col-md-6 col-xs-6">
@@ -14,7 +15,7 @@ layout: default
               <img src="/images/about/sports/biathlon.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" target="_blank" href="{% t pages.about.sports.biathlon.link %}">{% t pages.about.sports.biathlon.text %}</a>
+              <a class="links_sports" target="_blank" href="{{ sports_data.biathlon.link }}">{{ sports_data.biathlon.text }}</a>
             </div>
           </div>
         </div>
@@ -24,7 +25,7 @@ layout: default
               <img src="/images/about/sports/luge.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.luge.link %}" target="_blank">{% t pages.about.sports.luge.text %}</a>
+              <a class="links_sports" href="{{ sports_data.luge.link }}" target="_blank">{{ sports_data.luge.text }}</a>
             </div>
           </div>
         </div>
@@ -34,7 +35,7 @@ layout: default
               <img src="/images/about/sports/bobsleigh.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}" target="_blank">{% t pages.about.sports.bobsleigh.text %}</a>
+              <a class="links_sports" href="{{ sports_data.bobsleigh.link }}" target="_blank">{{ sports_data.bobsleigh.text }}</a>
             </div>
           </div>
         </div>
@@ -44,7 +45,7 @@ layout: default
               <img src="/images/about/sports/patinage-artistique.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}" target="_blank">{% t pages.about.sports.patinage-artistique.text %}</a>
+              <a class="links_sports" href="{{ sports_data.patinage-artistique.link }}" target="_blank">{{ sports_data.patinage-artistique.text }}</a>
             </div>
           </div>
         </div>
@@ -54,7 +55,7 @@ layout: default
               <img src="/images/about/sports/combine-nordique.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}" target="_blank">{% t pages.about.sports.combine-nordique.text %}</a>
+              <a class="links_sports" href="{{ sports_data.combine-nordique.link }}" target="_blank">{{ sports_data.combine-nordique.text }}</a>
             </div>
           </div>
         </div>
@@ -64,7 +65,7 @@ layout: default
               <img src="/images/about/sports/patinage-vitesse.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}" target="_blank">{% t pages.about.sports.patinage-vitesse.text %}</a>
+              <a class="links_sports" href="{{ sports_data.patinage-vitesse.link }}" target="_blank">{{ sports_data.patinage-vitesse.text }}</a>
             </div>
           </div>
         </div>
@@ -74,7 +75,7 @@ layout: default
               <img src="/images/about/sports/curling.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.curling.link %}" target="_blank">{% t pages.about.sports.curling.text %}</a>
+              <a class="links_sports" href="{{ sports_data.curling.link }}" target="_blank">{{ sports_data.curling.text }}</a>
             </div>
           </div>
         </div>
@@ -84,7 +85,7 @@ layout: default
               <img src="/images/about/sports/short-track.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.short-track.link %}" target="_blank">{% t pages.about.sports.short-track.text %}</a>
+              <a class="links_sports" href="{{ sports_data.short-track.link }}" target="_blank">{{ sports_data.short-track.text }}</a>
             </div>
           </div>
         </div>
@@ -94,7 +95,7 @@ layout: default
               <img src="/images/about/sports/hockey-sur-glace.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}" target="_blank">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+              <a class="links_sports" href="{{ sports_data.hockey-sur-glace.link }}" target="_blank">{{ sports_data.hockey-sur-glace.text }}</a>
             </div>
           </div>
         </div>
@@ -104,7 +105,7 @@ layout: default
               <img src="/images/about/sports/saut-a-ski.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}" target="_blank">{% t pages.about.sports.saut-a-ski.text %}</a>
+              <a class="links_sports" href="{{ sports_data.saut-a-ski.link }}" target="_blank">{{ sports_data.saut-a-ski.text }}</a>
             </div>
           </div>
         </div>
@@ -114,7 +115,7 @@ layout: default
               <img src="/images/about/sports/skeleton.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}" target="_blank">{% t pages.about.sports.skeleton.text %}</a>
+              <a class="links_sports" href="{{ sports_data.skeleton.link }}" target="_blank">{{ sports_data.skeleton.text }}</a>
             </div>
           </div>
         </div>
@@ -126,7 +127,7 @@ layout: default
               <img src="/images/about/sports/ski-freestyle.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}" target="_blank">{% t pages.about.sports.ski-freestyle.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-freestyle.link }}" target="_blank">{{ sports_data.ski-freestyle.text }}</a>
             </div>
           </div>
         </div>
@@ -136,7 +137,7 @@ layout: default
               <img src="/images/about/sports/ski-alpin.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}" target="_blank">{% t pages.about.sports.ski-alpin.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-alpin.link }}" target="_blank">{{ sports_data.ski-alpin.text }}</a>
             </div>
           </div>
         </div>
@@ -146,7 +147,7 @@ layout: default
               <img id="skimo" src="/images/about/sports/skimo.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.skimo.link %}" target="_blank">{% t pages.about.sports.skimo.text %}</a>
+              <a class="links_sports" href="{{ sports_data.skimo.link }}" target="_blank">{{ sports_data.skimo.text }}</a>
             </div>
           </div>
         </div>
@@ -156,7 +157,7 @@ layout: default
               <img src="/images/about/sports/ski-de-fond.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}" target="_blank">{% t pages.about.sports.ski-de-fond.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-de-fond.link }}" target="_blank">{{ sports_data.ski-de-fond.text }}</a>
             </div>
           </div>
         </div>
@@ -166,7 +167,7 @@ layout: default
               <img src="/images/about/sports/snowboard.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}" target="_blank">{% t pages.about.sports.snowboard.text %}</a>
+              <a class="links_sports" href="{{ sports_data.snowboard.link }}" target="_blank">{{ sports_data.snowboard.text }}</a>
             </div>
           </div>
         </div>
@@ -180,7 +181,7 @@ layout: default
               <img src="/images/about/sports/biathlon.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.biathlon.link %}" target="_blank">{% t pages.about.sports.biathlon.text %}</a>
+              <a class="links_sports" href="{{ sports_data.biathlon.link }}" target="_blank">{{ sports_data.biathlon.text }}</a>
             </div>
           </div>
         </div>
@@ -190,7 +191,7 @@ layout: default
               <img src="/images/about/sports/bobsleigh.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.bobsleigh.link %}" target="_blank">{% t pages.about.sports.bobsleigh.text %}</a>
+              <a class="links_sports" href="{{ sports_data.bobsleigh.link }}" target="_blank">{{ sports_data.bobsleigh.text }}</a>
             </div>
           </div>
         </div>
@@ -200,7 +201,7 @@ layout: default
               <img src="/images/about/sports/combine-nordique.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.combine-nordique.link %}" target="_blank">{% t pages.about.sports.combine-nordique.text %}</a>
+              <a class="links_sports" href="{{ sports_data.combine-nordique.link }}" target="_blank">{{ sports_data.combine-nordique.text }}</a>
             </div>
           </div>
         </div>
@@ -210,7 +211,7 @@ layout: default
               <img src="/images/about/sports/curling.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.curling.link %}" target="_blank">{% t pages.about.sports.curling.text %}</a>
+              <a class="links_sports" href="{{ sports_data.curling.link }}" target="_blank">{{ sports_data.curling.text }}</a>
             </div>
           </div>
         </div>
@@ -220,7 +221,7 @@ layout: default
               <img src="/images/about/sports/hockey-sur-glace.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.hockey-sur-glace.link %}" target="_blank">{% t pages.about.sports.hockey-sur-glace.text %}</a>
+              <a class="links_sports" href="{{ sports_data.hockey-sur-glace.link }}" target="_blank">{{ sports_data.hockey-sur-glace.text }}</a>
             </div>
           </div>
         </div>
@@ -230,7 +231,7 @@ layout: default
               <img src="/images/about/sports/luge.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.luge.link %}" target="_blank">{% t pages.about.sports.luge.text %}</a>
+              <a class="links_sports" href="{{ sports_data.luge.link }}" target="_blank">{{ sports_data.luge.text }}</a>
             </div>
           </div>
         </div>
@@ -240,7 +241,7 @@ layout: default
               <img src="/images/about/sports/patinage-artistique.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.patinage-artistique.link %}" target="_blank">{% t pages.about.sports.patinage-artistique.text %}</a>
+              <a class="links_sports" href="{{ sports_data.patinage-artistique.link }}" target="_blank">{{ sports_data.patinage-artistique.text }}</a>
             </div>
           </div>
         </div>
@@ -250,7 +251,7 @@ layout: default
               <img src="/images/about/sports/patinage-vitesse.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.patinage-vitesse.link %}" target="_blank">{% t pages.about.sports.patinage-vitesse.text %}</a>
+              <a class="links_sports" href="{{ sports_data.patinage-vitesse.link }}" target="_blank">{{ sports_data.patinage-vitesse.text }}</a>
             </div>
           </div>
         </div>
@@ -262,7 +263,7 @@ layout: default
               <img src="/images/about/sports/short-track.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.short-track.link %}" target="_blank">{% t pages.about.sports.short-track.text %}</a>
+              <a class="links_sports" href="{{ sports_data.short-track.link }}" target="_blank">{{ sports_data.short-track.text }}</a>
             </div>
           </div>
         </div>
@@ -272,7 +273,7 @@ layout: default
               <img src="/images/about/sports/saut-a-ski.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.saut-a-ski.link %}" target="_blank">{% t pages.about.sports.saut-a-ski.text %}</a>
+              <a class="links_sports" href="{{ sports_data.saut-a-ski.link }}" target="_blank">{{ sports_data.saut-a-ski.text }}</a>
             </div>
           </div>
         </div>
@@ -282,7 +283,7 @@ layout: default
               <img style="padding:3px;" src="/images/about/sports/skimo.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.skimo.link %}" target="_blank">{% t pages.about.sports.skimo.text %}</a>
+              <a class="links_sports" href="{{ sports_data.skimo.link }}" target="_blank">{{ sports_data.skimo.text }}</a>
             </div>
           </div>
         </div>
@@ -292,7 +293,7 @@ layout: default
               <img src="/images/about/sports/skeleton.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.skeleton.link %}" target="_blank">{% t pages.about.sports.skeleton.text %}</a>
+              <a class="links_sports" href="{{ sports_data.skeleton.link }}" target="_blank">{{ sports_data.skeleton.text }}</a>
             </div>
           </div>
         </div>
@@ -302,7 +303,7 @@ layout: default
               <img src="/images/about/sports/ski-freestyle.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-freestyle.link %}" target="_blank">{% t pages.about.sports.ski-freestyle.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-freestyle.link }}" target="_blank">{{ sports_data.ski-freestyle.text }}</a>
             </div>
           </div>
         </div>
@@ -312,7 +313,7 @@ layout: default
               <img src="/images/about/sports/ski-alpin.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-alpin.link %}" target="_blank">{% t pages.about.sports.ski-alpin.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-alpin.link }}" target="_blank">{{ sports_data.ski-alpin.text }}</a>
             </div>
           </div>
         </div>
@@ -322,7 +323,7 @@ layout: default
               <img src="/images/about/sports/ski-de-fond.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.ski-de-fond.link %}" target="_blank">{% t pages.about.sports.ski-de-fond.text %}</a>
+              <a class="links_sports" href="{{ sports_data.ski-de-fond.link }}" target="_blank">{{ sports_data.ski-de-fond.text }}</a>
             </div>
           </div>
         </div>
@@ -332,12 +333,12 @@ layout: default
               <img src="/images/about/sports/snowboard.png">
             </div>
             <div class="col-md-9">
-              <a class="links_sports" href="{% t pages.about.sports.snowboard.link %}" target="_blank">{% t pages.about.sports.snowboard.text %}</a>
+              <a class="links_sports" href="{{ sports_data.snowboard.link }}" target="_blank">{{ sports_data.snowboard.text }}</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <p class="about_the_yog_p descr_pictos">{% t pages.about.sports_fin %}</p>
+    <div class="about_the_yog_p descr_pictos">{{document.fragments.end.html}}</div>
   </div>
 </div>

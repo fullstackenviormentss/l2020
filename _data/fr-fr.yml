@@ -46,55 +46,55 @@ pages:
             <span class="important-dates">Lausanne 2020 se déroulera du 10 au 22 janvier 2020 !</span>
     sports_title: Les disciplines sportives
     sports_texte: "Le programme sportif des 3ème Jeux Olympiques de la Jeunesse d’hiver s’apparente au programme des Jeux Olympiques d’hiver, avec des variations et innovations dans les disciplines proposées par les fédérations internationales. Les sports au programme sont :"
-    sports:
-      biathlon:
-        text: Biathlon
-        link: "https://www.olympic.org/fr/biathlon"
-      bobsleigh:
-        text: Bobsleigh
-        link: "https://www.olympic.org/fr/bobsleigh"
-      combine-nordique:
-        text: Combiné nordique
-        link: "https://www.olympic.org/fr/combine-nordique"
-      curling:
-        text: Curling
-        link: "https://www.olympic.org/fr/curling"
-      hockey-sur-glace:
-        text: Hockey sur glace
-        link: "https://www.olympic.org/fr/hockey-sur-glace"
-      luge:
-        text: Luge
-        link: "https://www.olympic.org/fr/luge"
-      patinage-artistique:
-        text: Patinage artistique
-        link: "https://www.olympic.org/fr/patinage-artistique"
-      patinage-vitesse:
-        text: Patinage de vitesse
-        link: "https://www.olympic.org/fr/patinage-de-vitesse"
-      short-track:
-        text: Patinage de vitesse sur piste courte
-        link: "https://www.olympic.org/fr/patinage-de-vitesse-sur-piste-courte"
-      saut-a-ski:
-        text: Saut à ski
-        link: "https://www.olympic.org/fr/saut-a-ski"
-      skeleton:
-        text: Skeleton
-        link: "https://www.olympic.org/fr/skeleton"
-      ski-freestyle:
-        text: Ski acrobatique
-        link: "https://www.olympic.org/fr/ski-acrobatique"
-      ski-alpin:
-        text: Ski alpin
-        link: "https://www.olympic.org/fr/ski-alpin"
-      ski-de-fond:
-        text: Ski de fond
-        link: "https://www.olympic.org/fr/ski-de-fond"
-      snowboard:
-        text: Snowboard
-        link: "https://www.olympic.org/fr/surf-des-neiges"
-      skimo:
-        text: Ski Alpinisme
-        link: "https://www.olympic.org/fr/news/gravir-le-sommet-olympique-tout-ce-que-vous-devez-savoir-sur-le-ski-alpinisme"
+  sports:
+    biathlon:
+      text: Biathlon
+      link: "https://www.olympic.org/fr/biathlon"
+    bobsleigh:
+      text: Bobsleigh
+      link: "https://www.olympic.org/fr/bobsleigh"
+    combine-nordique:
+      text: Combiné nordique
+      link: "https://www.olympic.org/fr/combine-nordique"
+    curling:
+      text: Curling
+      link: "https://www.olympic.org/fr/curling"
+    hockey-sur-glace:
+      text: Hockey sur glace
+      link: "https://www.olympic.org/fr/hockey-sur-glace"
+    luge:
+      text: Luge
+      link: "https://www.olympic.org/fr/luge"
+    patinage-artistique:
+      text: Patinage artistique
+      link: "https://www.olympic.org/fr/patinage-artistique"
+    patinage-vitesse:
+      text: Patinage de vitesse
+      link: "https://www.olympic.org/fr/patinage-de-vitesse"
+    short-track:
+      text: Patinage de vitesse sur piste courte
+      link: "https://www.olympic.org/fr/patinage-de-vitesse-sur-piste-courte"
+    saut-a-ski:
+      text: Saut à ski
+      link: "https://www.olympic.org/fr/saut-a-ski"
+    skeleton:
+      text: Skeleton
+      link: "https://www.olympic.org/fr/skeleton"
+    ski-freestyle:
+      text: Ski acrobatique
+      link: "https://www.olympic.org/fr/ski-acrobatique"
+    ski-alpin:
+      text: Ski alpin
+      link: "https://www.olympic.org/fr/ski-alpin"
+    ski-de-fond:
+      text: Ski de fond
+      link: "https://www.olympic.org/fr/ski-de-fond"
+    snowboard:
+      text: Snowboard
+      link: "https://www.olympic.org/fr/surf-des-neiges"
+    skimo:
+      text: Ski Alpinisme
+      link: "https://www.olympic.org/fr/news/gravir-le-sommet-olympique-tout-ce-que-vous-devez-savoir-sur-le-ski-alpinisme"
     sports_new: Pour la première fois dans l’histoire des Jeux Olympiques, le ski alpinisme fera également partie du programme olympique.
     sports_fin: Découvrez les sites de compétition <b><a href="venues" class="link_site">ici</a></b>
     facts:
