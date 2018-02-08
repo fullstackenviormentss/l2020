@@ -7,7 +7,8 @@ layout: default
 {% assign news2019 = 0 %}
 {% assign news2020 = 0 %}
 {% for new in site.prismicData.collections.news %}
-  {% capture newyear %}{{ news_item.fragments.publication_date.date | date: '%Y' }}{% endcapture %}
+  {% capture newyear %}{{ new.fragments.publication_date.date | date: '%Y' }}{% endcapture %}
+  {{newyear}}
   {% if newyear == '2017' %}
     {% assign news2017 = news2017 | plus: 1 %}
   {% endif %}
@@ -55,22 +56,22 @@ layout: default
       <div class="archive-links">
       {% if nowyear >= '2017' %}
         {% if news2017 > 9 %}
-          <a href="/news-archives/2017">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2017</a>
+          <a href="/{{ site.langShort }}/news-archives/2017">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2017</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2018' %}
         {% if news2018 > 9 %}
-          <a href="/news-archives/2018">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2018</a>
+          <a href="/{{ site.langShort }}/news-archives/2018">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2018</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2019' %}
         {% if news2019 > 9 %}
-          <a href="/news-archives/2019">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2019</a>
+          <a href="/{{ site.langShort }}/news-archives/2019">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2019</a>
         {% endif %}
       {% endif %}
       {% if nowyear >= '2020' %}
         {% if news2020 > 9 %}
-          <a href="/news-archives/2020">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2020</a>
+          <a href="/{{ site.langShort }}/news-archives/2020">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} 2020</a>
         {% endif %}
       {% endif %}
     </div>
