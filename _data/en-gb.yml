@@ -1,7 +1,7 @@
 nav:
   header:
     - title: "Home"
-      path: "/en"
+      path: "/en/"
     - title: "News"
       path: "/en/news"
     - title: "Venues"
@@ -12,7 +12,7 @@ nav:
       path: "/en/about"
   footer:
     - title: "Home"
-      path: "/en"
+      path: "/en/"
     - title: "News"
       path: "/en/news"
     - title: "Venues"
