@@ -3,10 +3,8 @@
 [{% for venue in site.prismicData.collections.venues %}
   {
     "title": "{{ venue.fragments.title.text }}",
-    "link": "{{ venue.fragments.title.text }}",
-    "lienDe": "{{ venue.fragments.title.text }}",
-    "lienEn": "{{ venue.fragments.title.text }}",
-    "lienIt": "{{ venue.fragments.title.text }}",
+    "link": "{{ venue.fragments.link.url }}",
+    "description": "{{ venue.fragments.description.text }}",
     "lat": {{ venue.fragments.position.latitude }},
     "lng": {{ venue.fragments.position.longitude }}
   }{% if forloop.last == false %},{% endif %}

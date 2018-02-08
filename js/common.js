@@ -362,38 +362,20 @@ var mapManagement = {
     });
   },
   placeMarker: function () {
-    var lang = "en";
-    if (window.location.href.indexOf("/fr/") > -1) {
-      lang = "fr";
-    }
-    if (window.location.href.indexOf("/de/") > -1) {
-      lang = "de";
-    }
-    if (window.location.href.indexOf("/it/") > -1) {
-      lang = "it";
-    }
-    $.getJSON("/mapdata/venues.json", function (data) {
+    $.getJSON("geodata/venues.json", function (data) {
       $.each(data, function (key, val) {
         var myLatLng = {
           lat: val.lat,
           lng: val.lng
         };
+        console.log(myLatLng)
         var marker = new google.maps.Marker({
           position: myLatLng,
           map: mapManagement.map,
           icon: '/images/venues/location_v2.png',
           title: 'Click!'
         });
-        var content = "<h1>" + val.title_en + "</h1><p>" + val.texte_en + "</p><p><a href=" + val.lienEn + " target='_blank'>More</a></p>";
-        if (lang == "fr") {
-          var content = "<h1>" + val.title + "</h1><p>" + val.texte_fr + "</p><p><a href=" + val.link + " target='_blank'>En savoir plus</a></p>";
-        }
-        if (lang == "de") {
-          var content = "<h1>" + val.title_de + "</h1><p>" + val.texte_de + "</p><p><a href=" + val.lienDe + " target='_blank'>Mehr Infos</a></p>";
-        }
-        if (lang == "it") {
-          var content = "<h1>" + val.title_it + "</h1><p>" + val.texte_it + "</p><p><a href=" + val.lienIt + " target='_blank'>A traduire dans common.js(456)</a></p>";
-        }
+        var content = "<h1>" + val.title + "</h1><p>" + val.description + "</p><p><a href=" + val.link + " target='_blank'>More</a></p>";
         var infowindow = new google.maps.InfoWindow({
           content: content
         });
