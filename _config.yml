@@ -75,3 +75,9 @@ prismic:
       type: venues
     jobs:
       type: jobs
+
+page_gen:
+  - data: 'years'
+    template: 'news-archives'
+    name: 'year'
+    dir: 'news-archives'
