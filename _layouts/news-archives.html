@@ -7,7 +7,6 @@ layout: default
   <div class="container">
     <h1 class="h1_big_news h1_newsletter_cta">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} {{page.year}}</h1>
     <div class="row">
-      <div class="news_section">
       	{% assign newsinverted = site.prismicData.collections.news | sort:'fragments.publication_date.date' | reverse  %}
       	{% assign offsetdependonyear = 9 %}
       	{% if pageyear < nowyear %}
@@ -39,7 +38,6 @@ layout: default
 	        </div>
 	          {% endif %}
 	      {% endfor %}
-			</div>
 	  </div>
   </div>
 </div>
