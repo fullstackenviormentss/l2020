@@ -31,7 +31,7 @@ layout: default
            <a class="wrap_a" href="/{{ site.langShort }}/news/{{ new.slug }}">
               <div class="new col-md-12">
                   <div class="wrap_media">
-                      <img class="grow" src="{{ new.fragments.image.url }}">
+                    <img class="grow" src="{{ new.fragments.image.url }}" srcset="{{ new.fragments.image.url }} {{ new.fragments.image.width }}w, {{ new.fragments.image.view_desktop_url }} {{ new.fragments.image.view_desktop_width }}w">
                   </div>
                   <h1 class="h1_news">
                       {{ new.fragments.title.text }}
