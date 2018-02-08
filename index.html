@@ -32,7 +32,7 @@ layout: default
                 <div class="new_meta">
                     <p class="news_date">
                         <time pubdate datetime="{{news_item.fragments.publication_date.date | date_to_xmlschema}}" title="{{news_item.fragments.publication_date.date | date_to_xmlschema | date: '%d.%m'}}">{{news_item.fragments.publication_date.date | date_to_xmlschema | date: "%d.%m.%Y"}}</time>
-                        <a href="/news/{{ news_item.slug | datapage_url: dir | split:'.html' | first }}">{{document.fragments.individual_news_link_to_read_more.text}}</a>
+                        <a href="/news/{{ news_item.slug | split:'.html' | first }}">{{document.fragments.individual_news_link_to_read_more.text}}</a>
                     </p>
                 </div>
             </div>

@@ -3,10 +3,6 @@ layout: default
 ---
 {% capture pageyear %}{{ page.year }}{% endcapture %}
 {% capture nowyear %}{{ site.time | date: '%Y' }}{% endcapture %}
-{{nowyear}}
-{{pageyear}}
-<p>page</p>
-{{page.year}}
 <div class="news-page">
   <div class="container">
     <h1 class="h1_big_news h1_newsletter_cta">{{ site.prismicData.single.base.fragments.news_years_archives_title.text }} {{page.year}}</h1>
