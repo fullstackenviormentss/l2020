@@ -1,0 +1,122 @@
+nav:
+  header:
+    - title: "Inicio"
+      path: "/es/"
+    - title: "Noticias"
+      path: "/es/news"
+    - title: "Lugares"
+      path: "/es/venues"
+    - title: "Deportes"
+      path: "/es/sports"  
+    - title: "Acerca de"
+      path: "/es/about"
+  footer:
+    - title: "Inicio"
+      path: "/es/"
+    - title: "Noticias"
+      path: "/es/news"
+    - title: "Lugares"
+      path: "/es/venues"
+    - title: "Deportes"
+      path: "/es/sports"  
+    - title: "Acerca de"
+      path: "/es/about"
+    - title: "Empleo"
+      path: "/es/jobs"
+    - title: "Contacto"
+      path: "/es/contact"
+pages:
+  news:
+    archive_link: Archivo
+  sports:
+    biathlon:
+      text: Biatlón
+      link: "https://www.olympic.org/fr/biathlon" 
+    bobsleigh:
+      text: Bobsleigh
+      link: "https://www.olympic.org/fr/bobsleigh"
+    combine-nordique: 
+      text: Combinada nórdica
+      link: "https://www.olympic.org/fr/combine-nordique"
+    curling:
+      text:  Curlin
+      link: "https://www.olympic.org/fr/curling"
+    hockey-sur-glace:
+      text: Hockey sobre hielo
+      link: "https://www.olympic.org/fr/hockey-sur-glace"
+    luge:
+      text: Trineo
+      link: "https://www.olympic.org/fr/luge"
+    patinage-artistique:
+      text: Patinaje artístico
+      link: "https://www.olympic.org/fr/patinage-artistique"
+    patinage-vitesse:
+      text: Patinaje de velocidad
+      link: "https://www.olympic.org/fr/patinage-de-vitesse"
+    short-track:
+      text: Patinaje de velocidad en pista corta
+      link: "https://www.olympic.org/fr/patinage-de-vitesse-sur-piste-courte"
+    saut-a-ski:
+      text: Salto de esquí
+      link: "https://www.olympic.org/fr/saut-a-ski"
+    skeleton:
+      text: Skeleton
+      link: "https://www.olympic.org/fr/skeleton"
+    ski-freestyle:
+      text: Esquí acrobático
+      link: "https://www.olympic.org/fr/ski-acrobatique"
+    ski-alpin:
+      text: Esquí alpino
+      link: "https://www.olympic.org/fr/ski-alpin"
+    ski-de-fond:
+      text: Esquí de fondo
+      link: "https://www.olympic.org/fr/ski-de-fond"
+    snowboard:
+      text: Snowboard
+      link: "https://www.olympic.org/fr/surf-des-neiges"
+    skimo:
+      text: Esquí de travesía
+      link: "http://www.ismf-ski.org/"
+  about:
+    facts:
+      title: Lausana 2020 en números
+      fact1: 
+        number: "1.880" 
+        text: Atletas entre 15 y 18 años
+      fact2: 
+        number: "+70" 
+        text: Naciones
+      fact3: 
+        number: "8 deportes"
+        text: 16 disciplinas y 81 pruebas
+      fact4: 
+        number: "+3000"
+        text: Voluntarios
+      fact5: 
+        number: IGUALDAD 
+        text: DE GÉNEROS
+    singleevent: 3 regiones - 2 países - 1 evento único
+  contact:
+    title: Contacto
+    form:
+      prenom:
+        title: Nombre
+        placeholder: Escriba su nombre
+      nom:
+        title: Apellido
+        placeholder: Escriba su apellido
+      email:
+        title: Dirección de correo electrónico
+        placeholder: Escriba su dirección de correo electrónico
+      message:
+        title: Mensaje
+        placeholder: Escriba su mensaje aquí
+      envoyer: Enviar
+      thanks: Agradecemos su solicitud. ¡Le responderemos lo más pronto posible!
+      error: Oops! Something went wrong while submitting the form
+footer:
+  link:
+    tokyo: "https://tokyo2020.jp/fr/"
+    beijing: "http://www.beijing2022.cn/fr/"
+    buenos: "http://www.buenosaires2018.com/fr/"
+    pyeongChang: "https://www.pyeongchang2018.com/fr/index"
