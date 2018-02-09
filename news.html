@@ -35,8 +35,8 @@ layout: default
               <div class="new col-md-12">
                   <div class="wrap_media">
                     <picture class="grow">
-                      <source srcset="{{ news_item.fragments.image.view_mobile_url }}" media="(max-width: 768px)">
                       <source srcset="{{ news_item.fragments.image.url }}" media="(max-width: 400px)">
+                      <source srcset="{{ news_item.fragments.image.view_mobile_url }}" media="(max-width: 768px)">
                       <source srcset="{{ news_item.fragments.image.url }}" media="(min-width: 768px)">
                       <img class="grow" src="{{news_item.fragments.image.view_mobile_url }}" alt="{{ news_item.fragments.image.alt }}">
                     </picture>
