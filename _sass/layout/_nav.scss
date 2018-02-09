@@ -18,7 +18,12 @@
 	width: 30%;
 	margin-top: 15px;    
     }
-    @media (max-width: 991px) {
+    @media (max-width:991px) {
+	max-width: 80px;
+    	padding: 0;
+    	margin-top: 0;
+    }
+    @media (max-width: 767px) {
 	width: 25%;
         text-align: left;
     }
@@ -150,7 +155,7 @@
             padding: 0;
         }
     }
-    .navbar-collapse.collapse.in, .navbar-collapse.collapsing {
+    .navbar-collapse.collapse.in {
         max-height: 380px;
         width: 100%;
     }
@@ -236,6 +241,18 @@
           text-align:left;
           margin-left: 15px;
       }
+}
+@media (max-width:991px) {
+    .links_social {
+	padding-top: 0;
+	text-align: left;
+    }
+    .twitter {
+	margin-left: 3px;
+    }
+    .youtube {
+	margin-left: 7px;
+    }
 }
 
 /* Line slider */
