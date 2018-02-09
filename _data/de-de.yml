@@ -4,7 +4,7 @@ nav:
       path: "/de/"
     - title: "News"
       path: "/de/news"
-    - title: "Wettkampfstätten"
+    - title: "Wo?"
       path: "/de/venues"
     - title: "Sportarten"
       path: "/de/sports"
