@@ -46,6 +46,12 @@ languages:
     path: 'fr'
   en-gb:
     path: 'en'
+  de-de:
+    path: 'de'
+  it-it:
+    path: 'it'
+  es-es:
+    path: 'es'
 
 prismic:
   # Your repository endpoint
