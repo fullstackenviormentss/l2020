@@ -150,7 +150,7 @@
             padding: 0;
         }
     }
-    .navbar-collapse.collapse.in {
+    .navbar-collapse.collapse.in, .navbar-collapse.collapsing {
         max-height: 380px;
         width: 100%;
     }

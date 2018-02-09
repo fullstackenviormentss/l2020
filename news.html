@@ -24,7 +24,8 @@ layout: default
 {% endfor %}
 <div class="news-page">
   <div class="container">
-    <h1 class="h1_big_news h1_newsletter_cta">News</h1>
+    {% assign document = site.prismicData.single.page_home %} 
+    <h1 class="h1_big_news h1_newsletter_cta">{{document.fragments.news_title.text}}</h1>
       
     <div class="row">
       {% assign news = site.prismicData.collections.news | sort:'fragments.publication_date.date' | reverse  %}
