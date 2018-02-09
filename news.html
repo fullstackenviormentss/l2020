@@ -33,7 +33,11 @@ layout: default
            <a class="wrap_a" href="/{{ site.langShort }}/news/{{ news_item.slug }}">
               <div class="new col-md-12">
                   <div class="wrap_media">
-                    <img class="grow" alt="{{ news_item.fragments.image.alt }}" src="{{ news_item.fragments.image.url }}" srcset="{{ news_item.fragments.image.url }} {{ news_item.fragments.image.height }}w, {{ news_item.fragments.image.view_mobile_url }} {{ news_item.fragments.image.view_mobile_height }}w">
+                    <img class="grow" 
+                    srcset="{{ news_item.fragments.image.url }} {{ news_item.fragments.image.width }}w, {{ news_item.fragments.image.view_mobile_url }} {{ news_item.fragments.image.view_mobile_width }}w"
+                    sizes="(max-width: 800px) 100%, 400px"
+                    src="{{ news_item.fragments.image.url }}"
+                    alt="{{ news_item.fragments.image.alt }}" />
                   </div>
                   <h1 class="h1_news">
                       {{ news_item.fragments.title.text }}
