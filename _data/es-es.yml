@@ -113,7 +113,7 @@ pages:
         placeholder: Escriba su mensaje aquí
       envoyer: Enviar
       thanks: Agradecemos su solicitud. ¡Le responderemos lo más pronto posible!
-      error: Oops! Something went wrong while submitting the form
+      error: Ha ocurrido un error al enviar el formulario
 footer:
   link:
     tokyo: "https://tokyo2020.jp/fr/"
