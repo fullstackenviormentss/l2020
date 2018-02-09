@@ -2,8 +2,6 @@ nav:
   header:
     - title: "Inicio"
       path: "/es/"
-    - title: "Noticias"
-      path: "/es/news"
     - title: "Lugares"
       path: "/es/venues"
     - title: "Deportes"
@@ -13,8 +11,6 @@ nav:
   footer:
     - title: "Inicio"
       path: "/es/"
-    - title: "Noticias"
-      path: "/es/news"
     - title: "Lugares"
       path: "/es/venues"
     - title: "Deportes"
