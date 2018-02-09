@@ -22,7 +22,7 @@ layout: default
                             <picture class="grow">
                                 <source srcset="{{ news_item.fragments.image.view_mobile_url }}" media="(max-width: 768px)">
                                 <source srcset="{{ news_item.fragments.image.url }}" media="(min-width: 768px)">
-                                <img src="{{news_item.fragments.image.view_mobile_url }}" alt="{{ news_item.fragments.image.alt }}">
+                                <img class="grow" src="{{news_item.fragments.image.view_mobile_url }}" alt="{{ news_item.fragments.image.alt }}">
                             </picture>
                         </div>
                         <h1 class="h1_news">
