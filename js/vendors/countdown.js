@@ -81,6 +81,13 @@
 				'minutes': "MIN",
 				'seconds': "SEC"
 			},
+			'it': {
+				'days': "GIORNI",
+				'day': "GIORNO",
+				'hours': "ORE",
+				'minutes': "MIN",
+				'seconds': "SEC"
+			},
 			'es': {
 				'days': "D&Iacute;AS",
 				'day': "D&Iacute;A",
