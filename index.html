@@ -81,7 +81,7 @@ layout: default
 </div>
 <div class="shop_section">
     <div class="container">
-        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.text}}</h2>
+        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.html | markdownify | remove: '<p>' | remove: '</p>'}}</h2>
         <a rel="noopener noreferrer" href="{{document.fragments.shop_link.url}}">
             <img src="{{ document.fragments.shop_image.url }}" alt="Shop!" width="50%" style="margin-bottom: 30px;">
         </a>
