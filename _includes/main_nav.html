@@ -93,9 +93,9 @@
             <div class="nav_lang">
             {% for lang in site.languages %}
               {% if site.langShort == lang[1].path %}
-                <a href="/{{ lang[1].path }}{{ current_page }}" lang="{{ lang[1].path }}" class="language accent nav_link">{{ lang[1].path }}</a>
+                <a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language accent nav_link">{{ lang[1].path }}</a>
               {% else %}
-                <a href="/{{ lang[1].path }}{{ current_page }}" lang="{{ lang[1].path }}" class="language nav_link">{{ lang[1].path }}</a>
+                <a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language nav_link">{{ lang[1].path }}</a>
               {% endif %}
             {% endfor %}
             </div>
