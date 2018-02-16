@@ -2,7 +2,7 @@ nav:
   header:
     - title: "Inicio"
       path: "/es/"
-    - title: "Lugares"
+    - title: "Sitios"
       path: "/es/venues"
     - title: "Deportes"
       path: "/es/sports"  
@@ -11,7 +11,7 @@ nav:
   footer:
     - title: "Inicio"
       path: "/es/"
-    - title: "Lugares"
+    - title: "Sitios"
       path: "/es/venues"
     - title: "Deportes"
       path: "/es/sports"  
@@ -32,16 +32,16 @@ pages:
       text: Bobsleigh
       link: "https://www.olympic.org/fr/bobsleigh"
     combine-nordique: 
-      text: Combinada nórdica
+      text: Combinado nórdico
       link: "https://www.olympic.org/fr/combine-nordique"
     curling:
-      text:  Curlin
+      text:  Curling
       link: "https://www.olympic.org/fr/curling"
     hockey-sur-glace:
       text: Hockey sobre hielo
       link: "https://www.olympic.org/fr/hockey-sur-glace"
     luge:
-      text: Trineo
+      text: Luge
       link: "https://www.olympic.org/fr/luge"
     patinage-artistique:
       text: Patinaje artístico
@@ -59,7 +59,7 @@ pages:
       text: Skeleton
       link: "https://www.olympic.org/fr/skeleton"
     ski-freestyle:
-      text: Esquí acrobático
+      text: Esquí freestyle
       link: "https://www.olympic.org/fr/ski-acrobatique"
     ski-alpin:
       text: Esquí alpino
