@@ -26,18 +26,21 @@
         margin-bottom: 15px;
     }
     .wrap_item {
-        height: 560px;
+        height: auto;
+        max-height: 560px;
         background: #fff;
     }
     .wrap_media {
-        height: 360px;
+        height: auto;
+        max-height: 360px;
         overflow: hidden;
         >a>img,
         >img,
         >a>iframe,
         >iframe,
         >video {
-            height: 360px;
+            height: auto;
+            max-height: 360px;
             /* Precise to avoid black line on iframe video */
             width: 101%;
             object-fit: cover;
