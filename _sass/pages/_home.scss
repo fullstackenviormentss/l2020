@@ -1,73 +1,3 @@
-html .hero {
-    background-size: cover;
-    height: 900px;
-    @media (max-width: 1921px) {
-        height: 900px;
-    } // Width of image
-    @media (max-width: 1651px) {
-        height: 800px;
-    }
-    @media (max-width: 1501px) {
-        height: 700px;
-        .the_claim {
-            font-size: 30px;
-            line-height: 40px;
-            font-weight: 600;
-        }
-    }
-    @media (max-width: 1250px) {
-        height: 600px;
-        margin-top: 50px;
-        .container {
-            padding-top: 180px !important;
-        }
-    }
-    @media (max-width: 1155px) {
-        height: 500px;
-        margin-top:100px;
-        .container {
-            padding-top: 110px !important;
-        }
-    }
-    @media (max-width: 990px) {
-        height: 400px;
-        margin-top:150px;
-        .container {
-            padding-top: 30px !important;
-        }
-    }
-    @media (max-width: 830px) {
-        height: 400px;
-        margin-top:180px;
-        .the_claim {
-            font-size: 20px;
-            line-height: 30px;
-            font-weight: 600;
-            padding-left:30px;
-        }
-    }
-    @media (max-width: 767px) {
-        height:300px;
-        margin-top: 150px;
-    }
-    @media (max-width: 550px) {
-        height: 200px;
-        .the_claim {
-            font-size: 10px;
-            line-height: 20px;
-            font-weight: 600;
-            padding-left:30px;
-            padding-top:10px;
-        }
-    }
-    .container {
-        padding: 250px 0 0 0;
-        @media (max-width: 650px) {
-            padding-top: 175px;
-        }
-    }
-}
-
 .shop_section {
     text-align: center;
 }
@@ -91,24 +21,6 @@ html .hero {
 
 #more_video {
     margin-top: 25px;
-}
-.the_claim {
-    position: absolute;
-    color: #FFFFFF;
-    width: inherit;
-    font-size: 45px;
-    line-height: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
 }
 
 .about_yog_section {
