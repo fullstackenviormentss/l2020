@@ -6,6 +6,9 @@
 .nav-brand {
     position: relative;
     float: left;
+    @media (min-width: 512px) {
+	min-height: 52px;	    
+    }
 }
 
 .socials {
@@ -48,6 +51,7 @@
     	}
 	@media (max-width: 512px) {
 		width: 65%;
+		max-width: 130px;
     	}
 }
 
