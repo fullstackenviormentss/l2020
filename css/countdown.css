@@ -14,98 +14,11 @@
     font-style: normal;
 }
 
-@media (min-width: 1200px) {
-    #ad {
-        height: 123px;
-    }
-    .countdown_container {
-        transform: scale(0.54) !important;
-    }
+#ad {
+    height: 123px;    
 }
-
-@media (max-width: 1199px) {
-    #ad {
-        height: 102px;
-    }
-    .countdown_container {
-        transform: scale(0.7) !important;
-    }
-}
-
-@media (max-width: 991px) {
-    #ad {
-        height: 79px;
-    }
-    .countdown_container {
-        transform: scale(0.5) !important;
-    }
-}
-
-@media (max-width: 767px) {
-    #ad {
-        height: 62px;
-        margin-top: 10px;
-    }
-    .countdown_container {
-        transform: scale(0.4) !important;
-    }
-}
-
-@media (max-width: 512px) {
-    #ad {
-        height: 62px;
-        margin-top: 15px;
-    }
-    .countdown_container {
-        transform: scale(0.3) !important;
-        margin-left: 20%;
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 459px) {
-    #ad {
-        height: 62px;
-        margin-top: 10px;
-    }
-    .countdown_container {
-        transform: scale(0.3) !important;
-        margin-left: 20%;
-        margin-top: 10px;
-    }
-    .countdown_container .border {
-        height: 145.2px !important;
-    }
-}
-
-@media (max-width: 390px) {
-    #ad {
-        height: 62px;
-        margin-top: 10px;
-    }
-    .countdown_container {
-        transform: scale(0.3) !important;
-        margin-left: 10% !important;
-        margin-top: 10px !important;
-    }
-    .countdown_container .border {
-        height: 145.2px !important;
-    }
-}
-
-@media only screen and (max-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
-    #ad {
-        height: 62px;
-        margin-top: 10px;
-    }
-    .countdown_container {
-        transform: scale(0.3) !important;
-        margin-left: 10% !important;
-        margin-top: 10px !important;
-    }
-    .countdown_container .border {
-        height: 145.2px !important;
-    }
+.countdown_container {
+    transform: scale(0.54) !important;
 }
 
 #ad {
@@ -116,7 +29,7 @@
 .countdown_container {
     position: relative;
     width: 484px;
-    height: 153px;
+    height: 100px;
     border: 0 solid #9f9f9f;
     background-color: white;
     background-repeat: no-repeat;
