@@ -12,6 +12,10 @@
     padding: 17px 0;
 }
 
+#logo {
+    height: 100px;	
+}
+
 .socials {
     float: left;
     @media (min-width: 1200px) {
@@ -34,10 +38,6 @@
 		visibility: hidden;
 		position: absolute;
     	}
-}
-
-#main-navbar {
-    float: right;
 }
 
 // Custom Navigation Bar
