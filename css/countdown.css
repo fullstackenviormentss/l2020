@@ -19,7 +19,7 @@
         height: 123px;
     }
     .countdown_container {
-        transform: scale(0.8) !important;
+        transform: scale(0.54) !important;
     }
 }
 
@@ -115,7 +115,6 @@
 
 .countdown_container {
     position: relative;
-    margin-left: 20%;
     width: 484px;
     height: 153px;
     border: 0 solid #9f9f9f;
