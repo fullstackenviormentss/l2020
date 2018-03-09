@@ -25,7 +25,10 @@
     position: relative;
     float: right;
 }
-
+.countdown_container_tag {
+    height: 100px;
+    overflow: hidden;
+}
 .countdown_container {
     position: relative;
     width: 484px;
