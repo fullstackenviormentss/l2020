@@ -29,7 +29,6 @@
     position: relative;
     width: 484px;
     height: 100px;
-    overflow: hidden;
     border: 0 solid #9f9f9f;
     background-color: white;
     background-repeat: no-repeat;
@@ -39,7 +38,9 @@
     -webkit-transform-origin: top left;
     -o-transform-origin: top left;
 }
-
+.logo{
+    height: 100px;
+}
 .countdown_numbers {
     line-height: 1.42857143;
 }
