@@ -93,8 +93,8 @@
             </button>
       	</div>
       	    
-	<div class="navbar-collapse collapse col-md-12" id="main-navbar">
-            <div class="nav navbar-nav justify-content-center">
+	<div class="navbar-collapse collapse col-md-12" id="main-navbar" style="width: 100% !important; text-align: center !important;">
+            <div class="nav navbar-nav justify-content-center" style="float: none !important;">
             	{% for link in nav %}
 
               	    {% capture current_base_page %}{{ site.baseurl }}{{ page.url | split:'.html' | first }}{% endcapture %}
