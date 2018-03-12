@@ -72,12 +72,12 @@
 	      	    <img height="24" src="/images/layout/YouTube-icon.png">
 	    	</a>
 	    </div>  
-	    <div class="nav_lang">
+	    <div class="nav_lang" style="text-align: right;">
 	        {% for lang in site.languages %}
 		    {% if site.langShort == lang[1].path %}
-		        <a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language accent nav_link"  style="padding: 10px;">{{ lang[1].path }}</a>
+		        <a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language accent nav_link"  style="padding-left: 20px; padding-right: 0px; padding-top: 10px; padding-bottom: 10px;">{{ lang[1].path }}</a>
 		    {% else %}
-		    	<a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language nav_link"  style="padding: 10px;">{{ lang[1].path }}</a>
+		    	<a href="/{{ lang[1].path }}" lang="{{ lang[1].path }}" class="language nav_link"  style="padding-left: 20px; padding-right: 0px; padding-top: 10px; padding-bottom: 10px;">{{ lang[1].path }}</a>
 		    {% endif %}
 	    	{% endfor %}
 	    </div>
