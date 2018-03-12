@@ -48,46 +48,6 @@ layout: default
     </div>
 </div>
 {% endif %}
-<div class="about_yog_section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h1 class="h1_about_yog">
-                    {{document.fragments.about_title.text | newline_to_br }}
-                </h1>
-            </div>
-            <div class="col-md-8">
-                <p class="about_the_yog_p">
-                    {{document.fragments.about_content.text | newline_to_br }}
-                    <strong> <a href="about">{{document.fragments.about_link_more.text | newline_to_br }}</a></strong>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="social_feed_section social_wall">
-    <div class='container'>
-        <h1 class="h1_big_news" style="color:white;">{{ document.fragments.social_wall_title.text }}</h1>
-            <div class="row">
-
-                {% social_wall
-                
-                    insta_username:2041300508,
-                    insta_amount:3
-            
-                %}
-
-        </div>
-    </div>
-</div>
-<div class="shop_section">
-    <div class="container">
-        <h2 class="h2_shop_section" style="margin-top: 50px; margin-bottom: 10px;">{{document.fragments.shop_heading.html | markdownify | remove: '<p>' | remove: '</p>'}}</h2>
-        <a rel="noopener noreferrer" href="{{document.fragments.shop_link.url}}">
-            <img src="{{ document.fragments.shop_image.url }}" alt="Shop!" width="50%" style="margin-bottom: 30px;">
-        </a>
-    </div>
-</div>
 <div class="newsletter_cta">
     <div class="container flex vcenter fade-in-module">
         <div class="newsletter-text">
@@ -108,6 +68,16 @@ layout: default
         </div>
         <div class="error form-fail">
             <div>{{ document.fragments.newsletter_error.text }}</div>
+        </div>
+    </div>
+</div>
+<div class="socials_cta">
+    <div class="container flex vcenter fade-in-module">
+        <div class="socials-text">
+            <h1 class="h1_newsletter_cta">Suivez-nous partout!</h1>
+        </div>
+        <div class="socials-icon-cta">
+            
         </div>
     </div>
 </div>
