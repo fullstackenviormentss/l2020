@@ -5,7 +5,7 @@ nav:
     - title: "News"
       path: "/fr/news"
     - title: "Les Jeux"
-      path: "/fr/"
+      path: "/fr/games"
     - title: "Shop"
       path: "https://lausanne2020.many-ways.ch/fr/"  
     - title: "Contact"
