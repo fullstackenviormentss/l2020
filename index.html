@@ -2,33 +2,9 @@
 layout: default
 ---
 {% assign document = site.prismicData.single.page_home %}
-<style>
-        html .hero{
-            background-image: url('{{ document.fragments.claims_image.url }}');
-        }
-        @media (max-width: 992px) {
-            html .hero{
-                background-image: url('{{ document.fragments.claims_image.view_desktop_url }}');
-            }
-        }
-        @media (max-width: 768px) {
-            html .hero{
-                background-image: url('{{ document.fragments.claims_image.view_tablet_url }}');
-            }
-        }
-        @media (max-width: 576px) {
-            html .hero{
-                background-image: url('{{ document.fragments.claims_image.view_mobile_url }}');
-            }
-        }
-</style>
-<div class="hero">
-    <div class="container">
-    {% for post in document.fragments.claims_list.group_documents %}
-        <h1 class="the_claim">{{post.fragments.claim.text}}<br/><span class="accent">{{post.fragments.claim_part_2.text}}</span></h1>
-    {% endfor %}
-    </div>
-</div>
+
+{% include carousel.html %}
+
 {% if site.lang == "fr-fr" or site.lang == "de-de" or site.lang == "en-gb" or site.lang == "it-it" %} 
 <div class="news_section">
     <div class="container">
