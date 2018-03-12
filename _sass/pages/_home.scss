@@ -4,7 +4,11 @@
 
 /* Carousel Styles */
 .carousel-indicators .active {
-    background-color: #2980b9;
+    background-color: ##d4016f;
+}
+
+.text-center h3 {
+    margin-top: 100px;
 }
 
 .carousel-inner img {
@@ -55,7 +59,7 @@
 
 .carousel-control.left span,
 .carousel-control.right span {
-	background-color: #000;
+	background-color: transparent;
 }
 
 .carousel-control.left span:hover,
@@ -71,7 +75,7 @@
     left: 1.8%;
     right: auto;
     width: 96.66666666666666%;
-    color: #fff;
+    color: #d4016f;
 }
 
 .header-text h2 {
@@ -79,13 +83,14 @@
 }
 
 .header-text h2 span {
-    background-color: #2980b9;
-	padding: 10px;
+    background-color: #0180c0;
+    padding: 10px;
 }
 
 .header-text h3 span {
-	background-color: #000;
-	padding: 15px;
+    background-color: #d4016f;
+    padding: 15px;
+    margin-top: 100px;
 }
 
 .btn-min-block {
@@ -121,32 +126,6 @@
     text-align: center;
     margin-bottom: 50px;
     font-size: 24px;
-}
-
-#text_video {
-    margin-bottom: 50px;
-}
-
-#more_video {
-    margin-top: 25px;
-}
-.the_claim {
-    position: absolute;
-    color: #FFFFFF;
-    width: inherit;
-    font-size: 45px;
-    line-height: 50px;
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0;
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;
 }
 
 .about_yog_section {
