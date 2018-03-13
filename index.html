@@ -8,8 +8,8 @@ layout: default
 {% if site.lang == "fr-fr" or site.lang == "de-de" or site.lang == "en-gb" or site.lang == "it-it" %} 
 <div class="news_section">
     <div class="container">
-        <h1 class="h1_big_news">{{document.fragments.news_title.text}}</h1>
-        <div class="row">
+        <h1 class="h1_big_news come-in-module">{{document.fragments.news_title.text}}</h1>
+        <div class="row come-in-module">
             {% assign news = site.prismicData.collections.news | sort:'fragments.publication_date.date' | reverse  %}
             {% for news_item in news limit:3 %}     
             <div class="come-in-module col-sm-6 col-md-4">
@@ -40,7 +40,7 @@ layout: default
             </div>
             {% endfor %}
         </div>
-        <div class="more-news-button">
+        <div class="more-news-button come-in-module">
             <a class="more-news-btn" rel="noopener noreferrer" href="/{{ site.langShort }}/news/">
                 {{document.fragments.news_link_to_watch_all.text}}
             </a>
@@ -49,7 +49,7 @@ layout: default
 </div>
 {% endif %}
 <div class="newsletter_cta">
-    <div class="container flex vcenter fade-in-module">
+    <div class="container flex vcenter come-in-module">
         <div class="newsletter-text">
             <h1 class="h1_newsletter_cta">{{ document.fragments.newsletter_heading.text }}</h1>
         </div>
@@ -72,7 +72,7 @@ layout: default
     </div>
 </div>
 <div class="socials_cta">
-    <div class="container vcenter fade-in-module">
+    <div class="container vcenter come-in-module">
         <div class="col-md-12 socials-text" style="text-align: center;">
             <div class="col-md-12">
 		<h1 class="h1_newsletter_cta">Suivez-nous partout!</h1>
@@ -104,10 +104,10 @@ layout: default
     </div>
 </div>
 <div class="previous_yog" style="text-align: center;">
-    <div class="col-md-12 previous_yog_text">
+    <div class="col-md-12 previous_yog_text come-in-module">
 	<h1 class="h1_previous_yog">Les précédents Jeux Olympiques de la Jeunesse</h1><br>
     </div>
-    <div class="col-md-12 previous_yog_icons">
+    <div class="col-md-12 previous_yog_icons come-in-module">
 	<div class="col-md-2 col-md-offset-2 col-xs-6">
             <a href="https://www.olympic.org/lillehammer-2016" target="_blank" rel="noopener">
                 <img height="80" src="/images/home/lillehammer2016.png">
@@ -131,10 +131,10 @@ layout: default
     </div>
 </div>
 <div class="incoming_games" style="text-align: center;">
-    <div class="col-md-12 incoming_games_text">
+    <div class="col-md-12 incoming_games_text come-in-module">
 	<h1 class="h1_incoming_games">Les prochains Jeux Olympiques</h1><br>
     </div>
-    <div class="col-md-12 incoming_games_icons">
+    <div class="col-md-12 incoming_games_icons come-in-module">
     	<div class="col-md-2 col-offset-2 col-xs-6">
             <a href="https://www.pyeongchang2018.com/" target="_blank" rel="noopener">
                 <img height="80" src="/images/layout/2018_2.png">
