@@ -9,8 +9,18 @@
       <div id="ad" style="width:50%">
         <div id="countdown_container_tag" class="countdown_container">
           <div class="logo">
-            <img src="/assets/omega_countdown/official-timekeeper-omega-fr.jpg">
-            <!-- <img class="retina" src="/assets/omega_countdown/official-timekeeper-omega.svg"> -->
+            {% if site.lang == "fr-fr" %} 
+	      <img src="/assets/omega_countdown/official-timekeeper-omega-fr.jpg">
+              <!-- <img class="retina" src="/assets/omega_countdown/official-timekeeper-omega.svg"> -->
+	    {% endif %}
+            {% if site.lang == "de-de" %} 
+	      <img src="/assets/omega_countdown/official-timekeeper-omega-de.jpg">
+              <!-- <img class="retina" src="/assets/omega_countdown/official-timekeeper-omega.svg"> -->
+	    {% endif %}
+            {% if site.lang == "en-gb" or site.lang == "it-it" or site.lang == "es-es" %} 
+	      <img src="/assets/omega_countdown/official-timekeeper-omega-en.jpg">
+              <!-- <img class="retina" src="/assets/omega_countdown/official-timekeeper-omega.svg"> -->
+	    {% endif %}
           </div>
 			
           <div id="fr" class="countdown">
