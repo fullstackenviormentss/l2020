@@ -4,7 +4,13 @@
   <div class="container">
     <div class="row flex vcenter">
       <div class="footer_logo col-md-8">
-        
+        <ul class="list-unstyled">
+          {% for link in nav %}
+          <li>
+            <a href="{{link.path}}">{{link.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
       </div>
       <div class="footer_copy col-md-4">
         {{site.prismicData.single.base.fragments.footer_content.html}}
